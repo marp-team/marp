@@ -1,0 +1,24 @@
+{
+  "name": "@marp-team/marp-repository",
+  "description": "Markdown Presentation Writer",
+  "private": true,
+  "license": "MIT",
+  "author": {
+    "name": "Marp team",
+    "url": "https://github.com/marp-team"
+  },
+  "contributors": [
+    {
+      "name": "Yuki Hattori",
+      "url": "https://github.com/yhatt"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marp-team/marp"
+  },
+  "workspaces": ["packages/*"],
+  "devDependencies": {
+    "lerna": "^2.9.0"
+  }
+}
