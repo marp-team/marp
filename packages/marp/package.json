@@ -14,5 +14,17 @@
       "url": "https://github.com/yhatt"
     }
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "format": "prettier \"**/*.{md,json,css,scss}\"",
+    "lint": "eslint .  && stylelint \"./**/*.{css,scss}\"",
+    "test": "cross-env NODE_ENV=test mocha --opts ../../mocha.opts"
+  },
+  "devDependencies": {
+    "@researchgate/babel-plugin-transform-scss-import-to-string": "^0.1.2",
+    "node-sass": "^4.8.3"
+  },
+  "dependencies": {
+    "@marp-team/marpit": "^0.0.0"
+  }
 }
