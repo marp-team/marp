@@ -32,7 +32,7 @@
     "@babel/preset-env": "^7.0.0-beta.42",
     "@babel/register": "^7.0.0-beta.42",
     "babel-plugin-empower-assert": "^1.3.0",
-    "babel-plugin-espower": "3.0.0-beta.1",
+    "babel-plugin-espower": "^3.0.0-beta.1",
     "cross-env": "^5.1.4",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^12.1.0",
