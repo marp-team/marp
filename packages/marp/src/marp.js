@@ -1,7 +1,7 @@
 import Marpit from '@marp-team/marpit'
 import Default from './themes/default.scss'
 
-export class Marp extends Marpit {
+export default class Marp extends Marpit {
   constructor(...args) {
     super(...args)
 
@@ -9,5 +9,3 @@ export class Marp extends Marpit {
     this.themeSet.default = defaultTheme
   }
 }
-
-export default Marp
