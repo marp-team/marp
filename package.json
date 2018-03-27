@@ -21,9 +21,10 @@
     "packages/*"
   ],
   "scripts": {
-    "format:check": "prettier **/*.{md,json,css}",
-    "lint:all": "eslint .",
-    "test": "cross-env NODE_ENV=TEST mocha"
+    "format": "lerna run format",
+    "format:check": "lerna run --parallel format -- -l",
+    "lint": "lerna run lint",
+    "test": "lerna run test"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.42",
@@ -32,7 +33,7 @@
     "@babel/preset-env": "^7.0.0-beta.42",
     "@babel/register": "^7.0.0-beta.42",
     "babel-plugin-empower-assert": "^1.3.0",
-    "babel-plugin-espower": "^2.4.0",
+    "babel-plugin-espower": "^3.0.0-beta.1",
     "cross-env": "^5.1.4",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^12.1.0",
@@ -42,6 +43,10 @@
     "lerna": "^2.9.0",
     "mocha": "^5.0.5",
     "power-assert": "^1.4.4",
-    "prettier": "^1.11.1"
+    "prettier": "^1.11.1",
+    "stylelint": "^9.1.3",
+    "stylelint-config-prettier": "^3.0.4",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-scss": "^2.5.0"
   }
 }
