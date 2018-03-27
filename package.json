@@ -17,8 +17,31 @@
     "type": "git",
     "url": "https://github.com/marp-team/marp"
   },
-  "workspaces": ["packages/*"],
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "format:check": "prettier **/*.{md,json,css}",
+    "lint:all": "eslint .",
+    "test": "cross-env NODE_ENV=TEST mocha"
+  },
   "devDependencies": {
-    "lerna": "^2.9.0"
+    "@babel/cli": "^7.0.0-beta.42",
+    "@babel/core": "^7.0.0-beta.42",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0-beta.42",
+    "@babel/preset-env": "^7.0.0-beta.42",
+    "@babel/register": "^7.0.0-beta.42",
+    "babel-plugin-empower-assert": "^1.3.0",
+    "babel-plugin-espower": "^2.4.0",
+    "cross-env": "^5.1.4",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "lerna": "^2.9.0",
+    "mocha": "^5.0.5",
+    "power-assert": "^1.4.4",
+    "prettier": "^1.11.1"
   }
 }
