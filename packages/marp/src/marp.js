@@ -1,5 +1,5 @@
 import Marpit from '@marp-team/marpit'
-import Default from './themes/default.scss'
+import Default from '../themes/default.scss'
 
 export default class Marp extends Marpit {
   constructor(...args) {
