@@ -24,7 +24,9 @@
   },
   "devDependencies": {
     "@researchgate/babel-plugin-transform-scss-import-to-string": "^0.1.2",
-    "node-sass": "^4.8.3"
+    "github-markdown-css": "^2.10.0",
+    "node-sass": "^4.8.3",
+    "node-sass-package-importer": "^5.1.1"
   },
   "dependencies": {
     "@marp-team/marpit": "^0.0.1"

@@ -4,6 +4,8 @@
  * @theme default
  */
 
+@import '~github-markdown-css';
+
 section {
-  background: #fff;
+  @extend .markdown-body;
 }
