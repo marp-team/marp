@@ -21,10 +21,12 @@
     "packages/*"
   ],
   "scripts": {
+    "build": "lerna run --parallel build",
     "format": "lerna run format",
     "format:check": "lerna run --parallel format -- -l",
     "lint": "lerna run lint",
-    "test": "lerna run test"
+    "test": "lerna run test",
+    "watch": "lerna run --parallel watch"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.42",

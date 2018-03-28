@@ -16,9 +16,11 @@
   ],
   "license": "MIT",
   "scripts": {
+    "build": "babel src --out-dir lib",
     "format": "prettier \"**/*.{md,json,css,scss}\"",
     "lint": "eslint .  && stylelint \"./**/*.{css,scss}\"",
-    "test": "cross-env NODE_ENV=test mocha --opts ../../mocha.opts"
+    "test": "cross-env NODE_ENV=test mocha --opts ../../mocha.opts",
+    "watch": "babel --watch src --out-dir lib"
   },
   "devDependencies": {
     "@researchgate/babel-plugin-transform-scss-import-to-string": "^0.1.2",
