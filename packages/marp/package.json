@@ -2,7 +2,7 @@
   "name": "@marp-team/marp",
   "version": "0.0.0",
   "description": "The core of Marp: Marpit framework + Theme set",
-  "main": "src/marp.js",
+  "main": "lib/marp.js",
   "repository": "https://github.com/marp-team/marp/tree/master/packages/marp",
   "author": {
     "name": "Marp team",
