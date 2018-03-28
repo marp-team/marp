@@ -17,7 +17,7 @@
   "license": "MIT",
   "scripts": {
     "build": "babel src --out-dir lib",
-    "format": "prettier \"**/*.{md,json,css,scss}\"",
+    "format": "prettier --ignore-path ../../.prettierignore \"**/*.{md,json,css,scss}\"",
     "lint": "eslint --ignore-path ../../.eslintignore . && stylelint \"./**/*.{css,scss}\"",
     "test": "cross-env NODE_ENV=test mocha --opts ../../mocha.opts",
     "watch": "babel --watch src --out-dir lib"
