@@ -27,6 +27,6 @@
     "node-sass": "^4.8.3"
   },
   "dependencies": {
-    "@marp-team/marpit": "^0.0.0"
+    "@marp-team/marpit": "^0.0.1"
   }
 }
