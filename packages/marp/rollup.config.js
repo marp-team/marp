@@ -1,3 +1,4 @@
+import autoprefixer from 'autoprefixer'
 import babel from 'rollup-plugin-babel'
 import path from 'path'
 import postcss from 'rollup-plugin-postcss'
@@ -13,7 +14,10 @@ export default [
       format: 'cjs',
     },
     plugins: [
-      postcss({ inject: false }),
+      postcss({
+        inject: false,
+        plugins: [autoprefixer()],
+      }),
       babel({ exclude: 'node_modules/**' }),
     ],
   },
