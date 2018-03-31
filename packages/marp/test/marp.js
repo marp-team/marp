@@ -1,6 +1,6 @@
 import assert from 'assert'
 import Marpit from '@marp-team/marpit'
-import Marp from '../src/marp'
+import Marp from '../lib/marp'
 
 describe('Marp', () => {
   it('extends Marpit', () => assert(new Marp() instanceof Marpit))

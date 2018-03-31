@@ -16,17 +16,19 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "rimraf lib && babel src --out-dir lib",
+    "build": "rollup -c",
+    "clean": "rimraf lib",
     "format": "prettier --ignore-path ../../.prettierignore \"**/*.{md,json,css,scss}\"",
     "lint": "eslint --ignore-path ../../.eslintignore . && stylelint \"./**/*.{css,scss}\"",
-    "test": "cross-env NODE_ENV=test mocha --opts ../../mocha.opts",
-    "watch": "rimraf lib && babel --watch src --out-dir lib"
+    "test": "yarn --silent build --silent && cross-env NODE_ENV=test mocha --opts ../../mocha.opts",
+    "watch": "rollup -w -c"
   },
   "devDependencies": {
-    "@researchgate/babel-plugin-transform-scss-import-to-string": "^0.1.2",
     "github-markdown-css": "^2.10.0",
     "node-sass": "^4.8.3",
-    "node-sass-package-importer": "^5.1.1"
+    "rollup": "^0.57.1",
+    "rollup-plugin-babel": "^4.0.0-beta.3",
+    "rollup-plugin-postcss": "^1.4.1"
   },
   "dependencies": {
     "@marp-team/marpit": "^0.0.1"
