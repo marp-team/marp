@@ -24,6 +24,7 @@
     "watch": "rollup -w -c"
   },
   "devDependencies": {
+    "autoprefixer": "^8.2.0",
     "github-markdown-css": "^2.10.0",
     "node-sass": "^4.8.3",
     "rollup": "^0.57.1",
