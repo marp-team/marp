@@ -32,6 +32,7 @@
     "rollup-plugin-postcss": "^1.6.2"
   },
   "dependencies": {
-    "@marp-team/marpit": "^0.0.6"
+    "@marp-team/marpit": "^0.0.6",
+    "highlight.js": "^9.12.0"
   }
 }
