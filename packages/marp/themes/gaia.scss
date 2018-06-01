@@ -4,7 +4,8 @@
  * @theme gaia
  */
 
-@import url(https://fonts.googleapis.com/css?family=Lato:400,900);
+@import url('https://fonts.googleapis.com/css?family=Lato:400,900');
+@import '~highlight.js/styles/sunburst';
 
 $color-primary: #0288d1;
 
