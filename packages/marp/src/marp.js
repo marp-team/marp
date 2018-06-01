@@ -6,6 +6,8 @@ export default class Marp extends Marpit {
   constructor(...args) {
     super(...args)
 
+    this.markdown.enable('table')
+
     const defaultTheme = this.themeSet.add(Default)
     this.themeSet.default = defaultTheme
 
