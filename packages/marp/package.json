@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^8.5.2",
+    "cheerio": "^1.0.0-rc.2",
     "github-markdown-css": "^2.10.0",
     "node-sass": "^4.9.0",
     "rollup": "^0.59.4",
