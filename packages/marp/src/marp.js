@@ -5,14 +5,21 @@ import Default from '../themes/default.scss'
 import Gaia from '../themes/gaia.scss'
 
 export default class Marp extends Marpit {
-  constructor(...args) {
-    super(...args)
+  constructor(opts) {
+    super({
+      markdown: [
+        'commonmark',
+        {
+          breaks: true,
+          highlight: (...hargs) => this.highlighter(...hargs),
+          linkify: true,
+        },
+      ],
+      ...opts,
+    })
 
     // Enable table
-    this.markdown.enable('table')
-    this.markdown.set({
-      highlight: (code, lang) => this.highlighter(code, lang),
-    })
+    this.markdown.enable(['table', 'linkify'])
 
     // Add themes
     this.themeSet.default = this.themeSet.add(Default)
