@@ -26,7 +26,7 @@
     "format:check": "lerna run --parallel format -- -l",
     "lint": "lerna run lint",
     "test": "lerna run test",
-    "watch": "lerna run --parallel watch"
+    "watch": "lerna exec --parallel -- \"yarn watch < $(tty)\""
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.49",
