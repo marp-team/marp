@@ -21,7 +21,7 @@
     "format": "prettier --ignore-path ../../.prettierignore \"**/*.{md,json,css,scss}\"",
     "lint": "eslint --ignore-path ../../.eslintignore . && stylelint \"./**/*.{css,scss}\"",
     "test": "yarn --silent build --silent && cross-env NODE_ENV=test mocha --opts ../../mocha.opts",
-    "watch": "rollup -w -c"
+    "watch": "node ../../rollup_watch.js"
   },
   "devDependencies": {
     "autoprefixer": "^8.5.2",
