@@ -34,6 +34,7 @@
   },
   "dependencies": {
     "@marp-team/marpit": "^0.0.6",
-    "highlight.js": "^9.12.0"
+    "highlight.js": "^9.12.0",
+    "markdown-it-emoji": "^1.4.0"
   }
 }

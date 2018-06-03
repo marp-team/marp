@@ -25,6 +25,14 @@ describe('Marp', () => {
       const $ = cheerio.load(marp().markdown.render(address))
       assert($(`a[href="${address}"]`).text() === address)
     })
+
+    it('converts emoji shorthand to unicode emoji', () => {
+      const $ = cheerio.load(
+        marp().markdown.render('# emoji:heart:\n\n## emoji❤️')
+      )
+      assert($('h1').html() === $('h2').html())
+      assert($('h1 > span[data-marpit-emoji]').length === 1)
+    })
   })
 
   describe('themeSet property', () => {
