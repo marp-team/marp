@@ -24,7 +24,7 @@
     "watch": "rollup -w -c"
   },
   "devDependencies": {
-    "autoprefixer": "^8.5.2",
+    "autoprefixer": "^8.6.0",
     "github-markdown-css": "^2.10.0",
     "node-sass": "^4.9.0",
     "rollup": "^0.59.4",
@@ -32,6 +32,6 @@
     "rollup-plugin-postcss": "^1.6.2"
   },
   "dependencies": {
-    "@marp-team/marpit": "^0.0.6"
+    "@marp-team/marpit": "^0.0.7"
   }
 }
