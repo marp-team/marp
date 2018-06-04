@@ -21,10 +21,11 @@
     "format": "prettier --ignore-path ../../.prettierignore \"**/*.{md,json,css,scss}\"",
     "lint": "eslint --ignore-path ../../.eslintignore . && stylelint \"./**/*.{css,scss}\"",
     "test": "yarn --silent build --silent && cross-env NODE_ENV=test mocha --opts ../../mocha.opts",
-    "watch": "rollup -w -c"
+    "watch": "node ../../rollup_watch.js"
   },
   "devDependencies": {
     "autoprefixer": "^8.6.0",
+    "cheerio": "^1.0.0-rc.2",
     "github-markdown-css": "^2.10.0",
     "node-sass": "^4.9.0",
     "rollup": "^0.59.4",
@@ -32,6 +33,8 @@
     "rollup-plugin-postcss": "^1.6.2"
   },
   "dependencies": {
-    "@marp-team/marpit": "^0.0.7"
+    "@marp-team/marpit": "^0.0.7",
+    "highlight.js": "^9.12.0",
+    "markdown-it-emoji": "^1.4.0"
   }
 }

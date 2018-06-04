@@ -6,7 +6,7 @@ import pkg from './package.json'
 
 export default [
   {
-    external: ['@marp-team/marpit'],
+    external: ['@marp-team/marpit', 'highlight.js'],
     input: `src/${path.basename(pkg.main)}`,
     output: {
       name: 'marp',

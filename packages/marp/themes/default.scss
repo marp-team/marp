@@ -1,10 +1,11 @@
 /**
- * [WIP] Marp default theme.
+ * [WIP] Default theme
  *
  * @theme default
  */
 
 @import '~github-markdown-css';
+@import '~highlight.js/styles/github';
 
 section {
   @extend .markdown-body;

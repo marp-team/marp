@@ -4,14 +4,14 @@
  * @theme gaia
  */
 
-@import url(https://fonts.googleapis.com/css?family=Lato:400,900);
+@import url('https://fonts.googleapis.com/css?family=Lato:400,900');
+@import '~highlight.js/styles/sunburst';
 
 $color-primary: #0288d1;
 
 section {
   padding: 80px;
   color: #455a64;
-
   background-color: #fff8e1;
   background-image: linear-gradient(
     135deg,
@@ -20,7 +20,6 @@ section {
     rgba(#fff, 0) 50%,
     rgba(#fff, 0.05)
   );
-
   font-size: 35px;
   font-family: 'Lato', 'Avenir Next', 'Avenir', 'Trebuchet MS', 'Segoe UI',
     sans-serif;
