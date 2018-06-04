@@ -24,7 +24,7 @@
     "watch": "node ../../rollup_watch.js"
   },
   "devDependencies": {
-    "autoprefixer": "^8.5.2",
+    "autoprefixer": "^8.6.0",
     "cheerio": "^1.0.0-rc.2",
     "github-markdown-css": "^2.10.0",
     "node-sass": "^4.9.0",
@@ -33,7 +33,7 @@
     "rollup-plugin-postcss": "^1.6.2"
   },
   "dependencies": {
-    "@marp-team/marpit": "^0.0.6",
+    "@marp-team/marpit": "^0.0.7",
     "highlight.js": "^9.12.0",
     "markdown-it-emoji": "^1.4.0"
   }

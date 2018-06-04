@@ -45,7 +45,7 @@
     "lerna": "^2.11.0",
     "mocha": "^5.2.0",
     "power-assert": "^1.5.0",
-    "prettier": "^1.13.3",
+    "prettier": "^1.13.4",
     "rimraf": "^2.6.2",
     "stylelint": "^9.2.1",
     "stylelint-config-prettier": "^3.2.0",
