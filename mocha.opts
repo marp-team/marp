@@ -1,4 +1,0 @@
---recursive
---reporter spec
---require @babel/register
---ui bdd
