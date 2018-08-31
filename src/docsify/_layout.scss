@@ -1,0 +1,105 @@
+$brand-primary: #0288d1;
+$brand-dark: #02669d;
+$brand-light: #67b8e3;
+
+:root {
+  --mono-tint3: #fbfbfb;
+  --theme-color: #{$brand-primary};
+
+  // Base
+  --base-letter-spacing: 0.5px;
+  --base-font-size: 14.75px;
+
+  // Animation
+  --duration-slow: 0.6s;
+  --duration-medium: 0.3s;
+  --duration-fast: 0.15s;
+
+  // Sidebar
+  --sidebar-background: var(--mono-tint3);
+  --sidebar-width: 270px;
+  --sidebar-padding: 20px 40px;
+
+  // Sidebar navigation
+  --sidebar-nav-link-text-decoration--hover: ;
+  --sidebar-nav-link-text-decoration--active: ;
+  --sidebar-nav-link-color--hover: var(--theme-color);
+  --sidebar-nav-link-color--active: var(--theme-color);
+  --sidebar-nav-link-font-weight--active: bold;
+
+  @media screen and (min-width: 1280px) {
+    --sidebar-width: 25vw;
+  }
+
+  // Content
+  --link-color: #{$brand-primary};
+  --link-color--hover: #{$brand-dark};
+  --link-text-decoration: ;
+
+  // Notices
+  --notice-border-width: 0 0 1px 0;
+  --notice-before-color: #fff;
+  --notice-before-padding: 0 4px 0 0;
+  --notice-before-height: 2.5em;
+  --notice-before-line-height: calc(var(--notice-before-height) * 1.55);
+  --notice-before-left: 100%;
+  --notice-before-top: 100%;
+  --notice-before-width: 2.5em;
+  --notice-before-margin: calc(var(--notice-before-height) * -1) 0 0
+    calc(var(--notice-before-width) * -1);
+
+  --notice-important-background: #{mix(#fff, complement($brand-light), 90%)};
+  --notice-important-border-color: #{complement($brand-primary)};
+  --notice-important-before-content: url('https://icongr.am/fontawesome/exclamation-triangle.svg?color=ffffff&size=16');
+  --notice-important-before-background: linear-gradient(
+    135deg,
+    transparent 50%,
+    #{complement($brand-primary)} 50%
+  );
+
+  --notice-tip-background: #{mix(#fff, $brand-light, 90%)};
+  --notice-tip-border-color: #{$brand-primary};
+  --notice-tip-before-content: url('https://icongr.am/fontawesome/info-circle.svg?color=ffffff&size=16');
+  --notice-tip-before-background: linear-gradient(
+    135deg,
+    transparent 50%,
+    #{$brand-primary} 50%
+  );
+}
+
+.markdown-section {
+  .tip,
+  .warn {
+    &::before {
+      position: absolute;
+      text-align: right;
+    }
+  }
+}
+
+.sidebar {
+  box-shadow: 0 0 40px var(--mono-tint2);
+
+  &::-webkit-scrollbar {
+    width: 3px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--mono-tint2);
+  }
+
+  @media (min-width: 48em) {
+    body.close & {
+      box-shadow: none;
+    }
+  }
+
+  @media (max-width: 47.99em) {
+    body:not(.close) & {
+      box-shadow: none;
+    }
+  }
+
+  > h1 img {
+    max-height: 100px;
+  }
+}

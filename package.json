@@ -1,0 +1,43 @@
+{
+  "name": "@marp-team/marp",
+  "description": "The entrance repository of Marp family",
+  "private": true,
+  "license": "MIT",
+  "author": {
+    "name": "Marp team",
+    "url": "https://github.com/marp-team"
+  },
+  "contributors": [
+    {
+      "name": "Yuki Hattori",
+      "url": "https://github.com/yhatt"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marp-team/marp"
+  },
+  "scripts": {
+    "build": "yarn run --silent clean && parcel build src/*",
+    "clean": "rimraf dist",
+    "format": "prettier \"**/*.{css,js,json,md,scss,ts,yaml,yml}\"",
+    "format:check": "yarn --silent format -l",
+    "format:write": "yarn --silent format --write",
+    "lint:css": "stylelint \"src/**/*.{css,scss}\"",
+    "start": "parcel src/*"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.1.3",
+    "docsify-themeable": "^0.3.0",
+    "node-sass": "^4.9.3",
+    "parcel-bundler": "^1.9.7",
+    "postcss-import": "^12.0.0",
+    "prettier": "^1.14.2",
+    "pug": "^2.0.3",
+    "rimraf": "^2.6.2",
+    "stylelint": "^9.5.0",
+    "stylelint-config-prettier": "^4.0.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-scss": "^3.3.0"
+  }
+}
