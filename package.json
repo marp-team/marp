@@ -18,7 +18,7 @@
     "url": "https://github.com/marp-team/marp"
   },
   "scripts": {
-    "build": "yarn run -s clean && parcel build src/* --no-source-maps && yarn run -s public",
+    "build": "yarn run -s clean && yarn run -s public && parcel build src/* --no-source-maps",
     "clean": "rimraf dist",
     "public": "cpx \"./public/**/*\" ./dist",
     "public:watch": "yarn run -s public --watch",
