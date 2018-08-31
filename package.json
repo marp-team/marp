@@ -18,7 +18,7 @@
     "url": "https://github.com/marp-team/marp"
   },
   "scripts": {
-    "build": "yarn run --silent clean && parcel build src/*",
+    "build": "yarn run --silent clean && parcel build src/* --no-source-maps",
     "clean": "rimraf dist",
     "format": "prettier \"**/*.{css,js,json,md,scss,ts,yaml,yml}\"",
     "format:check": "yarn --silent format -l",
@@ -31,8 +31,6 @@
     "docsify-themeable": "^0.3.0",
     "node-sass": "^4.9.3",
     "parcel-bundler": "^1.9.7",
-    "postcss": "^7.0.2",
-    "postcss-import": "^12.0.0",
     "prettier": "^1.14.2",
     "pug": "^2.0.3",
     "rimraf": "^2.6.2",
