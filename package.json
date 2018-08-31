@@ -31,7 +31,6 @@
     "docsify-themeable": "^0.3.0",
     "node-sass": "^4.9.3",
     "parcel-bundler": "^1.9.7",
-    "postcss-import": "^11.1.0",
     "prettier": "^1.14.2",
     "pug": "^2.0.3",
     "rimraf": "^2.6.2",
