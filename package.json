@@ -18,19 +18,23 @@
     "url": "https://github.com/marp-team/marp"
   },
   "scripts": {
-    "build": "yarn run --silent clean && parcel build src/* --no-source-maps && cpx \"./public/**/*\" ./dist",
+    "build": "yarn run -s clean && parcel build src/* --no-source-maps && yarn run -s public",
     "clean": "rimraf dist",
+    "public": "cpx \"./public/**/*\" ./dist",
+    "public:watch": "yarn run -s public --watch",
     "format": "prettier \"**/*.{css,js,json,md,scss,ts,yaml,yml}\"",
-    "format:check": "yarn --silent format -l",
-    "format:write": "yarn --silent format --write",
+    "format:check": "yarn -s format -l",
+    "format:write": "yarn -s format --write",
     "lint:css": "stylelint \"src/**/*.{css,scss}\"",
-    "start": "parcel src/*"
+    "start": "npm-run-all --npm-path yarn --parallel public:watch watch",
+    "watch": "parcel src/*"
   },
   "devDependencies": {
     "autoprefixer": "^9.1.3",
     "cpx": "^1.5.0",
     "docsify-themeable": "^0.3.0",
     "node-sass": "^4.9.3",
+    "npm-run-all": "^4.1.3",
     "parcel-bundler": "^1.9.7",
     "prettier": "^1.14.2",
     "pug": "^2.0.3",
