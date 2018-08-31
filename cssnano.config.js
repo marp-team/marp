@@ -1,1 +1,8 @@
-module.exports = { preset: 'default' }
+module.exports = {
+  preset: [
+    'default',
+    {
+      mergeLonghand: false,
+    },
+  ],
+}
