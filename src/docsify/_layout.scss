@@ -48,6 +48,7 @@ $brand-light: #67b8e3;
   --notice-before-margin: calc(var(--notice-before-height) * -1) 0 0
     calc(var(--notice-before-width) * -1);
 
+  // Notice: important
   --notice-important-background: #{mix(#fff, complement($brand-light), 90%)};
   --notice-important-border-color: #{complement($brand-primary)};
   --notice-important-before-content: url('https://icongr.am/fontawesome/exclamation-triangle.svg?color=ffffff&size=16');
@@ -57,6 +58,7 @@ $brand-light: #67b8e3;
     #{complement($brand-primary)} 50%
   );
 
+  // Notice: tip
   --notice-tip-background: #{mix(#fff, $brand-light, 90%)};
   --notice-tip-border-color: #{$brand-primary};
   --notice-tip-before-content: url('https://icongr.am/fontawesome/info-circle.svg?color=ffffff&size=16');
