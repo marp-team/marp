@@ -1,0 +1,16 @@
+:root {
+  --code-theme-background: #{rgba(#666, 0.05)};
+  --code-theme-comment: #9ab;
+  --code-theme-function: #e71;
+  --code-theme-keyword: #d42;
+  --code-theme-operator: #a67f59;
+  --code-theme-punctuation: #5ad;
+  --code-theme-selection: #b3d4fc;
+  --code-theme-selector: #458;
+  --code-theme-tag: #70a;
+  --code-theme-text: #333;
+  --code-theme-variable: #e90;
+
+  // Copy code plugin
+  --copycode-background: #aaa;
+}

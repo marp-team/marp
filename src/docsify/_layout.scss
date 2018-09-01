@@ -7,8 +7,8 @@ $brand-light: #67b8e3;
   --theme-color: #{$brand-primary};
 
   // Base
-  --base-letter-spacing: 0.5px;
-  --base-font-size: 14.75px;
+  --base-letter-spacing: 0.25px;
+  --base-font-size: 14.5px;
 
   // Animation
   --duration-slow: 0.6s;
@@ -21,20 +21,23 @@ $brand-light: #67b8e3;
   --sidebar-padding: 20px 40px;
 
   // Sidebar navigation
-  --sidebar-nav-link-text-decoration--hover: ;
-  --sidebar-nav-link-text-decoration--active: ;
+  --sidebar-nav-link-text-decoration--hover: none;
+  --sidebar-nav-link-text-decoration--active: none;
   --sidebar-nav-link-color--hover: var(--theme-color);
   --sidebar-nav-link-color--active: var(--theme-color);
   --sidebar-nav-link-font-weight--active: bold;
 
-  @media screen and (min-width: 1280px) {
-    --sidebar-width: 25vw;
-  }
-
   // Content
+  --content-max-width: 60em;
+
+  // Content: link
   --link-color: #{$brand-primary};
   --link-color--hover: #{$brand-dark};
-  --link-text-decoration: ;
+  --link-text-decoration: none;
+
+  // Content: code
+  --code-block-padding: 1.25em;
+  --code-block-line-height: 1.4;
 
   // Notices
   --notice-border-width: 0 0 1px 0;
@@ -67,9 +70,17 @@ $brand-light: #67b8e3;
     transparent 50%,
     #{$brand-primary} 50%
   );
+
+  @media screen and (min-width: 1320px) {
+    --base-font-size: 16px;
+    --sidebar-width: 25vw;
+  }
 }
 
 .markdown-section {
+  padding-bottom: 4rem;
+  padding-top: 4rem;
+
   .tip,
   .warn {
     &::before {
@@ -89,19 +100,31 @@ $brand-light: #67b8e3;
     background-color: var(--mono-tint2);
   }
 
-  @media (min-width: 48em) {
-    body.close & {
-      box-shadow: none;
-    }
-  }
-
-  @media (max-width: 47.99em) {
-    body:not(.close) & {
-      box-shadow: none;
-    }
-  }
-
   > h1 img {
     max-height: 100px;
+  }
+}
+
+@media (min-width: 48em) {
+  body.close {
+    .sidebar {
+      box-shadow: none;
+    }
+  }
+}
+
+@media (max-width: 47.99em) {
+  body:not(.close) {
+    .sidebar {
+      box-shadow: none;
+    }
+  }
+
+  body.close {
+    .content {
+      background-color: var(--base-background-color);
+      filter: blur(4px) brightness(0.95);
+      opacity: 0.5;
+    }
   }
 }
