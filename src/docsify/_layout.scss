@@ -36,6 +36,13 @@ $important-color: complement($brand-primary);
   --link-color--hover: #{$brand-dark};
   --link-text-decoration: none;
 
+  // Content: headings
+  --heading-h4-font-weight: 500;
+  --heading-h5-color: var(--mono-base);
+  --heading-h5-font-weight: 500;
+  --heading-h6-color: var(--mono-tint1);
+  --heading-h6-font-weight: normal;
+
   // Content: code
   --code-block-padding: 1.25em;
   --code-block-line-height: 1.4;
@@ -68,6 +75,18 @@ $important-color: complement($brand-primary);
     --base-font-size: 16px;
     --sidebar-width: 25vw;
   }
+}
+
+h5 {
+  color: var(--heading-h5-color, var(--heading-color));
+  font-weight: var(--heading-h5-font-weight, var(--heading-font-weight));
+  margin: var(--heading-h5-margin, var(--heading-margin));
+}
+
+h6 {
+  color: var(--heading-h6-color, var(--heading-color));
+  font-weight: var(--heading-h6-font-weight, var(--heading-font-weight));
+  margin: var(--heading-h6-margin, var(--heading-margin));
 }
 
 .markdown-section {
