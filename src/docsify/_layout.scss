@@ -100,6 +100,19 @@ h6 {
       text-align: right;
     }
   }
+
+  @media (max-width: 30em) {
+    .table-wrapper {
+      overflow-x: auto;
+      overflow-x: overlay;
+      -webkit-overflow-scrolling: touch;
+
+      th,
+      td {
+        white-space: nowrap;
+      }
+    }
+  }
 }
 
 .sidebar {
