@@ -11,6 +11,13 @@
   --code-theme-text: #333;
   --code-theme-variable: #e90;
 
+  // Block
+  --code-block-padding: 1.25em;
+  --code-block-line-height: 1.4;
+
+  // Inline
+  --code-inline-color: currentColor;
+
   // Copy code plugin
   --copycode-background: #aaa;
 }

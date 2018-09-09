@@ -6,6 +6,7 @@ $important-color: complement($brand-primary);
 :root {
   --mono-tint3: #fbfbfb;
   --theme-color: #{$brand-primary};
+  --strong-color: currentColor;
 
   // Base
   --base-letter-spacing: 0.25px;
@@ -42,10 +43,6 @@ $important-color: complement($brand-primary);
   --heading-h5-font-weight: 500;
   --heading-h6-color: var(--mono-tint1);
   --heading-h6-font-weight: normal;
-
-  // Content: code
-  --code-block-padding: 1.25em;
-  --code-block-line-height: 1.4;
 
   // Notices
   --notice-border-width: 0 0 1px 0;
