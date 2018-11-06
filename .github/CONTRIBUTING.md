@@ -6,7 +6,7 @@ You can start contributing our project in several ways: improve docs, report bug
 
 Depending on the project you want to contribute, it might have additional guidelines you should follow at that repository. Please also check the guideline per repository.
 
-> :beginner: Would you the first time to contribute OSS? [Open Source Guides](https://opensource.guide/how-to-contribute/) might help you.
+> :information_source: Would you the first time to contribute OSS? [Open Source Guides](https://opensource.guide/how-to-contribute/) might help you.
 
 ## [Code of conduct][code-of-conduct]
 
