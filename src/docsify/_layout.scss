@@ -74,18 +74,6 @@ $important-color: complement($brand-primary);
   }
 }
 
-h5 {
-  color: var(--heading-h5-color, var(--heading-color));
-  font-weight: var(--heading-h5-font-weight, var(--heading-font-weight));
-  margin: var(--heading-h5-margin, var(--heading-margin));
-}
-
-h6 {
-  color: var(--heading-h6-color, var(--heading-color));
-  font-weight: var(--heading-h6-font-weight, var(--heading-font-weight));
-  margin: var(--heading-h6-margin, var(--heading-margin));
-}
-
 .markdown-section {
   padding-bottom: 4rem;
   padding-top: 4rem;
