@@ -82,13 +82,17 @@ If it is defined in `package.json`, run `npm version [major|minor|patch]` at lat
 
 After than, push master branch and tag by `git push && git push --tags`. Please update GitHub release by taking copy of change logs from updated CHANGELOG.md if possible.
 
-### Release to npm
+### Publish to npm
 
-Several repository provide [npm package](https://www.npmjs.com/org/marp-team). The core maintainer can release package to npm after bumping version.
+Several repository provide [npm package](https://www.npmjs.com/org/marp-team). The core maintainer can publish package to npm after bumping version.
 
-For the security reason, we are not planned to automate release. [We require two-factor authentication to release](https://blog.npmjs.org/post/175861857230/two-factor-authentication-protection-for-packages).
+```
+npm publish
+```
 
-> :information_source: Maintainer should configure to check code styling and tests again when running important commands through `preversion` (bumping version) and `prepack` (release to npm).
+For the security reason, we are not planned to automate publishing. [We require two-factor authentication to publish](https://blog.npmjs.org/post/175861857230/two-factor-authentication-protection-for-packages).
+
+> :information_source: Maintainer should configure to check code styling and tests again when running important commands through `preversion` (bumping version) and `prepack` (publish to npm).
 
 [code-of-conduct]: https://github.com/marp-team/marp/blob/master/.github/CODE_OF_CONDUCT.md
 [marp-team]: https://github.com/marp-team/
