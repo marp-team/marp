@@ -1,22 +1,22 @@
 version: 2
 jobs:
-  build:
+  format_and_lint:
     docker:
-      - image: circleci/node:8.11.4
+      - image: circleci/node:10.13.0
     working_directory: ~/marp
     steps:
       - checkout
 
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "yarn.lock" }}-{{ .Branch }}
-            - v1-dependencies-{{ checksum "yarn.lock" }}-
-            - v1-dependencies-
+            - v1-dependencies-{{ .Environment.CIRCLE_JOB }}-{{ checksum "yarn.lock" }}-{{ .Branch }}
+            - v1-dependencies-{{ .Environment.CIRCLE_JOB }}-{{ checksum "yarn.lock" }}-
+            - v1-dependencies-{{ .Environment.CIRCLE_JOB }}-
 
       - run: yarn install
 
       - save_cache:
-          key: v1-dependencies-{{ checksum "yarn.lock" }}-{{ .Branch }}
+          key: v1-dependencies-{{ .Environment.CIRCLE_JOB }}-{{ checksum "yarn.lock" }}-{{ .Branch }}
           paths:
             - node_modules
             - ~/.cache/yarn
@@ -26,3 +26,9 @@ jobs:
           command: yarn format:check
 
       - run: yarn lint:css
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - format_and_lint
