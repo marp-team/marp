@@ -58,8 +58,41 @@ These are tasks for maintainer, and usually comitter doesn't have to worry.
 
 - If there is CHANGELOG.md in a working project, the maintainer has to update it after (or while) merge PR. We're adopting the format based on [Keep a Changelog].
 
+## Release
+
+The core maintainer can release package or product of marp-team projects.
+
+> :warning: You have to use `npm` in a release process, and NEVER use `yarn`.
+
+### Versioning
+
+Basically we are following [Semantic Versioning].
+
+#### Pre-release
+
+We treat `v0.0.x` as the pre-release version. Against the spec of semver, it may update only patch version until reach to the stable implementation even if it has some breakings or incompatible changes.
+
+Maintainer should mark `v0.0.x` as "Pre-release" in GitHub release page.
+
+#### Bump version
+
+We have automated bumping version with `version` npm script in many repositories.
+
+If it is defined in `package.json`, run `npm version [major|minor|patch]` at latest `master` branch to bump version. In many cases, it would add the version tag and update CHANGELOG.md.
+
+After than, push master branch and tag by `git push && git push --tags`. Please update GitHub release by taking copy of change logs from updated CHANGELOG.md if possible.
+
+### Release to npm
+
+Several repository provide [npm package](https://www.npmjs.com/org/marp-team). The core maintainer can release package to npm after bumping version.
+
+For the security reason, we are not planned to automate release. [We require two-factor authentication to release](https://blog.npmjs.org/post/175861857230/two-factor-authentication-protection-for-packages).
+
+> :information_source: Maintainer should configure to check code styling and tests again when running important commands through `preversion` (bumping version) and `prepack` (release to npm).
+
 [code-of-conduct]: https://github.com/marp-team/marp/blob/master/.github/CODE_OF_CONDUCT.md
 [marp-team]: https://github.com/marp-team/
 [yarn]: https://yarnpkg.com/
 [prettier]: https://prettier.io/
 [keep a changelog]: https://keepachangelog.com/en/1.0.0/
+[semantic versioning]: https://semver.org/
