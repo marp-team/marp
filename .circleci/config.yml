@@ -9,14 +9,14 @@ jobs:
 
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "yarn.lock" }}-{{ .Branch }}
-            - v1-dependencies-{{ checksum "yarn.lock" }}-
-            - v1-dependencies-
+            - v1-dependencies-{{ .Environment.CIRCLE_JOB }}-{{ checksum "yarn.lock" }}-{{ .Branch }}
+            - v1-dependencies-{{ .Environment.CIRCLE_JOB }}-{{ checksum "yarn.lock" }}-
+            - v1-dependencies-{{ .Environment.CIRCLE_JOB }}-
 
       - run: yarn install
 
       - save_cache:
-          key: v1-dependencies-{{ checksum "yarn.lock" }}-{{ .Branch }}
+          key: v1-dependencies-{{ .Environment.CIRCLE_JOB }}-{{ checksum "yarn.lock" }}-{{ .Branch }}
           paths:
             - node_modules
             - ~/.cache/yarn
