@@ -1,6 +1,0 @@
-.cache/
-.git/
-.vscode/
-dist/
-node_modules
-package.json
