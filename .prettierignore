@@ -1,0 +1,6 @@
+.git/
+.vscode/
+/website/.cache/
+/website/public
+node_modules
+package.json
