@@ -8,14 +8,11 @@
     "start": "yarn -s run develop"
   },
   "dependencies": {
+    "autoprefixer": "^9.3.1",
     "gatsby": "^2.0.48",
-    "gatsby-image": "^2.0.20",
-    "gatsby-plugin-manifest": "^2.0.9",
-    "gatsby-plugin-offline": "^2.0.14",
     "gatsby-plugin-react-helmet": "^3.0.2",
-    "gatsby-plugin-sharp": "^2.0.12",
-    "gatsby-source-filesystem": "^2.0.8",
-    "gatsby-transformer-sharp": "^2.1.8",
+    "gatsby-plugin-sass": "^2.0.4",
+    "node-sass": "^4.10.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-helmet": "^5.2.0"
