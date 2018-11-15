@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "build": "gatsby build",
+    "check-ts": "tsc",
     "develop": "gatsby develop",
     "start": "yarn -s run develop"
   },
@@ -12,6 +13,7 @@
     "gatsby": "^2.0.48",
     "gatsby-plugin-react-helmet": "^3.0.2",
     "gatsby-plugin-sass": "^2.0.4",
+    "gatsby-plugin-typescript": "^2.0.1",
     "node-sass": "^4.10.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",

@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "noEmit": true,
+    "target": "esnext"
+  },
+  "extends": "../tsconfig.base.json",
+  "include": ["src"]
+}
