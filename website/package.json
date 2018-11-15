@@ -5,8 +5,7 @@
   "scripts": {
     "build": "gatsby build",
     "check-ts": "tsc",
-    "develop": "gatsby develop",
-    "start": "yarn -s run develop"
+    "start": "gatsby develop"
   },
   "dependencies": {
     "autoprefixer": "^9.3.1",
