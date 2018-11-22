@@ -1,0 +1,8 @@
+@import './common';
+
+.header {
+  background: $base-background;
+  box-sizing: border-box;
+  height: $header-height;
+  overflow: hidden;
+}

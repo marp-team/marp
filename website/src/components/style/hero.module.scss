@@ -1,0 +1,67 @@
+@import './common';
+
+.hero {
+  background: $hero-background;
+  display: flex;
+  height: calc(100vh - #{$header-height});
+  min-height: 320px;
+
+  &-block {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+
+    &-lead {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
+  @include portrait {
+    flex-direction: column;
+
+    &-block-screenshot {
+      flex: 0 1 auto;
+      max-height: calc((100vh - #{$header-height}) / 2);
+    }
+  }
+}
+
+.logo {
+  display: block;
+  margin: auto;
+  width: 12.5vw;
+
+  @include portrait {
+    width: 25vw;
+  }
+
+  &-heading {
+    margin: 0;
+  }
+}
+
+.screenshot {
+  box-sizing: border-box;
+  filter: drop-shadow(0 0 10px rgba(#000, 0.1));
+  height: 80%;
+  object-fit: contain;
+  object-position: 100% 50%;
+  position: absolute;
+  right: -10%;
+  top: 10%;
+  user-select: none;
+  width: 100%;
+
+  @include portrait {
+    display: block;
+    box-sizing: border-box;
+    position: static;
+    height: auto;
+    padding: 10vw 10vw 0 10vw;
+    transform: translateY(10%);
+    object-position: 50% 100%;
+  }
+}

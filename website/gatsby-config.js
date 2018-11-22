@@ -3,6 +3,9 @@ const autoprefixer = require('autoprefixer')
 module.exports = {
   siteMetadata: {
     title: 'Marp: Markdown Presentation Writer',
+    description:
+      'Marp is simple and modern presentation writer through Markdown.',
+    keywords: ['markdown', 'slide', 'deck', 'presentation', 'marp', 'marpit'],
   },
   plugins: [
     'gatsby-plugin-typescript',
