@@ -6,62 +6,54 @@
   height: calc(100vh - #{$header-height});
   min-height: 320px;
 
-  &-block {
-    flex: 1;
-    overflow: hidden;
-    position: relative;
-
-    &-lead {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-    }
-  }
-
   @include portrait {
     flex-direction: column;
-
-    &-block-screenshot {
-      flex: 0 1 auto;
-      max-height: calc((100vh - #{$header-height}) / 2);
-    }
   }
 }
 
-.logo {
-  display: block;
-  margin: auto;
-  width: 12.5vw;
+.lead {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 
-  @include portrait {
-    width: 25vw;
+  &-logo {
+    display: block;
+    width: 25%;
+    height: auto;
+    margin: 0 auto;
   }
 
-  &-heading {
-    margin: 0;
+  &-header {
+    text-align: left;
+    margin: 0 auto;
+  }
+
+  &-name {
+    display: table;
+  }
+
+  &-description {
+    display: table;
+  }
+
+  @include portrait {
+    flex: 1;
   }
 }
 
 .screenshot {
+  flex: 6;
   box-sizing: border-box;
-  filter: drop-shadow(0 0 10px rgba(#000, 0.1));
-  height: 80%;
-  object-fit: contain;
-  object-position: 100% 50%;
-  position: absolute;
-  right: -10%;
-  top: 10%;
-  user-select: none;
-  width: 100%;
+  margin: 50px 30px;
+
+  background: url('../assets/screenshot-web.png') no-repeat center center;
+  background-size: contain;
+  filter: drop-shadow(0 2px 5px rgba(#000, 0.1));
 
   @include portrait {
-    display: block;
-    box-sizing: border-box;
-    position: static;
-    height: auto;
-    padding: 10vw 10vw 0 10vw;
-    transform: translateY(10%);
-    object-position: 50% 100%;
+    margin: 20px;
+    flex: auto;
   }
 }
