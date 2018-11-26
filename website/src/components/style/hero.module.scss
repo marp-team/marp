@@ -12,22 +12,22 @@
 }
 
 .lead {
-  flex: 4;
   display: flex;
   flex-direction: column;
+  flex: 4;
   justify-content: center;
   text-align: center;
 
   &-logo {
     display: block;
-    width: 25%;
     height: auto;
     margin: 0 auto;
+    width: 25%;
   }
 
   &-header {
-    text-align: left;
     margin: 0 auto;
+    text-align: left;
   }
 
   &-name {
@@ -44,16 +44,15 @@
 }
 
 .screenshot {
-  flex: 6;
+  background-size: contain;
+  background: url('../assets/screenshot-web.png') no-repeat center center;
   box-sizing: border-box;
+  filter: drop-shadow(0 2px 5px rgba(#000, 0.1));
+  flex: 6;
   margin: 50px 30px;
 
-  background: url('../assets/screenshot-web.png') no-repeat center center;
-  background-size: contain;
-  filter: drop-shadow(0 2px 5px rgba(#000, 0.1));
-
   @include portrait {
-    margin: 20px;
     flex: auto;
+    margin: 20px;
   }
 }
