@@ -2,8 +2,6 @@ import React from 'react'
 import logo from '../../../marp.png'
 import style from './style/hero.module.scss'
 
-console.log(logo)
-
 const Hero: React.FC = () => (
   <section className={style.hero}>
     <div className={style.lead}>
