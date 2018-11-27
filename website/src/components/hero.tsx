@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from './assets/marp-logo.svg'
+import logo from '../../../marp.png'
 import style from './style/hero.module.scss'
 
 console.log(logo)
@@ -7,13 +7,9 @@ console.log(logo)
 const Hero: React.FC = () => (
   <section className={style.hero}>
     <div className={style.lead}>
-      <img alt="Marp" className={style.leadLogo} src={logo} />
-      <header className={style.leadHeader}>
-        <h1 className={style.leadName}>Marp</h1>
-        <p className={style.leadDescription}>Markdown Presentation Writer</p>
-      </header>
+      <img alt="Marp" className={style.logo} src={logo} />
+      <p className={style.description}>Markdown Presentation Writer</p>
     </div>
-    <div className={style.screenshot} />
   </section>
 )
 

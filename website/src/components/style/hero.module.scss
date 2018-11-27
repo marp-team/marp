@@ -5,54 +5,25 @@
   display: flex;
   height: calc(100vh - #{$header-height});
   min-height: 320px;
-
-  @include portrait {
-    flex-direction: column;
-  }
+  color: #333;
 }
 
 .lead {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  flex: 4;
+  align-items: center;
   justify-content: center;
-  text-align: center;
-
-  &-logo {
-    display: block;
-    height: auto;
-    margin: 0 auto;
-    width: 25%;
-  }
-
-  &-header {
-    margin: 0 auto;
-    text-align: left;
-  }
-
-  &-name {
-    display: table;
-  }
-
-  &-description {
-    display: table;
-  }
-
-  @include portrait {
-    flex: 1;
-  }
 }
 
-.screenshot {
-  background-size: contain;
-  background: url('../assets/screenshot-web.png') no-repeat center center;
-  box-sizing: border-box;
-  filter: drop-shadow(0 2px 5px rgba(#000, 0.1));
-  flex: 6;
-  margin: 50px 30px;
+.logo {
+  width: 50%;
+  max-height: 50%;
+  display: inline-block;
+  object-fit: contain;
+}
 
-  @include portrait {
-    flex: auto;
-    margin: 20px;
-  }
+.description {
+  margin: 20px 0 0 0;
+  font-size: calc(12px + 0.75vw);
 }
