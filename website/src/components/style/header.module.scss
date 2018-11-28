@@ -1,6 +1,7 @@
 @import './common';
 
 .header {
+  margin: 0 25px;
   display: flex;
   align-items: center;
   background: $base-background;
@@ -9,9 +10,19 @@
   overflow: hidden;
   color: #444;
   font-size: 1rem;
+
+  > * {
+    flex: 0 0 auto;
+  }
 }
 
 .logo {
   width: auto;
-  height: 60%;
+  height: 50%;
+  margin: 0 25px 0 0;
+}
+
+.nav {
+  flex: 1 0 auto;
+  display: flex;
 }

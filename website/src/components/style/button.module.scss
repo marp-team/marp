@@ -16,6 +16,7 @@
   overflow: hidden;
   padding: 0.4em 0.75em;
   text-decoration: none;
+  user-select: none;
   vertical-align: middle;
   white-space: nowrap;
 
@@ -30,21 +31,56 @@
     box-shadow: 0 0 0 0.15em rgba($brand-secondary, 0.5),
       0 3px 6px rgba(#000, 0.25);
   }
+
+  &:hover {
+    transition: color 0.15s linear, background-color 0.15s linear;
+
+    &:active {
+      transition: none;
+    }
+  }
 }
 
 .color {
   &-default {
     background: $base-background;
-    color: currentColor;
+    color: #666;
+
+    &:hover {
+      background: mix($base-background, #000, 95%);
+
+      &:active {
+        background: mix($base-background, #000, 90%);
+      }
+    }
 
     &.outline {
-      border-color: currentColor;
+      border-color: #666;
+
+      &:hover {
+        background: #666;
+        color: $base-background;
+
+        &:active {
+          border-color: $brand-dark;
+          background: $brand-dark;
+        }
+      }
     }
   }
 
   &-primary {
-    background: linear-gradient(170deg, $brand-primary, $brand-secondary);
+    background: $brand-primary
+      linear-gradient(30deg, transparent, rgba($base-background, 0.2));
     color: $base-background;
+
+    &:hover {
+      background-color: mix($brand-primary, $brand-dark);
+
+      &:active {
+        background-color: $brand-dark;
+      }
+    }
 
     &.outline {
       border-color: $brand-primary;

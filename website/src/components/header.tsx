@@ -5,14 +5,16 @@ import logo from './assets/marp-logo.svg'
 import style from './style/header.module.scss'
 
 const Header: React.FC = () => (
-  <nav className={style.header}>
+  <header className={style.header}>
     <img alt="Marp" className={style.logo} src={logo} />
-    <Button color="primary">Try Marp Web</Button>
-    <Button outline>Get Desktop App</Button>
-    <Menuitem href="#">Features</Menuitem>
-    <Menuitem href="#">Docs</Menuitem>
-    <Menuitem href="#">Blog</Menuitem>
-  </nav>
+    <nav className={style.nav}>
+      <Menuitem href="#">Features</Menuitem>
+      <Menuitem href="#">Blog</Menuitem>
+      <Menuitem href="https://github.com/marp-team/marp/" target="_blank">
+        GitHub
+      </Menuitem>
+    </nav>
+  </header>
 )
 
 export default Header
