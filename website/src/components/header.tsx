@@ -1,3 +1,4 @@
+import { Link } from 'gatsby'
 import React from 'react'
 import { Locations } from './layout'
 import Menuitem from './menuitem'
@@ -13,11 +14,11 @@ export interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ stuck, location, ...props }) => (
   <header {...combineClass(props, style.header, stuck && style.stuck)}>
-    <a href="/" target="_top" className={style.logoLink}>
+    <Link to="/" className={style.logoLink}>
       <img alt="Marp" className={style.logo} src={logo} />
-    </a>
+    </Link>
     <nav className={style.nav}>
-      <Menuitem href="/blog" active={location === Locations.blog}>
+      <Menuitem to="/blog" active={location === Locations.blog}>
         Blog
       </Menuitem>
       <Menuitem href="https://github.com/marp-team/marp/" target="_blank">

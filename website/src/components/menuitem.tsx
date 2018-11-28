@@ -5,7 +5,6 @@ import { combineClass } from './utils'
 
 export interface MenuitemProps extends ButtonProps {
   active?: boolean
-  href: string
 }
 
 const Menuitem: React.FC<MenuitemProps> = props => {
