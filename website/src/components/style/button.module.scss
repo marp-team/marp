@@ -1,0 +1,53 @@
+@import './common';
+
+.button {
+  appearance: none;
+  border-radius: 1.5em;
+  border: 0;
+  box-shadow: 0 3px 6px rgba(#000, 0.25);
+  box-sizing: content-box;
+  cursor: pointer;
+  display: inline-block;
+  height: 1em;
+  line-height: 1em;
+  margin: 0.25em;
+  outline: 0;
+  overflow: hidden;
+  padding: 0.4em 0.75em;
+  text-decoration: none;
+  vertical-align: middle;
+
+  &.outline {
+    border-style: solid;
+    border-width: 0.15em;
+    padding-bottom: 0.25em;
+    padding-top: 0.25em;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 0.15em rgba($brand-secondary, 0.5),
+      0 3px 6px rgba(#000, 0.25);
+  }
+}
+
+.color {
+  &-default {
+    background: #fff;
+    color: currentColor;
+
+    &.outline {
+      border-color: currentColor;
+    }
+  }
+
+  &-primary {
+    background: linear-gradient(170deg, $brand-primary, $brand-secondary);
+    color: #fff;
+
+    &.outline {
+      border-color: $brand-primary;
+      color: $brand-primary;
+      background: #fff;
+    }
+  }
+}

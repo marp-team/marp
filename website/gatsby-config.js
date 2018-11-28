@@ -15,7 +15,7 @@ module.exports = {
       options: {
         cssLoaderOptions: {
           postCssPlugins: [autoprefixer()],
-          camelCase: 'only',
+          camelCase: true,
         },
       },
     },
