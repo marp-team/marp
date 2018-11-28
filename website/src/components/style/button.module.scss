@@ -9,6 +9,7 @@
   cursor: pointer;
   display: inline-block;
   height: 1em;
+  letter-spacing: 1px;
   line-height: 1em;
   margin: 0.25em;
   outline: 0;
@@ -16,10 +17,11 @@
   padding: 0.4em 0.75em;
   text-decoration: none;
   vertical-align: middle;
+  white-space: nowrap;
 
   &.outline {
     border-style: solid;
-    border-width: 0.15em;
+    border-width: 0.125em;
     padding-bottom: 0.25em;
     padding-top: 0.25em;
   }
@@ -32,7 +34,7 @@
 
 .color {
   &-default {
-    background: #fff;
+    background: $base-background;
     color: currentColor;
 
     &.outline {
@@ -42,12 +44,12 @@
 
   &-primary {
     background: linear-gradient(170deg, $brand-primary, $brand-secondary);
-    color: #fff;
+    color: $base-background;
 
     &.outline {
       border-color: $brand-primary;
       color: $brand-primary;
-      background: #fff;
+      background: $base-background;
     }
   }
 }
