@@ -13,7 +13,7 @@ const Menuitem: React.FC<MenuitemProps> = props => {
     <Button
       {...combineClass({ ...props, active: undefined }, style.menuitem)}
       outline={false}
-      data-active={props.active}
+      data-active={`${!!props.active}`}
     />
   )
 }

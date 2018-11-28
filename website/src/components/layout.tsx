@@ -8,8 +8,14 @@ import layoutStyle from './style/layout.module.scss'
 import './style/layout.scss'
 
 export interface LayoutProps {
-  children: React.ReactNode
+  children?: React.ReactNode
   hero?: boolean
+  location: Locations
+}
+
+export enum Locations {
+  root = '/',
+  blog = '/blog',
 }
 
 const renderHelmet = meta => (
@@ -24,7 +30,7 @@ const renderHelmet = meta => (
   </Helmet>
 )
 
-const Layout: React.SFC<LayoutProps> = ({ children, hero }) => (
+const Layout: React.SFC<LayoutProps> = ({ children, hero, location }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -43,7 +49,11 @@ const Layout: React.SFC<LayoutProps> = ({ children, hero }) => (
         {hero && <Hero />}
         <Sticky relative>
           {({ style, isSticky }) => (
-            <Header style={style} stuck={!hero || isSticky} />
+            <Header
+              location={location}
+              stuck={!hero || isSticky}
+              style={style}
+            />
           )}
         </Sticky>
         {children}

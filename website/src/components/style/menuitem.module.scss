@@ -24,7 +24,7 @@
     transition: none;
   }
 
-  &[data-active] {
+  &[data-active='true'] {
     box-shadow: inset 0 -0.2em $brand-primary;
     transition: none;
   }

@@ -6,7 +6,7 @@ const Hero: React.FC = () => (
   <section className={style.hero}>
     <div className={style.lead}>
       <img alt="Marp" className={style.logo} src={logo} />
-      <p className={style.description}>Markdown Presentation Writer</p>
+      <p className={style.description}>Under construction</p>
     </div>
   </section>
 )
