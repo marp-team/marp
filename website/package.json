@@ -13,6 +13,8 @@
     "gatsby-plugin-react-helmet": "^3.0.2",
     "gatsby-plugin-sass": "^2.0.4",
     "gatsby-plugin-typescript": "^2.0.1",
+    "gatsby-source-filesystem": "^2.0.9",
+    "gatsby-transformer-remark": "^2.1.13",
     "node-sass": "^4.10.0",
     "normalize.css": "^8.0.1",
     "react": "^16.6.3",
