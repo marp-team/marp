@@ -1,6 +1,6 @@
 import React from 'react'
-import Layout, { Locations } from '../components/layout'
+import Layout from '../components/layout'
 
-const index = () => <Layout hero location={Locations.root} />
+const index = ({ location }) => <Layout hero location={location.pathname} />
 
 export default index

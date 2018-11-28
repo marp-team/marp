@@ -1,6 +1,6 @@
 import React from 'react'
-import Layout, { Locations } from '../components/layout'
+import Layout from '../components/layout'
 
-const blog = () => <Layout location={Locations.blog} />
+const blog = ({ location }) => <Layout location={location.pathname} />
 
 export default blog

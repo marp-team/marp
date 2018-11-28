@@ -7,7 +7,7 @@ import { combineClass } from './utils'
 
 export interface HeaderProps {
   stuck: boolean
-  location: Locations
+  location: string | Locations
   [delegated: string]: any
 }
 

@@ -10,7 +10,7 @@ import './style/layout.scss'
 export interface LayoutProps {
   children?: React.ReactNode
   hero?: boolean
-  location: Locations
+  location: string | Locations
 }
 
 export enum Locations {
