@@ -14,7 +14,9 @@ const Menuitem: React.FC<MenuitemProps> = props => {
       {...combineClass({ ...props, active: undefined }, style.menuitem)}
       outline={false}
       data-active={`${!!props.active}`}
-    />
+    >
+      <span className={style.menuitemContainer}>{props.children}</span>
+    </Button>
   )
 }
 

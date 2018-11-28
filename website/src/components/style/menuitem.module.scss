@@ -1,31 +1,41 @@
 @import './common';
 
 .menuitem {
+  background: $base-background !important;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  box-shadow: none !important;
+  height: 100%;
   border-radius: 0;
   box-shadow: none;
   letter-spacing: 2px;
-  margin: 0.25em 1em;
-  padding: 0.4em 0;
+  margin: 0;
   text-transform: uppercase;
 
-  &:hover {
-    box-shadow: inset 0 -0.2em rgba(#000, 0.15);
-    transition: box-shadow 0.2s linear;
+  &-container {
+    padding: 0.4em 0;
+  }
 
-    &,
-    &:active {
-      background: transparent;
+  &:hover {
+    .menuitem-container {
+      box-shadow: inset 0 -0.2em rgba(#000, 0.15);
+      transition: box-shadow 0.2s linear;
     }
   }
 
   &:active,
   &:focus {
-    box-shadow: inset 0 -0.2em $brand-dark;
-    transition: none;
+    .menuitem-container {
+      box-shadow: inset 0 -0.2em $brand-dark;
+      transition: none;
+    }
   }
 
   &[data-active='true'] {
-    box-shadow: inset 0 -0.2em $brand-primary;
-    transition: none;
+    .menuitem-container {
+      box-shadow: inset 0 -0.2em $brand-primary;
+      transition: none;
+    }
   }
 }
