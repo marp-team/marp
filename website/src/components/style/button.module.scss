@@ -86,6 +86,16 @@
       background: $base-background;
       border-color: $brand-primary;
       color: $brand-primary;
+
+      &:hover {
+        color: $base-background;
+        background: $brand-primary;
+
+        &:active {
+          background: $brand-dark;
+          border-color: $brand-dark;
+        }
+      }
     }
   }
 }
