@@ -1,8 +1,8 @@
 version: 2
 jobs:
-  '10.13.0':
+  '10.14.0':
     docker:
-      - image: circleci/node:10.13.0
+      - image: circleci/node:10.14.0
     working_directory: ~/marp
     steps:
       - checkout
@@ -29,4 +29,4 @@ workflows:
   version: 2
   build:
     jobs:
-      - 10.13.0
+      - 10.14.0
