@@ -11,6 +11,7 @@ export interface LayoutProps {
   children?: React.ReactNode
   hero?: boolean
   location: string | Locations
+  title?: string
 }
 
 export enum Locations {
@@ -18,19 +19,28 @@ export enum Locations {
   blog = '/blog',
 }
 
-const renderHelmet = meta => (
-  <Helmet
-    title={meta.title}
-    meta={[
-      { name: 'description', content: meta.description },
-      { name: 'keywords', content: meta.keywords.join(',') },
-    ]}
-  >
-    <html lang="en" />
-  </Helmet>
-)
+const renderHelmet = (meta, title?: string) => {
+  const titleText = title ? `${title} | ${meta.title}` : meta.title
 
-const Layout: React.SFC<LayoutProps> = ({ children, hero, location }) => (
+  return (
+    <Helmet
+      title={titleText}
+      meta={[
+        { name: 'description', content: meta.description },
+        { name: 'keywords', content: meta.keywords.join(',') },
+      ]}
+    >
+      <html lang="en" />
+    </Helmet>
+  )
+}
+
+const Layout: React.SFC<LayoutProps> = ({
+  children,
+  hero,
+  location,
+  title,
+}) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -45,7 +55,7 @@ const Layout: React.SFC<LayoutProps> = ({ children, hero, location }) => (
     `}
     render={data => (
       <StickyContainer className={layoutStyle.container}>
-        {renderHelmet(data.site.siteMetadata)}
+        {renderHelmet(data.site.siteMetadata, title)}
         {hero && <Hero />}
         <Sticky relative>
           {({ style, isSticky }) => (
