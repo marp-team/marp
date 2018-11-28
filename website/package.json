@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "autoprefixer": "^9.3.1",
-    "gatsby": "^2.0.48",
+    "gatsby": "^2.0.56",
     "gatsby-plugin-react-helmet": "^3.0.2",
     "gatsby-plugin-sass": "^2.0.4",
     "gatsby-plugin-typescript": "^2.0.1",
