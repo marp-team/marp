@@ -24,23 +24,26 @@ export interface BlogExcerptedProps extends BlogBaseProps {
   excerpt: string
 }
 
-const GithubAuthor: React.FC<{ author: string; github: string }> = ({
+const GithubAuthor: React.FC<{ author: string; github?: string }> = ({
   author,
   github,
-}) => (
-  <a
-    className={style.github}
-    href={`https://github.com/${github}`}
-    target="_blank"
-  >
-    <img
-      alt={author}
-      className={style.githubAuthor}
-      src={`https://github.com/${github}.png`}
-    />
-    {author}
-  </a>
-)
+}) =>
+  github ? (
+    <a
+      className={style.github}
+      href={`https://github.com/${github}`}
+      target="_blank"
+    >
+      <img
+        alt={author}
+        className={style.githubAuthor}
+        src={`https://github.com/${github}.png`}
+      />
+      {author}
+    </a>
+  ) : (
+    <span className={style.github}>{author}</span>
+  )
 
 const BlogBase: React.FC<BlogBaseProps> = ({
   fields: { path },
@@ -53,7 +56,7 @@ const BlogBase: React.FC<BlogBaseProps> = ({
     </Link>
     <h2>{date}</h2>
     <h3>
-      {github ? <GithubAuthor author={author} github={github} /> : author}
+      <GithubAuthor author={author} github={github} />
     </h3>
     {children}
   </Contents>
