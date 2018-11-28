@@ -1,29 +1,41 @@
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import React from 'react'
+import { BlogExcerpted } from '../components/blog'
+import Contents from '../components/contents'
 import Layout from '../components/layout'
 
-const blog = ({ location, data }) => (
+const blog = ({
+  location,
+  data: {
+    allMarkdownRemark: { edges },
+  },
+}) => (
   <Layout location={location.pathname} title="Blog">
-    {data.allMarkdownRemark.edges.map(({ node }) => (
-      <span key={node.id}>
-        <h1>{node.frontmatter.title}</h1>
-      </span>
+    {edges.map(({ node }) => (
+      <BlogExcerpted {...node} key={node.id} />
     ))}
   </Layout>
 )
+
 export default blog
 
 export const pageQuery = graphql`
   query {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
-      limit: 1000
+      limit: 10
     ) {
       edges {
         node {
           id
-          frontmatter {
+          excerpt(pruneLength: 250)
+          fields {
             path
+          }
+          frontmatter {
+            author
+            date(formatString: "YYYY-MM-DD")
+            github
             title
           }
         }

@@ -1,0 +1,13 @@
+@import './common';
+
+.title {
+  &-link {
+    color: $brand-primary;
+    text-decoration: none;
+
+    &:hover {
+      color: $brand-dark;
+      transition: color 0.15s linear;
+    }
+  }
+}

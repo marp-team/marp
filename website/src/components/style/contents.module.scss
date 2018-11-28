@@ -1,0 +1,12 @@
+@import './common';
+
+.contents {
+  box-sizing: border-box;
+  margin: 40px auto;
+  padding: 0 40px;
+  max-width: 1200px;
+
+  &:empty {
+    display: none;
+  }
+}
