@@ -4,8 +4,13 @@ import { StickyContainer, Sticky } from 'react-sticky'
 import { StaticQuery, graphql } from 'gatsby'
 import Header from './header'
 import Hero from './hero'
-import style from './style/layout.module.scss'
+import layoutStyle from './style/layout.module.scss'
 import './style/layout.scss'
+
+export interface LayoutProps {
+  children: React.ReactNode
+  hero?: boolean
+}
 
 const renderHelmet = meta => (
   <Helmet
@@ -19,9 +24,7 @@ const renderHelmet = meta => (
   </Helmet>
 )
 
-let renderCount = 0
-
-const Layout: React.SFC = ({ children }) => (
+const Layout: React.SFC<LayoutProps> = ({ children, hero }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -35,12 +38,15 @@ const Layout: React.SFC = ({ children }) => (
       }
     `}
     render={data => (
-      <StickyContainer className={style.container}>
+      <StickyContainer className={layoutStyle.container}>
         {renderHelmet(data.site.siteMetadata)}
-        <Hero />
+        {hero && <Hero />}
         <Sticky relative>
-          {sticky => <Header style={sticky.style} stuck={sticky.isSticky} />}
+          {({ style, isSticky }) => (
+            <Header style={style} stuck={!hero || isSticky} />
+          )}
         </Sticky>
+        {children}
       </StickyContainer>
     )}
   />

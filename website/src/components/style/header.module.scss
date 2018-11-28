@@ -1,18 +1,18 @@
 @import './common';
 
 .header {
-  padding: 0 25px;
-  display: flex;
   align-items: center;
   background: $base-background;
+  border-bottom: 1px solid $base-background;
   box-sizing: border-box;
+  color: #444;
+  display: flex;
+  font-size: 1rem;
   height: $header-height;
   overflow: hidden;
-  color: #444;
-  font-size: 1rem;
-  z-index: 1;
-  border-bottom: 1px solid $base-background;
+  padding: 0 25px;
   transition: border-color 0.15s linear;
+  z-index: 1;
 
   > * {
     flex: 0 0 auto;
@@ -25,12 +25,15 @@
 
 .logo {
   display: block;
-  width: auto;
   height: 50px;
-  margin: 0 25px 0 0;
+  width: auto;
+
+  &-link {
+    margin: 0 25px 0 0;
+  }
 }
 
 .nav {
-  flex: 1 0 auto;
   display: flex;
+  flex: 1 0 auto;
 }

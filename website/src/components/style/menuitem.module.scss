@@ -1,13 +1,11 @@
 @import './common';
 
 .menuitem {
+  border-radius: 0;
+  box-shadow: none;
+  letter-spacing: 2px;
   margin: 0.25em 1em;
   padding: 0.4em 0;
-
-  box-shadow: none;
-  border-radius: 0;
-
-  letter-spacing: 2px;
   text-transform: uppercase;
 
   &:hover {

@@ -9,21 +9,21 @@
 }
 
 .lead {
-  width: 100%;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 .logo {
-  width: 50%;
-  max-height: 50%;
   display: inline-block;
+  max-height: 50%;
   object-fit: contain;
+  width: 50%;
 }
 
 .description {
-  margin: 20px 0 0 0;
   font-size: calc(12px + 0.75vw);
+  margin: 20px 0 0 0;
 }

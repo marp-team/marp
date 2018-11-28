@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../components/layout'
 
 const IndexPage = () => (
-  <Layout>
+  <Layout hero>
     <h1>Marp</h1>
   </Layout>
 )

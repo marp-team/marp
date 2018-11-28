@@ -11,7 +11,7 @@ export interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ stuck, ...props }) => (
   <header {...combineClass(props, style.header, stuck && style.stuck)}>
-    <a href="/" target="_top">
+    <a href="/" target="_top" className={style.logoLink}>
       <img alt="Marp" className={style.logo} src={logo} />
     </a>
     <nav className={style.nav}>
