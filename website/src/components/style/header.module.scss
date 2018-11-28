@@ -1,7 +1,7 @@
 @import './common';
 
 .header {
-  margin: 0 25px;
+  padding: 0 25px;
   display: flex;
   align-items: center;
   background: $base-background;
@@ -10,15 +10,23 @@
   overflow: hidden;
   color: #444;
   font-size: 1rem;
+  z-index: 1;
+  border-bottom: 1px solid $base-background;
+  transition: border-color 0.15s linear;
 
   > * {
     flex: 0 0 auto;
   }
+
+  &.stuck {
+    border-color: #eee;
+  }
 }
 
 .logo {
+  display: block;
   width: auto;
-  height: 50%;
+  height: 50px;
   margin: 0 25px 0 0;
 }
 

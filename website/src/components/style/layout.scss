@@ -12,15 +12,3 @@ body {
   overflow: hidden;
   height: 100%;
 }
-
-#___gatsby,
-#___gatsby > div {
-  position: relative;
-  box-sizing: border-box;
-  height: 100%;
-  min-height: 100%;
-}
-
-#___gatsby {
-  overflow: auto;
-}

@@ -1,12 +1,19 @@
 import React from 'react'
-import Button from './button'
 import Menuitem from './menuitem'
 import logo from './assets/marp-logo.svg'
 import style from './style/header.module.scss'
+import { combineClass } from './utils'
 
-const Header: React.FC = () => (
-  <header className={style.header}>
-    <img alt="Marp" className={style.logo} src={logo} />
+export interface HeaderProps {
+  stuck: boolean
+  [delegated: string]: any
+}
+
+const Header: React.FC<HeaderProps> = ({ stuck, ...props }) => (
+  <header {...combineClass(props, style.header, stuck && style.stuck)}>
+    <a href="/" target="_top">
+      <img alt="Marp" className={style.logo} src={logo} />
+    </a>
     <nav className={style.nav}>
       <Menuitem href="#">Features</Menuitem>
       <Menuitem href="#">Blog</Menuitem>
