@@ -27,7 +27,7 @@
   &:active,
   &:focus {
     .menuitem-container {
-      box-shadow: inset 0 -0.2em $brand-dark;
+      box-shadow: inset 0 -0.2em mix(mix(#000, #fff, 15%), $brand-primary);
       transition: none;
     }
   }
