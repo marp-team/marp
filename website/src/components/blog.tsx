@@ -28,8 +28,16 @@ const GithubAuthor: React.FC<{ author: string; github: string }> = ({
   author,
   github,
 }) => (
-  <a href={`https://github.com/${github}`} target="_blank">
-    <img src={`https://github.com/${github}.png`} alt={author} />
+  <a
+    className={style.github}
+    href={`https://github.com/${github}`}
+    target="_blank"
+  >
+    <img
+      alt={author}
+      className={style.githubAuthor}
+      src={`https://github.com/${github}.png`}
+    />
     {author}
   </a>
 )
@@ -53,6 +61,7 @@ const BlogBase: React.FC<BlogBaseProps> = ({
 
 const Blog: React.FC<BlogProps> = ({ html, ...props }) => (
   <BlogBase {...props}>
+    <hr />
     <div dangerouslySetInnerHTML={{ __html: html }} />
   </BlogBase>
 )
