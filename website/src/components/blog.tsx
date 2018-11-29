@@ -39,6 +39,7 @@ const Meta: React.FC<{ author: string; date: string; github?: string }> = ({
         <a
           className={style.metaGithub}
           href={`https://github.com/${github}`}
+          rel="noopener"
           target="_blank"
         >
           <img
@@ -61,21 +62,22 @@ const BlogBase: React.FC<BlogBaseProps> = ({
   frontmatter: { author, date, github, title },
   children,
 }) => (
-  <Contents>
-    <Link className={style.titleLink} to={path}>
-      <h1 className={style.title}>{title}</h1>
-    </Link>
-    <p>
-      <Meta author={author} github={github} date={date} />
-    </p>
-    {children}
-  </Contents>
+  <>
+    <Contents>
+      <Link className={style.titleLink} to={path}>
+        <h1 className={style.title}>{title}</h1>
+      </Link>
+      <p>
+        <Meta author={author} github={github} date={date} />
+      </p>
+      {children}
+    </Contents>
+  </>
 )
 
 const Blog: React.FC<BlogProps> = ({ html, ...props }) => (
   <BlogBase {...props}>
-    <hr />
-    <div dangerouslySetInnerHTML={{ __html: html }} />
+    <div className={style.blog} dangerouslySetInnerHTML={{ __html: html }} />
   </BlogBase>
 )
 
@@ -84,7 +86,11 @@ export default Blog
 export const BlogExcerpted: React.FC<BlogExcerptedProps> = ({
   excerpt,
   ...props
-}) => <BlogBase {...props}>{excerpt}</BlogBase>
+}) => (
+  <BlogBase {...props}>
+    <div className={`${style.blog} ${style.excerpt}`}>{excerpt}</div>
+  </BlogBase>
+)
 
 export const query = graphql`
   fragment BlogBase on MarkdownRemark {

@@ -21,7 +21,11 @@ const Header: React.FC<HeaderProps> = ({ stuck, location, ...props }) => (
       <Menuitem to="/blog" active={location.startsWith(Locations.blog)}>
         Blog
       </Menuitem>
-      <Menuitem href="https://github.com/marp-team/marp/" target="_blank">
+      <Menuitem
+        href="https://github.com/marp-team/marp/"
+        rel="noopener"
+        target="_blank"
+      >
         GitHub
       </Menuitem>
     </nav>
