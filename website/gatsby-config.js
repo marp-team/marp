@@ -29,6 +29,7 @@ module.exports = {
     {
       resolve: 'gatsby-transformer-remark',
       options: {
+        excerpt_separator: '<!-- more -->',
         plugins: [
           'gatsby-remark-autolink-headers',
           {

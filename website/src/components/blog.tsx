@@ -1,5 +1,6 @@
 import { Link, graphql } from 'gatsby'
 import React from 'react'
+import Button from './button'
 import Contents from './contents'
 import style from './style/blog.module.scss'
 
@@ -89,6 +90,11 @@ export const BlogExcerpted: React.FC<BlogExcerptedProps> = ({
 }) => (
   <BlogBase {...props}>
     <div className={`${style.blog} ${style.excerpt}`}>{excerpt}</div>
+    <p>
+      <Button color="primary" outline to={props.fields.path}>
+        Read more
+      </Button>
+    </p>
   </BlogBase>
 )
 
@@ -112,6 +118,6 @@ export const query = graphql`
 
   fragment BlogExcerpted on MarkdownRemark {
     ...BlogBase
-    excerpt(pruneLength: 250)
+    excerpt(pruneLength: 210)
   }
 `
