@@ -12,30 +12,40 @@
   }
 }
 
-.github {
-  align-items: center;
-  color: #888;
-  display: inline-flex;
-  font-size: 1rem;
-  text-decoration: none;
-
-  &-author {
-    background: #f0f0f0;
-    border-radius: 1.75em;
-    color: transparent;
-    height: 1.75em;
-    margin: 0 0.25em 0 0;
-    overflow: hidden;
-    text-indent: 1.75em;
-    white-space: nowrap;
-    width: 1.75em;
+.meta {
+  &,
+  &-github {
+    align-items: center;
+    color: #888;
+    display: inline-flex;
+    flex-wrap: wrap;
+    vertical-align: middle;
   }
-}
 
-a.github:hover {
-  color: #666;
+  &-github {
+    color: currentColor;
+    text-decoration: none;
 
-  &:active {
-    color: #333;
+    &-icon {
+      background: #f0f0f0;
+      border-radius: 1.75em;
+      color: transparent;
+      display: block;
+      height: 1.75em;
+      overflow: hidden;
+      text-indent: 1.75em;
+      white-space: nowrap;
+      width: 1.75em;
+    }
+
+    @at-root {
+      a#{&}:hover {
+        color: #666;
+
+        &:active {
+          color: #333;
+        }
+      }
+    }
   }
 }

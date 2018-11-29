@@ -14,16 +14,7 @@ export default BlogTemplate
 export const pageQuery = graphql`
   query($path: String!) {
     markdownRemark(fields: { path: { eq: $path } }) {
-      html
-      fields {
-        path
-      }
-      frontmatter {
-        author
-        date(formatString: "YYYY-MM-DD")
-        github
-        title
-      }
+      ...Blog
     }
   }
 `

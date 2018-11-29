@@ -1,4 +1,4 @@
-import { Link } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import React from 'react'
 import Contents from './contents'
 import style from './style/blog.module.scss'
@@ -9,7 +9,7 @@ interface BlogBaseProps {
   }
   frontmatter: {
     author: string
-    date: Date
+    date: string
     github?: string
     title: string
   }
@@ -24,26 +24,37 @@ export interface BlogExcerptedProps extends BlogBaseProps {
   excerpt: string
 }
 
-const GithubAuthor: React.FC<{ author: string; github?: string }> = ({
+const Meta: React.FC<{ author: string; date: string; github?: string }> = ({
   author,
+  date,
   github,
-}) =>
-  github ? (
-    <a
-      className={style.github}
-      href={`https://github.com/${github}`}
-      target="_blank"
-    >
-      <img
-        alt={author}
-        className={style.githubAuthor}
-        src={`https://github.com/${github}.png`}
-      />
-      {author}
-    </a>
-  ) : (
-    <span className={style.github}>{author}</span>
-  )
+}) => (
+  <span className={style.meta}>
+    <time className={style.metaTime} dateTime={date}>
+      Posted {date}
+    </time>
+    &nbsp;by&nbsp;
+    <span className={style.metaAuthor}>
+      {github ? (
+        <a
+          className={style.metaGithub}
+          href={`https://github.com/${github}`}
+          target="_blank"
+        >
+          <img
+            alt={author}
+            className={style.metaGithubIcon}
+            src={`https://github.com/${github}.png`}
+          />
+          &nbsp;
+          <span className={style.metaGithubAuthor}>{author}</span>
+        </a>
+      ) : (
+        author
+      )}
+    </span>
+  </span>
+)
 
 const BlogBase: React.FC<BlogBaseProps> = ({
   fields: { path },
@@ -54,10 +65,9 @@ const BlogBase: React.FC<BlogBaseProps> = ({
     <Link className={style.titleLink} to={path}>
       <h1 className={style.title}>{title}</h1>
     </Link>
-    <h2>{date}</h2>
-    <h3>
-      <GithubAuthor author={author} github={github} />
-    </h3>
+    <p>
+      <Meta author={author} github={github} date={date} />
+    </p>
     {children}
   </Contents>
 )
@@ -75,3 +85,27 @@ export const BlogExcerpted: React.FC<BlogExcerptedProps> = ({
   excerpt,
   ...props
 }) => <BlogBase {...props}>{excerpt}</BlogBase>
+
+export const query = graphql`
+  fragment BlogBase on MarkdownRemark {
+    fields {
+      path
+    }
+    frontmatter {
+      author
+      date(formatString: "MMMM DD, YYYY")
+      github
+      title
+    }
+  }
+
+  fragment Blog on MarkdownRemark {
+    ...BlogBase
+    html
+  }
+
+  fragment BlogExcerpted on MarkdownRemark {
+    ...BlogBase
+    excerpt(pruneLength: 250)
+  }
+`

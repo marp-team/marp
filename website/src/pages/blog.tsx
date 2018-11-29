@@ -27,17 +27,8 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
+          ...BlogExcerpted
           id
-          excerpt(pruneLength: 250)
-          fields {
-            path
-          }
-          frontmatter {
-            author
-            date(formatString: "YYYY-MM-DD")
-            github
-            title
-          }
         }
       }
     }
