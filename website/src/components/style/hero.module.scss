@@ -1,6 +1,7 @@
 @import './common';
 
 .hero {
+  margin: 0;
   background: $hero-background;
   display: flex;
   height: calc(100vh - #{$header-height});
