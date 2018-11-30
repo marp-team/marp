@@ -5,6 +5,8 @@ $brand-dark: #02669d;
 
 // Base
 $base-background: #fff;
+$base-color: #333;
+$base-code-background: mix($base-color, $base-background, 3%);
 
 // Hero
 $hero-background: linear-gradient(to bottom, $base-background, #f9f9f9);

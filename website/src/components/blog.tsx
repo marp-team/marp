@@ -78,7 +78,10 @@ const BlogBase: React.FC<BlogBaseProps> = ({
 
 const Blog: React.FC<BlogProps> = ({ html, ...props }) => (
   <BlogBase {...props}>
-    <div className={style.blog} dangerouslySetInnerHTML={{ __html: html }} />
+    <section
+      className={style.blog}
+      dangerouslySetInnerHTML={{ __html: html }}
+    />
   </BlogBase>
 )
 
@@ -89,7 +92,7 @@ export const BlogExcerpted: React.FC<BlogExcerptedProps> = ({
   ...props
 }) => (
   <BlogBase {...props}>
-    <div className={`${style.blog} ${style.excerpt}`}>{excerpt}</div>
+    <section className={`${style.blog} ${style.excerpt}`}>{excerpt}</section>
     <p>
       <Button color="primary" outline to={props.fields.path}>
         Read more

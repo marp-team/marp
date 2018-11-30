@@ -1,11 +1,12 @@
 @import '~normalize.css';
-@import '~prismjs/themes/prism';
+@import './prism';
 @import './common';
 @import './fonts';
 
 html,
 body {
   background: $base-background;
+  color: $base-color;
   font-family: 'Quicksand', 'Avenir', 'Century Gothic', sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   font-size: 18px;
@@ -13,4 +14,136 @@ body {
   height: 100%;
   letter-spacing: 0.04em;
   overflow: hidden;
+}
+
+section {
+  margin: 2rem 0;
+}
+
+hr {
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid #ccc;
+  height: 0;
+  margin: 2rem 0;
+  overflow: hidden;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 2rem 0 1rem 0;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.7em;
+}
+
+h3 {
+  font-size: 1.4em;
+}
+
+h4 {
+  font-size: 1.25em;
+}
+
+h5 {
+  font-size: 1.1em;
+}
+
+h6 {
+  font-size: 1em;
+}
+
+a {
+  color: $brand-primary;
+  text-decoration: none;
+
+  &:hover {
+    color: $brand-dark;
+    transition: color 0.15s linear;
+
+    &:active {
+      color: mix($base-color, $brand-dark);
+      transition: none;
+    }
+  }
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+ul,
+ol,
+pre,
+blockquote {
+  margin: 1.5rem 0;
+}
+
+ul,
+ol {
+  padding: 0 0 0 1.75em;
+
+  li {
+    margin: 0.5rem 0;
+  }
+
+  ul,
+  ol {
+    margin: 1rem 0;
+  }
+}
+
+code,
+pre {
+  background-color: $base-code-background;
+  border-radius: 2px;
+}
+
+code {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.85em;
+  margin: 0;
+  padding: 0.15em 0.5em;
+}
+
+pre {
+  line-height: 1.1em;
+  overflow-x: auto;
+  padding: 1em;
+  white-space: pre;
+  word-wrap: normal;
+
+  > code {
+    background-color: transparent;
+    border-radius: 0;
+    padding: 0;
+  }
+}
+
+blockquote {
+  border-left: 2px solid $brand-secondary;
+  padding: 0 0 0 1em;
+
+  & & {
+    border-color: mix($base-background, $brand-secondary);
+  }
+}
+
+img {
+  border-style: none;
 }
