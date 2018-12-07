@@ -1,7 +1,7 @@
 @import '~normalize.css';
-@import './prism';
 @import './common';
 @import './fonts';
+@import './prism';
 
 html,
 body {
@@ -23,7 +23,7 @@ section {
 hr {
   background: transparent;
   border: 0;
-  border-bottom: 2px solid #ccc;
+  border-bottom: 2px solid mix($base-background, $base-color, 75%);
   height: 0;
   margin: 2rem 0;
   overflow: hidden;
@@ -112,25 +112,30 @@ code,
 pre {
   background-color: $base-code-background;
   border-radius: 2px;
+  box-shadow: 0 1px 4px rgba(#000, 0.15);
+  letter-spacing: 0;
 }
 
 code {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Source Code Pro', 'Courier New', Courier, monospace;
   font-size: 0.85em;
   margin: 0;
   padding: 0.15em 0.5em;
 }
 
 pre {
+  box-sizing: border-box;
   line-height: 1.1em;
   overflow-x: auto;
-  padding: 1em;
   white-space: pre;
   word-wrap: normal;
 
   > code {
     background-color: transparent;
     border-radius: 0;
+    box-shadow: none;
+    display: inline-block;
+    margin: 1em;
     padding: 0;
   }
 }
@@ -141,6 +146,31 @@ blockquote {
 
   & & {
     border-color: mix($base-background, $brand-secondary);
+  }
+}
+
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > td,
+      > th {
+        border-bottom: 1px solid mix($base-background, $base-color, 75%);
+        padding: 0.4em;
+      }
+    }
+  }
+
+  > thead > tr,
+  > tbody > tr:last-child {
+    > td,
+    > th {
+      border-bottom-width: 2px;
+    }
   }
 }
 
