@@ -35,6 +35,10 @@ const renderHelmet = (meta, title?: string) => {
   )
 }
 
+class StickyWrapper extends React.Component {
+  render = () => this.props.children
+}
+
 const Layout: React.SFC<LayoutProps> = ({
   children,
   hero,
@@ -59,11 +63,13 @@ const Layout: React.SFC<LayoutProps> = ({
         {hero && <Hero />}
         <Sticky relative>
           {({ style, isSticky }) => (
-            <Header
-              location={location}
-              stuck={!hero || isSticky}
-              style={style}
-            />
+            <StickyWrapper>
+              <Header
+                location={location}
+                stuck={!hero || isSticky}
+                style={style}
+              />
+            </StickyWrapper>
           )}
         </Sticky>
         {children}
