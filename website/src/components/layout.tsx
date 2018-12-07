@@ -57,24 +57,33 @@ const Layout: React.SFC<LayoutProps> = ({
         }
       }
     `}
-    render={data => (
-      <StickyContainer className={layoutStyle.container}>
-        {renderHelmet(data.site.siteMetadata, title)}
-        {hero && <Hero />}
-        <Sticky relative>
-          {({ style, isSticky }) => (
-            <StickyWrapper>
-              <Header
-                location={location}
-                stuck={!hero || isSticky}
-                style={style}
-              />
-            </StickyWrapper>
-          )}
-        </Sticky>
-        {children}
-      </StickyContainer>
-    )}
+    render={data => {
+      let container
+      setTimeout(() => container.getParent().focus(), 0)
+
+      return (
+        <StickyContainer
+          className={layoutStyle.container}
+          ref={elm => (container = elm)}
+          tabIndex="-1"
+        >
+          {renderHelmet(data.site.siteMetadata, title)}
+          {hero && <Hero />}
+          <Sticky relative>
+            {({ style, isSticky }) => (
+              <StickyWrapper>
+                <Header
+                  location={location}
+                  stuck={!hero || isSticky}
+                  style={style}
+                />
+              </StickyWrapper>
+            )}
+          </Sticky>
+          {children}
+        </StickyContainer>
+      )
+    }}
   />
 )
 
