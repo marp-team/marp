@@ -78,4 +78,4 @@ const Layout: React.FC<LayoutProps> = ({ children, hero, location, title }) => (
   />
 )
 
-export default Layout
+export default Layout as React.FC<Partial<LayoutProps>>

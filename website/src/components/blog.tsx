@@ -7,6 +7,7 @@ import style from './style/blog.module.scss'
 interface BlogBaseProps {
   fields: {
     path: string
+    reserved: boolean
   }
   frontmatter: {
     author: string
@@ -59,7 +60,7 @@ const Meta: React.FC<{ author: string; date: string; github?: string }> = ({
 )
 
 const BlogBase: React.FC<BlogBaseProps> = ({
-  fields: { path },
+  fields: { path, reserved },
   frontmatter: { author, date, github, title },
   children,
 }) => (
@@ -105,6 +106,7 @@ export const query = graphql`
   fragment BlogBase on MarkdownRemark {
     fields {
       path
+      reserved
     }
     frontmatter {
       author

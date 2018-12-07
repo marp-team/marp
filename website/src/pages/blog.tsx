@@ -1,7 +1,6 @@
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import React from 'react'
 import { BlogExcerpted } from '../components/blog'
-import Contents from '../components/contents'
 import Layout from '../components/layout'
 
 const blog = ({
@@ -34,3 +33,20 @@ export const pageQuery = graphql`
     }
   }
 `
+
+/*
+  query($reserved: [Boolean]!) {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      limit: 10
+      filter: { fields: { reserved: { in: $reserved } } }
+    ) {
+      edges {
+        node {
+          ...BlogExcerpted
+          id
+        }
+      }
+    }
+  }
+*/

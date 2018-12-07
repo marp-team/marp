@@ -33,9 +33,11 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
   if (node.internal.type === `MarkdownRemark`) {
+    const date = new Date(node.frontmatter.date)
     const slug = path.basename(createFilePath({ node, getNode }))
 
     createNodeField({ node, name: 'slug', value: slug })
     createNodeField({ node, name: 'path', value: `/blog/${slug}` })
+    createNodeField({ node, name: 'reserved', value: date > new Date() })
   }
 }
