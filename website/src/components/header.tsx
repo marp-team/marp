@@ -18,7 +18,10 @@ const Header: React.FC<HeaderProps> = ({ stuck, location, ...props }) => (
       <img alt="Marp" className={style.logo} src={logo} />
     </Link>
     <nav className={style.nav}>
-      <Menuitem to="/blog" active={location.startsWith(Locations.blog)}>
+      <Menuitem
+        to="/blog"
+        active={!!location && location.startsWith(Locations.blog)}
+      >
         Blog
       </Menuitem>
       <Menuitem

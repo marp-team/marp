@@ -5,6 +5,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import Header from './header'
 import Hero from './hero'
 import layoutStyle from './style/layout.module.scss'
+import { layoutFocusTarget } from '../../symbol'
 import './style/layout.scss'
 
 export interface LayoutProps {
@@ -35,16 +36,11 @@ const renderHelmet = (meta, title?: string) => {
   )
 }
 
-class StickyWrapper extends React.Component {
+const StickyWrapper = class extends React.Component {
   render = () => this.props.children
 }
 
-const Layout: React.SFC<LayoutProps> = ({
-  children,
-  hero,
-  location,
-  title,
-}) => (
+const Layout: React.FC<LayoutProps> = ({ children, hero, location, title }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -57,33 +53,28 @@ const Layout: React.SFC<LayoutProps> = ({
         }
       }
     `}
-    render={data => {
-      let container
-      setTimeout(() => container.getParent().focus(), 0)
-
-      return (
-        <StickyContainer
-          className={layoutStyle.container}
-          ref={elm => (container = elm)}
-          tabIndex="-1"
-        >
-          {renderHelmet(data.site.siteMetadata, title)}
-          {hero && <Hero />}
-          <Sticky relative>
-            {({ style, isSticky }) => (
-              <StickyWrapper>
-                <Header
-                  location={location}
-                  stuck={!hero || isSticky}
-                  style={style}
-                />
-              </StickyWrapper>
-            )}
-          </Sticky>
-          {children}
-        </StickyContainer>
-      )
-    }}
+    render={data => (
+      <StickyContainer
+        className={layoutStyle.container}
+        ref={cont => (window[layoutFocusTarget] = cont && cont.getParent())}
+        tabIndex="-1"
+      >
+        {renderHelmet(data.site.siteMetadata, title)}
+        {hero && <Hero />}
+        <Sticky relative>
+          {({ style, isSticky }) => (
+            <StickyWrapper>
+              <Header
+                location={location}
+                stuck={!hero || isSticky}
+                style={style}
+              />
+            </StickyWrapper>
+          )}
+        </Sticky>
+        {children}
+      </StickyContainer>
+    )}
   />
 )
 
