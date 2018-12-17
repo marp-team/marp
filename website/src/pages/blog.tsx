@@ -10,9 +10,14 @@ const blog = ({
   },
 }) => (
   <Layout location={location.pathname} title="Blog">
-    {edges.map(({ node }) => (
-      <BlogExcerpted {...node} key={node.id} />
-    ))}
+    {edges
+      .map(
+        ({ node }) =>
+          (process.env.NODE_ENV === 'development' || !node.fields.reserved) && (
+            <BlogExcerpted {...node} key={node.id} />
+          )
+      )
+      .filter(n => n)}
   </Layout>
 )
 
@@ -22,7 +27,7 @@ export const pageQuery = graphql`
   query {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
-      limit: 10
+      limit: 30
     ) {
       edges {
         node {
@@ -33,20 +38,3 @@ export const pageQuery = graphql`
     }
   }
 `
-
-/*
-  query($reserved: [Boolean]!) {
-    allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] }
-      limit: 10
-      filter: { fields: { reserved: { in: $reserved } } }
-    ) {
-      edges {
-        node {
-          ...BlogExcerpted
-          id
-        }
-      }
-    }
-  }
-*/
