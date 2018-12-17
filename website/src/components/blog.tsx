@@ -2,6 +2,7 @@ import { Link, graphql } from 'gatsby'
 import React from 'react'
 import Button from './button'
 import Contents from './contents'
+import { combineClass } from './utils'
 import style from './style/blog.module.scss'
 
 interface BlogBaseProps {
@@ -26,11 +27,12 @@ export interface BlogExcerptedProps extends BlogBaseProps {
   excerpt: string
 }
 
-const Meta: React.FC<{ author: string; date: string; github?: string }> = ({
-  author,
-  date,
-  github,
-}) => (
+const Meta: React.FC<{
+  author: string
+  date: string
+  github?: string
+  reserved: boolean
+}> = ({ author, date, github, reserved }) => (
   <span className={style.meta}>
     <time className={style.metaTime} dateTime={date}>
       Posted {date}
@@ -56,6 +58,11 @@ const Meta: React.FC<{ author: string; date: string; github?: string }> = ({
         author
       )}
     </span>
+    {reserved && (
+      <>
+        &nbsp;<span className={style.metaReserved}>Reserved</span>
+      </>
+    )}
   </span>
 )
 
@@ -63,18 +70,17 @@ const BlogBase: React.FC<BlogBaseProps> = ({
   fields: { path, reserved },
   frontmatter: { author, date, github, title },
   children,
+  ...props
 }) => (
-  <>
-    <Contents>
-      <Link className={style.titleLink} to={path}>
-        <h1 className={style.title}>{title}</h1>
-      </Link>
-      <p>
-        <Meta author={author} github={github} date={date} />
-      </p>
-      {children}
-    </Contents>
-  </>
+  <Contents {...props}>
+    <Link className={style.titleLink} to={path}>
+      <h1 className={style.title}>{title}</h1>
+    </Link>
+    <p>
+      <Meta author={author} github={github} date={date} reserved={reserved} />
+    </p>
+    {children}
+  </Contents>
 )
 
 const Blog: React.FC<BlogProps> = ({ html, ...props }) => (
@@ -92,8 +98,14 @@ export const BlogExcerpted: React.FC<BlogExcerptedProps> = ({
   excerpt,
   ...props
 }) => (
-  <BlogBase {...props}>
-    <section className={`${style.blog} ${style.excerpt}`}>{excerpt}</section>
+  <BlogBase
+    {...combineClass(
+      props,
+      style.excerpt,
+      props.fields.reserved && style.reserved
+    )}
+  >
+    <section className={style.blog}>{excerpt}</section>
     <p>
       <Button color="primary" outline to={props.fields.path}>
         Read more

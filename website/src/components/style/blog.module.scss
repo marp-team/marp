@@ -1,5 +1,11 @@
 @import './common';
 
+.excerpt {
+  &.reserved {
+    opacity: 0.5;
+  }
+}
+
 .meta {
   &,
   &-github {
@@ -35,5 +41,14 @@
         }
       }
     }
+  }
+
+  &-reserved {
+    border-radius: 0.375em;
+    border: 1px solid currentColor;
+    box-sizing: border-box;
+    color: #930;
+    font-size: 0.75em;
+    padding: 0.375em;
   }
 }
