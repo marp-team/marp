@@ -2,7 +2,7 @@
 author: Yuki Hattori
 date: 2018-12-25
 github: yhatt
-title: [WIP] The story of Marp Next
+title: '[WIP] The story of Marp Next'
 ---
 
 ![Marp](marp.png)
