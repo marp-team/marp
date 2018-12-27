@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "gatsby build",
+    "build": "rimraf .cache public && gatsby build",
     "check-ts": "tsc",
     "start": "gatsby develop"
   },
@@ -28,5 +28,8 @@
     "react-dom": "^16.6.3",
     "react-helmet": "^5.2.0",
     "react-sticky": "^6.0.3"
+  },
+  "devDependencies": {
+    "rimraf": "^2.6.2"
   }
 }
