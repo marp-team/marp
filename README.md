@@ -19,7 +19,7 @@
 
 |                       Name | Description                                                                                                                         | Release                                                                                                                    |
 | -------------------------: | :---------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------- |
-|    [@marp-team/marp][marp] | 🚪 The entrance repository of Marp family. In future we would host website.                                                         |                                                                                                                            |
+|    [@marp-team/marp][marp] | The entrance repository of Marp family. It has our website hosted on [marp.app].                                                    |                                                                                                                            |
 |       **[Marpit][marpit]** | The skinny framework for creating slide deck from Markdown. ([marpit.marp.app])                                                     | [![@marp-team/marpit](https://img.shields.io/npm/v/@marp-team/marpit.svg?style=flat-square&logo=npm)][marpit-npm]          |
 | **[Marp Core][marp-core]** | The core of Marp converter based on [Marpit][marpit]. It has the practical Markdown syntax, advanced features, and official themes. | [![@marp-team/marp-core](https://img.shields.io/npm/v/@marp-team/marp-core.svg?style=flat-square&logo=npm)][marp-core-npm] |
 |   **[Marp CLI][marp-cli]** | A CLI interface for [Marp Core][marp-core] and any Marpit based framework. It can convert Markdown to static HTML / CSS and PDF.    | [![@marp-team/marp-cli](https://img.shields.io/npm/v/@marp-team/marp-cli.svg?style=flat-square&logo=npm)][marp-cli-npm]    |
@@ -34,6 +34,7 @@
 [marp-web]: https://github.com/marp-team/marp-web
 [pwa]: https://en.wikipedia.org/wiki/Progressive_Web_Apps
 [electron]: https://electronjs.org/
+[marp.app]: https://marp.app/
 [marpit.marp.app]: https://marpit.marp.app/
 [marpit-npm]: https://www.npmjs.com/package/@marp-team/marpit
 [marp-core-npm]: https://www.npmjs.com/package/@marp-team/marp-core
