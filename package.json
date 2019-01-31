@@ -22,10 +22,10 @@
   ],
   "scripts": {
     "format": "prettier \"**/*.{css,html,js,json,jsx,md,scss,ts,tsx,yaml,yml}\"",
-    "format:check": "yarn -s --mutex file format -l"
+    "format:check": "yarn -s --mutex file format -c"
   },
   "devDependencies": {
-    "prettier": "^1.15.3",
-    "typescript": "^3.2.2"
+    "prettier": "^1.16.2",
+    "typescript": "^3.2.4"
   }
 }
