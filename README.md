@@ -30,19 +30,19 @@ This repo (**[@marp-team/marp][marp]**) is an entrance to Marp family. In the fu
 
 ### Apps
 
-|                           Name | Description                                                                             | Release                                                     |
-| -----------------------------: | :-------------------------------------------------------------------------------------- | :---------------------------------------------------------- |
-|       **[Marp CLI][marp-cli]** | [Marp Core][marp-core] / [Marpit]'s CLI interface to convert into HTML, PDF, and image. | [![@marp-team/marp-cli][badge-marp-cli]][marp-cli-npm]      |
-|       **[Marp Web][marp-web]** | The main interface of Marp based on [PWA] and [Preact] framework.                       | [![tech demo][badge-marp-web]][marp-web-site]               |
-|                   Marp Desktop | The desktop client for [Marp Web][marp-web-site] for replacing [yhatt/marp].            | ![PLANNED][badge-planned]                                   |
-| **[Marp VSCode][marp-vscode]** | A [VS Code][vscode] extension to preview the slide deck written in Marp Markdown.       | [![VS Marketplace][badge-marp-vscode]][marp-vscode-release] |
+|                     Name | Description                                                                             | Release                                                |
+| -----------------------: | :-------------------------------------------------------------------------------------- | :----------------------------------------------------- |
+| **[Marp CLI][marp-cli]** | [Marp Core][marp-core] / [Marpit]'s CLI interface to convert into HTML, PDF, and image. | [![@marp-team/marp-cli][badge-marp-cli]][marp-cli-npm] |
+| **[Marp Web][marp-web]** | The main interface of Marp based on [PWA] and [Preact] framework.                       | [![tech demo][badge-marp-web]][marp-web-site]          |
+|             Marp Desktop | The desktop client for [Marp Web][marp-web-site] for replacing [yhatt/marp].            | ![PLANNED][badge-planned]                              |
 
 ### Integrations
 
-|       Name | Description                          | Release                                            |
-| ---------: | :----------------------------------- | :------------------------------------------------- |
-| Marp React | Marp renderer component for [React]. | [![badge-wip]](https://kkryjmyy75.codesandbox.io/) |
-|   Marp Vue | Marp renderer component for [Vue].   | [![badge-wip]](https://2x994l3roj.codesandbox.io/) |
+|                           Name | Description                                                                       | Release                                                     |
+| -----------------------------: | :-------------------------------------------------------------------------------- | :---------------------------------------------------------- |
+| **[Marp VSCode][marp-vscode]** | A [VS Code][vscode] extension to preview the slide deck written in Marp Markdown. | [![VS Marketplace][badge-marp-vscode]][marp-vscode-release] |
+|                     Marp React | Marp renderer component for [React].                                              | [![badge-wip]](https://kkryjmyy75.codesandbox.io/)          |
+|                       Marp Vue | Marp renderer component for [Vue].                                                | [![badge-wip]](https://2x994l3roj.codesandbox.io/)          |
 
 [yhatt/marp]: https://github.com/yhatt/marp
 [marp]: https://github.com/marp-team/marp
