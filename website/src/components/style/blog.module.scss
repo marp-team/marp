@@ -1,5 +1,21 @@
 @import './common';
 
+.blog {
+  font-weight: 300;
+  font-family: $font-family;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  b,
+  strong {
+    font-weight: 600;
+  }
+}
+
 .excerpt {
   &.reserved {
     opacity: 0.5;
