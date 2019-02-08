@@ -7,4 +7,9 @@
   position: absolute;
   right: 0;
   top: 0;
+  -webkit-tap-highlight-color: transparent;
+
+  > * {
+    -webkit-tap-highlight-color: initial;
+  }
 }
