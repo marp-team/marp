@@ -7,6 +7,8 @@
   position: absolute;
   right: 0;
   top: 0;
+
+  -webkit-overflow-scrolling: auto;
   -webkit-tap-highlight-color: transparent;
 
   > * {
