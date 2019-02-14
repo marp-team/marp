@@ -7,7 +7,7 @@ title: The story of Marp Next
 
 <!--![Marp](marp.png)-->
 
-The first version of [Marp](https://yhatt.github.io/marp/) was released at almost 3 years ago. At first, it was started from a simple tool for personal usage called "mdSlide". And now, Marp has been used by a lot of users who would recognize the real value of the presentation writer. Marp is amassed over [7,500 stars](https://github.com/yhatt/marp/stargazers) until now.
+The first version of [Marp](https://yhatt.github.io/marp/) was released at almost 3 years ago. At first, it was started from a simple tool for personal usage called "mdSlide". And now, Marp has been used by a lot of users who would recognize the real value of the presentation writer. Marp is amassed around [7,500 stars](https://github.com/yhatt/marp/stargazers) until now.
 
 However, our headache came from lacked maintainability to develop. We had received so many requests to the old Marp app, and it has to evolve to keep providing the best writing environment of presentation deck.
 
@@ -16,6 +16,8 @@ Today, I'm so excited to introduce the story of Marp Next! The full-rewritten Ma
 <!-- more -->
 
 # Marp ecosystem
+
+Marp Next is based on two core components: **[Marpit]** framework and **[Marp Core]**.
 
 ## [Marpit]
 
@@ -61,6 +63,31 @@ Currently, this feature has implemented as experimental feature because of the s
 
 ## Marp Core
 
+**[Marp Core]** is a base converter for our projects extended from Marpit.
+
+Marpit only has bare essential features, so it might have not enough to start writing your deck. Marp Core provides the practical syntax, additional features, and built-in themes. In short, it is a battery-included Marpit.
+
+Many of the features are based on the old desktop app, and have improved to be suitable to Marpit. Of course, we added the new features for creating more beautiful deck.
+
+[marp core]: https://github.com/marp-team/marp-core
+
+- Built-in themes (Default, Gaia, and _new_ UNCOVER theme)
+- Included Emoji support 😁
+- KaTeX Math typesetting
+- Fitting header via `<!-- fit -->` annotation (_new_)
+- Auto scaling for fence, code, and math block (_new_)
+
+# Applications
+
 ## Marp CLI
+
+Marp CLI is a CLI interface of Marpit and Marp Core converter. It is also a Swiss-Army knife for Marp slide deck.
+
+- Export to HTML, PDF, and image
+- Watch the change of Markdown
+- Open preview window for presentation
+- Full-customizable engine and theme
+
+Marp had a text editor originally, but you might think that want to write the slide deck with your favorite editor. If you use Vim, you would feel uncomfortable not to be usable Vim style key-binding. From now on, use Marp CLI together with original Vim!
 
 ## Marp Web
