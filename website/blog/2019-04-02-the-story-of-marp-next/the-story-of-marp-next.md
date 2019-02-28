@@ -1,15 +1,15 @@
 ---
 author: Yuki Hattori
-date: 2019-03-01
+date: 2019-04-02
 github: yhatt
 title: The story of Marp Next
 ---
 
 <!--![Marp](marp.png)-->
 
-The first version of [Marp](https://yhatt.github.io/marp/) was released at almost 3 years ago. At first, it was started from a simple tool for personal usage called "mdSlide". And now, Marp has been used by a lot of users who would recognize the real value of the presentation writer. Marp is amassed over [7,700 stars](https://github.com/yhatt/marp/stargazers) until now.
+The first version of [Marp](https://yhatt.github.io/marp/) was released at almost 3 years ago. At first, it was started from a simple tool for personal usage called "mdSlide". And now, Marp has been used by a lot of users who would recognize the real value of the presentation writer. Marp is amassed over [7,777 stars](https://github.com/yhatt/marp/stargazers) until now.
 
-However, our headache came from lacked maintainability to develop. We had received so many requests to the old Marp app, and it has to evolve to keep providing the best writing environment of presentation deck.
+However, our headache brought from lacked maintainability to develop. We had received so many requests to the old Marp app, and it has to evolve to keep providing the best writing environment of presentation deck.
 
 Today, I'm so excited to introduce the story of Marp Next! The full-rewritten Marp is not only just a writer. To be usable in various situations, we build **a brand-new Marp ecosystem** consisted of multiple modules. They are developed with JavaScript and TypeScript, and much more maintainable than the previous Marp.
 
@@ -154,3 +154,43 @@ It was realized because VS Code is using the same Markdown engine (markdown-it) 
 Marp's blazing fast live-preview is not only for ours! We are planning to provide Marp renderer component into React and Vue.
 
 Especially, Marp React would become to the base of the future of Marp Web.
+
+# Migration plan
+
+## Desktop app ([yhatt/marp](https://github.com/yhatt/marp))
+
+If you are using an old Marp application, **you should migrate to use Marp Next tools.** I never recommend continue to use the old Marp, because _its maintainance has stopped 2 years ago and there is concern about security issues._
+
+In future, the main interface would become to Marp Web. We have bet to PWA technology that has a lot of advantages. The desktop app is planned as "Marp Desktop" but it just may become a wrapper of Web interface.
+
+I would stop publishing the old Marp and archive its repository if Marp Web has grown to become replacable the old Marp.
+
+## Your slide deck
+
+Your Markdown slides written in the old Marp syntax should rewrite to suit to the brand-new Marp ecosystem.
+
+In a new Marp, we have reconsidered Markdown syntax based on feedback to the old Marp app. So, some syntaxs are losing compatibillity.
+
+### Directives
+
+- Directives would be parsed by YAML parser tuned for Marp (Marpit). Thus spot directive prefix `*` is changed to `_` for keeping YAML syntax.
+- Slide size is no longer changeable by Markdown. Use theme CSS.
+- `page_number` directive is renamed to `paginate`.
+- `template` directive is renewed to use `class` directive. It can define HTML class per slides.
+- `prerender` directive is removed. It brings user confusing about exported PDF quality.
+
+### Image
+
+- Background image `![bg]()` has no filter applied by default. Try using `![bg opacity]()` if you want.
+- The inline image is no longer scalable by percentage `![50%]()`. (It's not supported in Firefox) Instead you can use `width` (`w`) and `height` (`w`) keyword to resize image.
+- `![center]()` won't work. It requires changing image to the block element and brings confusion to theme author. You can tweak style if you want.
+
+```html
+<style>
+  img[alt~='center'] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>
+```
