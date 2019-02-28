@@ -7,7 +7,7 @@ title: The story of Marp Next
 
 <!--![Marp](marp.png)-->
 
-The first version of [Marp](https://yhatt.github.io/marp/) was released at almost 3 years ago. At first, it was started from a simple tool for personal usage called "mdSlide". And now, Marp has been used by a lot of users who would recognize the real value of the presentation writer. Marp is amassed over [7,777 stars](https://github.com/yhatt/marp/stargazers) until now.
+The first version of [Marp](https://yhatt.github.io/marp/) was released at almost 3 years ago. At first, it was started from a simple tool for personal usage called "mdSlide". And now, Marp has been used by a lot of users who would recognize the real value of the presentation writer. Marp is amassed more than [7,777 stars](https://github.com/yhatt/marp/stargazers) until now.
 
 However, our headache brought from lacked maintainability to develop. We had received so many requests to the old Marp app, and it has to evolve to keep providing the best writing environment of presentation deck.
 
