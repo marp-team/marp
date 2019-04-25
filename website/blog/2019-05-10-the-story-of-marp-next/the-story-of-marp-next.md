@@ -151,9 +151,12 @@ It was realized because VS Code is using the same Markdown engine (markdown-it) 
 
 [marp vscode]: https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode
 
-## Marp for React / Vue
+## [Marp React] & [Marp Vue]
 
-Marp's blazing fast live-preview is not only for ours! We provide Marp renderer component into React and Vue. Especially, Marp React would become to the base of the future of Marp Web.
+[marp react]: https://github.com/marp-team/marp-react
+[marp vue]: https://github.com/marp-team/marp-vue
+
+Marp's blazing fast live-preview is not only for ours! We provide Marp renderer component into [React][marp react] and [Vue][marp vue]. Especially, Marp React would become to the base of the future of Marp Web.
 
 # Migration plan
 
@@ -194,3 +197,7 @@ In a new Marp, we have reconsidered Markdown syntax based on feedback to the old
   }
 </style>
 ```
+
+# Try Marp Next!
+
+Marp Next just focuses to build the ecosystem for Markdown slide deck with pure open source. We expect to expand Marp productivity together with open source community. Are you interested to Marp ecosystem, or its a little part? We welcome to your contribute.
