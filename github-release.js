@@ -53,12 +53,18 @@ if (!token || !user || !repo) {
   process.exit(1)
 }
 
-execFileSync('curl', [
-  '-H',
-  'Accept: application/vnd.github.v3+json',
-  '-H',
-  `Authorization: token ${token}`,
-  '-d',
-  JSON.stringify(data),
-  entry,
-])
+const ret = JSON.parse(
+  execFileSync('curl', [
+    '-sS',
+    '-H',
+    'Accept: application/vnd.github.v3+json',
+    '-H',
+    `Authorization: token ${token}`,
+    '-d',
+    JSON.stringify(data),
+    entry,
+  ])
+)
+
+// Output release ID for GitHub release API
+console.log(ret.id)
