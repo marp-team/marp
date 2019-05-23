@@ -1,6 +1,6 @@
 ---
 author: Yuki Hattori
-date: 2019-05-10
+date: 2019-06-01
 github: yhatt
 title: The story of Marp Next
 ---
@@ -17,15 +17,15 @@ Today, I'm so excited to introduce the story of Marp Next! The full-rewritten Ma
 
 # Marp ecosystem
 
-Marp Next is based on two core components: **[Marpit]** framework and **[Marp Core]**.
+Marp Next has two core components: **[Marpit]** framework and **[Marp Core]**. Tools by Marp ecosystem are usually based on these.
 
 ## Marpit
 
-<!--![Marpit](marpit.png)-->
+**[Marpit]** is _the skinny framework_ for creating HTML slide deck from Markdown. It is designed to convert Markdown into only minimum assets consisted of static HTML and CSS, and the output can convert into PDF slide deck by printing through Chrome / Chromium.
 
-**[Marpit]** is _the skinny framework_ for creating slide deck from Markdown. It is designed to output only minimum assets consisted of static HTML and CSS, and the output can convert into PDF slide deck by printing through Chrome / Chromium.
+Marpit has created for using as the base of Marp ecosystem, but it is also independent framework. You may integrate Marpit's Markdown conversion with your tool, even if it's not Marp: [reveal.js](https://codesandbox.io/embed/nw80vrxvpp), [WebSlides](https://codesandbox.io/embed/j3wo2091yw), and so on.
 
-Marpit has created for using as the base of Marp ecosystem, but it is also independent framework. You may integrate Marpit with your tool if you want.
+One of real-world use cases is [MetaBake](https://www.metabake.org) project. It provides Marpit integration from our early phase, to be easy to build web page with presentation style. ([See example](https://github.com/metabake/mbake/tree/master/examples/slidesEx))
 
 [marpit]: https://marpit.marp.app/
 
@@ -42,31 +42,31 @@ Additional syntax provided by Marpit should never break [CommonMark](https://com
 
 Marpit has the theming system to allow designing everything of slides by CSS.
 
-The old Marp had the _limited_ theming system and required deep diving to internal for customization: Build system, [Sass], the logic of Marp app, and so on. Marpit's it only requires a pure CSS, and no additional knowledges! You have only to focus styling HTML.
+The old Marp had the _limited_ theming system and required deep diving to internal for customization: Build system, [Sass], the logic of Marp app, and so on. So we had to create a brand-new theming system for easy customization of theme with only general CSS knowledge.
 
-In addition, Marpit has the pixel-perfect slide system. Theme creator never needs to worry about the responsive layout, and could provide design exactly as the author wanted with less effort.
+Marpit's it only requires a pure CSS, and no additional knowledges! You have only to focus styling HTML semantic elements.
+
+In addition, Marpit has the pixel-perfect slide system like PowerPoint and Keynote. Theme creator never needs to worry about the responsive layout, and could provide design exactly as the author wanted with less effort.
 
 [theme css]: https://marpit.marp.app/theme-css
 [sass]: https://sass-lang.com/
 
-### [Inline SVG slide]: for many advantages
+### [Inline SVG slide]&nbsp;(Experimental)
 
-Our unique idea is wrapping each slides by inline SVG.
-
-Currently, this feature has implemented as experimental feature because of the strange rendering in some browsers. However, it makes many advantages.
+Our unique idea is wrapping each slides by inline SVG. It might feel a bit strange, but makes many advantages.
 
 - Supports pixel-perfect scaling via style definition and **realizes Zero-JS slide deck**.
 - Isolates Markdown contents and prevents that injected DOM by Marpit's advanced feature breaks design defined in theme CSS.
 
-Thanks to the power of SVG, we can keep a framework simple and maintainable.
+Thanks to the power of SVG, we can keep a framework simple and maintainable. [Marp Core] is based on inline SVG slide by default.
 
 [inline svg slide]: https://marpit.marp.app/inline-svg
 
 ## Marp Core
 
-**[Marp Core]** is a base converter for our projects extended from Marpit.
+**[Marp Core]** is a base converter for our projects extended from Marpit. In short, it is a battery-included Marpit.
 
-Marpit only has bare essential features, so it might have not enough to start writing your deck. Marp Core provides the practical syntax, additional features, and built-in themes. In short, it is a battery-included Marpit.
+Marpit only has bare essential features, so it might have not enough to start writing your deck. Marp Core provides the practical syntax, additional features, and built-in themes.
 
 Many of the features are based on the old desktop app, and have improved to be suitable to Marpit. Of course, we added the new features for creating more beautiful deck.
 
@@ -75,8 +75,9 @@ Many of the features are based on the old desktop app, and have improved to be s
 - Built-in themes (Default, Gaia, and _new_ UNCOVER theme)
 - Included Emoji support 😁
 - [KaTeX](https://katex.org/) Math typesetting
-- Fitting header via `<!-- fit -->` annotation (_new_)
-- Theme can enable auto-scaling feature to fence, code, and math block (_new_)
+- Auto scaling features (_new_)
+  - Fitting header via `<!-- fit -->` annotation
+  - Scale-down overflowed fence, code, and math block
 
 # Applications
 
@@ -84,7 +85,7 @@ Many of the features are based on the old desktop app, and have improved to be s
 
 [marp cli]: https://github.com/marp-team/marp-cli
 
-**[Marp CLI]** is a CLI interface of Marpit and Marp Core converter, and a Swiss-Army knife for Marp slide deck.
+**[Marp CLI]** is a CLI interface of Marpit and Marp Core converter. It's a Swiss-Army knife for Marp slide deck!
 
 [![](https://raw.githubusercontent.com/marp-team/marp-cli/master/docs/images/marp-cli.gif)][marp cli]
 
@@ -97,11 +98,9 @@ You can use it right now by running `npx @marp-team/marp-cli` if [Node.js](https
 
 Marp had a text editor originally, but you might think that want to write the slide deck with your favorite editor. If you use Vim, you would feel uncomfortable not to be usable Vim style key-binding. From now on, use Marp CLI's watch mode together with original Vim!
 
-And Marp CLI can create really practicable static HTML as like as a presentation mode! It is powered by deep integration with [Bespoke.js](https://github.com/bespokejs/bespoke) and the modulized Marp.
+And Marp CLI can create really practicable static HTML as like as a presentation mode! It is powered by deep integration with [Bespoke.js](https://github.com/bespokejs/bespoke).
 
-Thanks to [Netlify], [Now], and more hosting services, Marp CLI also brings a efficient Git management for creating slide deck just like [GitPitch]. I've created [an example slide](https://yhatt-marp-cli-example.netlify.com/) managed via [GitHub repository](https://github.com/yhatt/marp-cli-example) as a good starter to help writing your slide deck. Try to use it via "Deploy to Netlify" button! 👇
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/yhatt/marp-cli-example) _or [See details of usage...](https://github.com/yhatt/marp-cli-example#usage)_
+Thanks to [Netlify], [Now], and more hosting services, Marp CLI also brings a efficient Git management for creating slide deck just like [GitPitch]. I've created [an example slide](https://yhatt-marp-cli-example.netlify.com/) managed via [GitHub repository](https://github.com/yhatt/marp-cli-example) as a good starter to help writing your slide deck. Try to use it via "Deploy to Netlify" button on [README](https://github.com/yhatt/marp-cli-example/blob/master/README.md#usage)!
 
 [netlify]: https://www.netlify.com/
 [now]: https://zeit.co/now/
@@ -111,7 +110,7 @@ Thanks to [Netlify], [Now], and more hosting services, Marp CLI also brings a ef
 
 **[Marp Web]** is a Web interface of Marp presentation writer. It allows writing your slide deck as like as a traditional desktop app.
 
-> The current Marp Web is just a tech demo. We are planning to re-implement Marp Web based on well-known framework for building SPA.
+> The current Marp Web is just a tech demo. We are planning to re-implement Marp Web based on well-known framework (like React) for building SPA.
 
 [marp web]: https://web.marp.app/
 
@@ -147,7 +146,7 @@ Honestly, I don't think to want to make a new editor because there are many grea
 
 [<img src="https://raw.githubusercontent.com/marp-team/marp-vscode/master/images/screenshot.png" width="600" />][marp vscode]
 
-It was realized because VS Code is using the same Markdown engine (markdown-it) as Marpit framework. In future, we want to add PDF export from Marp CLI to use as like as the old Marp application.
+It was realized because VS Code is using the same Markdown engine (markdown-it) as Marpit framework. Of course you can export slides as PDF and HTML easily, powered by [Marp CLI].
 
 [marp vscode]: https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode
 
@@ -156,7 +155,9 @@ It was realized because VS Code is using the same Markdown engine (markdown-it) 
 [marp react]: https://github.com/marp-team/marp-react
 [marp vue]: https://github.com/marp-team/marp-vue
 
-Marp's blazing fast live-preview is not only for ours! We provide Marp renderer component into [React][marp react] and [Vue][marp vue]. Especially, Marp React would become to the base of the future of Marp Web.
+Marp's blazing fast live-preview is not only for ours! We provide Marp renderer component into [React][marp react] and [Vue][marp vue]. Both Marp React and Marp Vue have supported the incremental update using framework's virtual DOM, and they are been easy to build your app.
+
+Especially, Marp React would become to the base of the future of [Marp Web].
 
 # Migration plan
 
