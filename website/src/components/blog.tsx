@@ -105,7 +105,10 @@ export const BlogExcerpted: React.FC<BlogExcerptedProps> = ({
       props.fields.reserved && style.reserved
     )}
   >
-    <section className={style.blog}>{excerpt}</section>
+    <section
+      className={style.blog}
+      dangerouslySetInnerHTML={{ __html: excerpt }}
+    />
     <p>
       <Button color="primary" outline to={props.fields.path}>
         Read more
@@ -135,6 +138,6 @@ export const query = graphql`
 
   fragment BlogExcerpted on MarkdownRemark {
     ...BlogBase
-    excerpt(pruneLength: 210)
+    excerpt(pruneLength: 210, format: HTML)
   }
 `

@@ -48,6 +48,7 @@
 
     &:hover {
       background: mix($base-background, #000, 95%);
+      color: #666;
 
       &:active {
         background: mix($base-background, #000, 90%);
@@ -76,9 +77,11 @@
 
     &:hover {
       background-color: mix($brand-primary, $brand-dark);
+      color: $base-background;
 
       &:active {
         background-color: $brand-dark;
+        color: $base-background;
       }
     }
 
