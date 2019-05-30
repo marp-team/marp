@@ -44,7 +44,7 @@ Marpit has the theming system to allow designing everything of slides by CSS.
 
 The old Marp had the _limited_ theming system and required deep diving to internal for customization: Build system, [Sass], the logic of Marp app, and so on. So we had to create a brand-new theming system for easy customization of theme with only general CSS knowledge.
 
-Marpit's it only requires a pure CSS, and no additional knowledges! You have only to focus styling HTML semantic elements.
+Marpit's it only requires a pure CSS, and no additional knowledges! You have only to focus styling HTML semantic elements. It means that you can create theme CSS from now!
 
 In addition, Marpit has the pixel-perfect slide system like PowerPoint and Keynote. Theme creator never needs to worry about the responsive layout, and could provide design exactly as the author wanted with less effort.
 
@@ -150,7 +150,7 @@ It was realized because VS Code is using the same Markdown engine (markdown-it) 
 
 [marp vscode]: https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode
 
-## [Marp React] & [Marp Vue]
+## [Marp React] & [Marp Vue] (In development)
 
 [marp react]: https://github.com/marp-team/marp-react
 [marp vue]: https://github.com/marp-team/marp-vue
@@ -163,7 +163,7 @@ Especially, Marp React would become to the base of the future of [Marp Web].
 
 ## Desktop app ([yhatt/marp](https://github.com/yhatt/marp))
 
-If you are using an old Marp application, **you should migrate to use Marp Next tools.** I never recommend continue to use the old Marp, because _its maintainance has stopped 2 years ago and there is concern about security issues._
+If you are using an old Marp application, **you should migrate to use Marp Next tools.** I NEVER recommend continue to use the old Marp, because _its maintainance has stopped 2 years ago and there is concern about security issues._
 
 In future, the main interface would become to Marp Web. We have bet to PWA technology that has a lot of advantages. The desktop app is planned as "Marp Desktop" but it just may become a wrapper of Web interface.
 
@@ -175,10 +175,14 @@ Your Markdown slides written in the old Marp syntax should rewrite to suit to th
 
 In a new Marp, we have reconsidered Markdown syntax based on feedback to the old Marp app. So, some syntaxs are losing compatibillity.
 
+### Syntax
+
+- In Marp Core, non-whitelisted HTML elements are disabled by default because of security reason. Currently our whitelist includes only `<br>` element. Some Marp Next tools has provided preference to enable HTML, but you should take care for enabling HTML in untrusted Markdown.
+
 ### Directives
 
 - Directives would be parsed by YAML parser tuned for Marp (Marpit). Thus spot directive prefix `*` is changed to `_` for keeping YAML syntax.
-- Slide size is no longer changeable by Markdown. Use theme CSS.
+- Slide size is no longer changeable by Markdown. So `size` directive is removed too. Instead use theme CSS.
 - `page_number` directive is renamed to `paginate`.
 - `template` directive is renewed to use `class` directive. It can define HTML class per slides.
 - `prerender` directive is removed. It brings user confusing about exported PDF quality.
@@ -201,4 +205,8 @@ In a new Marp, we have reconsidered Markdown syntax based on feedback to the old
 
 # Try Marp Next!
 
-Marp Next just focuses to build the ecosystem for Markdown slide deck with pure open source. We expect to expand Marp productivity together with open source community. Are you interested to Marp ecosystem, or its a little part? We welcome to your contribute.
+Marp Next just focuses to build the ecosystem for Markdown slide deck with pure open source. We expect to expand Marp productivity together with open source community.
+
+We still have stood at the beginning of the brand-new ecosystem. Are you interested to Marp team and our ecosystem? We welcome to start your contribution! See [our contributing guideline](https://github.com/marp-team/marp/blob/master/.github/CONTRIBUTING.md) and get started!
+
+PS. I've started [Patreon](https://www.patreon.com/yhatt) and stood in a line of [GitHub Sponsors](https://github.com/sponsors). These are also good contribution if you want to help my working for open source.
