@@ -1,6 +1,6 @@
 ---
 author: Yuki Hattori
-date: 2019-06-10
+date: 2019-06-06
 github: yhatt
 title: The story of Marp Next
 ---
