@@ -1,8 +1,3 @@
 [build]
-  publish = "public"
-  command = ""
-
-# TODO: Remove branch context after than merged #11
-[context.gatsby]
   publish = "website/public"
   command = "cd website && yarn build"
