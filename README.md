@@ -42,7 +42,7 @@ This repo (**[@marp-team/marp][marp]**) is an entrance to Marp family. In the fu
 | -----------------------------: | :-------------------------------------------------------------------------------- | :----------------------------------------------------------- |
 | **[Marp VSCode][marp-vscode]** | A [VS Code][vscode] extension to preview the slide deck written in Marp Markdown. | [![VS Marketplace][badge-marp-vscode]][marp-vscode-release]  |
 |   **[Marp React][marp-react]** | Marp renderer component for [React].                                              | [![@marp-team/marp-react][badge-marp-react]][marp-react-npm] |
-|                       Marp Vue | Marp renderer component for [Vue].                                                | [![badge-wip]](https://2x994l3roj.codesandbox.io/)           |
+|       **[Marp Vue][marp-vue]** | Marp renderer component for [Vue].                                                | [![@marp-team/marp-vue][badge-marp-vue]][marp-vue-npm]       |
 
 [yhatt/marp]: https://github.com/yhatt/marp
 [marp]: https://github.com/marp-team/marp
@@ -53,6 +53,7 @@ This repo (**[@marp-team/marp][marp]**) is an entrance to Marp family. In the fu
 [marp-web]: https://github.com/marp-team/marp-web
 [marp-vscode]: https://github.com/marp-team/marp-vscode
 [marp-react]: https://github.com/marp-team/marp-react
+[marp-vue]: https://github.com/marp-team/marp-vue
 [pwa]: https://en.wikipedia.org/wiki/Progressive_Web_Apps
 [preact]: https://preactjs.com/
 [electron]: https://electronjs.org/
@@ -66,12 +67,14 @@ This repo (**[@marp-team/marp][marp]**) is an entrance to Marp family. In the fu
 [marp-web-site]: https://web.marp.app/
 [marp-vscode-release]: https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode
 [marp-react-npm]: https://www.npmjs.com/package/@marp-team/marp-react
+[marp-vue-npm]: https://www.npmjs.com/package/@marp-team/marp-vue
 [badge-marpit]: https://img.shields.io/npm/v/@marp-team/marpit.svg?style=flat-square&logo=npm
 [badge-marp-core]: https://img.shields.io/npm/v/@marp-team/marp-core.svg?style=flat-square&logo=npm
 [badge-marp-cli]: https://img.shields.io/npm/v/@marp-team/marp-cli.svg?style=flat-square&logo=npm
 [badge-marp-web]: https://img.shields.io/badge/%E2%80%8B-tech%20demo-%230288d1.svg?style=flat-square&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAUUlEQVQokWNgGD6AqePif3Sx9B2PMcQwNKFrTN/x+D9ejTBNyBphmnBqRNYE04isCatGdE1MHRf/o2vC0IhNE1PaXPwacWnCqxGfJoI2Dn4AAN0ZrMM1VUFvAAAAAElFTkSuQmCC
 [badge-marp-vscode]: https://img.shields.io/visual-studio-marketplace/v/marp-team.marp-vscode.svg?style=flat-square&logo=visual-studio-code&label=Marketplace
 [badge-marp-react]: https://img.shields.io/npm/v/@marp-team/marp-react.svg?style=flat-square&logo=npm
+[badge-marp-vue]: https://img.shields.io/npm/v/@marp-team/marp-vue.svg?style=flat-square&logo=npm
 [badge-planned]: https://img.shields.io/badge/-PLANNED-lightgrey.svg?style=flat-square
 [badge-wip]: https://img.shields.io/badge/-Work%20in%20progress-lightgrey.svg?style=flat-square
 
