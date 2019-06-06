@@ -1,0 +1,73 @@
+.namespace {
+  opacity: 0.7;
+}
+
+.token {
+  &.comment,
+  &.prolog,
+  &.doctype,
+  &.cdata {
+    color: slategray;
+  }
+
+  &.punctuation {
+    color: #999;
+  }
+
+  &.property,
+  &.tag,
+  &.boolean,
+  &.number,
+  &.constant,
+  &.symbol,
+  &.deleted {
+    color: #905;
+  }
+
+  &.selector,
+  &.attr-name,
+  &.string,
+  &.char,
+  &.builtin,
+  &.inserted {
+    color: #690;
+  }
+
+  &.operator,
+  &.entity,
+  &.url,
+  .language-css &.string,
+  .style &.string {
+    color: #9a6e3a;
+  }
+
+  &.atrule,
+  &.attr-value,
+  &.keyword {
+    color: #07a;
+  }
+
+  &.function,
+  &.class-name {
+    color: #dd4a68;
+  }
+
+  &.regex,
+  &.important,
+  &.variable {
+    color: #e90;
+  }
+
+  &.important,
+  &.bold {
+    font-weight: bold;
+  }
+
+  &.italic {
+    font-style: italic;
+  }
+
+  &.entity {
+    cursor: help;
+  }
+}

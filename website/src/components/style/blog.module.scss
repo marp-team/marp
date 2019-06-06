@@ -1,0 +1,59 @@
+@import './common';
+
+.blog {
+  font-weight: 400;
+  font-family: $font-family;
+}
+
+.excerpt {
+  &.reserved {
+    opacity: 0.5;
+  }
+}
+
+.meta {
+  &,
+  &-github {
+    align-items: center;
+    color: #888;
+    display: inline-flex;
+    flex-wrap: wrap;
+    vertical-align: middle;
+  }
+
+  &-github {
+    color: currentColor;
+    text-decoration: none;
+
+    &-icon {
+      background: #f0f0f0;
+      border-radius: 1.75em;
+      color: transparent;
+      display: block;
+      height: 1.75em;
+      overflow: hidden;
+      text-indent: 1.75em;
+      white-space: nowrap;
+      width: 1.75em;
+    }
+
+    @at-root {
+      a#{&}:hover {
+        color: #666;
+
+        &:active {
+          color: #333;
+        }
+      }
+    }
+  }
+
+  &-reserved {
+    border-radius: 0.375em;
+    border: 1px solid currentColor;
+    box-sizing: border-box;
+    color: #930;
+    font-size: 0.75em;
+    padding: 0.375em;
+  }
+}

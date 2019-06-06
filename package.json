@@ -16,5 +16,16 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/marp-team/marp"
+  },
+  "workspaces": [
+    "website"
+  ],
+  "scripts": {
+    "format": "prettier \"**/*.{css,html,js,json,jsx,md,scss,ts,tsx,yaml,yml}\"",
+    "format:check": "yarn -s --mutex file format -c"
+  },
+  "devDependencies": {
+    "prettier": "^1.17.1",
+    "typescript": "^3.5.1"
   }
 }

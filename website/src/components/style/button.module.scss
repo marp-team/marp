@@ -1,0 +1,104 @@
+@import './common';
+
+.button {
+  appearance: none;
+  border-radius: 1.5em;
+  border: 0;
+  box-shadow: 0 3px 6px rgba(#000, 0.25);
+  box-sizing: content-box;
+  cursor: pointer;
+  display: inline-block;
+  height: 1em;
+  letter-spacing: 1px;
+  line-height: 1em;
+  margin: 0.25em;
+  outline: 0;
+  overflow: hidden;
+  padding: 0.4em 0.75em;
+  text-decoration: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &.outline {
+    border-style: solid;
+    border-width: 0.125em;
+    padding-bottom: 0.25em;
+    padding-top: 0.25em;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 0.15em rgba($brand-secondary, 0.5),
+      0 3px 6px rgba(#000, 0.25);
+  }
+
+  &:hover {
+    transition: color 0.15s linear, background-color 0.15s linear;
+
+    &:active {
+      transition: none;
+    }
+  }
+}
+
+.color {
+  &-default {
+    background: $base-background;
+    color: #666;
+
+    &:hover {
+      background: mix($base-background, #000, 95%);
+      color: #666;
+
+      &:active {
+        background: mix($base-background, #000, 90%);
+      }
+    }
+
+    &.outline {
+      border-color: #666;
+
+      &:hover {
+        background: #666;
+        color: $base-background;
+
+        &:active {
+          background: $brand-dark;
+          border-color: $brand-dark;
+        }
+      }
+    }
+  }
+
+  &-primary {
+    background: $brand-primary
+      linear-gradient(30deg, transparent, rgba($base-background, 0.2));
+    color: $base-background;
+
+    &:hover {
+      background-color: mix($brand-primary, $brand-dark);
+      color: $base-background;
+
+      &:active {
+        background-color: $brand-dark;
+        color: $base-background;
+      }
+    }
+
+    &.outline {
+      background: $base-background;
+      border-color: $brand-primary;
+      color: $brand-primary;
+
+      &:hover {
+        color: $base-background;
+        background: $brand-primary;
+
+        &:active {
+          background: $brand-dark;
+          border-color: $brand-dark;
+        }
+      }
+    }
+  }
+}

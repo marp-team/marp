@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "lib": ["es2016", "es2017", "dom"],
+    "module": "commonjs",
+    "noEmit": true,
+    "noImplicitAny": false,
+    "resolveJsonModule": true,
+    "strict": true,
+    "target": "es2015"
+  }
+}
