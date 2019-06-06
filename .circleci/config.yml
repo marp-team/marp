@@ -1,10 +1,12 @@
 version: 2
 jobs:
-  '10.15.0':
+  current:
     docker:
-      - image: circleci/node:10.15.0
+      - image: circleci/node:10.16.0
     working_directory: ~/marp
     steps:
+      - run: node --version
+
       - checkout
 
       - restore_cache:
@@ -14,6 +16,7 @@ jobs:
             - v1-dependencies-{{ .Environment.CIRCLE_JOB }}-
 
       - run: yarn install
+      - run: yarn audit
 
       - save_cache:
           key: v1-dependencies-{{ .Environment.CIRCLE_JOB }}-{{ checksum "yarn.lock" }}-{{ .Branch }}
@@ -29,4 +32,4 @@ workflows:
   version: 2
   build:
     jobs:
-      - 10.15.0
+      - current
