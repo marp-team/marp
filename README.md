@@ -19,22 +19,22 @@
 
 Our projects have consisted of manyrepos in order to focus limited scope per repository.
 
-This repo (**[@marp-team/marp][marp]**) is an entrance to Marp family. In the future, it will host [our website](https://marp.app/), and place project-wide utilities by the monorepo structure.
+This repo (**[@marp-team/marp][marp]**) is an entrance to Marp family, and places [our website](https://marp.app/) and project-wide utilities by the monorepo structure.
 
 ### Framework / Core
 
-|                             Name | Description                                                                        | Release                                                   |
-| -------------------------------: | :--------------------------------------------------------------------------------- | :-------------------------------------------------------- |
-| **[Marpit]** ([marpit.marp.app]) | The skinny framework for creating slide deck from Markdown.                        | [![@marp-team/marpit][badge-marpit]][marpit-npm]          |
-|       **[Marp Core][marp-core]** | The core of Marp converter with practical features and [themes][marp-core-themes]. | [![@marp-team/marp-core][badge-marp-core]][marp-core-npm] |
+|                       Name | Description                                                                        | Release                                                   |
+| -------------------------: | :--------------------------------------------------------------------------------- | :-------------------------------------------------------- |
+|               **[Marpit]** | The skinny framework for creating slide deck from Markdown. ([marpit.marp.app])    | [![@marp-team/marpit][badge-marpit]][marpit-npm]          |
+| **[Marp Core][marp-core]** | The core of Marp converter with practical features and [themes][marp-core-themes]. | [![@marp-team/marp-core][badge-marp-core]][marp-core-npm] |
 
 ### Apps
 
-|                     Name | Description                                                                             | Release                                                |
-| -----------------------: | :-------------------------------------------------------------------------------------- | :----------------------------------------------------- |
-| **[Marp CLI][marp-cli]** | [Marp Core][marp-core] / [Marpit]'s CLI interface to convert into HTML, PDF, and image. | [![@marp-team/marp-cli][badge-marp-cli]][marp-cli-npm] |
-| **[Marp Web][marp-web]** | The main interface of Marp based on [PWA] and [Preact] framework.                       | [![tech demo][badge-marp-web]][marp-web-site]          |
-|             Marp Desktop | The desktop client for [Marp Web][marp-web-site] for replacing [yhatt/marp].            | ![PLANNED][badge-planned]                              |
+|                     Name | Description                                                                                      | Release                                                |
+| -----------------------: | :----------------------------------------------------------------------------------------------- | :----------------------------------------------------- |
+| **[Marp CLI][marp-cli]** | [Marp Core][marp-core] / [Marpit]'s CLI interface to convert into HTML, PDF, PPTX, and image(s). | [![@marp-team/marp-cli][badge-marp-cli]][marp-cli-npm] |
+| **[Marp Web][marp-web]** | The main interface of Marp based on [PWA] and [Preact] framework.                                | [![tech demo][badge-marp-web]][marp-web-site]          |
+|             Marp Desktop | The desktop client for [Marp Web][marp-web-site] for replacing [yhatt/marp].                     | ![PLANNED][badge-planned]                              |
 
 ### Integrations
 
@@ -88,7 +88,7 @@ This repo (**[@marp-team/marp][marp]**) is an entrance to Marp family. In the fu
 
 <!-- - **[Slide title](https://example.com/)** by [@username](https://github.com/username) -->
 
-Let us know if you have created an awesome slide deck with Marp ecosystem! [Edit README.md and send pull request.](https://github.com/marp-team/marp/blob/master/README.md)
+Let us know if you have created an awesome slide deck with Marp ecosystem! [Edit README.md and send pull request.](https://github.com/marp-team/marp/edit/master/README.md)
 
 <!-- NOTE: The slide deck created by yhatt/marp  desktop app cannot add to examples. -->
 
