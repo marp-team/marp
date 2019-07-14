@@ -41,6 +41,10 @@ jobs:
           name: Prettier formatting
           command: yarn check:format
 
+      - run:
+          name: ESLint
+          command: yarn lint
+
 workflows:
   build:
     jobs:
