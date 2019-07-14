@@ -18,13 +18,19 @@
     "url": "https://github.com/marp-team/marp"
   },
   "workspaces": [
-    "website"
+    "packages/*"
   ],
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
   "scripts": {
-    "format": "prettier \"**/*.{css,html,js,json,jsx,md,scss,ts,tsx,yaml,yml}\"",
-    "format:check": "yarn -s --mutex file format -c"
+    "check:format": "yarn -s format -c",
+    "format": "prettier \"**/*.{css,html,js,json,jsx,md,scss,ts,tsx,yaml,yml}\""
   },
   "devDependencies": {
+    "lerna": "^3.15.0",
     "prettier": "^1.17.1",
     "typescript": "^3.5.1"
   }
