@@ -2,9 +2,11 @@
 
 > :warning: Currently this package is marked as private so can use only in this monorepo. It's better to use [obsoleted scripts](#obsoleted-scripts) when running scripts in the other repositories.
 
+<!--
 ```bash
 yarn add --dev @marp-team/common-scripts
 ```
+-->
 
 ## `marp-version`
 

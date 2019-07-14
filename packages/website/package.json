@@ -1,0 +1,29 @@
+{
+  "name": "@marp-team/website",
+  "version": "0.1.0",
+  "description": "Website of Marp ecosystem",
+  "author": {
+    "name": "Marp team",
+    "url": "https://github.com/marp-team"
+  },
+  "contributors": [
+    {
+      "name": "Yuki Hattori",
+      "url": "https://github.com/yhatt"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marp-team/marp"
+  },
+  "license": "MIT",
+  "homepage": "https://marp.app/",
+  "private": true,
+  "scripts": {
+    "build": "charge build docs dist",
+    "start": "charge serve docs"
+  },
+  "devDependencies": {
+    "@static/charge": "^1.4.1"
+  }
+}

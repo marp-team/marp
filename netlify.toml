@@ -1,0 +1,3 @@
+[build]
+  publish = "packages/website/dist"
+  command = "yarn workspace website build"

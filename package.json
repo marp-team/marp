@@ -27,14 +27,13 @@
   },
   "scripts": {
     "check:format": "yarn -s format -c",
-    "format": "prettier \"**/*.{css,html,js,json,jsx,md,scss,ts,tsx,yaml,yml}\"",
+    "format": "prettier \"**/*.{css,html,js,json,jsx,md,mdx,scss,ts,tsx,yaml,yml}\"",
     "lint": "eslint \"**/*.{js,jsx}\""
   },
   "devDependencies": {
     "eslint": "^6.0.1",
     "eslint-config-prettier": "^6.0.0",
     "lerna": "^3.15.0",
-    "prettier": "^1.18.2",
-    "typescript": "^3.5.3"
+    "prettier": "^1.18.2"
   }
 }
