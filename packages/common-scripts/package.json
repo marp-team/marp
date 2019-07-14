@@ -1,0 +1,31 @@
+{
+  "name": "@marp-team/common-scripts",
+  "version": "0.1.0",
+  "description": "Common scripts for Marp team repositories",
+  "author": {
+    "name": "Marp team",
+    "url": "https://github.com/marp-team"
+  },
+  "contributors": [
+    {
+      "name": "Yuki Hattori",
+      "url": "https://github.com/yhatt"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marp-team/marp"
+  },
+  "license": "MIT",
+  "files": [
+    "src/"
+  ],
+  "bin": {
+    "marp-github-release": "./src/github-release.js",
+    "marp-version": "./src/version.js"
+  },
+  "dependencies": {
+    "@octokit/rest": "^16.28.4"
+  },
+  "private": true
+}
