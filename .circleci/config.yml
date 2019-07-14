@@ -29,7 +29,7 @@ commands:
             - ~/.cache/yarn
 
 jobs:
-  test:
+  build:
     executor:
       name: node
     steps:
@@ -44,4 +44,4 @@ jobs:
 workflows:
   build:
     jobs:
-      - test
+      - build
