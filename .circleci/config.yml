@@ -8,7 +8,6 @@ executors:
 
 commands:
   install_dependencies:
-    description: Install dependencies
     parameters:
       cache_key:
         type: string
@@ -30,7 +29,7 @@ commands:
             - ~/.cache/yarn
 
 jobs:
-  build:
+  test:
     executor:
       name: node
     steps:
@@ -45,4 +44,4 @@ jobs:
 workflows:
   build:
     jobs:
-      - build
+      - test
