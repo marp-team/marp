@@ -7,12 +7,6 @@
   </p>
 </div>
 
-> This repository is the entrance of **_next version of Marp_ (Marp Next)**.
->
-> Refer to **[yhatt/marp]** when you are looking for pre-released desktop app. However, keep in your mind that _it has no longer been developed_.
-
----
-
 **Marp** is the ecosystem to write your presentation with plain Markdown.
 
 ## Marp family
