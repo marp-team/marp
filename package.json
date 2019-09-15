@@ -25,7 +25,7 @@
     "format:check": "yarn -s --mutex file format -c"
   },
   "devDependencies": {
-    "prettier": "^1.17.1",
-    "typescript": "^3.5.1"
+    "prettier": "^1.18.2",
+    "typescript": "^3.6.3"
   }
 }
