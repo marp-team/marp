@@ -2,7 +2,7 @@ version: 2
 jobs:
   current:
     docker:
-      - image: circleci/node:10.16.0
+      - image: circleci/node:10.16.3
     working_directory: ~/marp
     steps:
       - run: node --version
