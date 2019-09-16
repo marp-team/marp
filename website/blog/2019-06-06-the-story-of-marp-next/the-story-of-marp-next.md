@@ -23,7 +23,7 @@ Marp Next has two core components: **[Marpit]** framework and **[Marp Core]**. T
 
 Marpit has created for using as the base of Marp ecosystem, but it is also independent framework. You may integrate Marpit's Markdown conversion with your tool, even if it's not Marp: [reveal.js](https://codesandbox.io/embed/nw80vrxvpp), [WebSlides](https://codesandbox.io/embed/j3wo2091yw), and so on.
 
-One of real-world use cases is [MetaBake](https://www.metabake.org) project. It provides Marpit integration from our early phase, to be easy to build web page with presentation style. ([See example](https://github.com/metabake/mbake/tree/master/examples/slidesEx))
+<!-- One of real-world use cases is [MetaBake](https://www.metabake.org) project. It provides Marpit integration from our early phase, to be easy to build web page with presentation style. ([See example](https://github.com/metabake/mbake/tree/master/examples/slidesEx)) -->
 
 [marpit]: https://marpit.marp.app/
 
@@ -70,9 +70,10 @@ Many of the features are based on the old desktop app, and have improved to be s
 
 [marp core]: https://github.com/marp-team/marp-core
 
-- Built-in themes (Default, Gaia, and _new_ UNCOVER theme)
+- Built-in themes (Default, Gaia, and _new_ Uncover theme)
 - Included Emoji support 😁
 - [KaTeX](https://katex.org/) Math typesetting
+- `size` global directive
 - Auto scaling features (_new_)
   - Fitting header via `<!-- fit -->` annotation
   - Scale-down overflowed fence, code, and math block
@@ -180,7 +181,8 @@ In a new Marp, we have reconsidered Markdown syntax based on feedback to the old
 ### Directives
 
 - Directives would be parsed by YAML parser tuned for Marp (Marpit). Thus spot directive prefix `*` is changed to `_` for keeping YAML syntax.
-- Slide size is no longer changeable by Markdown. So `size` directive is removed too. Instead use theme CSS.
+- `$` prefix no longer required to global directives.
+- Slide size still can choose from "16:9" and "4:3", through `size` global directive (provided by Marp Core). If you want to use custom size or you're using Marpit framework, please use [theme CSS](https://marpit.marp.app/theme-css?id=slide-size).
 - `page_number` directive is renamed to `paginate`.
 - `template` directive is renewed to use `class` directive. It can define HTML class per slides.
 - `prerender` directive is removed. It brings user confusing about exported PDF quality.
@@ -188,8 +190,8 @@ In a new Marp, we have reconsidered Markdown syntax based on feedback to the old
 ### Image
 
 - Background image `![bg]()` has no filter applied by default. Try using `![bg opacity]()` if you want.
-- The inline image is no longer scalable by percentage `![50%]()`. (It's not supported in Firefox) Instead you can use `width` (`w`) and `height` (`w`) keyword to resize image.
-- `![center]()` won't work. It requires changing image to the block element and brings confusion to theme author. You can tweak style if you want.
+- The inline image is no longer scalable by percentage `![50%]()`. (It's not supported in Firefox) Instead you can use `width` (`w`) and `height` (`w`) keyword to resize image as like as `![width:300px]()`.
+- `![center]()` won't work. It requires changing image to the block element and brings confusion to theme author. You can tweak style if you still want.
 
 ```html
 <style>
