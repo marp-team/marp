@@ -98,6 +98,24 @@ Managed by [@marp-team](https://github.com/marp-team).
 
 - <img src="https://github.com/yhatt.png" width="16" height="16"/> Yuki Hattori ([@yhatt](https://github.com/yhatt))
 
+<!-- ### Sponsors -->
+
+<!-- Name and icons (Top-tier sponsors)
+
+- [<img src="https://github.com/yhatt.png" width="32" height="32" valign="middle"/> Yuki Hattori](https://github.com/yhatt)
+
+-->
+
+<!-- Icons (Mid-tier sponsors)
+(And) we are supported by them!
+
+<p>
+  <a href="https://github.com/yhatt"><img src="https://github.com/yhatt.png" width="32" height="32" /></a>
+</p>
+-->
+
+<!-- Thanks for our sponsors! :heart: -->
+
 ## License
 
 [MIT License](LICENSE)
