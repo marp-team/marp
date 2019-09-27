@@ -80,12 +80,13 @@ This repo (**[@marp-team/marp][marp]**) is an entrance to Marp family, and place
 
 ### Community
 
-<!-- - **[Slide title](https://example.com/)** by [@username](https://github.com/username) -->
+- [Reflection in Qt and Beyond](https://github.com/tomisaacson/reflection-in-Qt) by [@tomisaacson](https://github.com/tomisaacson)
+
+<!-- - [Slide title](https://example.com/) by [@username](https://github.com/username) -->
 
 Let us know if you have created an awesome slide deck with Marp ecosystem! [Edit README.md and send pull request.](https://github.com/marp-team/marp/edit/master/README.md)
 
-<!-- NOTE: The slide deck created by yhatt/marp  desktop app cannot add to examples. -->
-[Reflection in Qt and Beyond](https://github.com/tomisaacson/reflection-in-Qt)
+<!-- NOTE: The slide deck created by outdated yhatt/marp desktop app cannot add to examples. -->
 
 ## Contributing
 
