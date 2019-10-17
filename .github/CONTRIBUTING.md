@@ -12,15 +12,30 @@ Depending on the project you want to contribute, it might have additional guidel
 
 We follow [Contributor Covenant Code of Conduct][code-of-conduct] in the all of repositories managed by [marp-team].
 
+## Architecture
+
+[<img align="left" src="architecture.svg" width="25%" />](architecture.svg)
+
+A figure on the left shows the whole of architecture in the Marp ecosystem. Yellow arrows are meaning dependency.
+
+**[Marpit]** is the center of the ecosystem and the independent framework for developers. It's designed suitable for not only Marp but also other slide libraries (See examples of collaboration with [reveal.js](https://codesandbox.io/nw80vrxvpp) and [WebSlides](https://codesandbox.io/j3wo2091yw)).
+
+You are probably using **[Marp Core]** if you are creating a slide deck with Marp. It includes built-in themes, settings that suit for Marp tools, and Markdown extensions that break CommonMark.
+
+And the most of Marp apps (CLI, Web, Desktop...) and integrations (VS Code, React, Vue...) are creating based on [Marp Core]. [Marp CLI](https://github.com/marp-team/marp-cli) is a precious exception that supports Marpit-based converter for power users.<br clear="all" />
+
+[marpit]: https://github.com/marp-team/marpit
+[marp core]: https://github.com/marp-team/marp-core
+
 ## Report issue
 
 At first, you should search for similar issues before reporting your issue. It may have already been discussed or resolved in the other issue.
 
 [:mag: `org:marp-team is:issue [keyword]`](https://github.com/search?q=org%3Amarp-team+is%3Aissue+%5Bkeyword%5D) is useful to search issue from across our projects.
 
-If you could not find out similar issue, you can create new issue. Please not contain multiple reports in one issue. It should have only one theme.
+If you could not find out a similar issue, you can create a new issue. Please not contain multiple reports into one issue. It should have only one theme.
 
-> :information_source: Some projects have consisted of multiple packages created by [marp-team]. If you know which project causes an issue, please report the issue to that repo.
+> :information_source: Some projects have consisted of [marp-team] owned packages based on [project architecture](#architecture). If you know which project causes an issue, please report the issue to that repository. The member of Marp team may [transfer the reported issue](https://help.github.com/en/articles/transferring-an-issue-to-another-repository) into the proper repository.
 
 ### Question
 
@@ -40,7 +55,7 @@ Currently, we don't have a default issue template. But to assist in finding the 
 
 - Expected behavior and actual behavior
 - Necessary steps and resources to reproduce bug
-- Occurred environment (e.g. the version of OS, browser, Node.js)
+- Occurred environment (e.g. the version of OS, browser, Node.js, and so on)
 
 ## Pull request
 
@@ -54,7 +69,7 @@ You can submit pull request if you have fixed or added useful something to our p
 
 ### For maintainer
 
-These are tasks for maintainer, and usually comitter doesn't have to worry.
+These are tasks for maintainer, and usually committer doesn't have to worry.
 
 - If there is CHANGELOG.md in a working project, the maintainer has to update it after (or while) merge PR. We're adopting the format based on [Keep a Changelog].
 
