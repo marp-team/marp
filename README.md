@@ -111,7 +111,10 @@ We are supported by them! Thanks for our sponsors! :heart:
 <!-- Icons (Mid-tier sponsors) -->
 <p>
   <a href="https://github.com/pataiji"><img src="https://github.com/pataiji.png" width="32" height="32" alt="pataiji is sponsored yhatt" /></a>
+  <a href="https://github.com/miyachik"><img src="https://github.com/miyachik.png" width="32" height="32" alt="miyachik is sponsored yhatt" /></a>
 </p>
+
+> Do you want to sponsor [the member of Marp team](https://github.com/orgs/marp-team/people)? See [GitHub Sponsors](https://github.com/sponsors) profile(s) from "♥︎ Sponsor" button [at the top of repository](https://github.com/marp-team/marp).
 
 ## License
 
