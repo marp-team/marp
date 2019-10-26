@@ -1,0 +1,14 @@
+env:
+  node: true
+  es6: true
+
+extends:
+  - eslint:recommended
+  - plugin:react/recommended
+  - prettier
+  - prettier/react
+
+parserOptions:
+  ecmaFeatures:
+    jsx: true
+  sourceType: module

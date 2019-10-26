@@ -1,0 +1,3 @@
+rules:
+  react/prop-types: 0
+  react/react-in-jsx-scope: 0 # Charge does not require to import React

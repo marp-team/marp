@@ -1,0 +1,23 @@
+{
+  "name": "@marp-team/marp-website",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "author": {
+    "name": "Marp team",
+    "url": "https://github.com/marp-team"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marp-team/marp"
+  },
+  "scripts": {
+    "build": "charge build src dist",
+    "serve": "charge serve src"
+  },
+  "devDependencies": {
+    "@emotion/core": "^10.0.22",
+    "@marp-team/marp-core": "^0.14.0",
+    "@static/charge": "^1.5.0"
+  }
+}
