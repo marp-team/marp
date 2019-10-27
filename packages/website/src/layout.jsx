@@ -2,15 +2,19 @@
 import { URL } from 'url'
 import { Global, css, jsx } from '@emotion/core'
 
-const base = 'https://marp.app/'
-
 export const defaultTitle = 'Marp: Markdown Presentation Ecosystem'
 export const defaultImage = '/assets/og-image.png'
 
 export const generateTitle = (...breadcrumbs) =>
   ['Marp', ...breadcrumbs].reverse().join(' | ')
 
-export const resolvePath = path => new URL(path, base).toString()
+export const resolvePath = (path, environment = 'production') =>
+  new URL(
+    path,
+    environment === 'production'
+      ? 'https://marp.app/'
+      : 'http://localhost:2468/'
+  ).toString()
 
 export const contentStyle = css`
   max-width: 1000px;
@@ -230,6 +234,7 @@ const Header = ({ route, height = 80 }) => (
 export const Layout = ({
   children,
   description,
+  environment,
   image = defaultImage,
   route,
   title = defaultTitle,
@@ -249,17 +254,18 @@ export const Layout = ({
       )}
       {route && (
         <>
-          <link rel="canonical" content={resolvePath(route)} />
-          <meta property="og:url" content={resolvePath(route)} />
+          <link rel="canonical" content={resolvePath(route, environment)} />
+          <meta property="og:url" content={resolvePath(route, environment)} />
         </>
       )}
       <meta property="og:title" content={title} />
       <meta property="og:type" content={type} />
-      <meta property="og:image" content={resolvePath(image)} />
+      <meta property="og:image" content={resolvePath(image, environment)} />
       <link
         href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700|Source+Code+Pro:400,500&display=swap"
         rel="stylesheet"
       />
+      <link href="/highlightjs.css" rel="stylesheet" />
       <Global styles={globalStyle} />
     </head>
     <body>

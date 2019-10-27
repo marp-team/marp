@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "eslint": "^6.6.0",
-    "eslint-config-prettier": "^6.4.0",
+    "eslint-config-prettier": "^6.5.0",
     "eslint-plugin-react": "^7.16.0",
     "lerna": "^3.18.3",
     "prettier": "^1.18.2"

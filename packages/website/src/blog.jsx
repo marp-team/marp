@@ -17,7 +17,7 @@ const coverStyle = css`
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 `
 
-const blogStyle = ({ fontSize = 17 } = {}) => css`
+export const blogStyle = ({ fontSize = 17 } = {}) => css`
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif,
     Apple Color Emoji, Segoe UI Emoji;
@@ -214,17 +214,17 @@ export const Meta = ({ author, date, github }) => (
   </div>
 )
 
-export const BlogLayout = ({ children, meta }) => {
+export const BlogLayout = ({ children, environment, meta }) => {
   const { title, description, image, slug, date, author, github } = meta
   const route = slug && `/blog/${slug}`
 
   return (
     <Layout
-      route={route}
-      meta={undefined}
-      title={generateTitle('Blog', title)}
       description={description}
+      environment={environment}
       image={image}
+      route={route}
+      title={generateTitle('Blog', title)}
     >
       <article css={[contentStyle, articleStyle]}>
         <a href={route || '#'}>
@@ -233,7 +233,11 @@ export const BlogLayout = ({ children, meta }) => {
         <Meta author={author} date={date} github={github} />
         {image && (
           <figure>
-            <img css={coverStyle} src={resolvePath(image)} alt={title} />
+            <img
+              css={coverStyle}
+              src={resolvePath(image, environment)}
+              alt={title}
+            />
           </figure>
         )}
         <div css={blogStyle()}>{children}</div>

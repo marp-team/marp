@@ -1,8 +1,13 @@
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core'
+import highlightjs from 'highlight.js'
 
-export const Code = ({ children, style }) => {
-  const lines = children.split('\n')
+export const Code = ({ children, language, style }) => {
+  const colored = highlightjs.getLanguage(language)
+    ? highlightjs.highlight(language, children, true)
+    : highlightjs.highlightAuto(children)
+
+  const lines = colored.value.split('\n')
   const codeStyle = css`
     --line-number-width: 3.5em;
 
@@ -42,7 +47,11 @@ export const Code = ({ children, style }) => {
       <ol>
         {lines.map((line, i) => (
           <li className="code-line" key={i}>
-            {line === '' ? <br /> : line}
+            {line === '' ? (
+              <br />
+            ) : (
+              <span dangerouslySetInnerHTML={{ __html: line }} />
+            )}
           </li>
         ))}
       </ol>

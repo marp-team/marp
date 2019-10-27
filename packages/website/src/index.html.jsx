@@ -180,6 +180,7 @@ const Description = () => (
       <details id="example-markdown">
         <summary style={{ display: 'none' }} />
         <Code
+          language="markdown"
           style={css`
             background: #f0f0f0;
             border-radius: 15px;
@@ -198,11 +199,12 @@ const Description = () => (
   </section>
 )
 
-export default function Index() {
+export default function Index({ environment }) {
   return (
     <Layout
       route="/"
       description="Marp, Markdown Presentation Ecosystem, provides the great experience to create beautiful slide deck."
+      environment={environment}
       type="website"
     >
       <Hero />
