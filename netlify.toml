@@ -1,4 +1,3 @@
 [build]
-  base = "packages/website"
-  publish = "dist"
-  command = "yarn build"
+  publish = "packages/website/dist"
+  command = "yarn workspace @marp-team/marp-website build"
