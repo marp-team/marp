@@ -23,7 +23,7 @@ const globalStyle = css`
       BlinkMacSystemFont, sans-serif, Apple Color Emoji, Segoe UI Emoji;
     font-size: 18px;
     letter-spacing: 0.04em;
-    line-height: 1.3;
+    line-height: 1.4;
     min-height: 100%;
   }
 
@@ -46,10 +46,25 @@ const globalStyle = css`
     }
   }
 
+  h1 {
+    font-size: 1.75em;
+    font-size: calc(1.25em + 0.4vw);
+  }
+
   mark {
     color: inherit;
     background-color: transparent;
-    background-image: linear-gradient(to bottom, transparent 80%, #67b8e3 80%);
+    background-image: linear-gradient(to bottom, transparent 85%, #67b8e3 85%);
+  }
+
+  figure {
+    margin: 2em 0;
+
+    figcaption {
+      color: #999;
+      text-align: center;
+      font-size: 75%;
+    }
   }
 `
 
@@ -134,7 +149,7 @@ const Header = ({ active, height = 80 }) => (
 
             &:hover {
               &::after {
-                box-shadow: inset 0 ${height * -0.05}px rgba(0, 0, 0, 0.15);
+                box-shadow: inset 0 ${height * -0.05}px rgba(0, 0, 0, 0.25);
               }
             }
 
@@ -198,7 +213,7 @@ export const Layout = ({ active, children, title = defaultTitle }) => (
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
       <link
-        href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700&display=swap"
+        href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700|Source+Code+Pro:500&display=swap"
         rel="stylesheet"
       />
       <Global styles={globalStyle} />

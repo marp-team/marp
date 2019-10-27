@@ -2,6 +2,7 @@
 import { css, jsx } from '@emotion/core'
 import { Layout, defaultTitle } from './layout.js.jsx'
 import { Button } from './components/button.js.jsx'
+import { Code } from './components/code.js.jsx'
 import { Marp } from './components/marp.js.jsx'
 
 const Hero = () => (
@@ -71,7 +72,7 @@ const example = `
 theme: gaia
 _class: lead
 paginate: true
-backgroundImage: url('./assets/hero-background.jpg')
+backgroundImage: url('https://marp.app/assets/hero-background.jpg')
 ---
 
 ![bg left:40% 80%](https://raw.githubusercontent.com/marp-team/marp/master/marp.png)
@@ -84,58 +85,125 @@ https://marp.app/
 
 ---
 
-# Hello!
+# How to write slides
 
-- :smile:
+Split pages by horizontal ruler (\`---\`). It's very simple! :satisfied:
+
+\`\`\`markdown
+# Slide 1
+
+foobar
+
+---
+
+# Slide 2
+
+foobar
+\`\`\`
 `.trim()
+
+const MarpExample = ({ page }) => (
+  <Marp
+    markdown={example}
+    page={page}
+    style={css`
+      border: thin solid #ddd;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+      box-sizing: border-box;
+      margin: 20px;
+      max-width: 360px;
+      width: 80%;
+    `}
+  />
+)
+
+const Description = () => (
+  <section
+    css={css`
+      box-sizing: border-box;
+      font-weight: 500;
+      margin: 0 auto;
+      max-width: 1200px;
+      overflow: hidden;
+      padding: 30px;
+      text-align: center;
+
+      > section {
+        text-align: left;
+
+        p {
+          margin-left: auto;
+          margin-right: auto;
+          max-width: 640px;
+        }
+      }
+
+      > figure {
+        margin-top: 1em;
+      }
+    `}
+  >
+    <h1>
+      <mark>The great experience</mark> for creating slide deck
+    </h1>
+    <section>
+      <p>
+        Marp, Markdown Presentation Ecosystem, provides the great experience to
+        create beautiful slide deck. You only have to focus writing your story
+        in Markdown document.
+      </p>
+      <p>
+        The created deck can export into HTML, PDF, and PPTX to give a
+        presentation.
+      </p>
+    </section>
+    <figure>
+      <MarpExample page={1} />
+      <MarpExample page={2} />
+      <figcaption>
+        We&apos;re rendering slides generated in{' '}
+        <a href="https://github.com/marp-team/marp-core">Marp Core</a>
+      </figcaption>
+    </figure>
+    <p>
+      <Button
+        onClick="this"
+        id="show-example-markdown"
+        style={{ fontSize: '14px' }}
+      >
+        Show example Markdown...
+      </Button>
+    </p>
+    <section>
+      <details id="example-markdown">
+        <summary style={{ display: 'none' }} />
+        <Code
+          style={css`
+            background: #f0f0f0;
+            border-radius: 15px;
+            box-sizing: border-box;
+            font-size: 13.5px;
+            margin: 0 auto;
+            max-width: 800px;
+            padding: 20px 10px;
+            width: 85%;
+          `}
+        >
+          {example}
+        </Code>
+      </details>
+    </section>
+  </section>
+)
 
 export default function Index() {
   return (
     <Layout>
       <Hero />
-      <section
-        css={css`
-          overflow: hidden;
-          box-sizing: border-box;
-          padding: 50px 30px;
-          max-width: 1200px;
-          margin: 0 auto;
-          font-weight: 500;
-          text-align: center;
-        `}
-      >
-        <h1>
-          <mark>The great experience</mark> for creating slide deck
-        </h1>
-        <p>
-          Marp, Markdown Presentation Ecosystem, provides the great experience
-          to create beautiful slide deck.
-        </p>
-        <p>You only have to focus into your story in Markdown document.</p>
-        <p>
-          <Marp
-            markdown={example}
-            style={css`
-              width: 80%;
-              max-width: 400px;
-              border: thin solid #ccc;
-              box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
-            `}
-          />
-        </p>
-        <p>
-          <Marp
-            markdown={example}
-            page={2}
-            style={css`
-              width: 80%;
-              max-width: 400px;
-              border: thin solid #ccc;
-              box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
-            `}
-          />
-        </p>
-      </section>
+      <Description />
+
+      {/* TODO: Add section for features and tools */}
+      <script defer src="/index.js" />
     </Layout>
   )
 }

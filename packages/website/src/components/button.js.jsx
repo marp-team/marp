@@ -53,7 +53,7 @@ const colors = {
 
         &:active {
           color: #444;
-          background-color: #f0f0f0;
+          background-color: #e0e0e0;
         }
       }
     `,
@@ -106,6 +106,6 @@ export const Button = props => {
     props.css,
   ]
 
-  if (props.href) return <a tabIndex="0" role="button" {...props} css={style} />
+  if (props.href) return <a tabIndex={0} role="button" {...props} css={style} />
   return <button {...props} css={style} />
 }
