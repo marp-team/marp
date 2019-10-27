@@ -266,6 +266,10 @@ export const Layout = ({
       <meta property="og:title" content={title} />
       <meta property="og:type" content={type} />
       <meta property="og:image" content={resolvePath(image, environment)} />
+      <meta
+        property="twitter:card"
+        content={type === 'website' ? 'summary_large_image' : 'summary'}
+      />
       <link
         href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700|Source+Code+Pro:400,500&display=swap"
         rel="stylesheet"
