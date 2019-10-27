@@ -1,4 +1,5 @@
 /** @jsx jsx */
+import { version } from '@marp-team/marp-core/package.json'
 import { css, jsx } from '@emotion/core'
 import { Layout, defaultTitle } from './layout.js.jsx'
 import { Button } from './components/button.js.jsx'
@@ -169,7 +170,7 @@ const Description = () => (
       <Button
         onClick="this"
         id="show-example-markdown"
-        style={{ fontSize: '14px' }}
+        style={{ fontSize: '0.85em' }}
       >
         Show example Markdown...
       </Button>
@@ -182,7 +183,7 @@ const Description = () => (
             background: #f0f0f0;
             border-radius: 15px;
             box-sizing: border-box;
-            font-size: 13.5px;
+            font-size: 0.8em;
             margin: 0 auto;
             max-width: 800px;
             padding: 20px 10px;
@@ -198,12 +199,18 @@ const Description = () => (
 
 export default function Index() {
   return (
-    <Layout>
+    <Layout
+      route="/"
+      description="Marp, Markdown Presentation Ecosystem, provides the great experience to create beautiful slide deck."
+    >
       <Hero />
       <Description />
 
       {/* TODO: Add section for features and tools */}
-      <script defer src="/index.js" />
+      <script src="/index.js" />
+      <script
+        src={`https://cdn.jsdelivr.net/npm/@marp-team/marp-core@${version}/lib/browser.js`}
+      />
     </Layout>
   )
 }

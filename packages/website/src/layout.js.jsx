@@ -1,7 +1,11 @@
 /** @jsx jsx */
+import { URL } from 'url'
 import { Global, css, jsx } from '@emotion/core'
 
+const base = 'https://marp.app/'
+
 export const defaultTitle = 'Marp: Markdown Presentation Ecosystem'
+export const defaultImage = '/assets/og-image.png'
 
 const globalStyle = css`
   html,
@@ -22,6 +26,7 @@ const globalStyle = css`
     font-family: Quicksand, Avenir, Century Gothic, -apple-system,
       BlinkMacSystemFont, sans-serif, Apple Color Emoji, Segoe UI Emoji;
     font-size: 18px;
+    font-size: calc(15px + 0.2vw);
     letter-spacing: 0.04em;
     line-height: 1.4;
     min-height: 100%;
@@ -68,7 +73,7 @@ const globalStyle = css`
   }
 `
 
-const Header = ({ active, height = 80 }) => (
+const Header = ({ route, height = 80 }) => (
   <header
     css={css`
       --header-gap: calc(5px + 1vw);
@@ -181,12 +186,12 @@ const Header = ({ active, height = 80 }) => (
     `}
   >
     <a href="/">
-      <img src="./assets/marp-logo.svg" alt={defaultTitle} />
+      <img src="/assets/marp-logo.svg" alt={defaultTitle} />
     </a>
     <nav>
       <ul>
         <li>
-          <a href="/blog" className={active === 'blog' ? 'active' : undefined}>
+          <a href="/blog" className={route === '/blog' ? 'active' : undefined}>
             Blog
           </a>
         </li>
@@ -205,26 +210,43 @@ const Header = ({ active, height = 80 }) => (
   </header>
 )
 
-export const Layout = ({ active, children, title = defaultTitle }) => (
+export const Layout = ({
+  children,
+  description,
+  image = defaultImage,
+  route,
+  title = defaultTitle,
+  type = 'website',
+}) => (
   <html lang="en">
     <head>
       <title>{title}</title>
       <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
+      {description && (
+        <>
+          <meta name="description" content={description} />
+          <meta property="og:description" content={description} />
+        </>
+      )}
+      {route && (
+        <>
+          <link rel="canonical" content={new URL(route, base).toString()} />
+          <meta property="og:url" content={new URL(route, base).toString()} />
+        </>
+      )}
+      <meta property="og:title" content={title} />
+      <meta property="og:type" content={type} />
+      <meta property="og:image" content={new URL(image, base).toString()} />
       <link
         href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700|Source+Code+Pro:500&display=swap"
         rel="stylesheet"
       />
       <Global styles={globalStyle} />
     </head>
-    <body
-      css={css`
-        display: flex;
-        flex-direction: column;
-      `}
-    >
-      <Header active={active} />
+    <body>
+      <Header route={route} />
       <main>{children}</main>
     </body>
   </html>

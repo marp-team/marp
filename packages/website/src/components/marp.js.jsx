@@ -21,23 +21,21 @@ const container = css`
 export const Marp = props => {
   const marp = new MarpCore({
     container: null,
-    script: { source: 'cdn' },
+    script: false,
     printable: false,
   })
-  const { html, css: renderedCss } = marp.render(props.markdown, {
-    htmlAsArray: true,
-  })
+  const rendered = marp.render(props.markdown, { htmlAsArray: true })
 
   return (
     <div css={reset}>
       <div
         css={[
           container,
-          css([renderedCss.replace(/\/\*[\s\S]*?\*\//g, '')]),
+          css([rendered.css.replace(/\/\*[\s\S]*?\*\//g, '')]),
           props.style,
         ]}
         dangerouslySetInnerHTML={{
-          __html: html[props.page ? props.page - 1 : 0],
+          __html: rendered.html[props.page ? props.page - 1 : 0],
         }}
       />
     </div>
