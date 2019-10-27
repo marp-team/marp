@@ -11,7 +11,7 @@ export const generateTitle = (...breadcrumbs) =>
 export const resolvePath = (path, environment = 'production') =>
   new URL(
     path,
-    environment === 'production'
+    process.env.DEPLOY_URL || environment === 'production'
       ? 'https://marp.app/'
       : 'http://localhost:2468/'
   ).toString()
