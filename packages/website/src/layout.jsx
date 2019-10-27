@@ -11,9 +11,14 @@ export const generateTitle = (...breadcrumbs) =>
 export const resolvePath = (path, environment = 'production') =>
   new URL(
     path,
-    process.env.DEPLOY_URL || environment === 'production'
-      ? 'https://marp.app/'
-      : 'http://localhost:2468/'
+    (() => {
+      // For Netlify deploy preview
+      if (process.env.CONTEXT === 'deploy-preview')
+        return process.env.DEPLOY_URL
+
+      if (environment === 'production') return 'https://marp.app/'
+      return 'http://localhost:2468/'
+    })()
   ).toString()
 
 export const contentStyle = css`
