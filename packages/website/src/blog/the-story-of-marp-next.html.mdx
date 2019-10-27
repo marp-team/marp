@@ -4,14 +4,17 @@ export const meta = {
   slug: 'the-story-of-marp-next',
   title: 'The story of Marp Next',
   image: '/blog/og-images/the-story-of-marp-next.png',
-  description: "Today, I'm so excited to introduce the story of Marp Next! The full-rewritten Marp is not only just a writer. To be usable in various situations, we build a brand-new Marp ecosystem consisted of multiple modules.",
+  description:
+    "Today, I'm so excited to introduce the story of Marp Next! The full-rewritten Marp is not only just a writer. To be usable in various situations, we build a brand-new Marp ecosystem consisted of multiple modules.",
   date: '2019-06-06',
   author: 'Yuki Hattori',
   github: 'yhatt',
 }
 
 export const layout = ({ children, environment }) => (
-  <BlogLayout environment={environment} meta={meta}>{children}</BlogLayout>
+  <BlogLayout environment={environment} meta={meta}>
+    {children}
+  </BlogLayout>
 )
 
 The first version of [Marp](https://yhatt.github.io/marp/) was released at almost 3 years ago. At first, it was started from a simple tool for personal usage called "mdSlide". And now, Marp has been used by a lot of users who would recognize the real value of the presentation writer. Marp is amassed around [8,000 stars](https://github.com/yhatt/marp/stargazers) until now.
@@ -139,7 +142,10 @@ And 2 years later, the time has come to use PWA! After the first access to **[ht
 By migrating to the web-based app, Marp will be able using in mobile device: Android and iOS. That's sure it's well suited to the tablet device like iPad.
 
 <figure>
-  <img src="https://user-images.githubusercontent.com/3993388/50569518-5305c800-0daa-11e9-8fa4-08053c9b51cd.png" width="640" />
+  <img
+    src="https://user-images.githubusercontent.com/3993388/50569518-5305c800-0daa-11e9-8fa4-08053c9b51cd.png"
+    width="640"
+  />
 </figure>
 
 Marp Web would work also in Chrome OS well. Marp especially has many users in the field of education, and supporting Chrome OS that has large share in its field is meaningful.
