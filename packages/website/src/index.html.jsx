@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { version } from '@marp-team/marp-core/package.json'
 import { css, jsx } from '@emotion/core'
-import { Layout, defaultTitle } from './layout.js.jsx'
+import { Layout, defaultTitle } from './layout.jsx'
 import { Button } from './components/button.js.jsx'
 import { Code } from './components/code.js.jsx'
 import { Marp } from './components/marp.js.jsx'
@@ -55,6 +55,7 @@ const Hero = () => (
     */}
     <p>
       <Button
+        color="primary"
         outline="true"
         href="https://github.com/marp-team/marp/"
         rel="noopener noreferrer"
@@ -202,6 +203,7 @@ export default function Index() {
     <Layout
       route="/"
       description="Marp, Markdown Presentation Ecosystem, provides the great experience to create beautiful slide deck."
+      type="website"
     >
       <Hero />
       <Description />

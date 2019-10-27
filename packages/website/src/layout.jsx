@@ -7,6 +7,18 @@ const base = 'https://marp.app/'
 export const defaultTitle = 'Marp: Markdown Presentation Ecosystem'
 export const defaultImage = '/assets/og-image.png'
 
+export const generateTitle = (...breadcrumbs) =>
+  ['Marp', ...breadcrumbs].reverse().join(' | ')
+
+export const resolvePath = path => new URL(path, base).toString()
+
+export const contentStyle = css`
+  max-width: 1000px;
+  overflow: hidden;
+  padding: 30px;
+  margin: 0 auto;
+`
+
 const globalStyle = css`
   html,
   body {
@@ -19,7 +31,7 @@ const globalStyle = css`
   }
 
   body {
-    color: #333;
+    color: #445;
     background-color: #f8f8f8;
     background-image: linear-gradient(to bottom, #f8f8f8, #fff);
     background-attachment: fixed;
@@ -191,7 +203,12 @@ const Header = ({ route, height = 80 }) => (
     <nav>
       <ul>
         <li>
-          <a href="/blog" className={route === '/blog' ? 'active' : undefined}>
+          <a
+            href="/blog"
+            className={
+              route && route.startsWith('/blog') ? 'active' : undefined
+            }
+          >
             Blog
           </a>
         </li>
@@ -216,7 +233,7 @@ export const Layout = ({
   image = defaultImage,
   route,
   title = defaultTitle,
-  type = 'website',
+  type = 'article',
 }) => (
   <html lang="en">
     <head>
@@ -232,15 +249,15 @@ export const Layout = ({
       )}
       {route && (
         <>
-          <link rel="canonical" content={new URL(route, base).toString()} />
-          <meta property="og:url" content={new URL(route, base).toString()} />
+          <link rel="canonical" content={resolvePath(route)} />
+          <meta property="og:url" content={resolvePath(route)} />
         </>
       )}
       <meta property="og:title" content={title} />
       <meta property="og:type" content={type} />
-      <meta property="og:image" content={new URL(image, base).toString()} />
+      <meta property="og:image" content={resolvePath(image)} />
       <link
-        href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700|Source+Code+Pro:500&display=swap"
+        href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700|Source+Code+Pro:400,500&display=swap"
         rel="stylesheet"
       />
       <Global styles={globalStyle} />
