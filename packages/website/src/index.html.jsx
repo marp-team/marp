@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { version } from '@marp-team/marp-core/package.json'
 import { css, jsx } from '@emotion/core'
-import { Layout, defaultTitle } from './layout.jsx'
+import { Layout, contentStyle, defaultTitle } from './layout.jsx'
 import { Button } from './components/button.js.jsx'
 import { Code } from './components/code.js.jsx'
 import { Marp } from './components/marp.js.jsx'
@@ -121,29 +121,27 @@ const MarpExample = ({ page }) => (
 
 const Description = () => (
   <section
-    css={css`
-      box-sizing: border-box;
-      font-weight: 500;
-      margin: 0 auto;
-      max-width: 1200px;
-      overflow: hidden;
-      padding: 30px;
-      text-align: center;
+    css={[
+      contentStyle,
+      css`
+        font-weight: 500;
+        text-align: center;
 
-      > section {
-        text-align: left;
+        > section {
+          text-align: left;
 
-        p {
-          margin-left: auto;
-          margin-right: auto;
-          max-width: 640px;
+          p {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 640px;
+          }
         }
-      }
 
-      > figure {
-        margin-top: 1em;
-      }
-    `}
+        > figure {
+          margin-top: 1em;
+        }
+      `,
+    ]}
   >
     <h1>
       <mark>The great experience</mark> for creating slide deck
@@ -182,7 +180,8 @@ const Description = () => (
         <Code
           language="markdown"
           style={css`
-            background: #f0f0f0;
+            border: thin solid #eee;
+            background: #f6f6f6 url('/assets/noise.png');
             border-radius: 15px;
             box-sizing: border-box;
             font-size: 0.8em;
@@ -210,7 +209,9 @@ export default function Index({ environment }) {
       <Hero />
       <Description />
 
-      {/* TODO: Add section for features and tools */}
+      <section css={contentStyle}>{/* TODO: Add features section */}</section>
+
+      {/* TODO: Add introduction section for tools and header */}
       <script src="/index.js" />
       <script
         src={`https://cdn.jsdelivr.net/npm/@marp-team/marp-core@${version}/lib/browser.js`}

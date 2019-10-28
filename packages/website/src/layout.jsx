@@ -41,9 +41,6 @@ const globalStyle = css`
 
   body {
     color: #445;
-    background-color: #f8f8f8;
-    background-image: linear-gradient(to bottom, #f8f8f8, #fff);
-    background-attachment: fixed;
     font-family: Quicksand, Avenir, Century Gothic, -apple-system,
       BlinkMacSystemFont, sans-serif, Apple Color Emoji, Segoe UI Emoji;
     font-size: 18px;
@@ -51,6 +48,22 @@ const globalStyle = css`
     letter-spacing: 0.04em;
     line-height: 1.4;
     min-height: 100%;
+    position: relative;
+
+    /* "background-attachment: fixed" may break background rendering in mobile device. */
+    &::before {
+      display: block;
+      position: fixed;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: '';
+      background-color: #f8f8f8;
+      background-image: url('/assets/noise.png'),
+        linear-gradient(to bottom, #fafafa, #fff 50%);
+    }
   }
 
   img {

@@ -118,7 +118,7 @@ export const blogStyle = ({ fontSize = 17 } = {}) => css`
   code,
   pre {
     font-family: 'Source Code Pro', 'Courier New', Courier, monospace;
-    background-color: #f0f0f0;
+    background-color: #f6f6f6;
     border-radius: 2px;
     letter-spacing: 0;
   }
@@ -130,6 +130,7 @@ export const blogStyle = ({ fontSize = 17 } = {}) => css`
   }
 
   pre {
+    background-image: url('/assets/noise.png');
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
     box-sizing: border-box;
     font-weight: 500;
