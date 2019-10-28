@@ -10,11 +10,14 @@ const articleStyle = css`
   }
 `
 const coverStyle = css`
-  display: block;
-  width: 100%;
-  max-width: 640px;
-  margin: 1em auto;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: block;
+  height: auto;
+  margin: 1em auto;
+  max-height: 320px;
+  max-width: 640px;
+  object-fit: cover;
+  width: 100%;
 `
 
 export const blogStyle = ({ fontSize = 17 } = {}) => css`
@@ -215,7 +218,16 @@ export const Meta = ({ author, date, github }) => (
 )
 
 export const BlogLayout = ({ children, environment, meta }) => {
-  const { title, description, image, slug, date, author, github } = meta
+  const {
+    title,
+    description,
+    image,
+    imageCaption,
+    slug,
+    date,
+    author,
+    github,
+  } = meta
   const route = slug && `/blog/${slug}`
 
   return (
@@ -236,8 +248,9 @@ export const BlogLayout = ({ children, environment, meta }) => {
             <img
               css={coverStyle}
               src={resolvePath(image, environment)}
-              alt={title}
+              alt={imageCaption || title}
             />
+            {imageCaption && <figcaption>{imageCaption}</figcaption>}
           </figure>
         )}
         <div css={blogStyle()}>{children}</div>
