@@ -22,7 +22,7 @@ export default function Blog({ environment, pages }) {
             key={article.path}
             css={css`
               margin: 1em 0;
-              padding: 20px;
+              padding: 25px;
               position: relative;
             `}
           >
@@ -38,7 +38,6 @@ export default function Blog({ environment, pages }) {
                 text-indent: 100%;
                 white-space: nowrap;
                 pointer-events: auto;
-                border-radius: 0.5em;
                 z-index: 1;
                 transition: background-color 0.2s linear, box-shadow 0.2s linear;
 

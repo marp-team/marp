@@ -8,7 +8,7 @@ export const defaultImage = '/assets/og-image.png'
 export const generateTitle = (...breadcrumbs) =>
   ['Marp', ...breadcrumbs].reverse().join(' | ')
 
-export const resolvePath = (path, environment = 'production') =>
+export const resolvePath = path =>
   new URL(
     path,
     (() => {
@@ -16,7 +16,8 @@ export const resolvePath = (path, environment = 'production') =>
       if (process.env.CONTEXT === 'deploy-preview')
         return process.env.DEPLOY_URL
 
-      if (environment === 'production') return 'https://marp.app/'
+      if (process.env.NODE_ENV === 'production') return 'https://marp.app/'
+
       return 'http://localhost:2468/'
     })()
   ).toString()
@@ -104,6 +105,13 @@ const globalStyle = css`
       text-align: center;
       font-size: 75%;
     }
+  }
+
+  code {
+    font-family: 'Source Code Pro', 'Courier New', Courier, monospace;
+    background-color: #f8f8f8;
+    letter-spacing: 0;
+    padding: 0 0.2em;
   }
 `
 
@@ -252,7 +260,6 @@ const Header = ({ route, height = 80 }) => (
 export const Layout = ({
   children,
   description,
-  environment,
   image = defaultImage,
   route,
   title = defaultTitle,
@@ -272,13 +279,13 @@ export const Layout = ({
       )}
       {route && (
         <>
-          <link rel="canonical" content={resolvePath(route, environment)} />
-          <meta property="og:url" content={resolvePath(route, environment)} />
+          <link rel="canonical" content={resolvePath(route)} />
+          <meta property="og:url" content={resolvePath(route)} />
         </>
       )}
       <meta property="og:title" content={title} />
       <meta property="og:type" content={type} />
-      <meta property="og:image" content={resolvePath(image, environment)} />
+      <meta property="og:image" content={resolvePath(image)} />
       <meta
         property="twitter:card"
         content={type === 'website' ? 'summary_large_image' : 'summary'}

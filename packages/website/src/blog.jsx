@@ -218,7 +218,7 @@ export const Meta = ({ author, date, github }) => (
   </div>
 )
 
-export const BlogLayout = ({ children, environment, meta }) => {
+export const BlogLayout = ({ children, meta }) => {
   const {
     title,
     description,
@@ -234,7 +234,6 @@ export const BlogLayout = ({ children, environment, meta }) => {
   return (
     <Layout
       description={description}
-      environment={environment}
       image={image}
       route={route}
       title={generateTitle('Blog', title)}
@@ -248,7 +247,7 @@ export const BlogLayout = ({ children, environment, meta }) => {
           <figure>
             <img
               css={coverStyle}
-              src={resolvePath(image, environment)}
+              src={resolvePath(image)}
               alt={imageCaption || title}
             />
             {imageCaption && <figcaption>{imageCaption}</figcaption>}

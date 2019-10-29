@@ -1,6 +1,6 @@
 document
-  .getElementById('show-example-markdown')
+  .getElementById('show-markdown-example')
   .addEventListener('click', () => {
-    const example = document.getElementById('example-markdown')
+    const example = document.getElementById('markdown-example')
     example.open = !example.open
   })
