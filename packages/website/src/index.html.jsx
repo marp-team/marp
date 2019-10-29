@@ -413,11 +413,11 @@ const Features = () => {
         <figure>
           <img
             src="https://icongr.am/octicons/plug.svg?size=50&amp;color=444455"
-            alt="Extensible architecture"
+            alt="Pluggable architecture"
           />
         </figure>
         <h2>
-          <mark>Extensible</mark> architecture
+          <mark>Pluggable</mark> architecture
         </h2>
         <p>
           As a matter of fact,{' '}
@@ -471,75 +471,99 @@ const Features = () => {
   const { length } = FeatureSections().props.children
 
   return (
-    <FeatureSections
-      css={[
-        contentStyle,
-        css`
-          display: grid;
-          grid-template-rows: repeat(${length + 1}, auto);
-          grid-template-columns: 1fr;
-          max-width: 1200px;
-          padding-top: 0;
-
-          section {
-            background: #fff;
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-            box-sizing: border-box;
-            font-size: 85%;
-            margin: 10px;
-            padding: 25px;
-            white-space: break-word;
-            grid-column: 1;
-
-            figure {
-              margin: 0;
-              height: 50px;
-              text-align: center;
-
-              img {
-                width: 50px;
-                height: 50px;
-              }
-            }
-
-            h2 {
-              font-size: 22px;
-              text-align: center;
-            }
-
-            p {
-              font-size: 14px;
-              font-size: calc(14px + 0.02vw);
-              margin-bottom: 0;
-            }
-          }
-
-          @media (min-width: 768px) {
-            grid-template-columns: 1fr 1fr;
+    <div
+      css={css`
+        position: relative;
+        &:before {
+          position: absolute;
+          display: block;
+          content: '';
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background: linear-gradient(
+            -8deg,
+            rgba(120, 197, 233, 0),
+            rgba(120, 197, 233, 0) 50%,
+            rgba(120, 197, 233, 0.5)
+          );
+          z-index: 0;
+          clip-path: polygon(0 15vw, 100% 0, 100% 100%, 0 100%);
+        }
+      `}
+    >
+      <FeatureSections
+        css={[
+          contentStyle,
+          css`
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-rows: repeat(${length + 1}, auto);
+            grid-template-columns: 1fr;
+            max-width: 1200px;
 
             section {
-              margin: 20px;
+              background: #fff;
+              box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+              box-sizing: border-box;
+              font-size: 85%;
+              margin: 10px;
+              padding: 25px;
+              white-space: break-word;
+              grid-column: 1;
 
-              &:nth-of-type(odd) {
-                grid-column: 1;
+              figure {
+                margin: 0;
+                height: 50px;
+                text-align: center;
+
+                img {
+                  width: 50px;
+                  height: 50px;
+                }
               }
 
-              &:nth-of-type(even) {
-                grid-column: 2;
+              h2 {
+                font-size: 22px;
+                text-align: center;
               }
 
-              ${[...Array(length)].map(
-                (_, i) => css`
-                  &:nth-of-type(${i + 1}) {
-                    grid-row: ${i + 1} / span 2;
-                  }
-                `
-              )}
+              p {
+                font-size: 14px;
+                font-size: calc(14px + 0.02vw);
+                margin-bottom: 0;
+              }
             }
-          }
-        `,
-      ]}
-    />
+
+            @media (min-width: 768px) {
+              grid-template-columns: 1fr 1fr;
+
+              section {
+                margin: 20px;
+
+                &:nth-of-type(odd) {
+                  grid-column: 1;
+                }
+
+                &:nth-of-type(even) {
+                  grid-column: 2;
+                }
+
+                ${[...Array(length)].map(
+                  (_, i) => css`
+                    &:nth-of-type(${i + 1}) {
+                      grid-row: ${i + 1} / span 2;
+                    }
+                  `
+                )}
+              }
+            }
+          `,
+        ]}
+      />
+    </div>
   )
 }
 
