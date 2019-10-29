@@ -75,6 +75,7 @@ const example = (resolver = v => v) =>
 theme: gaia
 _class: lead
 paginate: true
+backgroundColor: #fff
 backgroundImage: url('${resolver('/assets/hero-background.jpg')}')
 ---
 
