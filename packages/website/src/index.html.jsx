@@ -40,11 +40,11 @@ const Hero = () => (
       />
       Markdown Presentation Ecosystem
     </h1>
-    {/* TODO: Link to document
     <p>
+      {/* TODO: Change this link to "Docs" page that would be hosted on marp.app in future */}
       <Button
         color="primary"
-        href="#"
+        href="#get-started"
         css={css`
           font-size: calc(18px + 0.5vw);
           padding: 0.75em 1.5em;
@@ -53,18 +53,17 @@ const Hero = () => (
         Get started!
       </Button>
     </p>
-    */}
     <p>
       <Button
         color="primary"
         outline="true"
         href="https://github.com/marp-team/marp/"
-        rel="noopener noreferrer"
+        rel="noopener"
         css={css`
           font-size: calc(12px + 0.25vw);
         `}
       >
-        Find Marp tools at repository...
+        Find out Marp tools at GitHub...
       </Button>
     </p>
   </section>
@@ -475,6 +474,7 @@ const Features = () => {
     <div
       css={css`
         position: relative;
+
         &:before {
           position: absolute;
           display: block;
@@ -567,6 +567,278 @@ const Features = () => {
   )
 }
 
+const GetStarted = () => (
+  <section
+    id="get-started"
+    css={css`
+      position: relative;
+
+      /* Fix position for anchor link */
+      padding-top: 110px;
+      margin-top: -110px;
+
+      &::before {
+        overflow: visible;
+        position: absolute;
+        display: block;
+        content: '';
+        top: calc(-12vw + 110px);
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: #0288d1;
+        z-index: 0;
+        clip-path: polygon(0 0, 100% 8vw, 100% 100%, 0 100%);
+      }
+
+      &::after {
+        display: block;
+        content: '';
+        height: 0;
+        overflow: hidden;
+        clear: both;
+      }
+
+      > p,
+      > section {
+        margin: 40px;
+        max-width: 1000px;
+        position: relative;
+        z-index: 1;
+      }
+
+      > p {
+        color: #fff;
+        margin: 30px auto;
+        padding: 0 40px;
+        text-align: center;
+      }
+
+      > section {
+        background: #fff;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+        box-sizing: border-box;
+        display: block;
+        font-size: calc(16px + 0.1vw);
+        padding: 40px 30px;
+        white-space: break-word;
+        width: auto;
+
+        @media (min-width: 1060px) {
+          margin: 40px auto;
+        }
+
+        header {
+          margin: 0 0 1em 0;
+
+          h3 {
+            font-size: 1.5em;
+            margin: 0;
+          }
+
+          p {
+            color: #888;
+            font-size: 75%;
+            margin: 0.5em 0;
+          }
+        }
+
+        p {
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+
+        [role='button'] {
+          font-size: 85%;
+        }
+      }
+    `}
+  >
+    <Heading
+      level={2}
+      css={css`
+        background: #02669d;
+        color: #fff;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      `}
+    >
+      Tools and integrations
+    </Heading>
+    <section>
+      <header>
+        <h3>
+          <mark>Marp for VS Code</mark>{' '}
+          <img src="https://img.shields.io/visual-studio-marketplace/v/marp-team.marp-vscode.svg?style=flat-square&amp;label=&amp;colorB=67b8e3" />
+        </h3>
+        <p>Create slide deck written in Marp Markdown on VS Code</p>
+      </header>
+      <p>
+        Enhance VS Code&apos;s Markdown preview pane to support writing your
+        beautiful presentation. You can see the slide deck output as soon as
+        editting Markdown.
+      </p>
+      <p>
+        <Button
+          href="https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode"
+          target="_blank"
+          rel="noopener noreferrer"
+          color="primary"
+        >
+          VS Marketplace
+        </Button>{' '}
+        <Button
+          href="https://github.com/marp-team/marp-vscode"
+          rel="noopener"
+          // eslint-disable-next-line react/jsx-no-target-blank
+          target="_blank"
+          outline="true"
+        >
+          GitHub
+        </Button>
+      </p>
+    </section>
+    <section>
+      <header>
+        <h3>
+          <mark>Marp CLI</mark>{' '}
+          <img src="https://img.shields.io/npm/v/@marp-team/marp-cli.svg?style=flat-square&amp;label=&amp;colorB=67b8e3" />
+        </h3>
+        <p>A CLI interface for Marp and Marpit based converters</p>
+      </header>
+      <p>
+        CLI is the swiss-army knife for Marp ecosystem. Convert your Markdown
+        into various formats, watch changes, launch server for on-demand
+        conversion, and customize engine.
+      </p>
+      <p>
+        <Button
+          href="https://github.com/marp-team/marp-cli/releases"
+          rel="noopener"
+          // eslint-disable-next-line react/jsx-no-target-blank
+          target="_blank"
+          color="primary"
+        >
+          Releases
+        </Button>{' '}
+        <Button
+          href="https://github.com/marp-team/marp-cli"
+          rel="noopener"
+          // eslint-disable-next-line react/jsx-no-target-blank
+          target="_blank"
+          outline="true"
+        >
+          GitHub
+        </Button>
+      </p>
+    </section>
+    <Heading
+      level={3}
+      css={css`
+        background: #02669d;
+        color: #fff;
+      `}
+    >
+      For developers
+    </Heading>
+    <section>
+      <header>
+        <h3>
+          <mark>Marp Core</mark>{' '}
+          <img src="https://img.shields.io/npm/v/@marp-team/marp-core.svg?style=flat-square&amp;label=&amp;colorB=67b8e3" />
+        </h3>
+        <p>The core of Marp converter</p>
+      </header>
+      <p>
+        All official Marp tools provided by us are using this core as the
+        engine. It is based on Marpit framework, and includes some extended
+        features to help creating beautiful slide deck.
+      </p>
+      <p>
+        <Button
+          href="https://www.npmjs.com/package/@marp-team/marp-core"
+          target="_blank"
+          rel="noopener noreferrer"
+          color="primary"
+          outline="true"
+        >
+          npm
+        </Button>{' '}
+        <Button
+          href="https://github.com/marp-team/marp-core"
+          rel="noopener"
+          // eslint-disable-next-line react/jsx-no-target-blank
+          target="_blank"
+          outline="true"
+        >
+          GitHub
+        </Button>
+      </p>
+    </section>
+    <section>
+      <header>
+        <h3>
+          <mark>Marpit</mark> framework{' '}
+          <img src="https://img.shields.io/npm/v/@marp-team/marpit.svg?style=flat-square&amp;label=&amp;colorB=67b8e3" />
+        </h3>
+        <p>The skinny framework for creating slide deck from Markdown</p>
+      </header>
+      <p>
+        Marpit, independented from Marp, is the skinny framework to transform
+        Markdown + CSS theme to the deck composed of HTML + CSS. It has designed
+        to output only minimum assets.
+      </p>
+      <p>
+        <Button
+          href="https://marpit.marp.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          color="primary"
+        >
+          Documentation
+        </Button>{' '}
+        <Button
+          href="https://www.npmjs.com/package/@marp-team/marpit"
+          target="_blank"
+          rel="noopener noreferrer"
+          color="primary"
+          outline="true"
+        >
+          npm
+        </Button>{' '}
+        <Button
+          href="https://github.com/marp-team/marpit"
+          rel="noopener"
+          // eslint-disable-next-line react/jsx-no-target-blank
+          target="_blank"
+          outline="true"
+        >
+          GitHub
+        </Button>
+      </p>
+    </section>
+    <p>
+      ...and find out all tools, integrations, examples at our GitHub entrance
+      repository!
+    </p>
+    <p>
+      <Button
+        color="primary"
+        outline="true"
+        href="https://github.com/marp-team/marp/"
+        rel="noopener"
+        target="_blank"
+        css={css`
+          font-size: calc(12px + 0.25vw);
+        `}
+      >
+        Go to the entrance repository...
+      </Button>
+    </p>
+  </section>
+)
+
 export default function Index() {
   return (
     <Layout
@@ -577,116 +849,7 @@ export default function Index() {
       <Hero />
       <Description />
       <Features />
-      <section>
-        <Heading level={2}>Tools and integrations</Heading>
-        <section css={contentStyle}>
-          <h3>Marp for VS Code</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
-            voluptatibus dolor minima, delectus dignissimos deserunt excepturi
-            exercitationem, nihil ducimus blanditiis officiis, labore autem eius
-            non ea fugiat quam molestiae totam?
-          </p>
-          <p>
-            <Button
-              href="https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode"
-              target="_blank"
-              rel="noopener noreferrer"
-              color="primary"
-            >
-              Visual Studio Marketplace
-            </Button>{' '}
-            <Button
-              href="https://github.com/marp-team/marp-vscode"
-              rel="noopener noreferrer"
-              // eslint-disable-next-line react/jsx-no-target-blank
-              target="_blank"
-              outline="true"
-            >
-              Repository
-            </Button>
-          </p>
-        </section>
-        <section css={contentStyle}>
-          <h3>Marp CLI</h3>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem
-            maiores optio, doloremque fugit voluptas distinctio commodi
-            voluptates ratione incidunt dolore molestias repudiandae suscipit
-            expedita quod fuga sit? Distinctio, ipsam optio?
-          </p>
-          <p>
-            <Button
-              href="https://github.com/marp-team/marp-cli"
-              rel="noopener noreferrer"
-              // eslint-disable-next-line react/jsx-no-target-blank
-              target="_blank"
-              outline="true"
-            >
-              Repository
-            </Button>
-          </p>
-        </section>
-        <section css={contentStyle}>
-          <h3>Marp Core</h3>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel
-            maiores expedita dolores ullam, totam, reprehenderit assumenda sit
-            sunt recusandae officiis harum illo at alias inventore hic debitis,
-            nihil deleniti quo.
-            <p>
-              <Button
-                href="https://github.com/marp-team/marp-core"
-                rel="noopener noreferrer"
-                // eslint-disable-next-line react/jsx-no-target-blank
-                target="_blank"
-                outline="true"
-              >
-                Repository
-              </Button>
-            </p>
-          </p>
-        </section>
-        <section css={contentStyle}>
-          <h3>Marpit framework</h3>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias
-            tenetur quidem quae in architecto cupiditate nam vitae accusamus
-            culpa expedita tempore cum vel odit necessitatibus adipisci
-            sapiente, deserunt ab aliquam.
-          </p>
-          <p>
-            <Button
-              href="https://marpit.marp.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              color="primary"
-            >
-              Documentation
-            </Button>{' '}
-            <Button
-              href="https://github.com/marp-team/marpit"
-              rel="noopener noreferrer"
-              // eslint-disable-next-line react/jsx-no-target-blank
-              target="_blank"
-              outline="true"
-            >
-              Repository
-            </Button>
-          </p>
-        </section>
-
-        <section css={contentStyle}>
-          <h3>Pre-releases</h3>
-          <p>
-            <ul>
-              <li>Marp Web</li>
-              <li>Marp React</li>
-              <li>Marp Vue</li>
-            </ul>
-          </p>
-        </section>
-      </section>
+      <GetStarted />
 
       {/* TODO: Add footer to layout */}
       <script src="/index.js" />

@@ -38,6 +38,7 @@ const globalStyle = css`
 
   html {
     height: 100%;
+    scroll-behavior: smooth;
   }
 
   body {
