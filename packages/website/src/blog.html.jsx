@@ -35,7 +35,7 @@ export default function Blog({ environment, pages }) {
                 right: 0;
                 bottom: 0;
                 overflow: hidden;
-                text-indent: 100%;
+                text-indent: 200%;
                 white-space: nowrap;
                 pointer-events: auto;
                 z-index: 1;
