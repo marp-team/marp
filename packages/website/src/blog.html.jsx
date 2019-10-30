@@ -16,7 +16,14 @@ export default function Blog({ environment, pages }) {
       title={generateTitle('Blog')}
     >
       <section css={contentStyle}>
-        <Heading style={{ marginTop: 0 }}>Blog</Heading>
+        <Heading
+          css={css`
+            text-transform: uppercase;
+            margin-top: 0;
+          `}
+        >
+          Blog
+        </Heading>
         {articles.map(article => (
           <section
             key={article.path}

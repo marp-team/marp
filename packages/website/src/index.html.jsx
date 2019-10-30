@@ -4,6 +4,7 @@ import { css, jsx } from '@emotion/core'
 import { Layout, contentStyle, defaultTitle, resolvePath } from './layout.jsx'
 import { Button } from './components/button.js.jsx'
 import { Code } from './components/code.js.jsx'
+import { Heading } from './components/heading.js.jsx'
 import { Marp } from './components/marp.js.jsx'
 
 const Hero = () => (
@@ -526,7 +527,6 @@ const Features = () => {
               }
 
               h2 {
-                font-size: 22px;
                 text-align: center;
               }
 
@@ -577,8 +577,118 @@ export default function Index() {
       <Hero />
       <Description />
       <Features />
+      <section>
+        <Heading level={2}>Tools and integrations</Heading>
+        <section css={contentStyle}>
+          <h3>Marp for VS Code</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+            voluptatibus dolor minima, delectus dignissimos deserunt excepturi
+            exercitationem, nihil ducimus blanditiis officiis, labore autem eius
+            non ea fugiat quam molestiae totam?
+          </p>
+          <p>
+            <Button
+              href="https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode"
+              target="_blank"
+              rel="noopener noreferrer"
+              color="primary"
+            >
+              Visual Studio Marketplace
+            </Button>{' '}
+            <Button
+              href="https://github.com/marp-team/marp-vscode"
+              rel="noopener noreferrer"
+              // eslint-disable-next-line react/jsx-no-target-blank
+              target="_blank"
+              outline="true"
+            >
+              Repository
+            </Button>
+          </p>
+        </section>
+        <section css={contentStyle}>
+          <h3>Marp CLI</h3>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem
+            maiores optio, doloremque fugit voluptas distinctio commodi
+            voluptates ratione incidunt dolore molestias repudiandae suscipit
+            expedita quod fuga sit? Distinctio, ipsam optio?
+          </p>
+          <p>
+            <Button
+              href="https://github.com/marp-team/marp-cli"
+              rel="noopener noreferrer"
+              // eslint-disable-next-line react/jsx-no-target-blank
+              target="_blank"
+              outline="true"
+            >
+              Repository
+            </Button>
+          </p>
+        </section>
+        <section css={contentStyle}>
+          <h3>Marp Core</h3>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel
+            maiores expedita dolores ullam, totam, reprehenderit assumenda sit
+            sunt recusandae officiis harum illo at alias inventore hic debitis,
+            nihil deleniti quo.
+            <p>
+              <Button
+                href="https://github.com/marp-team/marp-core"
+                rel="noopener noreferrer"
+                // eslint-disable-next-line react/jsx-no-target-blank
+                target="_blank"
+                outline="true"
+              >
+                Repository
+              </Button>
+            </p>
+          </p>
+        </section>
+        <section css={contentStyle}>
+          <h3>Marpit framework</h3>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias
+            tenetur quidem quae in architecto cupiditate nam vitae accusamus
+            culpa expedita tempore cum vel odit necessitatibus adipisci
+            sapiente, deserunt ab aliquam.
+          </p>
+          <p>
+            <Button
+              href="https://marpit.marp.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              color="primary"
+            >
+              Documentation
+            </Button>{' '}
+            <Button
+              href="https://github.com/marp-team/marpit"
+              rel="noopener noreferrer"
+              // eslint-disable-next-line react/jsx-no-target-blank
+              target="_blank"
+              outline="true"
+            >
+              Repository
+            </Button>
+          </p>
+        </section>
 
-      {/* TODO: Add introduction section for tools and header */}
+        <section css={contentStyle}>
+          <h3>Pre-releases</h3>
+          <p>
+            <ul>
+              <li>Marp Web</li>
+              <li>Marp React</li>
+              <li>Marp Vue</li>
+            </ul>
+          </p>
+        </section>
+      </section>
+
+      {/* TODO: Add footer to layout */}
       <script src="/index.js" />
       <script
         src={`https://cdn.jsdelivr.net/npm/@marp-team/marp-core@${version}/lib/browser.js`}

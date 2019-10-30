@@ -91,6 +91,16 @@ const globalStyle = css`
     font-size: calc(1.25em + 0.4vw);
   }
 
+  h2 {
+    font-size: 1.6em;
+    font-size: calc(1.2em + 0.2vw);
+  }
+
+  h3 {
+    font-size: 1.35em;
+    font-size: calc(1.13em + 0.1vw);
+  }
+
   mark {
     color: inherit;
     background-color: transparent;
