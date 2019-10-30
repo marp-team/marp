@@ -691,7 +691,6 @@ const GetStarted = () => (
         <Button
           href="https://github.com/marp-team/marp-vscode"
           rel="noopener"
-          // eslint-disable-next-line react/jsx-no-target-blank
           target="_blank"
           outline="true"
         >
@@ -714,18 +713,17 @@ const GetStarted = () => (
       </p>
       <p>
         <Button
-          href="https://github.com/marp-team/marp-cli/releases"
-          rel="noopener"
-          // eslint-disable-next-line react/jsx-no-target-blank
+          href="https://www.npmjs.com/package/@marp-team/marp-cli"
+          rel="noopener noreferrer"
           target="_blank"
           color="primary"
+          outline="true"
         >
-          Releases
+          npm
         </Button>{' '}
         <Button
           href="https://github.com/marp-team/marp-cli"
           rel="noopener"
-          // eslint-disable-next-line react/jsx-no-target-blank
           target="_blank"
           outline="true"
         >
@@ -768,7 +766,6 @@ const GetStarted = () => (
         <Button
           href="https://github.com/marp-team/marp-core"
           rel="noopener"
-          // eslint-disable-next-line react/jsx-no-target-blank
           target="_blank"
           outline="true"
         >
@@ -810,7 +807,6 @@ const GetStarted = () => (
         <Button
           href="https://github.com/marp-team/marpit"
           rel="noopener"
-          // eslint-disable-next-line react/jsx-no-target-blank
           target="_blank"
           outline="true"
         >
