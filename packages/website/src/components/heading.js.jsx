@@ -10,29 +10,21 @@ export const Heading = ({ children, level = 1, ...props }) => {
         background-color: #009bda;
         background-image: url('/assets/noise.png'),
           linear-gradient(-30deg, #02669d, #009bda);
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
         box-sizing: border-box;
+        clip-path: polygon(1.5em 0, 100% 0, calc(100% - 1.5em) 100%, 0 100%);
         color: #fff;
         line-height: 1.2;
         margin-left: auto;
         margin-right: auto;
         max-width: calc(100% - 60px);
-        padding: 0.25em 2.5em;
+        padding: 0.25em 2em;
         text-align: center;
-        transform: skewX(-45deg);
         width: max-content;
         word-wrap: break-word;
       `}
       {...props}
     >
-      <span
-        css={css`
-          display: inline-block;
-          transform: skewX(45deg);
-        `}
-      >
-        {children}
-      </span>
+      {children}
     </Tag>
   )
 }
