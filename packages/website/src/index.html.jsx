@@ -693,14 +693,21 @@ const GetStarted = () => (
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="/assets/marp-for-vs-code.png" alt="Marp for VS Code" />
+          <img
+            src="/assets/marp-for-vs-code.png"
+            alt="Marp for VS Code"
+            loading="lazy"
+          />
         </a>
       </figure>
       <div>
         <header>
           <h3>
             <mark>Marp for VS Code</mark>{' '}
-            <img src="https://img.shields.io/visual-studio-marketplace/v/marp-team.marp-vscode.svg?style=flat-square&amp;label=&amp;colorB=67b8e3" />
+            <img
+              src="https://img.shields.io/visual-studio-marketplace/v/marp-team.marp-vscode.svg?style=flat-square&amp;label=&amp;colorB=67b8e3"
+              alt="Marp for VS Code"
+            />
           </h3>
           <p>Create slide deck written in Marp Markdown on VS Code</p>
         </header>
@@ -737,14 +744,17 @@ const GetStarted = () => (
           target="_blank"
           rel="noopener"
         >
-          <img src="/assets/marp-cli.png" alt="Marp CLI" />
+          <img src="/assets/marp-cli.png" alt="Marp CLI" loading="lazy" />
         </a>
       </figure>
       <div>
         <header>
           <h3>
             <mark>Marp CLI</mark>{' '}
-            <img src="https://img.shields.io/npm/v/@marp-team/marp-cli.svg?style=flat-square&amp;label=&amp;colorB=67b8e3" />
+            <img
+              src="https://img.shields.io/npm/v/@marp-team/marp-cli.svg?style=flat-square&amp;label=&amp;colorB=67b8e3"
+              alt="Marp CLI"
+            />
           </h3>
           <p>A CLI interface for Marp and Marpit based converters</p>
         </header>
@@ -796,14 +806,17 @@ const GetStarted = () => (
           target="_blank"
           rel="noopener"
         >
-          <img src="/assets/marp-logo.svg" alt="Marp Core" />
+          <img src="/assets/marp-logo.svg" alt="Marp Core" loading="lazy" />
         </a>
       </figure>
       <div>
         <header>
           <h3>
             <mark>Marp Core</mark>{' '}
-            <img src="https://img.shields.io/npm/v/@marp-team/marp-core.svg?style=flat-square&amp;label=&amp;colorB=67b8e3" />
+            <img
+              src="https://img.shields.io/npm/v/@marp-team/marp-core.svg?style=flat-square&amp;label=&amp;colorB=67b8e3"
+              alt="Marp Core"
+            />
           </h3>
           <p>The core of Marp converter</p>
         </header>
@@ -846,14 +859,17 @@ const GetStarted = () => (
           target="_blank"
           rel="noopener"
         >
-          <img src="/assets/marpit.svg" alt="Marpit" />
+          <img src="/assets/marpit.svg" alt="Marpit" loading="lazy" />
         </a>
       </figure>
       <div>
         <header>
           <h3>
             <mark>Marpit</mark> framework{' '}
-            <img src="https://img.shields.io/npm/v/@marp-team/marpit.svg?style=flat-square&amp;label=&amp;colorB=67b8e3" />
+            <img
+              src="https://img.shields.io/npm/v/@marp-team/marpit.svg?style=flat-square&amp;label=&amp;colorB=67b8e3"
+              alt="Marpit framework"
+            />
           </h3>
           <p>The skinny framework for creating slide deck from Markdown</p>
         </header>

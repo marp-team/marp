@@ -305,9 +305,15 @@ export const Layout = ({
         property="twitter:card"
         content={type === 'website' ? 'summary_large_image' : 'summary'}
       />
+      <link rel="icon" href="/favicon.png" type="image/png" />
       <link
-        href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700|Source+Code+Pro:400,500&display=swap"
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href="/apple-touch-icon-180x180.png"
+      />
+      <link
         rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700|Source+Code+Pro:400,500&display=swap"
       />
       <link href="/highlightjs.css" rel="stylesheet" />
       <Global styles={globalStyle} />
