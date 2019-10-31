@@ -575,28 +575,28 @@ const GetStarted = () => (
 
       /* Fix position for anchor link */
       padding-top: 110px;
-      margin-top: -110px;
+      margin: -110px 0 0 0;
 
       &::before {
+        background: #0288d1;
+        bottom: 0;
+        clip-path: polygon(0 0, 100% 8vw, 100% 100%, 0 100%);
+        content: '';
+        display: block;
+        left: 0;
         overflow: visible;
         position: absolute;
-        display: block;
-        content: '';
-        top: calc(-12vw + 110px);
         right: 0;
-        bottom: 0;
-        left: 0;
-        background: #0288d1;
+        top: calc(-12vw + 110px);
         z-index: 0;
-        clip-path: polygon(0 0, 100% 8vw, 100% 100%, 0 100%);
       }
 
       &::after {
-        display: block;
-        content: '';
-        height: 0;
-        overflow: hidden;
         clear: both;
+        content: '';
+        display: block;
+        height: 1px;
+        overflow: hidden;
       }
 
       > p,
@@ -670,7 +670,8 @@ const GetStarted = () => (
         }
 
         [role='button'] {
-          font-size: 85%;
+          margin-top: 8px;
+          font-size: 83%;
         }
       }
     `}
