@@ -1,35 +1,91 @@
-version: 2
-jobs:
-  current:
-    docker:
-      - image: circleci/node:10.16.3
-    working_directory: ~/marp
-    steps:
-      - run: node --version
+version: 2.1
 
-      - checkout
+executors:
+  node:
+    parameters:
+      version:
+        type: string
+        default: lts
+    docker:
+      - image: circleci/node:<< parameters.version >>
+    working_directory: ~/marp-core
+
+commands:
+  install:
+    parameters:
+      postinstall:
+        type: steps
+        default: []
+      yarn:
+        type: string
+        default: 1.19.1
+    steps:
+      # https://github.com/nodejs/docker-node/blob/master/docs/BestPractices.md#upgradingdowngrading-yarn
+      - run:
+          name: Upgrade yarn
+          command: |
+            sudo -E sh -c 'curl -fSLO --compressed "https://yarnpkg.com/downloads/$YARN_VERSION/yarn-v$YARN_VERSION.tar.gz" \
+              && tar -xzf yarn-v$YARN_VERSION.tar.gz -C /opt/ \
+              && ln -snf /opt/yarn-v$YARN_VERSION/bin/yarn /usr/local/bin/yarn \
+              && ln -snf /opt/yarn-v$YARN_VERSION/bin/yarnpkg /usr/local/bin/yarnpkg \
+              && rm yarn-v$YARN_VERSION.tar.gz'
+          environment:
+            YARN_VERSION: << parameters.yarn >>
 
       - restore_cache:
           keys:
-            - v1-dependencies-{{ .Environment.CIRCLE_JOB }}-{{ checksum "yarn.lock" }}-{{ .Branch }}
-            - v1-dependencies-{{ .Environment.CIRCLE_JOB }}-{{ checksum "yarn.lock" }}-
-            - v1-dependencies-{{ .Environment.CIRCLE_JOB }}-
+            - v2.1-dependencies-{{ .Environment.CIRCLE_JOB }}-{{ checksum "yarn.lock" }}-{{ .Branch }}
+            - v2.1-dependencies-{{ .Environment.CIRCLE_JOB }}-{{ checksum "yarn.lock" }}-
+            - v2.1-dependencies-{{ .Environment.CIRCLE_JOB }}-
 
       - run: yarn install
-      - run: yarn audit
+      - steps: << parameters.postinstall >>
 
       - save_cache:
-          key: v1-dependencies-{{ .Environment.CIRCLE_JOB }}-{{ checksum "yarn.lock" }}-{{ .Branch }}
+          key: v2.1-dependencies-{{ .Environment.CIRCLE_JOB }}-{{ checksum "yarn.lock" }}-{{ .Branch }}
           paths:
             - node_modules
             - ~/.cache/yarn
 
+  audit:
+    steps:
+      - checkout
+      - install:
+          postinstall:
+            - run: yarn audit
+
+  test:
+    steps:
+      - run: node --version
+
+      - checkout
+      - install
+
       - run:
           name: Prettier formatting
-          command: yarn format:check
+          command: yarn check:format
+
+      - run:
+          name: ESLint
+          command: yarn lint
+
+jobs:
+  audit:
+    executor: node
+    steps:
+      - audit
+
+  test-node:
+    executor:
+      name: node
+      version: '12.13.0' # Specify LTS version for development
+    steps:
+      - test
 
 workflows:
-  version: 2
-  build:
+  test:
     jobs:
-      - current
+      - audit
+      - test-node:
+          requires:
+            - audit

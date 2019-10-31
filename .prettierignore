@@ -1,6 +1,5 @@
 .git/
 .vscode/
-/website/.cache/
-/website/public
+dist
 node_modules
-package.json
+tmp
