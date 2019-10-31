@@ -27,9 +27,9 @@
   },
   "scripts": {
     "check:format": "yarn -s format -c",
-    "docs": "yarn -s workspace @marp-team/marp-website serve",
     "format": "prettier \"**/*.{css,html,js,json,jsx,md,mdx,scss,yaml,yml}\"",
-    "lint": "eslint \"**/*.{js,jsx}\""
+    "lint": "eslint \"**/*.{js,jsx}\"",
+    "website": "yarn -s workspace @marp-team/marp-website serve"
   },
   "devDependencies": {
     "eslint": "^6.6.0",

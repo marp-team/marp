@@ -111,6 +111,10 @@ const globalStyle = css`
   figure {
     margin: 2em 0;
 
+    img {
+      max-width: 100%;
+    }
+
     figcaption {
       color: #999;
       text-align: center;
