@@ -130,7 +130,9 @@ const globalStyle = css`
   }
 `
 
-const Header = ({ route, height = 80 }) => (
+const headerHeight = 80
+
+const Header = ({ route }) => (
   <header
     css={css`
       --header-gap: calc(5px + 1vw);
@@ -143,8 +145,8 @@ const Header = ({ route, height = 80 }) => (
       box-shadow: 0 0 40px rgba(128, 128, 128, 0.05);
       box-sizing: border-box;
       display: flex;
-      font-size: ${height * 0.22}px;
-      height: ${height}px;
+      font-size: ${headerHeight * 0.22}px;
+      height: ${headerHeight}px;
       left: 0;
       overflow: hidden;
       padding: 0 var(--header-gap);
@@ -159,11 +161,11 @@ const Header = ({ route, height = 80 }) => (
         align-self: center;
         display: flex;
         margin: 0 var(--header-gap);
-        width: ${height * 0.75}px;
+        width: ${headerHeight * 0.75}px;
 
         > img {
-          width: ${height * 0.75}px;
-          height: ${height * 0.75}px;
+          width: ${headerHeight * 0.75}px;
+          height: ${headerHeight * 0.75}px;
         }
       }
 
@@ -194,8 +196,8 @@ const Header = ({ route, height = 80 }) => (
               position: absolute;
               left: calc(var(--header-gap) * -1);
               right: calc(var(--header-gap) * -1);
-              top: ${height * -0.5}px;
-              bottom: ${height * -0.5}px;
+              top: ${headerHeight * -0.5}px;
+              bottom: ${headerHeight * -0.5}px;
             }
 
             &::after {
@@ -205,20 +207,21 @@ const Header = ({ route, height = 80 }) => (
               top: 0;
               left: 0;
               right: 0;
-              bottom: ${height * -0.075}px;
+              bottom: ${headerHeight * -0.075}px;
               transition: box-shadow 0.2s linear;
             }
 
             &:hover {
               &::after {
-                box-shadow: inset 0 ${height * -0.05}px rgba(0, 0, 0, 0.25);
+                box-shadow: inset 0 ${headerHeight * -0.05}px
+                  rgba(0, 0, 0, 0.25);
               }
             }
 
             &.active {
               &::after {
                 transition: none;
-                box-shadow: inset 0 ${height * -0.05}px #009bda;
+                box-shadow: inset 0 ${headerHeight * -0.05}px #009bda;
               }
             }
 
@@ -227,14 +230,14 @@ const Header = ({ route, height = 80 }) => (
 
               &::after {
                 transition: none;
-                box-shadow: inset 0 ${height * -0.05}px #78c5e9;
+                box-shadow: inset 0 ${headerHeight * -0.05}px #78c5e9;
               }
             }
 
             &:hover:active {
               &::after {
                 transition: none;
-                box-shadow: inset 0 ${height * -0.05}px #007aad;
+                box-shadow: inset 0 ${headerHeight * -0.05}px #007aad;
               }
             }
           }
@@ -270,6 +273,35 @@ const Header = ({ route, height = 80 }) => (
       </ul>
     </nav>
   </header>
+)
+
+const footerHeight = 90
+
+const Footer = ({ children }) => (
+  <footer
+    css={css`
+      background: #334 url('/assets/noise.png');
+      box-sizing: border-box;
+      color: #bbc;
+      min-height: ${footerHeight}px;
+      padding: 10px 30px 30px 10px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+
+      p {
+        margin: 20px 0 0 20px;
+      }
+
+      iframe {
+        vertical-align: bottom;
+      }
+    `}
+  >
+    {children}
+  </footer>
 )
 
 export const Layout = ({
@@ -313,14 +345,80 @@ export const Layout = ({
       />
       <link
         rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700|Source+Code+Pro:400,500&display=swap"
+        href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700|Source+Code+Pro:400,500&amp;display=swap"
       />
       <link href="/highlightjs.css" rel="stylesheet" />
       <Global styles={globalStyle} />
     </head>
     <body>
       <Header route={route} />
-      <main>{children}</main>
+      <main
+        css={css`
+          min-height: calc(100vh - ${headerHeight + footerHeight}px);
+        `}
+      >
+        {children}
+      </main>
+      <Footer>
+        <p>Copyright &copy; 2019- Marp Team.</p>
+        <p>
+          <iframe
+            src="https://ghbtns.com/github-btn.html?user=marp-team&amp;repo=marp&amp;type=star&amp;count=true"
+            loading="lazy"
+            frameBorder="0"
+            scrolling="0"
+            width="160"
+            height="20"
+          />
+        </p>
+      </Footer>
+      <a
+        href="#"
+        title="Back to top"
+        css={css`
+          position: fixed;
+          right: 0;
+          bottom: 0;
+          width: calc(30px + 5vw);
+          height: calc(30px + 5vw);
+          max-width: ${footerHeight}px;
+          max-height: ${footerHeight}px;
+          color: #fff !important;
+          z-index: 100;
+          display: block;
+          filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.25));
+          line-height: ${footerHeight * 3}px;
+          pointer-events: none;
+          overflow: hidden;
+
+          background: linear-gradient(135deg, transparent 50%, #67b8e3 50%);
+
+          &:hover {
+            background: linear-gradient(135deg, transparent 50%, #0288d1 50%);
+
+            &:active {
+              background: linear-gradient(135deg, transparent 50%, #02669d 50%);
+            }
+          }
+
+          &::after {
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            content: '';
+            pointer-events: auto;
+            clip-path: polygon(0 100%, 100% 0, 100% 100%);
+            background: url('https://icongr.am/octicons/arrow-up.svg?color=ffffff')
+              no-repeat 80% 80%;
+            background-size: 35% 35%;
+          }
+        `}
+      >
+        Back to top
+      </a>
     </body>
   </html>
 )

@@ -11,10 +11,10 @@ export const GetStarted = () => (
 
       /* Fix position for anchor link */
       padding-top: 110px;
-      margin: -110px 0 0 0;
+      margin: -110px 0 -1px 0;
 
       &::before {
-        background: #0288d1;
+        background: #0288d1 url('/assets/noise.png');
         bottom: 0;
         clip-path: polygon(0 0, 100% 8vw, 100% 100%, 0 100%);
         content: '';
@@ -51,7 +51,7 @@ export const GetStarted = () => (
       }
 
       > section {
-        background: #fff;
+        background: #fff url('/assets/noise.png');
         border-radius: 1em;
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
         box-sizing: border-box;
