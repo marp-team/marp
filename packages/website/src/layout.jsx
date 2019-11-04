@@ -38,7 +38,6 @@ const globalStyle = css`
 
   html {
     height: 100%;
-    scroll-behavior: smooth;
   }
 
   body {
@@ -307,6 +306,7 @@ const Footer = ({ children }) => (
 export const Layout = ({
   children,
   description,
+  globalStyles,
   image = defaultImage,
   route,
   title = defaultTitle,
@@ -348,7 +348,7 @@ export const Layout = ({
         href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700|Source+Code+Pro:400,500&amp;display=swap"
       />
       <link href="/highlightjs.css" rel="stylesheet" />
-      <Global styles={globalStyle} />
+      <Global styles={[globalStyle, globalStyles]} />
     </head>
     <body>
       <Header route={route} />
@@ -364,6 +364,7 @@ export const Layout = ({
         <p>
           <iframe
             src="https://ghbtns.com/github-btn.html?user=marp-team&amp;repo=marp&amp;type=star&amp;count=true"
+            title="Stars"
             loading="lazy"
             frameBorder="0"
             scrolling="0"
