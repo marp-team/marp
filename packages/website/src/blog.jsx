@@ -1,5 +1,8 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core'
+import { MDXProvider } from '@mdx-js/react'
+import GitHubSlugger from 'github-slugger'
+import { Heading } from './components/blog/heading.js.jsx'
 import { Layout, contentStyle, generateTitle, resolvePath } from './layout.jsx'
 
 const articleStyle = css`
@@ -231,6 +234,15 @@ export const BlogLayout = ({ children, meta }) => {
   } = meta
   const route = slug && `/blog/${slug}`
 
+  // Slugified headings
+  const slugger = new GitHubSlugger()
+  const h1 = props => <Heading {...props} level={1} slugger={slugger} />
+  const h2 = props => <Heading {...props} level={2} slugger={slugger} />
+  const h3 = props => <Heading {...props} level={3} slugger={slugger} />
+  const h4 = props => <Heading {...props} level={4} slugger={slugger} />
+  const h5 = props => <Heading {...props} level={5} slugger={slugger} />
+  const h6 = props => <Heading {...props} level={6} slugger={slugger} />
+
   return (
     <Layout
       description={description}
@@ -253,7 +265,11 @@ export const BlogLayout = ({ children, meta }) => {
             {imageCaption && <figcaption>{imageCaption}</figcaption>}
           </figure>
         )}
-        <div css={blogStyle()}>{children}</div>
+        <div css={blogStyle()}>
+          <MDXProvider components={{ h1, h2, h3, h4, h5, h6 }}>
+            {children}
+          </MDXProvider>
+        </div>
       </article>
     </Layout>
   )
