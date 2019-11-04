@@ -364,6 +364,7 @@ export const Layout = ({
         <p>
           <iframe
             src="https://ghbtns.com/github-btn.html?user=marp-team&amp;repo=marp&amp;type=star&amp;count=true"
+            title="Stars"
             loading="lazy"
             frameBorder="0"
             scrolling="0"
