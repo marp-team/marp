@@ -27,15 +27,15 @@
   },
   "scripts": {
     "check:format": "yarn -s format -c",
-    "format": "prettier \"**/*.{css,html,js,json,jsx,md,mdx,scss,yaml,yml}\"",
+    "format": "prettier \"**/*.{css,html,js,json,jsx,md,scss,yaml,yml}\"",
     "lint": "eslint \"**/*.{js,jsx}\"",
     "website": "yarn -s workspace @marp-team/marp-website serve"
   },
   "devDependencies": {
     "eslint": "^6.6.0",
-    "eslint-config-prettier": "^6.5.0",
+    "eslint-config-prettier": "^6.7.0",
     "eslint-plugin-react": "^7.16.0",
-    "lerna": "^3.18.3",
-    "prettier": "^1.18.2"
+    "lerna": "^3.18.4",
+    "prettier": "^1.19.1"
   }
 }

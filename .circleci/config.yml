@@ -8,7 +8,7 @@ executors:
         default: lts
     docker:
       - image: circleci/node:<< parameters.version >>
-    working_directory: ~/marp-core
+    working_directory: ~/marp
 
 commands:
   install:
@@ -20,17 +20,9 @@ commands:
         type: string
         default: 1.19.1
     steps:
-      # https://github.com/nodejs/docker-node/blob/master/docs/BestPractices.md#upgradingdowngrading-yarn
       - run:
-          name: Upgrade yarn
-          command: |
-            sudo -E sh -c 'curl -fSLO --compressed "https://yarnpkg.com/downloads/$YARN_VERSION/yarn-v$YARN_VERSION.tar.gz" \
-              && tar -xzf yarn-v$YARN_VERSION.tar.gz -C /opt/ \
-              && ln -snf /opt/yarn-v$YARN_VERSION/bin/yarn /usr/local/bin/yarn \
-              && ln -snf /opt/yarn-v$YARN_VERSION/bin/yarnpkg /usr/local/bin/yarnpkg \
-              && rm yarn-v$YARN_VERSION.tar.gz'
-          environment:
-            YARN_VERSION: << parameters.yarn >>
+          name: Upgrade yarn for current user
+          command: cd ~ && yarn policies set-version << parameters.yarn >>
 
       - restore_cache:
           keys:
