@@ -90,9 +90,9 @@ Let us know if you have created an awesome slide deck with Marp ecosystem! [Edit
 
 ## Contributing
 
-Marp and sub-projects are following the [contributing guideline of marp-team][contributing] hosted in this repo. Please read this before starting work in our projects.
+Marp and sub-projects are following the [contributing guideline of marp-team][contributing]. Please read this before starting work in our projects.
 
-[contributing]: .github/CONTRIBUTING.md
+[contributing]: https://github.com/marp-team/.github/blob/master/CONTRIBUTING.md
 
 ## Author
 
