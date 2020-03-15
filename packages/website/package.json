@@ -16,12 +16,12 @@
     "serve": "cross-env NODE_ENV=development charge serve src"
   },
   "devDependencies": {
-    "@emotion/core": "^10.0.22",
-    "@marp-team/marp-core": "^0.15.2",
-    "@static/charge": "^1.5.0",
-    "cross-env": "^6.0.3",
-    "github-slugger": "^1.2.1",
-    "highlight.js": "^9.15.10",
+    "@emotion/core": "^10.0.28",
+    "@marp-team/marp-core": "^1.0.1",
+    "@static/charge": "^1.7.0",
+    "cross-env": "^7.0.2",
+    "github-slugger": "^1.3.0",
+    "highlight.js": "^9.18.1",
     "react-innertext": "^1.1.5"
   }
 }
