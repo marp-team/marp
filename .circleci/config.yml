@@ -18,7 +18,7 @@ commands:
         default: []
       yarn:
         type: string
-        default: 1.19.1
+        default: 1.22.4
     steps:
       - run:
           name: Upgrade yarn for current user
@@ -26,17 +26,16 @@ commands:
 
       - restore_cache:
           keys:
-            - v2.1-dependencies-{{ .Environment.CIRCLE_JOB }}-{{ checksum "yarn.lock" }}-{{ .Branch }}
-            - v2.1-dependencies-{{ .Environment.CIRCLE_JOB }}-{{ checksum "yarn.lock" }}-
-            - v2.1-dependencies-{{ .Environment.CIRCLE_JOB }}-
+            - v2.2-dependencies-{{ .Environment.CIRCLE_JOB }}-{{ checksum "yarn.lock" }}-{{ .Branch }}
+            - v2.2-dependencies-{{ .Environment.CIRCLE_JOB }}-{{ checksum "yarn.lock" }}-
+            - v2.2-dependencies-{{ .Environment.CIRCLE_JOB }}-
 
       - run: yarn install
       - steps: << parameters.postinstall >>
 
       - save_cache:
-          key: v2.1-dependencies-{{ .Environment.CIRCLE_JOB }}-{{ checksum "yarn.lock" }}-{{ .Branch }}
+          key: v2.2-dependencies-{{ .Environment.CIRCLE_JOB }}-{{ checksum "yarn.lock" }}-{{ .Branch }}
           paths:
-            - node_modules
             - ~/.cache/yarn
 
   audit:
@@ -70,7 +69,7 @@ jobs:
   test-node:
     executor:
       name: node
-      version: '12.13.0' # Specify LTS version for development
+      version: '12.16.1' # Specify LTS version for development
     steps:
       - test
 
