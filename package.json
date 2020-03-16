@@ -37,5 +37,9 @@
     "eslint-plugin-react": "^7.19.0",
     "lerna": "^3.20.2",
     "prettier": "^1.19.1"
+  },
+  "resolutions": {
+    "**/mkdirp/minimist": "^0.2.1",
+    "**/optimist/minimist": "^0.2.1"
   }
 }
