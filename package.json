@@ -39,7 +39,6 @@
     "prettier": "^1.19.1"
   },
   "resolutions": {
-    "**/mkdirp/minimist": "^0.2.1",
     "**/optimist/minimist": "^0.2.1"
   }
 }
