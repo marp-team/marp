@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core'
-import { defaultTitle } from '../layout.jsx'
 import { Button } from '../components/button.js.jsx'
+import { defaultTitle } from '../layout.jsx'
 
 export const Hero = () => (
   <section

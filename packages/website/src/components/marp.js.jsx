@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import { Marp as MarpCore } from '@marp-team/marp-core'
 import { css, jsx } from '@emotion/core'
+import { Marp as MarpCore } from '@marp-team/marp-core'
 import { resolvePath } from '../layout.jsx'
 
 const reset = css`
@@ -19,14 +19,14 @@ const container = css`
   display: inline-block;
 `
 
-export const Marp = props => {
+export const Marp = (props) => {
   const marp = new MarpCore({
     container: null,
     script: false,
     printable: false,
   })
 
-  marp.markdown.normalizeLink = url => resolvePath(url)
+  marp.markdown.normalizeLink = (url) => resolvePath(url)
 
   const rendered = marp.render(props.markdown, { htmlAsArray: true })
 

@@ -22,8 +22,7 @@
   ],
   "prettier": {
     "semi": false,
-    "singleQuote": true,
-    "trailingComma": "es5"
+    "singleQuote": true
   },
   "scripts": {
     "check:format": "yarn -s format -c",
@@ -32,13 +31,11 @@
     "website": "yarn -s workspace @marp-team/marp-website serve"
   },
   "devDependencies": {
-    "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.10.0",
-    "eslint-plugin-react": "^7.19.0",
-    "lerna": "^3.20.2",
-    "prettier": "^1.19.1"
-  },
-  "resolutions": {
-    "**/optimist/minimist": "^0.2.1"
+    "eslint": "^7.0.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-react": "^7.20.0",
+    "lerna": "^3.21.0",
+    "prettier": "^2.0.5"
   }
 }

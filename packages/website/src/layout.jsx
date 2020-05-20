@@ -8,7 +8,7 @@ export const defaultImage = '/assets/og-image.png'
 export const generateTitle = (...breadcrumbs) =>
   ['Marp', ...breadcrumbs].reverse().join(' | ')
 
-export const resolvePath = path =>
+export const resolvePath = (path) =>
   new URL(
     path,
     (() => {

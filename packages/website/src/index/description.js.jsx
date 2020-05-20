@@ -1,12 +1,12 @@
 /** @jsx jsx */
-import { version } from '@marp-team/marp-core/package.json'
 import { css, jsx } from '@emotion/core'
-import { contentStyle, resolvePath } from '../layout.jsx'
+import { version } from '@marp-team/marp-core/package.json'
 import { Button } from '../components/button.js.jsx'
 import { Code } from '../components/code.js.jsx'
 import { Marp } from '../components/marp.js.jsx'
+import { contentStyle, resolvePath } from '../layout.jsx'
 
-const example = (resolver = v => v) =>
+const example = (resolver = (v) => v) =>
   `
 ---
 theme: gaia
