@@ -19,14 +19,14 @@ const container = css`
   display: inline-block;
 `
 
-export const Marp = props => {
+export const Marp = (props) => {
   const marp = new MarpCore({
     container: null,
     script: false,
     printable: false,
   })
 
-  marp.markdown.normalizeLink = url => resolvePath(url)
+  marp.markdown.normalizeLink = (url) => resolvePath(url)
 
   const rendered = marp.render(props.markdown, { htmlAsArray: true })
 

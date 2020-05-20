@@ -2,7 +2,7 @@
 import { css, jsx } from '@emotion/core'
 import { contentStyle } from '../layout.jsx'
 
-const FeatureSections = props => (
+const FeatureSections = (props) => (
   <section {...props}>
     <section>
       <figure>

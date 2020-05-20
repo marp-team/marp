@@ -96,7 +96,7 @@ const colors = {
   },
 }
 
-export const Button = props => {
+export const Button = (props) => {
   const color = colors[props.color] || colors.default
   const style = [
     button,

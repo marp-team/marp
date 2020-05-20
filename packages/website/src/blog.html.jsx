@@ -6,7 +6,7 @@ import { Layout, contentStyle, generateTitle } from './layout.jsx'
 
 export default function Blog({ environment, pages }) {
   const articles = pages
-    .filter(p => p.path.startsWith('/blog/') && p.meta.title && p.meta.date)
+    .filter((p) => p.path.startsWith('/blog/') && p.meta.title && p.meta.date)
     .sort((a, b) => new Date(b.meta.date) - new Date(a.meta.date))
 
   return (
@@ -24,7 +24,7 @@ export default function Blog({ environment, pages }) {
         >
           Blog
         </Heading>
-        {articles.map(article => (
+        {articles.map((article) => (
           <section
             key={article.path}
             css={css`

@@ -6,7 +6,7 @@ import { Button } from '../components/button.js.jsx'
 import { Code } from '../components/code.js.jsx'
 import { Marp } from '../components/marp.js.jsx'
 
-const example = (resolver = v => v) =>
+const example = (resolver = (v) => v) =>
   `
 ---
 theme: gaia

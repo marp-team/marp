@@ -69,7 +69,7 @@ jobs:
   test-node:
     executor:
       name: node
-      version: '12.16.1' # Specify LTS version for development
+      version: '12.16.3' # Specify LTS version for development
     steps:
       - test
 
