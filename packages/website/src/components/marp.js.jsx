@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import { Marp as MarpCore } from '@marp-team/marp-core'
 import { css, jsx } from '@emotion/core'
+import { Marp as MarpCore } from '@marp-team/marp-core'
 import { resolvePath } from '../layout.jsx'
 
 const reset = css`

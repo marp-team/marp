@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core'
-import { Heading } from './components/heading.js.jsx'
 import { Meta, blogStyle } from './blog.jsx'
+import { Heading } from './components/heading.js.jsx'
 import { Layout, contentStyle, generateTitle } from './layout.jsx'
 
 export default function Blog({ environment, pages }) {

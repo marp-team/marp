@@ -1,10 +1,10 @@
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core'
-import { Layout } from './layout.jsx'
 import { Description } from './index/description.js.jsx'
 import { Features } from './index/features.js.jsx'
 import { GetStarted } from './index/get-started.js.jsx'
 import { Hero } from './index/hero.js.jsx'
+import { Layout } from './layout.jsx'
 
 export default function Index() {
   return (

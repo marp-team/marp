@@ -33,6 +33,7 @@
   "devDependencies": {
     "eslint": "^7.0.0",
     "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-react": "^7.20.0",
     "lerna": "^3.21.0",
     "prettier": "^2.0.5"
