@@ -105,11 +105,19 @@ Managed by [@marp-team](https://github.com/marp-team).
 
 We are supported by them! Thanks for our sponsors! :heart:
 
-<!-- Name and icons (Top-tier sponsors)
-- [<img src="https://github.com/yhatt.png" width="32" height="32" valign="middle"/> Yuki Hattori](https://github.com/yhatt)
--->
+<!-- Name and icons (Top-tier sponsors) -->
+<table>
+  <tr align="center">
+    <td>
+      <a href="https://github.com/junta-m"><img src="https://github.com/junta-m.png" width="64" height="64" alt="junta-m is sponsored yhatt" valign="middle"/></a>
+    </td>
+  </tr>
+  <tr>
+    <th><a href="https://github.com/junta-m">junta-m</a></th>
+  </tr>
+</table>
 
-<!-- Icons (Mid-tier sponsors) -->
+<!-- Small icons (Mid-tier sponsors) -->
 <p>
   <a href="https://github.com/pataiji"><img src="https://github.com/pataiji.png" width="32" height="32" alt="pataiji is sponsored yhatt" /></a>
   <a href="https://github.com/miyachik"><img src="https://github.com/miyachik.png" width="32" height="32" alt="miyachik is sponsored yhatt" /></a>
