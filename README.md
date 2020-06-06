@@ -82,6 +82,7 @@ This repo (**[@marp-team/marp][marp]**) is an entrance to Marp family, and place
 
 - [Reflection in Qt and Beyond](https://github.com/tomisaacson/reflection-in-Qt) by [@tomisaacson](https://github.com/tomisaacson)
 - [Marp GitHub Pages Action](https://alexsci.com/test-marp-action) by [@ralexander-phi](https://github.com/ralexander-phi)
+- [Teaching theme for Marp](https://github.com/eyssette/teaching-theme-for-marp) by [@eyssette](https://github.com/eyssette)
 
 <!-- - [Title](https://example.com/) by [@username](https://github.com/username) -->
 
