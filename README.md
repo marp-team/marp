@@ -11,9 +11,9 @@
 
 ## Marp family
 
-Our projects have consisted of manyrepos in order to focus limited scope per repository.
+Our projects have consisted of manyrepos in order to focus limited scope per repository. Active projects are shown as emphasized in following list.
 
-This repo (**[@marp-team/marp][marp]**) is an entrance to Marp family, and places [our website](https://marp.app/) and project-wide utilities by the monorepo structure.
+This repo (**[@marp-team/marp][marp]**) is an entrance to Marp family, and places [our website](https://marp.app/).
 
 ### Framework / Core
 
@@ -27,7 +27,7 @@ This repo (**[@marp-team/marp][marp]**) is an entrance to Marp family, and place
 |                     Name | Description                                                                                      | Release                                                |
 | -----------------------: | :----------------------------------------------------------------------------------------------- | :----------------------------------------------------- |
 | **[Marp CLI][marp-cli]** | [Marp Core][marp-core] / [Marpit]'s CLI interface to convert into HTML, PDF, PPTX, and image(s). | [![@marp-team/marp-cli][badge-marp-cli]][marp-cli-npm] |
-| **[Marp Web][marp-web]** | The main interface of Marp based on [PWA] and [Preact] framework.                                | [![tech demo][badge-marp-web]][marp-web-site]          |
+|     [Marp Web][marp-web] | The main interface of Marp based on [PWA] and [Preact] framework.                                | [![tech demo][badge-marp-web]][marp-web-site]          |
 |             Marp Desktop | The desktop client for [Marp Web][marp-web-site] for replacing [yhatt/marp].                     | ![PLANNED][badge-planned]                              |
 
 ### Integrations
@@ -35,8 +35,8 @@ This repo (**[@marp-team/marp][marp]**) is an entrance to Marp family, and place
 |                           Name | Description                                                                       | Release                                                      |
 | -----------------------------: | :-------------------------------------------------------------------------------- | :----------------------------------------------------------- |
 | **[Marp VSCode][marp-vscode]** | A [VS Code][vscode] extension to preview the slide deck written in Marp Markdown. | [![VS Marketplace][badge-marp-vscode]][marp-vscode-release]  |
-|   **[Marp React][marp-react]** | Marp renderer component for [React].                                              | [![@marp-team/marp-react][badge-marp-react]][marp-react-npm] |
-|       **[Marp Vue][marp-vue]** | Marp renderer component for [Vue].                                                | [![@marp-team/marp-vue][badge-marp-vue]][marp-vue-npm]       |
+|       [Marp React][marp-react] | Marp renderer component for [React].                                              | [![@marp-team/marp-react][badge-marp-react]][marp-react-npm] |
+|           [Marp Vue][marp-vue] | Marp renderer component for [Vue].                                                | [![@marp-team/marp-vue][badge-marp-vue]][marp-vue-npm]       |
 
 [yhatt/marp]: https://github.com/yhatt/marp
 [marp]: https://github.com/marp-team/marp
@@ -83,7 +83,7 @@ This repo (**[@marp-team/marp][marp]**) is an entrance to Marp family, and place
 - [Reflection in Qt and Beyond](https://github.com/tomisaacson/reflection-in-Qt) by [@tomisaacson](https://github.com/tomisaacson)
 - [Marp GitHub Pages Action](https://alexsci.com/test-marp-action) by [@ralexander-phi](https://github.com/ralexander-phi)
 
-<!-- - [Slide title](https://example.com/) by [@username](https://github.com/username) -->
+<!-- - [Title](https://example.com/) by [@username](https://github.com/username) -->
 
 Let us know if you have created an awesome slide deck with Marp ecosystem! [Edit README.md and send pull request.](https://github.com/marp-team/marp/edit/master/README.md)
 
