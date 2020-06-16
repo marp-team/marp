@@ -37,7 +37,7 @@ const FeatureSections = (props) => (
     <section>
       <figure>
         <img
-          src="https://icongr.am/octicons/gist.svg?size=50&amp;color=444455"
+          src="https://icongr.am/octicons/code-square.svg?size=50&amp;color=444455"
           alt="Directives and extended syntax"
         />
       </figure>
@@ -87,7 +87,7 @@ const FeatureSections = (props) => (
     <section>
       <figure>
         <img
-          src="https://icongr.am/octicons/paintcan.svg?size=50&amp;color=444455"
+          src="https://icongr.am/octicons/paintbrush.svg?size=50&amp;color=444455"
           alt="Built-in themes and CSS theming"
         />
       </figure>
@@ -168,9 +168,8 @@ const FeatureSections = (props) => (
     <section>
       <figure>
         <img
-          src="https://icongr.am/octicons/tools.svg?size=50&amp;color=444455"
+          src="https://icongr.am/octicons/package.svg?size=50&amp;color=444455"
           alt="Marp family: The official toolset"
-          style={{ transform: 'scale(0.8)' }}
         />
       </figure>
       <h2>
@@ -250,7 +249,7 @@ const FeatureSections = (props) => (
     <section>
       <figure>
         <img
-          src="https://icongr.am/octicons/heart.svg?size=50&amp;color=444455"
+          src="https://icongr.am/octicons/heart-fill.svg?size=50&amp;color=444455"
           alt="Fully open source"
         />
       </figure>
