@@ -11,9 +11,9 @@
 
 ## Marp family
 
-Our projects have consisted of manyrepos in order to focus limited scope per repository. Active projects are shown as emphasized in following list.
+Our project is spread over many repos in order to focus on a limited scope per repository. Active projects are shown as emphasized in following list.
 
-This repo (**[@marp-team/marp][marp]**) is an entrance to Marp family, and places [our website](https://marp.app/).
+This repo (**[@marp-team/marp][marp]**) is an entrance to the Marp family, and places [our website](https://marp.app/).
 
 ### Framework / Core
 
