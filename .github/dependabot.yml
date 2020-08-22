@@ -1,0 +1,21 @@
+version: 2
+
+updates:
+  - package-ecosystem: npm
+    directory: '/'
+    reviewers:
+      - 'marp-team/maintainers'
+    schedule:
+      interval: daily
+    allow:
+      - dependency-name: '@marp-team/*'
+    versioning-strategy: increase
+
+  - package-ecosystem: github-actions
+    directory: '/'
+    reviewers:
+      - 'marp-team/maintainers'
+    schedule:
+      interval: weekly
+    # versioning-strategy: increase-if-necessary
+    open-pull-requests-limit: 0 # Dependabot does not allow relaxed versioning :(

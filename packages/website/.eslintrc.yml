@@ -1,6 +1,0 @@
-rules:
-  react/prop-types: 0
-  react/react-in-jsx-scope: 0 # Charge does not require to import React
-  import/extensions: # Charge cannot resolve dependency correctly if omitted extension
-    - error
-    - always

@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html:not(.translating) {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply relative text-foreground bg-background min-h-full;
+}
+
+body::before {
+  @apply fixed block inset-0 bg-background;
+
+  background-image: url('/assets/noise.png'),
+    linear-gradient(
+      to bottom,
+      theme('colors.gray.100'),
+      theme('colors.background') 50%
+    );
+  content: '';
+  z-index: -1;
+}
+
+a:not(.custom-anchor) {
+  @apply text-marp-brand;
+}
+
+a:not(.custom-anchor):hover {
+  @apply underline text-marp-dark transition-colors duration-300;
+}
+
+a:not(.custom-anchor):hover:active {
+  @apply text-marp-darkest;
+
+  transition-duration: 0ms;
+}
+
+a.named-anchor {
+  @apply invisible block h-0 relative;
+
+  top: -4rem;
+}
+
+@screen md {
+  a.named-anchor {
+    top: -5rem;
+  }
+}
+
+mark {
+  background: none;
+  color: inherit;
+  box-shadow: inset 0 -0.2em theme('colors.marp.light');
+}
+
+/* NProgress */
+#nprogress .bar {
+  @apply bg-marp-brand;
+}
+#nprogress .peg {
+  @apply shadow-none;
+}
+
+/* Helper classes */
+.text-gradient {
+  @apply text-marp-brand leading-tight;
+}
+
+@supports (background-clip: text) {
+  .text-gradient {
+    @apply text-transparent bg-marp-brand bg-clip-text;
+
+    background-image: linear-gradient(
+      -1deg,
+      theme('colors.marp.light'),
+      theme('colors.marp.brand'),
+      theme('colors.marp.dark')
+    );
+  }
+}
