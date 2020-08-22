@@ -45,7 +45,9 @@ const Blog = ({ articles }: InferGetStaticPropsType<typeof getStaticProps>) => (
 
         if (article.excerpt) {
           summary = (
-            <Typography>{renderToReact(article.excerpt.mdast)}</Typography>
+            <Typography>
+              {renderToReact(article.excerpt.mdast, { anchorLink: false })}
+            </Typography>
           )
         } else if (article.data.description) {
           summary = article.data.description
@@ -90,6 +92,8 @@ const Blog = ({ articles }: InferGetStaticPropsType<typeof getStaticProps>) => (
                   className="inline w-8 h-8"
                   src="https://icongr.am/octicons/arrow-right.svg?color=4a5568"
                   alt="→"
+                  width={32}
+                  height={32}
                 />
                 Read more...
               </p>

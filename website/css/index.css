@@ -37,14 +37,14 @@ a:not(.custom-anchor):hover:active {
   transition-duration: 0ms;
 }
 
-a.named-anchor {
+.named-anchor {
   @apply invisible block h-0 relative;
 
   top: -4rem;
 }
 
 @screen md {
-  a.named-anchor {
+  .named-anchor {
     top: -5rem;
   }
 }

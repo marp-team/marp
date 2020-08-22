@@ -11,6 +11,8 @@ const Card: React.FC<CardProps> = ({ children, name, icon, index }) => (
         className="mx-auto w-12 h-12 m-2 lg:w-16 lg:h-16"
         src={icon}
         alt={name}
+        width={48}
+        height={48}
       />
       <h3 className="text-gradient text-2xl text-center font-semibold my-4">
         {name}
