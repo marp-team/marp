@@ -6,4 +6,5 @@ export const sanitize = {
     ...gitHubSanitize.attributes,
     '*': [...gitHubSanitize.attributes['*'], 'data*'],
   },
+  clobberPrefix: '',
 }
