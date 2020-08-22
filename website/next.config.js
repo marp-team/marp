@@ -5,7 +5,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 const env = { BUILD_YEAR: new Date().getFullYear().toString() }
 
 // for Netlify's deploy preview
-if (process.env.DEPLOY_URL) env.NEXT_PUBLIC_HOST = process.env.DEPLOY_URL
+if (process.env.URL) env.NEXT_PUBLIC_HOST = process.env.URL
 
 module.exports = withBundleAnalyzer({
   env,
