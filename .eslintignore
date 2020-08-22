@@ -1,4 +1,5 @@
-.cache/
-dist
+.next
+coverage
+lib
 node_modules
-tmp
+out
