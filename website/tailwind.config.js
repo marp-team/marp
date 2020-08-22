@@ -3,18 +3,10 @@ const {
   fontFamily,
 } = require('tailwindcss/defaultTheme')
 
-const dirs = ['components', 'pages', 'utils']
-const extentions = ['js', 'jsx', 'ts', 'tsx']
-
 module.exports = {
-  future: {
-    removeDeprecatedGapUtilities: true,
-  },
+  future: { removeDeprecatedGapUtilities: true },
   plugins: [],
-  purge: dirs.reduce(
-    (acc, dir) => [...acc, ...extentions.map((ext) => `./${dir}/**/*.${ext}`)],
-    []
-  ),
+  purge: ['@(components|pages|utils)/**/*.[jt]s?(x)'],
   theme: {
     colors: {
       black,
@@ -41,7 +33,5 @@ module.exports = {
       rounded: ['Quicksand', 'Avenir', 'Century Gothic', ...fontFamily.sans],
     },
   },
-  variants: {
-    transitionDuration: ['responsive', 'hover'],
-  },
+  variants: { transitionDuration: ['responsive', 'hover'] },
 }
