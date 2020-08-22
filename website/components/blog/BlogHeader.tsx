@@ -37,6 +37,8 @@ export const BlogHeader = ({
               src={`https://github.com/${github}.png`}
               alt={author || github}
               className="h-16 w-16 rounded-full shadow-md bg-white mr-4"
+              width={64}
+              height={64}
             />
           )}
           <span className="leading-relaxed">

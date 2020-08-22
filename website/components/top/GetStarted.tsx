@@ -8,6 +8,8 @@ type CardProps = {
   href: string
   name: string
   screenShot?: string
+  ssWidth?: number
+  ssHeight?: number
   summary: string
 }
 
@@ -19,6 +21,8 @@ const Card: React.FC<CardProps> = ({
   href,
   name,
   screenShot: screenshot,
+  ssWidth,
+  ssHeight,
   summary,
 }) => (
   <section className={classNames('card', className, { screenshot })}>
@@ -43,7 +47,13 @@ const Card: React.FC<CardProps> = ({
     </a>
     {screenshot && (
       <figure>
-        <img src={screenshot} alt={name} loading="lazy" />
+        <img
+          src={screenshot}
+          alt={name}
+          loading="lazy"
+          width={ssWidth}
+          height={ssHeight}
+        />
       </figure>
     )}
     <p className="mx-5 lg:my-3">{description}</p>
@@ -128,9 +138,7 @@ const Card: React.FC<CardProps> = ({
 
 export const GetStarted = () => (
   <>
-    <a id="get-started" className="named-anchor">
-      Get started
-    </a>
+    <span id="get-started" className="named-anchor" />
     <div className="get-started clearfix">
       <section className="container mx-auto py-10 px-8 lg:px-16">
         <h3 className="font-bold text-center text-2xl sm:text-3xl">
@@ -143,6 +151,8 @@ export const GetStarted = () => (
           badge="https://img.shields.io/visual-studio-marketplace/v/marp-team.marp-vscode.svg?style=flat-square&amp;label=&amp;colorB=0288d1"
           href="https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode"
           screenShot="/assets/marp-for-vs-code.png"
+          ssWidth={1946}
+          ssHeight={1424}
           className="vscode"
         >
           <Button
@@ -171,6 +181,8 @@ export const GetStarted = () => (
           badge="https://img.shields.io/npm/v/@marp-team/marp-cli.svg?style=flat-square&amp;label=&amp;colorB=0288d1"
           href="https://github.com/marp-team/marp-cli"
           screenShot="/assets/marp-cli.png"
+          ssWidth={1400}
+          ssHeight={800}
           className="cli"
         >
           <Button

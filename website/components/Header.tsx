@@ -24,6 +24,8 @@ export const Header = ({ activeItem }: { activeItem?: ItemSlug }) => (
             src="/assets/marp-logo.svg"
             alt="Marp"
             className="block h-16 w-16 p-2 md:p-3 md:h-20 md:w-20"
+            width={56}
+            height={56}
           />
         </a>
       </Link>

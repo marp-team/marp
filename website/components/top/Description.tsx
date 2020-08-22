@@ -52,6 +52,8 @@ export const Description = ({ example }: DescriptionProps) => {
             style={showExample ? {} : { verticalAlign: 'sub' }}
             src="https://icongr.am/octicons/chevron-down.svg?color=4a5568"
             alt=""
+            width={24}
+            height={24}
           />
         </Button>
       </p>
