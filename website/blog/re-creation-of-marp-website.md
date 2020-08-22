@@ -1,6 +1,7 @@
 ---
 title: Re-creation of Marp website for the unified docs
 date: 2020-08-22
+description: We are announcing that Marp team is working to the re-creation of marp.app website for hosting the unified documentation.
 author: Yuki Hattori
 github: yhatt
 ---
