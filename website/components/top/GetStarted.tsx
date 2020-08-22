@@ -43,7 +43,7 @@ const Card: React.FC<CardProps> = ({
           loading="lazy"
         />
       )}
-      <p className="text-gray-600 text-sm pt-1 leading-tight">{summary}</p>
+      <p className="text-gray-700 text-sm pt-1 leading-tight">{summary}</p>
     </a>
     {screenshot && (
       <figure>

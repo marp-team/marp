@@ -88,7 +88,7 @@ export const Button = ({
         }
 
         .button.outline.primary {
-          @apply text-marp-brand bg-white;
+          @apply text-marp-darken bg-white;
 
           background-image: none;
         }

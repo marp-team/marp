@@ -32,7 +32,7 @@ export const Description = ({ example }: DescriptionProps) => {
           page={2}
           className="max-w-sm w-full inline-block mt-5 lg:ml-5 lg:mt-0"
         />
-        <figcaption className="mt-5 text-sm text-gray-500">
+        <figcaption className="mt-5 text-sm text-gray-700">
           We&apos;re rendering slides generated in{' '}
           <a href="https://github.com/marp-team/marp-core">Marp Core</a>
         </figcaption>

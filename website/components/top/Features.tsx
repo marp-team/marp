@@ -14,9 +14,9 @@ const Card: React.FC<CardProps> = ({ children, name, icon, index }) => (
         width={48}
         height={48}
       />
-      <h3 className="text-gradient text-2xl text-center font-semibold my-4">
+      <h2 className="text-gradient text-2xl text-center font-semibold my-4">
         {name}
-      </h3>
+      </h2>
       <p className="text-sm lg:text-base">{children}</p>
     </div>
     <style jsx>{`

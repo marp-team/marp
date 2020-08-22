@@ -24,7 +24,7 @@ body::before {
 }
 
 a:not(.custom-anchor) {
-  @apply text-marp-brand;
+  @apply text-marp-darken;
 }
 
 a:not(.custom-anchor):hover {
