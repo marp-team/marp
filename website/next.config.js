@@ -9,6 +9,7 @@ if (process.env.URL) env.NEXT_PUBLIC_HOST = process.env.URL
 
 module.exports = withBundleAnalyzer({
   env,
+  experimental: { optimizeFonts: true },
   webpack: (config) => {
     config.module.rules.push({ test: /\.md$/, use: 'raw-loader' })
     return config
