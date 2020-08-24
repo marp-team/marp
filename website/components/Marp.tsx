@@ -40,7 +40,6 @@ export const Marp = ({
       html[page - 1] +
       `<style>${css}</style><style>:host{all:initial;}:host>[data-marpit-svg]{vertical-align:top;}</style>`
 
-    console.log(browser)
     return browser(root)
   }, [css, html, page])
 
