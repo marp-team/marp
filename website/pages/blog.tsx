@@ -7,6 +7,8 @@ import { Typography } from 'components/Typography'
 import { formatDate, formatDateShort } from 'utils/date'
 import { parse, parseMatter, renderToReact } from 'utils/markdown'
 
+const toJSON = (obj: any) => JSON.parse(JSON.stringify(obj))
+
 export const getStaticProps = async () => {
   const ctx = require.context('blog', false, /\.md$/)
   const mdMetas = await Promise.all(
@@ -27,7 +29,13 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      articles: JSON.parse(JSON.stringify(articles)) as typeof articles,
+      articles: articles.map((article) =>
+        toJSON({
+          data: article.data,
+          excerpt: article.excerpt?.mdast,
+          slug: article.slug,
+        })
+      ),
     },
   }
 }
@@ -46,7 +54,7 @@ const Blog = ({ articles }: InferGetStaticPropsType<typeof getStaticProps>) => (
         if (article.excerpt) {
           summary = (
             <Typography>
-              {renderToReact(article.excerpt.mdast, { anchorLink: false })}
+              {renderToReact(article.excerpt, { anchorLink: false })}
             </Typography>
           )
         } else if (article.data.description) {

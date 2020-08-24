@@ -7,7 +7,7 @@ export type RenderedMarp = ReturnType<typeof generateRenderedMarp>
 
 export type MarpProps = {
   className?: string
-  rendered: RenderedMarp
+  rendered: Pick<RenderedMarp, 'css' | 'html'>
   page?: number
 }
 
