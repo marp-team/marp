@@ -1,7 +1,7 @@
 import matter from 'gray-matter'
-import { AnchorLinkProvider } from 'components/markdown/Heading'
 import { parse as mdParse } from './parse'
 import { renderer } from './renderer'
+import { AnchorLinkProvider } from 'components/markdown/Heading'
 
 const toJSON = (value: any) => JSON.parse(JSON.stringify(value))
 

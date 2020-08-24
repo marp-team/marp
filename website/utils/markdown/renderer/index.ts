@@ -1,8 +1,8 @@
 import RemarkReact from 'remark-react'
+import { sanitize } from './sanitize'
 import { Anchor } from 'components/markdown/Anchor'
 import * as Heading from 'components/markdown/Heading'
 import { Pre, toHastCodeHandler } from 'components/markdown/Pre'
-import { sanitize } from './sanitize'
 
 export const { Compiler: renderer } = new RemarkReact({
   remarkReactComponents: {
