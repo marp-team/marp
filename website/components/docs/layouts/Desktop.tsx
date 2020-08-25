@@ -1,5 +1,6 @@
 import { useLayoutEffect, useRef, useState, RefObject } from 'react'
 import Sticky from 'wil-react-sticky'
+import { Breadcrumb } from 'components/docs/Breadcrumb'
 import { LayoutProps } from 'components/docs/Layout'
 import { Navigation } from 'components/docs/Navigation'
 
@@ -28,7 +29,7 @@ const useElementY = () => {
   return [ref as RefObject<any>, y] as const
 }
 
-export const Desktop: React.FC<LayoutProps> = ({ children }) => {
+export const Desktop: React.FC<LayoutProps> = ({ breadcrumbs, children }) => {
   const [containerRef, containerY] = useElementY()
   const sidebarStickyRef = useRef<Sticky>(null)
   const contentsStickyRef = useRef<Sticky>(null)
@@ -55,7 +56,7 @@ export const Desktop: React.FC<LayoutProps> = ({ children }) => {
           containerSelectorFocus="#docs-container"
           ref={sidebarStickyRef}
         >
-          <div className="p-6 w-64 mx-auto">
+          <div className="px-6 py-10 w-64 mx-auto">
             <Navigation />
           </div>
         </Sticky>
@@ -67,7 +68,13 @@ export const Desktop: React.FC<LayoutProps> = ({ children }) => {
           containerSelectorFocus="#docs-container"
           ref={contentsStickyRef}
         >
-          <div className="p-6">
+          <div className="px-6 py-10">
+            {breadcrumbs?.length && (
+              <>
+                <Breadcrumb breadcrumbs={breadcrumbs} />
+                <hr className="my-6 border-gray-400" />
+              </>
+            )}
             <article className="container mx-auto">{children}</article>
           </div>
         </Sticky>

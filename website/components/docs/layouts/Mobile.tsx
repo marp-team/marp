@@ -3,6 +3,7 @@ import classNames from 'classnames'
 import FocusTrap from 'focus-trap-react'
 import { useRouter } from 'next/router'
 import { useCallback, useEffect, useRef, useState } from 'react'
+import { Breadcrumb } from 'components/docs/Breadcrumb'
 import { LayoutProps } from 'components/docs/Layout'
 import { Navigation } from 'components/docs/Navigation'
 
@@ -131,12 +132,10 @@ export const Mobile: React.FC<LayoutProps> = ({ children, breadcrumbs }) => {
           />
         </button>
         {breadcrumbs?.length && (
-          <div className="docs-breadcrumb">
-            <ol>
-              {breadcrumbs.map((el, i) => (
-                <li key={i}>{el}</li>
-              ))}
-            </ol>
+          <div className="docs-breadcrumb-wrapper">
+            <div className="docs-breadcrumb-container">
+              <Breadcrumb breadcrumbs={breadcrumbs} />
+            </div>
           </div>
         )}
       </nav>
@@ -190,10 +189,10 @@ export const Mobile: React.FC<LayoutProps> = ({ children, breadcrumbs }) => {
           @apply fixed inset-0 h-10 bg-white shadow-sm flex items-stretch z-50;
           top: 4rem;
         }
-        .docs-breadcrumb {
+        .docs-breadcrumb-wrapper {
           @apply relative flex-1 my-1 mr-3 -ml-1 overflow-hidden flex items-center;
         }
-        .docs-breadcrumb::before {
+        .docs-breadcrumb-wrapper::before {
           @apply block absolute inset-0 w-2 z-10;
 
           content: '';
@@ -203,18 +202,11 @@ export const Mobile: React.FC<LayoutProps> = ({ children, breadcrumbs }) => {
             rgba(255, 255, 255, 0)
           );
         }
-        .docs-breadcrumb ol {
-          @apply relative flex items-center justify-end overflow-hidden pl-2;
+        .docs-breadcrumb-container {
+          @apply w-full;
         }
-        .docs-breadcrumb li {
-          @apply block whitespace-no-wrap;
-        }
-        .docs-breadcrumb li:not(:first-child)::before {
-          @apply pl-6 bg-no-repeat;
-          background-image: url('https://icongr.am/octicons/triangle-right.svg?color=718096');
-          background-position: 0.25rem center;
-          background-size: 1rem 1rem;
-          content: '';
+        .docs-breadcrumb-container :global(li:first-child) {
+          @apply pl-2;
         }
       `}</style>
     </>
