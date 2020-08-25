@@ -1,5 +1,6 @@
 import { useLayoutEffect, useRef, useState, RefObject } from 'react'
 import Sticky from 'wil-react-sticky'
+import { LayoutProps } from 'components/docs/Layout'
 import { Navigation } from 'components/docs/Navigation'
 
 const useElementY = () => {
@@ -27,7 +28,7 @@ const useElementY = () => {
   return [ref as RefObject<any>, y] as const
 }
 
-export const Desktop: React.FC = ({ children }) => {
+export const Desktop: React.FC<LayoutProps> = ({ children }) => {
   const [containerRef, containerY] = useElementY()
   const sidebarStickyRef = useRef<Sticky>(null)
   const contentsStickyRef = useRef<Sticky>(null)

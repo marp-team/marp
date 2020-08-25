@@ -4,9 +4,11 @@ import { Mobile } from './layouts/Mobile'
 import { Layout } from 'components/Layout'
 
 // eslint-disable-next-line @typescript-eslint/ban-types
-export type LayoutProps = {}
+export type LayoutProps = {
+  breadcrumbs?: React.ReactNode[]
+}
 
-const DocsLayout: React.FC<LayoutProps> = ({ children }) => {
+const DocsLayout: React.FC<LayoutProps> = ({ children, ...props }) => {
   const isDesktop = useMedia({ minWidth: '768px' })
   const Container = isDesktop ? Desktop : Mobile
 
@@ -16,7 +18,7 @@ const DocsLayout: React.FC<LayoutProps> = ({ children }) => {
       title={['Docs']}
       noIndex // TODO: Remove noIndex
     >
-      <Container>{children}</Container>
+      <Container {...props}>{children}</Container>
     </Layout>
   )
 }

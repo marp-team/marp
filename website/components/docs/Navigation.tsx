@@ -2,7 +2,7 @@ export const Navigation = () => (
   <>
     <ul>
       <li>
-        <h3 className="font-rounded font-bold text-gray-600 uppercase text-xl">
+        <h3 className="font-rounded font-bold text-gray-700 uppercase text-xl">
           Concept
         </h3>
         <ul>
@@ -21,7 +21,7 @@ export const Navigation = () => (
     </ul>
     <ul className="mt-8">
       <li>
-        <h3 className="font-rounded font-bold text-gray-600 uppercase text-xl">
+        <h3 className="font-rounded font-bold text-gray-700 uppercase text-xl">
           Concept
         </h3>
         <ul>
@@ -41,7 +41,7 @@ export const Navigation = () => (
     </ul>
     <ul className="mt-8">
       <li>
-        <h3 className="font-rounded font-bold text-gray-600 uppercase text-xl">
+        <h3 className="font-rounded font-bold text-gray-700 uppercase text-xl">
           Markdown
         </h3>
         <ul>

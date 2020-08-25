@@ -2,6 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  scrollbar-color: theme('colors.gray.500') theme('colors.gray.300');
+  scrollbar-width: thin;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-track {
+  @apply bg-gray-300;
+}
+*::-webkit-scrollbar-thumb {
+  @apply bg-gray-500 bg-clip-padding rounded-full;
+
+  border: 1px solid transparent;
+}
+*::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-600;
+}
+*::-webkit-scrollbar-thumb:hover:active {
+  @apply bg-gray-700;
+}
+
 html:not(.translating) {
   scroll-behavior: smooth;
 }

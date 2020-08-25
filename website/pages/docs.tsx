@@ -1,7 +1,7 @@
 import { Layout } from 'components/docs/Layout'
 
 const Docs = () => (
-  <Layout>
+  <Layout breadcrumbs={['Concept', 'How about Marp?']}>
     <p>
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non, illum sequi
       a doloremque impedit culpa, animi error molestias dignissimos omnis est
