@@ -80,7 +80,6 @@ const Blog = ({ articles }: InferGetStaticPropsType<typeof getStaticProps>) => (
               </p>
               {summary && (
                 <>
-                  {/* @ts-ignore for inert attribute */}
                   <div className="flex flex-col lg:flex-row" inert="">
                     {article.data.image && (
                       <figure className="mx-auto mb-6 lg:order-1 lg:mb-0 lg:ml-6 lg:w-full lg:max-w-sm">

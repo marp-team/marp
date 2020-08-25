@@ -1,5 +1,6 @@
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
 import classNames from 'classnames'
+import FocusTrap from 'focus-trap-react'
 import { useRouter } from 'next/router'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { LayoutProps } from 'components/docs/Layout'
@@ -10,18 +11,26 @@ const useDrawer = (drawer?: HTMLElement) => {
   const [open, setOpen] = useState(false)
   const [active, setActive] = useState(false)
   const activeTimer = useRef<number>()
+  const lastFocusedElement = useRef<HTMLElement | undefined>(undefined)
 
-  const handleOpen = useCallback(() => {
+  const handleOpen = useCallback((e?: React.SyntheticEvent<HTMLElement>) => {
+    setActive(true)
     setOpen(true)
-    setActive(true)
+
+    lastFocusedElement.current = e?.currentTarget
   }, [])
+
   const handleClose = useCallback(() => {
-    setOpen(false)
     setActive(true)
+    setOpen(false)
   }, [])
-  const toggle = useCallback(() => {
-    open ? handleClose() : handleOpen()
-  }, [open, handleOpen, handleClose])
+
+  const toggle = useCallback(
+    (e?: React.SyntheticEvent<HTMLElement>) => {
+      open ? handleClose() : handleOpen(e)
+    },
+    [open, handleOpen, handleClose]
+  )
 
   useEffect(() => {
     router.events.on('routeChangeComplete', handleClose)
@@ -34,6 +43,22 @@ const useDrawer = (drawer?: HTMLElement) => {
       return () => enableBodyScroll(drawer)
     }
   }, [drawer, open])
+
+  useEffect(() => {
+    if (open) {
+      const escKeyListener = ({ keyCode }: KeyboardEvent) =>
+        keyCode === 27 && handleClose()
+
+      document.addEventListener('keydown', escKeyListener)
+      return () => document.removeEventListener('keydown', escKeyListener)
+    }
+  }, [handleClose, open])
+
+  useEffect(() => {
+    if (!open && lastFocusedElement.current) {
+      lastFocusedElement.current.focus()
+    }
+  }, [open])
 
   useEffect(() => {
     if (active) {
@@ -58,34 +83,54 @@ export const Mobile: React.FC<LayoutProps> = ({ children, breadcrumbs }) => {
         onClick={handleClose}
         aria-hidden
       />
-      <nav className={classNames('docs-nav', { active, open })} ref={setDrawer}>
-        <p className="mb-6">
-          <button
-            className="rounded hover:bg-gray-300 focus:outline-none focus:shadow-outline"
-            onClick={handleClose}
-          >
-            <img
-              src="https://icongr.am/octicons/x.svg?color=4a5568"
-              alt="Close navigation"
-              className="w-8 h-8"
-            />
-          </button>
-        </p>
-        <Navigation />
-      </nav>
+      <FocusTrap
+        active={open}
+        focusTrapOptions={{
+          allowOutsideClick: () => true,
+          escapeDeactivates: false,
+          initialFocus: '#docs-nav',
+        }}
+      >
+        <nav
+          id="docs-nav"
+          className={classNames({ active, open })}
+          ref={setDrawer}
+          tabIndex={-1}
+          inert={open ? undefined : ''}
+        >
+          <div className="p-8">
+            <p className="mb-6">
+              <button
+                className="docs-btn w-8 h-8"
+                onClick={handleClose}
+                aria-expanded={open}
+              >
+                <img
+                  src="https://icongr.am/octicons/x.svg?color=4a5568"
+                  alt="Close navigation"
+                  className="w-8 h-8"
+                />
+              </button>
+            </p>
+            <Navigation />
+          </div>
+        </nav>
+      </FocusTrap>
       <nav className="docs-topbar">
         <button
-          className="w-8 h-8 m-1 relative rounded hover:bg-gray-200 focus:outline-none focus:shadow-outline z-20"
+          className="docs-btn w-8 h-8 m-1 relative z-20"
           type="button"
           onClick={toggle}
+          aria-controls="docs-nav"
+          aria-expanded={open}
         >
           <img
             src="https://icongr.am/octicons/three-bars.svg?color=4a5568"
-            alt="Open navigation"
+            alt="Toggle navigation"
             className="w-8 h-8 p-1"
           />
         </button>
-        {breadcrumbs && (
+        {breadcrumbs?.length && (
           <div className="docs-breadcrumb">
             <ol>
               {breadcrumbs.map((el, i) => (
@@ -114,17 +159,31 @@ export const Mobile: React.FC<LayoutProps> = ({ children, breadcrumbs }) => {
           @apply pointer-events-auto opacity-100;
         }
 
-        .docs-nav {
-          @apply p-8 w-64 border-r fixed inset-0 bg-background overflow-auto transform -translate-x-full;
+        .docs-btn {
+          @apply appearance-none rounded;
+        }
+        .docs-btn:hover,
+        .docs-btn:focus {
+          @apply bg-gray-200 outline-none;
+        }
+        .docs-btn:hover:active {
+          @apply bg-gray-300 outline-none;
+        }
+        .docs-btn:focus-visible {
+          @apply shadow-outline;
+        }
+
+        #docs-nav {
+          @apply w-64 border-r fixed inset-0 bg-background overflow-hidden outline-none transform -translate-x-full;
 
           transition-property: box-shadow, transform;
           z-index: 60;
         }
-        .docs-nav.active {
+        #docs-nav.active {
           @apply duration-300;
         }
-        .docs-nav.open {
-          @apply transform-none shadow-2xl;
+        #docs-nav.open {
+          @apply overflow-auto transform-none shadow-2xl;
         }
 
         .docs-topbar {
@@ -135,8 +194,14 @@ export const Mobile: React.FC<LayoutProps> = ({ children, breadcrumbs }) => {
           @apply relative flex-1 my-1 mr-3 -ml-1 overflow-hidden flex items-center;
         }
         .docs-breadcrumb::before {
-          @apply block absolute inset-0 w-2 bg-gradient-to-r from-white via-white to-transparent z-10;
+          @apply block absolute inset-0 w-2 z-10;
+
           content: '';
+          background: linear-gradient(
+            to right,
+            theme('colors.white') 50%,
+            rgba(255, 255, 255, 0)
+          );
         }
         .docs-breadcrumb ol {
           @apply relative flex items-center justify-end overflow-hidden pl-2;
