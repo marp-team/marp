@@ -74,7 +74,9 @@ export const Desktop: React.FC<LayoutProps> = ({ breadcrumbs, children }) => {
                 <Breadcrumb breadcrumbs={breadcrumbs} />
               </div>
             )}
-            <article className="container mx-auto px-6">{children}</article>
+            <article id="docs-article" className="container">
+              {children}
+            </article>
           </div>
         </Sticky>
       </div>
@@ -87,9 +89,20 @@ export const Desktop: React.FC<LayoutProps> = ({ breadcrumbs, children }) => {
           grid-template-rows: 1fr;
           grid-template-columns: minmax(16rem, 20%) 1px 1fr minmax(8rem, 15%);
         }
+
+        #docs-article {
+          @apply mx-auto px-6;
+
+          --root-font-size: 0.9rem;
+        }
+
         @screen xl {
           #docs-container {
             grid-template-areas: 'sidebar border contents nav';
+          }
+
+          #docs-article {
+            --root-font-size: 1rem;
           }
         }
       `}</style>

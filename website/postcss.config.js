@@ -10,5 +10,6 @@ module.exports = {
         'focus-visible-pseudo-class': true,
       },
     },
+    [require.resolve('./css/plugin-rem')]: {},
   },
 }

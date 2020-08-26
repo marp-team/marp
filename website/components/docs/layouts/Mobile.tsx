@@ -139,7 +139,7 @@ export const Mobile: React.FC<LayoutProps> = ({ children, breadcrumbs }) => {
           </div>
         )}
       </nav>
-      <article className="container p-6 pt-16 mx-auto text-sm">
+      <article id="docs-article" className="container">
         {children}
       </article>
       <style jsx>{`
@@ -207,6 +207,12 @@ export const Mobile: React.FC<LayoutProps> = ({ children, breadcrumbs }) => {
         }
         .docs-breadcrumb-container :global(li:first-child) {
           @apply pl-2;
+        }
+
+        #docs-article {
+          @apply p-6 pt-16 mx-auto;
+
+          --root-font-size: 0.9rem;
         }
       `}</style>
     </>

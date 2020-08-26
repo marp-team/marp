@@ -84,7 +84,6 @@ export const Header = ({ activeItem }: { activeItem?: ItemSlug }) => (
         .header-item:hover:active > img {
           @apply transform scale-125 shadow-none;
 
-          -webkit-tap-highlight-color: transparent;
           transition-duration: 0ms;
         }
 
@@ -107,6 +106,10 @@ export const Header = ({ activeItem }: { activeItem?: ItemSlug }) => (
         .header-item:focus-visible,
         .nav-item:focus-visible::before {
           @apply bg-gray-200;
+        }
+
+        .header-item:not(.nav-item) {
+          -webkit-tap-highlight-color: transparent;
         }
 
         @screen md {
