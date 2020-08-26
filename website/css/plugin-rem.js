@@ -15,7 +15,7 @@ module.exports = plugin('marp-rem', () => (css) =>
         if (i % 2) return v
 
         return v.replace(
-          /(\d*\.?\d+)rem\b/g,
+          /(-?\d*\.?\d+)rem\b/g,
           (_, num) => `calc(var(${rootFontSizeCustomProp}, 1rem) * ${num})`
         )
       })
