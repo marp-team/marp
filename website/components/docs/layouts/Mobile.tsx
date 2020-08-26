@@ -139,7 +139,7 @@ export const Mobile: React.FC<LayoutProps> = ({ children, breadcrumbs }) => {
           </div>
         )}
       </nav>
-      <article className="container p-6 pt-16 -mt-2 mx-auto text-sm">
+      <article className="container p-6 pt-16 mx-auto text-sm">
         {children}
       </article>
       <style jsx>{`

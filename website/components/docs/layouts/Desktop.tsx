@@ -56,7 +56,7 @@ export const Desktop: React.FC<LayoutProps> = ({ breadcrumbs, children }) => {
           containerSelectorFocus="#docs-container"
           ref={sidebarStickyRef}
         >
-          <div className="px-6 py-10 w-64 mx-auto">
+          <div className="px-8 py-10 w-64 mx-auto">
             <Navigation />
           </div>
         </Sticky>
@@ -68,14 +68,13 @@ export const Desktop: React.FC<LayoutProps> = ({ breadcrumbs, children }) => {
           containerSelectorFocus="#docs-container"
           ref={contentsStickyRef}
         >
-          <div className="px-6 py-10">
+          <div className="px-8 py-10">
             {breadcrumbs?.length && (
-              <>
+              <div className="bg-gray-300 rounded mb-6 p-2">
                 <Breadcrumb breadcrumbs={breadcrumbs} />
-                <hr className="my-6 border-gray-400" />
-              </>
+              </div>
             )}
-            <article className="container mx-auto">{children}</article>
+            <article className="container mx-auto px-6">{children}</article>
           </div>
         </Sticky>
       </div>
@@ -84,9 +83,14 @@ export const Desktop: React.FC<LayoutProps> = ({ breadcrumbs, children }) => {
           @apply grid;
 
           min-height: inherit;
-          grid-template-areas: 'sidebar border contents';
+          grid-template-areas: 'sidebar border contents contents';
           grid-template-rows: 1fr;
-          grid-template-columns: minmax(16rem, 25%) 1px 1fr;
+          grid-template-columns: minmax(16rem, 20%) 1px 1fr minmax(8rem, 15%);
+        }
+        @screen xl {
+          #docs-container {
+            grid-template-areas: 'sidebar border contents nav';
+          }
         }
       `}</style>
     </div>
