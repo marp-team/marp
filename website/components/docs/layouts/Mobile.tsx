@@ -73,7 +73,12 @@ const useDrawer = (drawer?: HTMLElement) => {
   return { active, handleClose, handleOpen, toggle, open }
 }
 
-export const Mobile: React.FC<LayoutProps> = ({ children, breadcrumbs }) => {
+export const Mobile: React.FC<LayoutProps> = ({
+  children,
+  breadcrumbs,
+  manifest,
+  slug,
+}) => {
   const [drawer, setDrawer] = useState<HTMLElement | null>(null)
   const { active, handleClose, toggle, open } = useDrawer(drawer ?? undefined)
 
@@ -113,7 +118,7 @@ export const Mobile: React.FC<LayoutProps> = ({ children, breadcrumbs }) => {
                 />
               </button>
             </p>
-            <Navigation />
+            <Navigation manifest={manifest} slug={slug} />
           </div>
         </nav>
       </FocusTrap>

@@ -1,24 +1,24 @@
 import { useMedia } from 'use-media'
+import { BreadcrumbProps } from './Breadcrumb'
+import { NavigationProps } from './Navigation'
 import { Desktop } from './layouts/Desktop'
 import { Mobile } from './layouts/Mobile'
 import { Layout } from 'components/Layout'
 
-// eslint-disable-next-line @typescript-eslint/ban-types
-export type LayoutProps = {
-  breadcrumbs?: React.ReactNode[]
-}
+export type LayoutProps = BreadcrumbProps & NavigationProps
 
-const DocsLayout: React.FC<LayoutProps> = ({ children, ...props }) => {
+const DocsLayout: React.FC<LayoutProps> = (props) => {
   const isDesktop = useMedia({ minWidth: '768px' })
   const Container = isDesktop ? Desktop : Mobile
 
   return (
     <Layout
       activeItem="docs"
-      title={['Docs']}
+      canonical={`/docs/${props.slug.join('/')}`}
+      title={[props.breadcrumbs.map((b) => b.title).join(' > '), 'Docs']}
       noIndex // TODO: Remove noIndex
     >
-      <Container {...props}>{children}</Container>
+      <Container {...props} />
     </Layout>
   )
 }

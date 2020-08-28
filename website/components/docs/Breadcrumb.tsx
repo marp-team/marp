@@ -1,13 +1,27 @@
+import Link from 'next/link'
+
 export type BreadcrumbProps = {
-  breadcrumbs: React.ReactNode[]
+  breadcrumbs: {
+    key: string
+    link?: string
+    title: string
+  }[]
 }
 
 export const Breadcrumb = ({ breadcrumbs }: BreadcrumbProps) => (
   <div className="breadcrumb-wrapper">
     <div className="breadcrumb-container">
       <ol>
-        {breadcrumbs.map((el, i) => (
-          <li key={i}>{el}</li>
+        {breadcrumbs.map(({ key, title, link }) => (
+          <li key={key}>
+            {link ? (
+              <Link href="/docs/[[...slug]]" as={link}>
+                <a>{title}</a>
+              </Link>
+            ) : (
+              title
+            )}
+          </li>
         ))}
       </ol>
     </div>

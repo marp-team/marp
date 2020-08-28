@@ -29,7 +29,12 @@ const useElementY = () => {
   return [ref as RefObject<any>, y] as const
 }
 
-export const Desktop: React.FC<LayoutProps> = ({ breadcrumbs, children }) => {
+export const Desktop: React.FC<LayoutProps> = ({
+  breadcrumbs,
+  children,
+  manifest,
+  slug,
+}) => {
   const [containerRef, containerY] = useElementY()
   const sidebarStickyRef = useRef<Sticky>(null)
   const contentsStickyRef = useRef<Sticky>(null)
@@ -56,8 +61,8 @@ export const Desktop: React.FC<LayoutProps> = ({ breadcrumbs, children }) => {
           containerSelectorFocus="#docs-container"
           ref={sidebarStickyRef}
         >
-          <div className="px-8 py-10 w-64 mx-auto">
-            <Navigation />
+          <div className="sidebar-nav">
+            <Navigation manifest={manifest} slug={slug} />
           </div>
         </Sticky>
       </div>
@@ -96,6 +101,12 @@ export const Desktop: React.FC<LayoutProps> = ({ breadcrumbs, children }) => {
           --root-font-size: 0.9rem;
         }
 
+        .sidebar-nav {
+          @apply px-8 py-10 w-64 mx-auto;
+
+          min-width: 16rem;
+        }
+
         @screen xl {
           #docs-container {
             grid-template-areas: 'sidebar border contents nav';
@@ -103,6 +114,10 @@ export const Desktop: React.FC<LayoutProps> = ({ breadcrumbs, children }) => {
 
           #docs-article {
             --root-font-size: 1rem;
+          }
+
+          .sidebar-nav {
+            @apply w-5/6;
           }
         }
       `}</style>

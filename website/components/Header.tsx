@@ -32,7 +32,7 @@ export const Header = ({ activeItem }: { activeItem?: ItemSlug }) => (
       <nav className="ml-2">
         <ul className="flex items-stretch h-16 md:h-20">
           <li className="relative flex items-center justify-center">
-            <Link href="/docs">
+            <Link href="/docs/[[...slug]]" as="/docs">
               <a
                 className={classNames('custom-anchor header-item nav-item', {
                   active: activeItem === 'docs',

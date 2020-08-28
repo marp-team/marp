@@ -65,7 +65,7 @@ const Blog = ({ articles }: InferGetStaticPropsType<typeof getStaticProps>) => (
 
         return (
           <div key={article.slug} className="article-container">
-            <Link href={`/blog/${article.slug}`}>
+            <Link href="/blog/[slug]" as={`/blog/${article.slug}`}>
               <a className="article-container-link">
                 <h1 className="sr-only">{article.data.title}</h1>
               </a>
