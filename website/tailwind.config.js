@@ -32,6 +32,7 @@ module.exports = {
       sans: ['Inter', ...fontFamily.sans],
       rounded: ['Quicksand', 'Avenir', 'Century Gothic', ...fontFamily.sans],
     },
+    extend: { transitionDuration: { 0: '0s' } },
   },
   variants: { transitionDuration: ['responsive', 'hover'] },
 }

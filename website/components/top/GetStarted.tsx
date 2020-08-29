@@ -106,9 +106,7 @@ const Card: React.FC<CardProps> = ({
       }
       .card-link:hover:active,
       .card-link:focus {
-        @apply shadow-outline outline-none;
-
-        transition-duration: 0ms;
+        @apply shadow-outline outline-none duration-0;
       }
 
       @screen lg {

@@ -56,9 +56,7 @@ a:not(.custom-anchor):hover {
 }
 
 a:not(.custom-anchor):hover:active {
-  @apply text-marp-darkest;
-
-  transition-duration: 0ms;
+  @apply text-marp-darkest duration-0;
 }
 
 .named-anchor {

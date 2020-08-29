@@ -59,7 +59,8 @@ const Docs = ({
   slug,
 }: InferGetStaticPropsType<typeof getStaticProps>) => (
   <Layout breadcrumbs={breadcrumbs} manifest={manifest} slug={slug}>
-    <Typography>{renderToReact(mdast)}</Typography>
+    {/* key is required to fix broken Google Translator built in Chrome */}
+    <Typography key={slug.join('/')}>{renderToReact(mdast)}</Typography>
   </Layout>
 )
 

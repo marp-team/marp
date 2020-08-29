@@ -82,9 +82,7 @@ export const Header = ({ activeItem }: { activeItem?: ItemSlug }) => (
         }
 
         .header-item:hover:active > img {
-          @apply transform scale-125 shadow-none;
-
-          transition-duration: 0ms;
+          @apply transform scale-125 shadow-none duration-0;
         }
 
         @media not all and (hover: none) {
@@ -135,12 +133,12 @@ export const Header = ({ activeItem }: { activeItem?: ItemSlug }) => (
         }
 
         .nav-item.active > span::after {
-          transition-duration: 0ms;
+          @apply duration-0;
           box-shadow: inset 0 -0.25rem theme('colors.marp.brand');
         }
 
         .nav-item:hover:active > span::after {
-          transition-duration: 0ms;
+          @apply duration-0;
           box-shadow: inset 0 -0.25rem theme('colors.marp.dark');
         }
       `}</style>

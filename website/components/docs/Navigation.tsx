@@ -53,23 +53,24 @@ export const Navigation = ({
         }
 
         .page-link {
-          @apply block py-1 px-2 mt-1 rounded text-marp-darken;
+          @apply block py-1 px-2 mt-1 rounded text-marp-darken transition-colors outline-none;
         }
-        .page-link:hover {
-          @apply underline;
+        .page-link:hover,
+        .page-link:focus {
+          @apply bg-gray-200 text-marp-dark duration-300;
         }
         .page-link:hover:active {
-          @apply bg-gray-300;
+          @apply bg-gray-300 duration-0;
         }
         .page-link:focus-visible {
-          @apply outline-none shadow-outline;
+          @apply shadow-outline;
         }
 
         .page-link.active {
-          @apply font-bold text-white bg-marp-brand;
+          @apply font-bold text-white bg-gradient-to-br from-marp-brand to-marp-dark duration-0;
         }
         .page-link.active:hover:active {
-          @apply bg-marp-dark;
+          @apply bg-marp-dark from-marp-dark to-marp-darkest;
         }
       `}</style>
     </div>

@@ -121,8 +121,7 @@ const Blog = ({ articles }: InferGetStaticPropsType<typeof getStaticProps>) => (
             @apply shadow-lg bg-white;
           }
           .article-container-link:hover:active {
-            @apply shadow-outline bg-white outline-none;
-            transition-duration: 0s;
+            @apply shadow-outline bg-white outline-none duration-0;
           }
           .article-container-link:hover + * .read-more {
             @apply text-marp-brand;
@@ -130,8 +129,7 @@ const Blog = ({ articles }: InferGetStaticPropsType<typeof getStaticProps>) => (
         }
 
         .article-container-link:focus {
-          @apply shadow-outline bg-white outline-none;
-          transition-duration: 0s;
+          @apply shadow-outline bg-white outline-none duration-0;
         }
 
         .read-more {
