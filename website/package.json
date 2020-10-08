@@ -14,7 +14,7 @@
     "classnames": "^2.2.6",
     "focus-visible": "^5.1.0",
     "hast-util-sanitize": "^3.0.0",
-    "next": "^9.5.2",
+    "next": "^9.5.4",
     "nprogress": "^0.2.0",
     "prism-react-renderer": "^1.1.1",
     "react-dom": "^16.13.1",
