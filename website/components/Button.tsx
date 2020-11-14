@@ -50,9 +50,7 @@ export const Button = ({
           @apply bg-background duration-150;
         }
         .button:hover:active {
-          @apply outline-none shadow-outline bg-gray-300;
-
-          transition-duration: 0s;
+          @apply outline-none shadow-outline bg-gray-300 duration-0;
         }
         .button:focus {
           @apply outline-none shadow-outline;

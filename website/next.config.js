@@ -23,6 +23,11 @@ module.exports = withBundleAnalyzer({
   experimental: { optimizeFonts: true },
   webpack: (config, { isServer }) => {
     config.module.rules.push({ test: /\.md$/, use: 'raw-loader' })
+    config.module.rules.push({
+      test: /\.ya?ml$/,
+      type: 'json',
+      use: 'yaml-loader',
+    })
 
     if (!isServer) {
       config.module.rules.push({

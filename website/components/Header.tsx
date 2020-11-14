@@ -31,23 +31,22 @@ export const Header = ({ activeItem }: { activeItem?: ItemSlug }) => (
       </Link>
       <nav className="ml-2">
         <ul className="flex items-stretch h-16 md:h-20">
-          {/* TODO: Add document page and remove noIndex from docs layout */}
-          {/*
-        <li className="relative flex items-center justify-center">
-          <Link href="/docs">
-            <a
-              className={classNames('custom-anchor header-item nav-item', {
-                active: activeItem === 'docs',
-              })}
-              role="link"
-              tabIndex={0}
-              onMouseUp={handleMouseUp}
-            >
-              <span>Docs</span>
-            </a>
-          </Link>
-        </li>
-        */}
+          {process.env.NEXT_PUBLIC_DOCS && (
+            <li className="relative flex items-center justify-center">
+              <Link href="/docs">
+                <a
+                  className={classNames('custom-anchor header-item nav-item', {
+                    active: activeItem === 'docs',
+                  })}
+                  role="link"
+                  tabIndex={0}
+                  onMouseUp={handleMouseUp}
+                >
+                  <span>Docs</span>
+                </a>
+              </Link>
+            </li>
+          )}
           <li className="relative flex items-center justify-center">
             <Link href="/blog">
               <a
@@ -85,10 +84,7 @@ export const Header = ({ activeItem }: { activeItem?: ItemSlug }) => (
         }
 
         .header-item:hover:active > img {
-          @apply transform scale-125 shadow-none;
-
-          -webkit-tap-highlight-color: transparent;
-          transition-duration: 0ms;
+          @apply transform scale-125 shadow-none duration-0;
         }
 
         @media not all and (hover: none) {
@@ -110,6 +106,10 @@ export const Header = ({ activeItem }: { activeItem?: ItemSlug }) => (
         .header-item:focus-visible,
         .nav-item:focus-visible::before {
           @apply bg-gray-200;
+        }
+
+        .header-item:not(.nav-item) {
+          -webkit-tap-highlight-color: transparent;
         }
 
         @screen md {
@@ -135,12 +135,12 @@ export const Header = ({ activeItem }: { activeItem?: ItemSlug }) => (
         }
 
         .nav-item.active > span::after {
-          transition-duration: 0ms;
+          @apply duration-0;
           box-shadow: inset 0 -0.25rem theme('colors.marp.brand');
         }
 
         .nav-item:hover:active > span::after {
-          transition-duration: 0ms;
+          @apply duration-0;
           box-shadow: inset 0 -0.25rem theme('colors.marp.dark');
         }
       `}</style>

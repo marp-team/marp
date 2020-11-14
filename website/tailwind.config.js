@@ -4,7 +4,12 @@ const {
 } = require('tailwindcss/defaultTheme')
 
 module.exports = {
-  future: { removeDeprecatedGapUtilities: true },
+  future: {
+    removeDeprecatedGapUtilities: true, // ok
+    purgeLayersByDefault: true,
+    defaultLineHeights: true,
+    standardFontWeights: true,
+  },
   plugins: [],
   purge: ['@(components|pages|utils)/**/*.[jt]s?(x)'],
   theme: {
@@ -32,6 +37,7 @@ module.exports = {
       sans: ['Inter', ...fontFamily.sans],
       rounded: ['Quicksand', 'Avenir', 'Century Gothic', ...fontFamily.sans],
     },
+    extend: { transitionDuration: { 0: '0s' } },
   },
   variants: { transitionDuration: ['responsive', 'hover'] },
 }

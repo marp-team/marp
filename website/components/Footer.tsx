@@ -13,6 +13,7 @@ export const Footer = () => (
           width={150}
           height={20}
           title="GitHub"
+          loading="lazy"
         ></iframe>
       </p>
       <ScrollToTop />

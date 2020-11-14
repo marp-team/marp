@@ -80,7 +80,6 @@ const Blog = ({ articles }: InferGetStaticPropsType<typeof getStaticProps>) => (
               </p>
               {summary && (
                 <>
-                  {/* @ts-ignore for inert attribute */}
                   <div className="flex flex-col lg:flex-row" inert="">
                     {article.data.image && (
                       <figure className="mx-auto mb-6 lg:order-1 lg:mb-0 lg:ml-6 lg:w-full lg:max-w-sm">
@@ -122,8 +121,7 @@ const Blog = ({ articles }: InferGetStaticPropsType<typeof getStaticProps>) => (
             @apply shadow-lg bg-white;
           }
           .article-container-link:hover:active {
-            @apply shadow-outline bg-white outline-none;
-            transition-duration: 0s;
+            @apply shadow-outline bg-white outline-none duration-0;
           }
           .article-container-link:hover + * .read-more {
             @apply text-marp-brand;
@@ -131,8 +129,7 @@ const Blog = ({ articles }: InferGetStaticPropsType<typeof getStaticProps>) => (
         }
 
         .article-container-link:focus {
-          @apply shadow-outline bg-white outline-none;
-          transition-duration: 0s;
+          @apply shadow-outline bg-white outline-none duration-0;
         }
 
         .read-more {
