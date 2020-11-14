@@ -9,10 +9,7 @@ let parser: unified.Processor | undefined
 export const parse = async (md: string) => {
   parser =
     parser ||
-    unified()
-      .use(remarkParse, { commonmark: true })
-      .use(remarkSlug)
-      .use(imageParagraphToFigure)
+    unified().use(remarkParse).use(remarkSlug).use(imageParagraphToFigure)
 
   return removePosition(await parser.run(parser.parse(md)), true)
 }

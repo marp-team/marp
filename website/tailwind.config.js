@@ -4,7 +4,12 @@ const {
 } = require('tailwindcss/defaultTheme')
 
 module.exports = {
-  future: { removeDeprecatedGapUtilities: true },
+  future: {
+    removeDeprecatedGapUtilities: true, // ok
+    purgeLayersByDefault: true,
+    defaultLineHeights: true,
+    standardFontWeights: true,
+  },
   plugins: [],
   purge: ['@(components|pages|utils)/**/*.[jt]s?(x)'],
   theme: {

@@ -17,7 +17,7 @@ export const BlogHeader = ({
   title,
 }: BlogHeaderProps) => (
   <div className="text-center text-gray-600">
-    <Link href="/blog/[slug]" as={`/blog/${slug}`}>
+    <Link href={`/blog/${slug}`}>
       <a>
         <h1 className="text-gradient text-3xl font-bold md:text-4xl">
           {title}

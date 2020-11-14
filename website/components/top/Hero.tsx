@@ -43,11 +43,11 @@ export const Hero = () => (
         </Button>
       </p>
       <style jsx>{`
-      section {
-        background: #fcfcfc url('${heroBg}') no-repeat right center;
-        background-size: cover;
-      }
-    `}</style>
+        section {
+          background: #fcfcfc url('${heroBg}') no-repeat right center;
+          background-size: cover;
+        }
+      `}</style>
     </section>
   </>
 )

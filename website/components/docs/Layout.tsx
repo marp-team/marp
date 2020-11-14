@@ -16,7 +16,7 @@ const DocsLayout: React.FC<LayoutProps> = (props) => {
       activeItem="docs"
       canonical={`/docs/${props.slug.join('/')}`}
       title={[props.breadcrumbs.map((b) => b.title).join(' > '), 'Docs']}
-      noIndex // TODO: Remove noIndex
+      noIndex={!process.env.NEXT_PUBLIC_DOCS}
     >
       <Container {...props} />
     </Layout>

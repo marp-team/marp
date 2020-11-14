@@ -24,7 +24,7 @@ export const Navigation = ({
                   const href = `/docs/${slug}/${pSlug}`
 
                   return (
-                    <Link href="/docs/[[...slug]]" as={href} key={pSlug}>
+                    <Link href={href} key={pSlug}>
                       <a
                         className={classNames(
                           'page-link custom-anchor',

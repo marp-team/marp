@@ -31,20 +31,22 @@ export const Header = ({ activeItem }: { activeItem?: ItemSlug }) => (
       </Link>
       <nav className="ml-2">
         <ul className="flex items-stretch h-16 md:h-20">
-          <li className="relative flex items-center justify-center">
-            <Link href="/docs/[[...slug]]" as="/docs">
-              <a
-                className={classNames('custom-anchor header-item nav-item', {
-                  active: activeItem === 'docs',
-                })}
-                role="link"
-                tabIndex={0}
-                onMouseUp={handleMouseUp}
-              >
-                <span>Docs</span>
-              </a>
-            </Link>
-          </li>
+          {process.env.NEXT_PUBLIC_DOCS && (
+            <li className="relative flex items-center justify-center">
+              <Link href="/docs">
+                <a
+                  className={classNames('custom-anchor header-item nav-item', {
+                    active: activeItem === 'docs',
+                  })}
+                  role="link"
+                  tabIndex={0}
+                  onMouseUp={handleMouseUp}
+                >
+                  <span>Docs</span>
+                </a>
+              </Link>
+            </li>
+          )}
           <li className="relative flex items-center justify-center">
             <Link href="/blog">
               <a

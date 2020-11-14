@@ -5,7 +5,6 @@ import {
   GetStaticPropsContext,
   InferGetStaticPropsType,
 } from 'next'
-import Link from 'next/link'
 import { Typography } from 'components/Typography'
 import { Layout } from 'components/docs/Layout'
 import { parse, renderToReact } from 'utils/markdown'

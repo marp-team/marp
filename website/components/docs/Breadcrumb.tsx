@@ -15,7 +15,7 @@ export const Breadcrumb = ({ breadcrumbs }: BreadcrumbProps) => (
         {breadcrumbs.map(({ key, title, link }) => (
           <li key={key}>
             {link ? (
-              <Link href="/docs/[[...slug]]" as={link}>
+              <Link href={link}>
                 <a>{title}</a>
               </Link>
             ) : (
