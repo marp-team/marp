@@ -20,6 +20,9 @@ if (process.env.URL) env.NEXT_PUBLIC_HOST = process.env.URL // for Netlify's dep
 
 module.exports = withBundleAnalyzer({
   env,
+  experimental: {
+    optimizeFonts: true,
+  },
   webpack: (config, { isServer }) => {
     config.module.rules.push({ test: /\.md$/, use: 'raw-loader' })
     config.module.rules.push({
