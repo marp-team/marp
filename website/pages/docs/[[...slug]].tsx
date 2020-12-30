@@ -28,6 +28,8 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
 
   // Page data
   const slug = ([] as string[]).concat(params?.slug ?? defaultSlug)
+  if (slug[0] === 'docs') slug.splice(0, 1) // for webpack 5
+
   const { default: md } = await import(`docs/${path.join(...slug)}.md`)
   const { data, mdast } = await parse(md)
 
