@@ -96,6 +96,7 @@ And there is a gravesite of classic Marp app in https://github.com/yhatt/marp. :
 - [Reflection in Qt and Beyond](https://github.com/tomisaacson/reflection-in-Qt) by [@tomisaacson](https://github.com/tomisaacson)
 - [Marp GitHub Pages Action](https://alexsci.com/test-marp-action) by [@ralexander-phi](https://github.com/ralexander-phi)
 - [Teaching theme for Marp](https://github.com/eyssette/teaching-theme-for-marp) by [@eyssette](https://github.com/eyssette)
+- [CS199: Even More Practice](https://cs199emp.netlify.app/) Fall 2020 and Spring 2021 slides at [UIUC](https://cs.illinois.edu/) - [Github](https://github.com/harsh183/emp-125/)
 
 <!-- - [Title](https://example.com/) by [@username](https://github.com/username) -->
 
