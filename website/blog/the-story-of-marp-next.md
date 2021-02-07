@@ -86,7 +86,7 @@ Many of the features are based on the old desktop app, and have improved to be s
 
 **[Marp CLI]** is a CLI interface of Marpit and Marp Core converter. It's a Swiss-Army knife for Marp slide deck!
 
-[![Marp CLI](https://raw.githubusercontent.com/marp-team/marp-cli/master/docs/images/marp-cli.gif ' ')][marp cli]
+[![Marp CLI](https://raw.githubusercontent.com/marp-team/marp-cli/main/docs/images/marp-cli.gif ' ')][marp cli]
 
 You can use it right now by running `npx @marp-team/marp-cli` if [Node.js](https://nodejs.org/) is installed.
 
@@ -207,6 +207,6 @@ In a new Marp, we have reconsidered Markdown syntax based on feedback to the old
 
 Marp Next just focuses to build the ecosystem for Markdown slide deck with pure open source. We expect to expand Marp productivity together with open source community.
 
-We still have stood at the beginning of the brand-new ecosystem. Are you interested to Marp team and our ecosystem? We welcome to start your contribution! See [our contributing guideline](https://github.com/marp-team/marp/blob/master/.github/CONTRIBUTING.md) and get started!
+We still have stood at the beginning of the brand-new ecosystem. Are you interested to Marp team and our ecosystem? We welcome to start your contribution! See [our contributing guideline](https://github.com/marp-team/.github/blob/master/CONTRIBUTING.md) and get started!
 
 > PS. [GitHub Sponsors](https://github.com/sponsors/yhatt) is also good contribution if you want to help my working for open source.

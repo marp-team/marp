@@ -1,5 +1,5 @@
 // Based on Marpit PostCSS rem plugin
-// https://github.com/marp-team/marpit/blob/master/src/postcss/root/rem.js
+// https://github.com/marp-team/marpit/blob/main/src/postcss/root/rem.js
 
 const { plugin } = require('postcss')
 const rootFontSizeCustomProp = '--root-font-size'

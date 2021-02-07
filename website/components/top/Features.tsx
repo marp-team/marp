@@ -126,7 +126,7 @@ const cards = [
       </a>{' '}
       has{' '}
       <a
-        href="https://github.com/marp-team/marp-core/tree/master/themes"
+        href="https://github.com/marp-team/marp-core/tree/main/themes"
         rel="noopener noreferrer"
         target="_blank"
       >

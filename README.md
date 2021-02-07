@@ -71,7 +71,7 @@ And there is a gravesite of classic Marp app in https://github.com/yhatt/marp. :
 [marp]: https://github.com/marp-team/marp
 [marpit]: https://github.com/marp-team/marpit
 [marp-core]: https://github.com/marp-team/marp-core
-[marp-core-themes]: https://github.com/marp-team/marp-core/tree/master/themes
+[marp-core-themes]: https://github.com/marp-team/marp-core/tree/main/themes
 [marp-cli]: https://github.com/marp-team/marp-cli
 [marp-vscode]: https://github.com/marp-team/marp-vscode
 [vscode]: https://code.visualstudio.com/
@@ -100,7 +100,7 @@ And there is a gravesite of classic Marp app in https://github.com/yhatt/marp. :
 
 <!-- - [Title](https://example.com/) by [@username](https://github.com/username) -->
 
-Let us know if you have created an awesome slide deck with Marp ecosystem! [Edit README.md and send pull request.](https://github.com/marp-team/marp/edit/master/README.md)
+Let us know if you have created an awesome slide deck with Marp ecosystem! [Edit README.md and send pull request.](https://github.com/marp-team/marp/edit/main/README.md)
 
 ## Contributing
 
