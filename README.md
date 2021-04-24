@@ -11,7 +11,7 @@
 
 <div align="center">
 
-### [Go to the official website ▶︎](https://marp.app)
+### [🌐 Go to the official website ▶︎](https://marp.app)&emsp;|&emsp;[💬 Discussion forum ▶︎](https://github.com/marp-team/marp/discussions)
 
 </div>
 
