@@ -26,7 +26,7 @@
     "wil-react-sticky": "^1.0.5"
   },
   "devDependencies": {
-    "@marp-team/marp-core": "^1.5.0",
+    "@marp-team/marp-core": "^2.0.0",
     "@next/bundle-analyzer": "^10.0.3",
     "@types/classnames": "^2.2.11",
     "@types/react": "^16.9.56",
