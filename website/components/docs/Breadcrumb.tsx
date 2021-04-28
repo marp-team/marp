@@ -33,7 +33,7 @@ export const Breadcrumb = ({ breadcrumbs }: BreadcrumbProps) => (
         @apply absolute inset-0 flex items-center justify-end;
       }
       ol {
-        @apply flex-1 inline-flex flex-no-wrap whitespace-no-wrap;
+        @apply flex-1 inline-flex flex-nowrap whitespace-nowrap;
       }
       li {
         @apply block;

@@ -95,6 +95,7 @@ export const Mobile: React.FC<LayoutProps> = ({
           allowOutsideClick: () => true,
           escapeDeactivates: false,
           initialFocus: '#docs-nav',
+          fallbackFocus: '#docs-nav-toggle',
         }}
       >
         <nav
@@ -125,6 +126,7 @@ export const Mobile: React.FC<LayoutProps> = ({
       <nav className="docs-topbar">
         <button
           className="docs-btn w-8 h-8 m-1 relative z-20"
+          id="docs-nav-toggle"
           type="button"
           onClick={toggle}
           aria-controls="docs-nav"
@@ -174,7 +176,7 @@ export const Mobile: React.FC<LayoutProps> = ({
           @apply bg-gray-300 outline-none;
         }
         .docs-btn:focus-visible {
-          @apply shadow-outline;
+          @apply ring;
         }
 
         #docs-nav {

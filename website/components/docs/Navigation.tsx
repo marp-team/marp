@@ -63,7 +63,7 @@ export const Navigation = ({
           @apply bg-gray-300 duration-0;
         }
         .page-link:focus-visible {
-          @apply shadow-outline;
+          @apply ring;
         }
 
         .page-link.active {

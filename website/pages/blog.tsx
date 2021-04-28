@@ -10,10 +10,10 @@ import { parse, parseMatter, renderToReact } from 'utils/markdown'
 const toJSON = (obj: any) => JSON.parse(JSON.stringify(obj))
 
 export const getStaticProps = async () => {
-  const ctx = require.context('blog', false, /\.md$/)
+  const ctx = require.context('blog', false, /^.[\\/][^\\/]*\.md$/)
   const mdMetas = await Promise.all(
     ctx.keys().map((id) => {
-      const { default: md } = ctx(id)
+      const md = ctx(id)
       const { data, excerpt } = parseMatter(md)
 
       return (async () => ({
@@ -121,7 +121,7 @@ const Blog = ({ articles }: InferGetStaticPropsType<typeof getStaticProps>) => (
             @apply shadow-lg bg-white;
           }
           .article-container-link:hover:active {
-            @apply shadow-outline bg-white outline-none duration-0;
+            @apply ring bg-white outline-none duration-0;
           }
           .article-container-link:hover + * .read-more {
             @apply text-marp-brand;
@@ -129,7 +129,7 @@ const Blog = ({ articles }: InferGetStaticPropsType<typeof getStaticProps>) => (
         }
 
         .article-container-link:focus {
-          @apply shadow-outline bg-white outline-none duration-0;
+          @apply ring bg-white outline-none duration-0;
         }
 
         .read-more {

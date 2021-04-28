@@ -27,7 +27,7 @@ export const Typography: React.FC = ({ children }) => (
         @apply relative font-bold text-sm text-gray-600 mt-6 mb-4;
       }
       .typography :global(.anchor-link) {
-        @apply absolute inset-0 w-5 -ml-5 overflow-hidden whitespace-no-wrap my-auto bg-no-repeat bg-left hidden;
+        @apply absolute inset-0 w-5 -ml-5 overflow-hidden whitespace-nowrap my-auto bg-no-repeat bg-left hidden;
 
         background-size: 1rem 1rem;
         background-image: url('https://icongr.am/octicons/link.svg?color=718096');
