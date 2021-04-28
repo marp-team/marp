@@ -174,7 +174,7 @@ export const Mobile: React.FC<LayoutProps> = ({
           @apply bg-gray-300 outline-none;
         }
         .docs-btn:focus-visible {
-          @apply shadow-outline;
+          @apply ring;
         }
 
         #docs-nav {

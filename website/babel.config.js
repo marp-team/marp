@@ -8,7 +8,7 @@ module.exports = {
         'styled-jsx': {
           plugins: [
             [
-              'styled-jsx-plugin-postcss',
+              require.resolve('styled-jsx-plugin-postcss'),
               { path: path.resolve(__dirname, './postcss.config.js') },
             ],
           ],

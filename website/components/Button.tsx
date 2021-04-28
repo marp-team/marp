@@ -1,7 +1,10 @@
 import classNames from 'classnames'
+import { ReactNode } from 'react'
 
 export type ButtonProps = {
+  children?: ReactNode
   color?: 'primary'
+  href?: string
   outline?: boolean
   [key: string]: unknown
 }
@@ -50,10 +53,10 @@ export const Button = ({
           @apply bg-background duration-150;
         }
         .button:hover:active {
-          @apply outline-none shadow-outline bg-gray-300 duration-0;
+          @apply outline-none ring bg-gray-300 duration-0;
         }
         .button:focus {
-          @apply outline-none shadow-outline;
+          @apply outline-none ring;
         }
 
         /* Primary color */

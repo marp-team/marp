@@ -1,24 +1,28 @@
-const {
-  colors: { black, current, gray, transparent, white },
-  fontFamily,
-} = require('tailwindcss/defaultTheme')
+const { fontFamily } = require('tailwindcss/defaultTheme')
+
+const gray = {
+  100: '#f7fafc',
+  200: '#edf2f7',
+  300: '#e2e8f0',
+  400: '#cbd5e0',
+  500: '#a0aec0',
+  600: '#718096',
+  700: '#4a5568',
+  800: '#2d3748',
+  900: '#1a202c',
+}
 
 module.exports = {
-  future: {
-    removeDeprecatedGapUtilities: true, // ok
-    purgeLayersByDefault: true,
-    defaultLineHeights: true,
-    standardFontWeights: true,
-  },
   plugins: [],
   purge: ['@(components|pages|utils)/**/*.[jt]s?(x)'],
   theme: {
+    borderColor: (theme) => ({ ...theme('colors'), DEFAULT: gray[300] }),
     colors: {
-      black,
-      current,
+      black: '#000',
+      current: 'currentColor',
       gray,
-      transparent,
-      white,
+      transparent: 'transparent',
+      white: '#fff',
       background: '#f8f8f8',
       foreground: gray[800],
       marp: {
@@ -36,6 +40,12 @@ module.exports = {
       ...fontFamily,
       sans: ['Inter', ...fontFamily.sans],
       rounded: ['Quicksand', 'Avenir', 'Century Gothic', ...fontFamily.sans],
+    },
+    screens: {
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
     },
     extend: { transitionDuration: { 0: '0s' } },
   },

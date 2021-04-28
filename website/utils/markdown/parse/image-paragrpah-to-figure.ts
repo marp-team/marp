@@ -1,5 +1,5 @@
-import whitespace from 'hast-util-whitespace'
-import visit from 'unist-util-visit'
+import { whitespace } from 'hast-util-whitespace'
+import { visit } from 'unist-util-visit'
 
 // Based on remark-unwrap-images
 // https://github.com/remarkjs/remark-unwrap-images/blob/main/index.js

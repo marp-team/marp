@@ -2,6 +2,12 @@ const path = require('path')
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: !!process.env.ANALYZE,
 })
+const withTM = require('next-transpile-modules')([
+  'unist-util-remove-position',
+  'unist-util-visit',
+  'unist-util-is',
+  'hast-util-whitespace',
+])
 const { devDependencies } = require('./package.json')
 
 // Build test function to ignore devDependencies in client build
@@ -18,27 +24,32 @@ const testToignoreDevDependenciesInClient = (id) =>
 const env = { BUILD_YEAR: new Date().getFullYear().toString() }
 if (process.env.URL) env.NEXT_PUBLIC_HOST = process.env.URL // for Netlify's deploy preview
 
-module.exports = withBundleAnalyzer({
-  env,
-  experimental: {
-    optimizeFonts: true,
-  },
-  webpack: (config, { isServer }) => {
-    config.module.rules.push({ test: /\.md$/, use: 'raw-loader' })
-    config.module.rules.push({
-      test: /\.ya?ml$/,
-      type: 'json',
-      use: 'yaml-loader',
-    })
-
-    if (!isServer) {
+module.exports = withBundleAnalyzer(
+  withTM({
+    env,
+    experimental: {
+      optimizeFonts: true,
+    },
+    future: {
+      webpack5: true,
+    },
+    webpack: (config, { isServer }) => {
+      config.module.rules.push({ test: /\.md$/, type: 'asset/source' })
       config.module.rules.push({
-        test: testToignoreDevDependenciesInClient,
-        issuer: [__dirname],
-        use: 'null-loader',
+        test: /\.ya?ml$/,
+        type: 'json',
+        use: 'yaml-loader',
       })
-    }
 
-    return config
-  },
-})
+      if (!isServer) {
+        config.module.rules.push({
+          test: testToignoreDevDependenciesInClient,
+          issuer: [__dirname],
+          use: 'null-loader',
+        })
+      }
+
+      return config
+    },
+  })
+)
