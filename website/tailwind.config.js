@@ -1,5 +1,16 @@
 const { fontFamily } = require('tailwindcss/defaultTheme')
 
+const marp = {
+  // Brand colors
+  brand: '#0288d1',
+  light: '#67b8e3',
+  dark: '#02669d',
+
+  // Color variations
+  darken: '#0277b7',
+  darkest: '#1b4d68',
+}
+
 const gray = {
   100: '#f7fafc',
   200: '#edf2f7',
@@ -13,6 +24,7 @@ const gray = {
 }
 
 module.exports = {
+  mode: 'jit',
   plugins: [],
   purge: ['@(components|pages|utils)/**/*.[jt]s?(x)'],
   theme: {
@@ -25,17 +37,10 @@ module.exports = {
       white: '#fff',
       background: '#f8f8f8',
       foreground: gray[800],
-      marp: {
-        // Brand colors
-        brand: '#0288d1',
-        light: '#67b8e3',
-        dark: '#02669d',
-
-        // Color variations
-        darken: '#0277b7',
-        darkest: '#1b4d68',
-      },
+      marp,
     },
+    ringColor: (theme) => ({ ...theme('colors'), DEFAULT: marp.light }),
+    ringOffsetColor: (theme) => ({ ...theme('colors'), DEFAULT: marp.light }),
     fontFamily: {
       ...fontFamily,
       sans: ['Inter', ...fontFamily.sans],

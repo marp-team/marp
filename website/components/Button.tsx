@@ -53,10 +53,10 @@ export const Button = ({
           @apply bg-background duration-150;
         }
         .button:hover:active {
-          @apply outline-none ring bg-gray-300 duration-0;
+          @apply outline-none ring-offset-2 ring-1 ring-white bg-gray-300 duration-0;
         }
         .button:focus {
-          @apply outline-none ring;
+          @apply outline-none ring-offset-2 ring-1 ring-white;
         }
 
         /* Primary color */

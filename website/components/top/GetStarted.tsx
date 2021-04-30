@@ -106,7 +106,7 @@ const Card: React.FC<CardProps> = ({
       }
       .card-link:hover:active,
       .card-link:focus {
-        @apply ring outline-none duration-0;
+        @apply ring-offset-2 ring-1 ring-white outline-none duration-0;
       }
 
       @screen lg {
