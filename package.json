@@ -27,7 +27,7 @@
   },
   "scripts": {
     "check:format": "yarn -s format -c",
-    "check:ts": "lerna run --parallel check:ts",
+    "check:ts": "yarn lage check:ts",
     "format:write": "yarn -s format --write",
     "format": "prettier \"**/*.{css,js,jsx,json,md,mdx,scss,ts,tsx,yaml,yml}\"",
     "lint:js": "eslint --ext .js,.jsx,.ts,.tsx --report-unused-disable-directives --cache .",
@@ -42,7 +42,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-import-resolver-typescript": "^2.4.0",
     "eslint-plugin-import": "^2.22.1",
-    "lerna": "^4.0.0",
+    "lage": "^0.29.3",
     "prettier": "^2.1.2",
     "typescript": "^4.2.4"
   }
