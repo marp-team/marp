@@ -214,24 +214,24 @@
   dependencies:
     unist-util-visit "^1.3.0"
 
-"@marp-team/marp-core@^2.0.1":
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/@marp-team/marp-core/-/marp-core-2.0.1.tgz#d6fa4cecf2e3e58a5f57c539ec478e41beae1124"
-  integrity sha512-DVhvi4nFmjyuCqSkTW43Hdkhy4Vh2LbxiqyBaTVWb80T2EXQKaFpwwSOQGVY2WMjkZhj4gDdwlCYvRVde4qKwQ==
+"@marp-team/marp-core@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@marp-team/marp-core/-/marp-core-2.0.2.tgz#3383390d6064c4c2801fadc678efe7ed7237c60a"
+  integrity sha512-Bdioff4eNGghWr/5mll3LvxxxprDZZUtz1chavVx9JfVAdyLIeT3amVk/gHKiZR1KDaGFYiKp+LQfkkjP05jwg==
   dependencies:
     "@marp-team/marpit" "^2.0.1"
     "@marp-team/marpit-svg-polyfill" "^1.7.1"
     emoji-regex "^9.2.2"
     highlight.js "^10.7.2"
-    katex "^0.13.3"
+    katex "^0.13.9"
     markdown-it-emoji "^2.0.0"
     mathjax-full "^3.1.4"
-    postcss "^8.2.13"
+    postcss "^8.2.14"
     postcss-minify-params "^5.0.0"
     postcss-minify-selectors "^5.0.0"
     postcss-normalize-whitespace "^5.0.0"
     twemoji "^13.0.2"
-    xss "^1.0.8"
+    xss "^1.0.9"
 
 "@marp-team/marpit-svg-polyfill@^1.7.1":
   version "1.7.1"
@@ -3442,7 +3442,7 @@ jsonfile@^6.0.1:
     array-includes "^3.1.2"
     object.assign "^4.1.2"
 
-katex@^0.13.3:
+katex@^0.13.9:
   version "0.13.9"
   resolved "https://registry.yarnpkg.com/katex/-/katex-0.13.9.tgz#2b40665b1d287b62df08b195689d15df7689390f"
   integrity sha512-2rz+tCHtVvQOFfq3iv2/xFOqfQmz6MWTwZ5B34kp9CX99iOT2z6YdjyiTDFm0isXR2ePRi0gF8ERwS+IpNfgNA==
@@ -4916,7 +4916,7 @@ postcss@^7.0.14, postcss@^7.0.17, postcss@^7.0.2, postcss@^7.0.32, postcss@^7.0.
     source-map "^0.6.1"
     supports-color "^6.1.0"
 
-postcss@^8.1.6, postcss@^8.2.1, postcss@^8.2.13, postcss@^8.2.8:
+postcss@^8.1.6, postcss@^8.2.1, postcss@^8.2.13, postcss@^8.2.14, postcss@^8.2.8:
   version "8.2.14"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.2.14.tgz#dcf313eb8247b3ce8078d048c0e8262ca565ad2b"
   integrity sha512-+jD0ZijcvyCqPQo/m/CW0UcARpdFylq04of+Q7RKX6f/Tu+dvpUI/9Sp81+i6/vJThnOBX09Quw0ZLOVwpzX3w==
@@ -6638,7 +6638,7 @@ xmldom-sre@^0.1.31:
   resolved "https://registry.yarnpkg.com/xmldom-sre/-/xmldom-sre-0.1.31.tgz#10860d5bab2c603144597d04bf2c4980e98067f4"
   integrity sha512-f9s+fUkX04BxQf+7mMWAp5zk61pciie+fFLC9hX9UVvCeJQfNHRHXpeo5MPcR0EUf57PYLdt+ZO4f3Ipk2oZUw==
 
-xss@^1.0.8:
+xss@^1.0.9:
   version "1.0.9"
   resolved "https://registry.yarnpkg.com/xss/-/xss-1.0.9.tgz#3ffd565571ff60d2e40db7f3b80b4677bec770d2"
   integrity sha512-2t7FahYnGJys6DpHLhajusId7R0Pm2yTmuL0GV9+mV0ZlaLSnb2toBmppATfg5sWIhZQGlsTLoecSzya+l4EAQ==
