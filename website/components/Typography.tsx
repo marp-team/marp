@@ -89,7 +89,7 @@ export const Typography: React.FC = ({ children }) => (
         @apply my-6;
       }
       .typography :global(figure img) {
-        @apply block mx-auto max-w-screen-md w-full;
+        @apply block mx-auto max-w-screen-md;
       }
       .typography :global(figcaption) {
         @apply text-gray-600 text-sm text-center mx-auto w-11/12 my-4;
