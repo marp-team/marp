@@ -20,7 +20,7 @@ In this release, we have added IntelliSense extension for Marp directives and go
 
 <!-- more -->
 
-[**➡️ Go to VS Code Marketplace to get Marp for VS Code**][marp for vs code]
+[**➡️ Go to Visual Studio Marketplace to get Marp for VS Code**][marp for vs code]
 
 # History
 
@@ -112,4 +112,4 @@ We are planning some well-known features in the other presentation software to r
 
 Enjoy writing presentation with our extension! And join to [our discussion forum](https://github.com/marp-team/marp/discussions) if you want more Marp tips.
 
-[**➡️ Go to VS Code Marketplace to get Marp for VS Code**][marp for vs code]
+[**➡️ Go to Visual Studio Marketplace to get Marp for VS Code**][marp for vs code]
