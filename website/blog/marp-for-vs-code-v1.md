@@ -1,7 +1,7 @@
 ---
 title: 'Marp for VS Code v1: IntelliSense for Marp directives'
 date: 2021-05-20
-describe: I'm happy to announce Marp for VS Code has reached to the stable release v1! This release includes IntelliSense for Marp directives and getting more affinity with VS Code features to get better writing experience.
+description: I'm happy to announce Marp for VS Code has reached to the stable release v1! This release includes IntelliSense for Marp directives and getting more affinity with VS Code features to get better writing experience.
 author: Yuki Hattori
 github: yhatt
 image: /og-images/marp-for-vs-code-v1.jpg
