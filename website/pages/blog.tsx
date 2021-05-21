@@ -1,11 +1,14 @@
+import fs from 'fs'
 import { basename } from 'path'
 import { InferGetStaticPropsType } from 'next'
+import Head from 'next/head'
 import Link from 'next/link'
 import { Layout } from 'components/Layout'
 import { Title } from 'components/Title'
 import { Typography } from 'components/Typography'
 import { formatDate, formatDateShort } from 'utils/date'
 import { parse, parseMatter, renderToReact } from 'utils/markdown'
+import { absoluteUrl } from 'utils/url'
 
 const toJSON = (obj: any) => JSON.parse(JSON.stringify(obj))
 
@@ -27,6 +30,37 @@ export const getStaticProps = async () => {
   const articles = mdMetas.filter(({ data }) => data.date)
   articles.sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
 
+  // Generate RSS
+  const rss = `
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog | Marp</title>
+    <link>${absoluteUrl('/blog')}</link>
+    <description>Marp, Markdown Presentation Ecosystem, provides the great experience to create beautiful slide deck. You only have to focus writing your story in Markdown document.</description>
+    <language>en</language>
+    <lastBuildDate>${articles[0].data.date.toUTCString()}</lastBuildDate>
+    <atom:link href="${absoluteUrl(
+      '/blog/feed.xml'
+    )}" rel="self" type="application/rss+xml"/>
+    ${articles
+      .map((article) =>
+        `
+      <item>
+        <guid>${absoluteUrl(`/blog/${article.slug}`)}</guid>
+        <title>${article.data.title}</title>
+        <link>${absoluteUrl(`/blog/${article.slug}`)}</link>
+        <description>${article.data.description}</description>
+        <pubDate>${article.data.date.toUTCString()}</pubDate>
+      </item>
+    `.trim()
+      )
+      .join('')}
+  </channel>
+</rss>
+  `.trim()
+
+  await fs.promises.writeFile('./public/blog/feed.xml', rss)
+
   return {
     props: {
       articles: articles.map((article) =>
@@ -47,6 +81,14 @@ const Blog = ({ articles }: InferGetStaticPropsType<typeof getStaticProps>) => (
         <a>Blog</a>
       </Link>
     </Title>
+    <Head>
+      <link
+        rel="alternate"
+        type="application/rss+xml"
+        title="Blog | Marp"
+        href={absoluteUrl(`/blog/feed.xml`).toString()}
+      />
+    </Head>
     <div className="container mx-auto max-w-screen-lg px-3 py-1">
       {articles.map((article) => {
         let summary: JSX.Element | string | undefined
