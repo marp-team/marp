@@ -1,10 +1,10 @@
-import gitHubSanitize from 'hast-util-sanitize/lib/github.json'
+import { defaultSchema } from 'hast-util-sanitize'
 
 export const sanitize = {
-  ...gitHubSanitize,
+  ...defaultSchema,
   attributes: {
-    ...gitHubSanitize.attributes,
-    '*': [...gitHubSanitize.attributes['*'], 'data*'],
+    ...defaultSchema.attributes,
+    '*': [...(defaultSchema.attributes?.['*'] ?? []), 'data*'],
   },
   clobberPrefix: '',
 }

@@ -3,10 +3,11 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: !!process.env.ANALYZE,
 })
 const withTM = require('next-transpile-modules')([
+  'hast-util-sanitize',
+  'hast-util-whitespace',
+  'unist-util-is',
   'unist-util-remove-position',
   'unist-util-visit',
-  'unist-util-is',
-  'hast-util-whitespace',
 ])
 const { devDependencies } = require('./package.json')
 
