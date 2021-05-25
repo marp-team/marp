@@ -128,7 +128,7 @@ export const CodeBlock = ({
         }
 
         .prism-code {
-          @apply text-sm border rounded-lg leading-5 whitespace-pre overflow-x-auto overflow-y-hidden break-words shadow-inner;
+          @apply text-sm border rounded-md leading-5 whitespace-pre overflow-x-auto overflow-y-hidden break-words;
 
           font-family: inherit;
           background-image: url('/assets/noise.png');

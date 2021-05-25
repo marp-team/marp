@@ -16,7 +16,8 @@ const applicable = (node, inLink = false): string | false | null => {
     if (whitespace(child)) {
       // No ops
     } else if (child.type === 'image' && typeof child.title === 'string') {
-      image = child.title
+      image = child.title.trim()
+      child.title = image || null
     } else if (
       !inLink &&
       (child.type === 'link' || child.type === 'linkReference')
@@ -38,7 +39,7 @@ export const imageParagraphToFigure = () => (tree) => {
   visit(tree, 'paragraph', (node) => {
     const figureCaption = applicable(node)
 
-    if (figureCaption) {
+    if (typeof figureCaption === 'string') {
       node.data = node.data ?? {}
       node.data.hName = 'figure'
 

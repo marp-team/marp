@@ -72,6 +72,7 @@ export const Desktop: React.FC<LayoutProps> = ({
           offsetTop={containerY}
           containerSelectorFocus="#docs-container"
           ref={contentsStickyRef}
+          key={slug.join('/')}
         >
           <div className="px-8 py-10">
             {breadcrumbs?.length && (
