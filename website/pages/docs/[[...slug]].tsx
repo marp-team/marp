@@ -9,7 +9,7 @@ import { Typography } from 'components/Typography'
 import { Layout } from 'components/docs/Layout'
 import { parse, renderToReact } from 'utils/markdown'
 
-const defaultSlug = ['concept', 'introduction']
+const defaultSlug = ['introduction', 'whats-marp']
 const docsCtx = () => require.context('docs', true, /\.md$/)
 
 export const getStaticPaths: GetStaticPaths = async () => ({

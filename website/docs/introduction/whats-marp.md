@@ -1,4 +1,4 @@
-# Introduction
+# What's Marp?
 
 **Marp** (**Mar**kdown **P**resentation Ecosystem) provides the great experience to _write_ your presentation slide deck with Markdown.
 
@@ -41,7 +41,7 @@ bar
 
 ### Markdown
 
-[Markdown] is the one of most popular lightweight markup language. Marp ecosystem is based on [CommonMark], the consistent spec of Markdown. The author can focus to write story with keeping logical structure.
+[Markdown] is the one of most popular lightweight markup language. Marp ecosystem is based on [CommonMark], the consistent spec of Markdown. The author can focus to write story with keeping logical structure and efficient writing speed.
 
 [markdown]: https://en.wikipedia.org/wiki/Markdown
 [commonmark]: https://commonmark.org/

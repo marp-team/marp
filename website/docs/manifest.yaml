@@ -1,12 +1,19 @@
-concept:
-  title: Concept
+introduction:
+  title: Introduction
   pages:
-    introduction:
-      title: Introduction
-    how-to-use:
-      title: How to use
-markdown:
-  title: Markdown
+    whats-marp:
+      title: What's Marp?
+    install:
+      title: Install
+guide:
+  title: Guide
   pages:
     how-to-write-slides:
       title: How to write slides
+tools:
+  title: Tools
+  pages:
+    marp-cli:
+      title: Marp CLI
+    marp-for-vs-code:
+      title: Marp for VS Code

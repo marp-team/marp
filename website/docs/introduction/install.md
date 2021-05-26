@@ -1,4 +1,4 @@
-# How to use
+# Install
 
 Marp provides **[CLI][marp cli]** and **[VS Code extension][marp for vs code]** as the official toolset. Get started authoring presentation now by installing either of them.
 
