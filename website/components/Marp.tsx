@@ -79,9 +79,11 @@ export const MarpSlides = (props) => {
     <section className={classNames('marp-slides', multiple && 'multiple')}>
       {multiple && (
         <button
+          aria-label="Prev"
           className="marp-navigation left-0"
           disabled={activePageIdx <= 0}
           onClick={() => swiper.current?.slidePrev()}
+          translate="no"
         >
           &laquo;
         </button>
@@ -103,9 +105,11 @@ export const MarpSlides = (props) => {
       </Swiper>
       {multiple && (
         <button
+          aria-label="Next"
           className="marp-navigation right-0"
           disabled={activePageIdx >= html.length - 1}
           onClick={() => swiper.current?.slideNext()}
+          translate="no"
         >
           &raquo;
         </button>

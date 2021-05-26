@@ -1,3 +1,4 @@
+import remarkGfm from 'remark-gfm'
 import remarkParse from 'remark-parse'
 import remarkSlug from 'remark-slug'
 import unified from 'unified'
@@ -12,6 +13,7 @@ export const parse = async (md: string) => {
     parser ||
     unified()
       .use(remarkParse)
+      .use(remarkGfm)
       .use(remarkSlug)
       .use(imageParagraphToFigure)
       .use(marpCodeBlock)

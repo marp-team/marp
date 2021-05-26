@@ -1,5 +1,7 @@
 # Install
 
+### This is a stub page!
+
 Marp provides **[CLI][marp cli]** and **[VS Code extension][marp for vs code]** as the official toolset. Get started authoring presentation now by installing either of them.
 
 ## [Marp for VS Code]

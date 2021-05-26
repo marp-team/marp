@@ -1,5 +1,7 @@
 # What's Marp?
 
+### This is a stub page!
+
 **Marp** (**Mar**kdown **P**resentation Ecosystem) provides the great experience to _write_ your presentation slide deck with Markdown.
 
 ````markdown:marp
@@ -75,3 +77,13 @@ Marp is based on **[Marpit framework]**, the skinny framework for creating slide
 End users can customize conversion engine by using Marp CLI and plugins: Add new Markdown syntax (compatible with markdown-it plugins), add custom directives, provide custom theme set, and so on. Push the limits of Marp as you like!
 
 [marpit framework]: https://marpit.marp.app
+
+## Author
+
+We're [Marp team](https://github.com/marp-team). (Having said that, currently Marp is a solo project by maintainer. The best way to join us is many contributions into Marp!)
+
+- **Yuki Hattori ([@yhatt](https://github.com/yhatt))** - Project owner / maintainer
+
+## License
+
+All tools and related libraries by Marp team are licensed by [MIT License](https://github.com/marp-team/marp/blob/main/LICENSE).

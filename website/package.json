@@ -45,6 +45,7 @@
     "postcss": "^8.3.0",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-preset-env": "^6.7.0",
+    "remark-gfm": "^1.0.0",
     "remark-parse": "^9.0.0",
     "remark-slug": "^6.0.0",
     "styled-jsx-plugin-postcss": "^4.0.1",

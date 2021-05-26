@@ -100,7 +100,7 @@ export const Typography: React.FC = ({ children }) => (
       }
       .typography :global(td),
       .typography :global(th) {
-        @apply p-2 border-b border-gray-500 text-sm;
+        @apply p-2 border-b border-gray-400 text-sm;
       }
       .typography :global(thead tr:last-child td),
       .typography :global(thead tr:last-child th) {

@@ -10,6 +10,22 @@ guide:
   pages:
     how-to-write-slides:
       title: How to write slides
+    directives:
+      title: Directives
+    theme-css:
+      title: Theme CSS
+    heading-divider:
+      title: Heading divider
+    image-syntax:
+      title: Image syntax
+    fragmented-list:
+      title: Fragmented list
+    fitting-header:
+      title: Fitting header
+    math-typesetting:
+      title: Math typesetting
+    emoji:
+      title: Emoji
 tools:
   title: Tools
   pages:
