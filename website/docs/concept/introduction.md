@@ -2,6 +2,41 @@
 
 **Marp** (**Mar**kdown **P**resentation Ecosystem) provides the great experience to _write_ your presentation slide deck with Markdown.
 
+````markdown:marp
+---
+marp: true
+theme: uncover
+---
+
+![Marp w:240](/assets/marp-logo.svg)
+
+# **Marp**
+
+Markdown Presentation Ecosystem
+
+https://marp.app/
+
+---
+
+<!-- paginate: true -->
+
+## What's Marp?
+
+Marp provides the great experience to _write_ your presentation slide deck with Markdown. :pencil:
+
+```markdown
+# Slide 1
+
+foo
+
+---
+
+# Slide 2
+
+bar
+```
+````
+
 ## Concepts
 
 ### Markdown
@@ -21,7 +56,7 @@ Marp ecosystem is faithful to Web basics, HTML and CSS. We provide a theming sys
 
 ### Export to PDF, PPTX, HTML
 
-We have a first-class support of conversion into other file formats. We have given importance to reproducibility of rendering so you do not need to worry about broken layout.
+We have a first-class support of conversion into other file formats. Marp has given importance to reproducibility of rendering so you do not need to worry about broken layout.
 
 Marp is not aim to giving a presentation with itself. Exporting to PDF format is the best choice to give a presentation. You can present in anywhere, any devices, and regardless network status by just bringing a one PDF file.
 

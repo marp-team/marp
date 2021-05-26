@@ -1,5 +1,6 @@
 import RemarkReact from 'remark-react'
 import { sanitize } from './sanitize'
+import { MarpSlides } from 'components/Marp'
 import { Anchor } from 'components/markdown/Anchor'
 import * as Heading from 'components/markdown/Heading'
 import { Pre, toHastCodeHandler } from 'components/markdown/Pre'
@@ -13,6 +14,7 @@ export const { Compiler: renderer } = new RemarkReact({
     h4: Heading.H4,
     h5: Heading.H5,
     h6: Heading.H6,
+    'marp-slides': MarpSlides,
     pre: Pre,
   },
   sanitize,

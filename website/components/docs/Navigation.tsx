@@ -53,7 +53,9 @@ export const Navigation = ({
         }
 
         .page-link {
-          @apply block py-1 px-2 mt-1 rounded text-marp-darken transition-colors outline-none;
+          @apply block py-1 px-2 mt-1 rounded text-marp-darken outline-none;
+
+          transition-property: background-color, border-color, fill, stroke;
         }
         .page-link:hover,
         .page-link:focus {

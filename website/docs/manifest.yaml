@@ -5,3 +5,8 @@ concept:
       title: Introduction
     how-to-use:
       title: How to use
+markdown:
+  title: Markdown
+  pages:
+    how-to-write-slides:
+      title: How to write slides

@@ -3,6 +3,7 @@ import NProgress from 'nprogress'
 import 'focus-visible'
 import 'wicg-inert'
 import 'nprogress/nprogress.css'
+import 'swiper/swiper-bundle.css'
 import 'css/index.css'
 
 const translating = () => {

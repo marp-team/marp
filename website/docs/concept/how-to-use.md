@@ -1,6 +1,6 @@
 # How to use
 
-Marp provides CLI and VS Code extension as the official toolset.
+Marp provides **[CLI][marp cli]** and **[VS Code extension][marp for vs code]** as the official toolset. Get started authoring presentation now by installing either of them.
 
 ## [Marp for VS Code]
 

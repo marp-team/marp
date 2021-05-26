@@ -14,5 +14,19 @@ export const Pre: React.FC = (props) => {
   )
 }
 
-export const toHastCodeHandler = (h, { position, lang, value }) =>
-  h(position, 'pre', { 'data-code': value, 'data-language': lang?.trim() }, [])
+export const toHastCodeHandler = (h, { position, lang, value, marp }) => {
+  if (marp) {
+    return h(position, 'marp-slides', {
+      'data-comments': JSON.stringify(marp.comments),
+      'data-css': marp.css,
+      'data-html': JSON.stringify(marp.html),
+    })
+  }
+
+  return h(
+    position,
+    'pre',
+    { 'data-code': value, 'data-language': lang?.trim() },
+    []
+  )
+}
