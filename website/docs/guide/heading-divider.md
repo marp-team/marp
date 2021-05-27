@@ -98,6 +98,8 @@ https://daringfireball.net/projects/markdown/
 CommonMark is a project for a standardization of Markdown launched in 2012.
 ```
 
+> [Rulers to split pages](/docs/guide/how-to-write-slides#slides) still work normally even if enabled `headingDivider`.
+
 ## Advanced
 
 Auto split in parent heading levels is a reasonable behavior in the most cases, but sometimes you may require finer control of splitting levels. By setting array value consisted of 1-6, you also can indicate to split at before only specific levels.
