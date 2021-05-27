@@ -1,3 +1,3 @@
-# Theme CSS
+# Theme
 
 ### This is a stub page!

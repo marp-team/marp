@@ -12,8 +12,8 @@ guide:
       title: How to write slides
     directives:
       title: Directives
-    theme-css:
-      title: Theme CSS
+    theme:
+      title: Theme
     heading-divider:
       title: Heading divider
     image-syntax:

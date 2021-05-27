@@ -21,7 +21,9 @@ paginate: true
 
 ### Front matter
 
-**YAML front matter** is a syntax often used for keeping metadata of Markdown in a lot of tools. Marp has also supported front matter as the container to define directives. It must be the first thing of Markdown, and between the dash rulers.
+**YAML front matter** is a syntax often used for keeping metadata of Markdown in a lot of tools (e.g. [Jekyll site generator](https://jekyllrb.com/docs/front-matter/)). Marp has also supported front matter as the container to define directives.
+
+It must be the first thing of Markdown, and between the dash rulers.
 
 ```markdown
 ---
@@ -47,17 +49,17 @@ There is no difference how to define each directives, and you can mix definition
 
 **Global directives** are settings for the whole of slide deck.
 
-| Name             | Description                                            |
-| ---------------- | ------------------------------------------------------ |
-| `theme`          | Set a theme name for the slide deck                    |
-| `style`          | Specify CSS for tweaking theme                         |
-| `headingDivider` | Specify heading divider option                         |
-| `size`           | Choose the slide size preset provided by theme         |
-| `title`          | Set a title of the slide deck (for HTML export)        |
-| `description`    | Set a description of the slide deck (for HTML export)  |
-| `url`            | Set canonical URL for the slide deck (for HTML export) |
-| `image`          | Set Open Graph image URL (for HTML export)             |
-| `marp`           | Set whether or not enable Marp feature in VS Code      |
+| Name             | Description                                                      |
+| ---------------- | ---------------------------------------------------------------- |
+| `theme`          | [Set a theme name for the slide deck ▶️](/docs/guide/theme)      |
+| `style`          | Specify CSS for tweaking theme                                   |
+| `headingDivider` | [Specify heading divider option ▶️](/docs/guide/heading-divider) |
+| `size`           | Choose the slide size preset provided by theme                   |
+| `title`          | Set a title of the slide deck (for HTML export)                  |
+| `description`    | Set a description of the slide deck (for HTML export)            |
+| `url`            | Set canonical URL for the slide deck (for HTML export)           |
+| `image`          | Set Open Graph image URL (for HTML export)                       |
+| `marp`           | Set whether or not enable Marp feature in VS Code                |
 
 Marp will recognize only the last defined value if you set the value for a same global directive many times in multiple HTML comments.
 
@@ -128,8 +130,70 @@ Go to next page :arrow_right:
 
 To set specific value of local directives only to the current page, add the underscore prefix `_` to the name of directives.
 
-## Reference
+The value of scoped directive will be given priority over the inherited value from previous, and will not inherit to following pages.
+
+```markdown
+<!-- color: red -->
+
+# Page 1
+
+This page has red text.
+
+---
+
+<!-- _color: blue -->
+
+# Page 2
+
+This page has blue text, specified by scoped local directive.
+
+---
+
+# Page 3
+
+Go back to red text.
+```
+
+```markdown:marp
+<!-- color: red -->
+
+# Page 1
+
+This page has red text.
+
+---
+
+<!-- _color: blue -->
+
+# Page 2
+
+This page has blue text, specified by scoped local directive.
+
+---
+
+# Page 3
+
+Go back to red text.
+```
+
+The underscore prefix can add to all of local directives.
+
+#### Diagram
+
+![The diagram of local directives and scoped directives](/assets/docs/directives.png 'The diagram of local directives and scoped directives')
+
+## Theme
+
+<!-- TODO: Link to "Theme" section -->
+
+## Page number
+
+## Header and footer
+
+## Styling slide
+
+### Shorthand
 
 ## Editor integration
 
-By using **Marp for VS Code**, you can peek
+<!-- By using **Marp for VS Code**, you can peek -->
