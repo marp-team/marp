@@ -19,6 +19,7 @@ export const generateRenderedMarp = (markdown: string) => {
     container: false,
     script: false,
     printable: false,
+    math: 'mathjax', // KaTeX web fonts won't load in shadow DOM so we have to use prerendered MathJax SVG
   })
 
   return { markdown, ...marp.render(markdown, { htmlAsArray: true }) }

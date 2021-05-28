@@ -32,7 +32,7 @@ CommonMark allows `-`, `+`, and `*` as the character of [bullet list markers](ht
 
 ## For ordered list
 
-CommonMark's [ordered list marker](https://spec.commonmark.org/0.29/#ordered-list-marker) must have `.` or `)` after digits. Marpit would parse as fragmented list if you are using `)` as the following character.
+CommonMark's [ordered list marker](https://spec.commonmark.org/0.29/#ordered-list-marker) must have `.` or `)` after digits. Marp will parse as fragmented list if you are using `)` as the following character.
 
 <!-- prettier-ignore-start -->
 
