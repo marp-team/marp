@@ -89,7 +89,7 @@ export const MarpSlides = (props) => {
         </button>
       )}
       <Swiper
-        enabled={multiple}
+        enabled={multiple.toString() as any}
         allowTouchMove={multiple}
         speed={200}
         onActiveIndexChange={handleActiveIndexChange}

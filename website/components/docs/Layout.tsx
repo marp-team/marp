@@ -1,4 +1,4 @@
-import { useMediaLayout } from 'use-media'
+import { useMedia, useMediaLayout } from 'use-media'
 import { BreadcrumbProps } from './Breadcrumb'
 import { NavigationProps } from './Navigation'
 import { Desktop } from './layouts/Desktop'
@@ -7,8 +7,11 @@ import { Layout } from 'components/Layout'
 
 export type LayoutProps = BreadcrumbProps & NavigationProps
 
+const useMediaIsomorphic =
+  typeof window === 'undefined' ? useMedia : useMediaLayout
+
 const DocsLayout: React.FC<LayoutProps> = (props) => {
-  const isDesktop = useMediaLayout({ minWidth: '768px' }, false)
+  const isDesktop = useMediaIsomorphic({ minWidth: '768px' }, false)
   const Container = isDesktop ? Desktop : Mobile
 
   return (
