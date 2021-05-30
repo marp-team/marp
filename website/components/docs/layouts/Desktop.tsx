@@ -1,32 +1,40 @@
-import { useLayoutEffect, useRef, useState, RefObject } from 'react'
-import Sticky from 'wil-react-sticky'
+import { useEffect, useRef, useState, RefObject } from 'react'
+import SimpleBar from 'simplebar-react'
 import { Breadcrumb } from 'components/docs/Breadcrumb'
 import { LayoutProps } from 'components/docs/Layout'
 import { Navigation } from 'components/docs/Navigation'
 
-const useElementY = () => {
+const useBoundingClientRect = () => {
   const ref = useRef<HTMLElement>(null)
-  const [y, setY] = useState(0)
+  const [value, setValue] = useState<DOMRect | null>(null)
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const { current } = ref
     if (!current) return
 
-    const handleResize = () =>
-      setY(current.getBoundingClientRect().y + window.scrollY)
+    const handle = () => setValue(current.getBoundingClientRect())
+    window.addEventListener('scroll', handle)
+    window.addEventListener('resize', handle)
+
+    const eventCleanup = () => {
+      window.removeEventListener('scroll', handle)
+      window.removeEventListener('resize', handle)
+    }
 
     if (window.ResizeObserver) {
-      const observer = new ResizeObserver(handleResize)
-
+      const observer = new ResizeObserver(handle)
       observer.observe(current)
-      return () => observer.disconnect()
-    } else {
-      window.addEventListener('resize', handleResize)
-      return () => window.removeEventListener('resize', handleResize)
+
+      return () => {
+        observer.disconnect()
+        eventCleanup()
+      }
     }
+
+    return eventCleanup
   }, [])
 
-  return [ref as RefObject<any>, y] as const
+  return [ref as RefObject<any>, value] as const
 }
 
 export const Desktop: React.FC<LayoutProps> = ({
@@ -35,45 +43,36 @@ export const Desktop: React.FC<LayoutProps> = ({
   manifest,
   slug,
 }) => {
-  const [containerRef, containerY] = useElementY()
-  const sidebarStickyRef = useRef<Sticky>(null)
-  const contentsStickyRef = useRef<Sticky>(null)
+  const [docsClearfixRef, docsClearfixRect] = useBoundingClientRect()
 
-  useLayoutEffect(() => {
-    const handleResize = () => {
-      sidebarStickyRef.current?.['handleWindowScroll']()
-      contentsStickyRef.current?.['handleWindowScroll']()
-    }
+  const footerAppearedHeight =
+    docsClearfixRect &&
+    document.documentElement.clientHeight - docsClearfixRect.top
 
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
+  const navHeight = `calc(100vh - ${
+    Math.max(0, footerAppearedHeight ?? 0) + 80
+  }px)`
 
   return (
-    <div
-      id="docs-container"
-      className="text-sm xl:text-base"
-      ref={containerRef}
-    >
-      <div style={{ gridArea: 'sidebar' }}>
-        <Sticky
-          offsetTop={containerY}
-          containerSelectorFocus="#docs-container"
-          ref={sidebarStickyRef}
-        >
-          <div className="sidebar-nav">
-            <Navigation manifest={manifest} slug={slug} />
+    <>
+      <div id="docs-container" className="text-sm xl:text-base">
+        <div style={{ gridArea: 'sidebar' }}>
+          <div
+            className="sidebar-nav-container"
+            style={{
+              top: 80 + Math.max(0, footerAppearedHeight ?? 0),
+              height: navHeight,
+            }}
+          >
+            <SimpleBar className="sidebar-nav" style={{ maxHeight: navHeight }}>
+              <div className="sidebar-nav-content">
+                <Navigation manifest={manifest} slug={slug} />
+              </div>
+            </SimpleBar>
           </div>
-        </Sticky>
-      </div>
-      <div className="w-px bg-gray-400 my-6" style={{ gridArea: 'border' }} />
-      <div style={{ gridArea: 'contents' }}>
-        <Sticky
-          offsetTop={containerY}
-          containerSelectorFocus="#docs-container"
-          ref={contentsStickyRef}
-          key={slug.join('/')}
-        >
+        </div>
+        <div className="w-px bg-gray-400 my-6" style={{ gridArea: 'border' }} />
+        <div style={{ gridArea: 'contents' }}>
           <div className="px-8 py-10">
             {breadcrumbs?.length && (
               <div className="bg-gray-300 rounded mb-6 p-2">
@@ -84,8 +83,9 @@ export const Desktop: React.FC<LayoutProps> = ({
               {children}
             </article>
           </div>
-        </Sticky>
+        </div>
       </div>
+      <div ref={docsClearfixRef} />
       <style jsx>{`
         #docs-container {
           @apply grid;
@@ -102,7 +102,22 @@ export const Desktop: React.FC<LayoutProps> = ({
           --root-font-size: 0.9rem;
         }
 
-        .sidebar-nav {
+        .sidebar-nav-container {
+          @apply sticky overflow-hidden;
+        }
+
+        & :global(.sidebar-nav) {
+          @apply overflow-y-auto max-h-full;
+        }
+
+        & :global(.sidebar-nav .simplebar-track.simplebar-vertical) {
+          width: 9px;
+        }
+        & :global(.sidebar-nav .simplebar-scrollbar::before) {
+          @apply bg-gray-600;
+        }
+
+        .sidebar-nav-content {
           @apply px-8 py-10 w-64 mx-auto;
 
           min-width: 16rem;
@@ -117,11 +132,11 @@ export const Desktop: React.FC<LayoutProps> = ({
             --root-font-size: 1rem;
           }
 
-          .sidebar-nav {
+          .sidebar-nav-content {
             @apply w-5/6;
           }
         }
       `}</style>
-    </div>
+    </>
   )
 }
