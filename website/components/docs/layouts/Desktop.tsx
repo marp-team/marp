@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, RefObject } from 'react'
+import { useLayoutEffect, useRef, useState, RefObject } from 'react'
 import SimpleBar from 'simplebar-react'
 import { Breadcrumb } from 'components/docs/Breadcrumb'
 import { LayoutProps } from 'components/docs/Layout'
@@ -8,7 +8,7 @@ const useBoundingClientRect = () => {
   const ref = useRef<HTMLElement>(null)
   const [value, setValue] = useState<DOMRect | null>(null)
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const { current } = ref
     if (!current) return
 
