@@ -69,7 +69,7 @@ Marp will recognize only the last defined value if you set the value for a same 
 
 | Name                 | Description                                                                                                                               |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `paginate`           | Show page number on the slide if set `true`                                                                                               |
+| `paginate`           | [Show page number on the slide if set `true` ▶️](#page-number)                                                                            |
 | `header`             | Specify the content of slide header                                                                                                       |
 | `footer`             | Specify the content of slide footer                                                                                                       |
 | `class`              | Set [HTML `class` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/class) for the slide element `<section>` |
@@ -187,6 +187,93 @@ The underscore prefix can add to all of local directives.
 <!-- TODO: Link to "Theme" section -->
 
 ## Page number
+
+To add page number to the slide, set **`paginate`** local directive as `true`.
+
+```markdown
+<!-- paginate: true -->
+
+You can see a page number of the slide in lower right.
+```
+
+```markdown:marp
+<!-- paginate: true -->
+
+You can see a page number of the slide in lower right.
+
+<style>
+  @keyframes point {
+    from { background-position: bottom 55px right 55px; }
+    to { background-position: bottom 40px right 40px; }
+  }
+  section {
+    animation: 0.5s ease-in-out alternate infinite point;
+    background: #fff url('https://icongr.am/feather/arrow-down-right.svg?color=0288d1') no-repeat bottom 40px right 40px / 100px;
+  }
+  @media (prefers-reduced-motion) {
+    section {
+      animation: none;
+    }
+  }
+</style>
+```
+
+Refer to [theme guide](/docs/guide/theme) for the detail of how to style a page number.
+
+### Skip pagination in the title slide
+
+Just move a definition of `paginate` directive to an inside of a second page.
+
+```markdown
+# Title slide
+
+---
+
+<!-- paginate: true --->
+
+## Start pagination from this page.
+```
+
+```markdown:marp
+# Title slide
+
+---
+
+<!-- paginate: true --->
+
+## Start pagination from this page.
+
+<style scoped>
+  @keyframes point {
+    from { background-position: bottom 55px right 55px; }
+    to { background-position: bottom 40px right 40px; }
+  }
+  section {
+    animation: 0.5s ease-in-out alternate infinite point;
+    background: #fff url('https://icongr.am/feather/arrow-down-right.svg?color=0288d1') no-repeat bottom 40px right 40px / 100px;
+  }
+  @media (prefers-reduced-motion) {
+    section {
+      animation: none;
+    }
+  }
+</style>
+```
+
+Or you also can use [scoped directive](#scoped-local-directives) to disable pagination in the title slide.
+
+```markdown
+---
+paginate: true
+_paginate: false
+---
+
+# Title slide
+
+---
+
+## Start pagination from this page.
+```
 
 ## Header and footer
 

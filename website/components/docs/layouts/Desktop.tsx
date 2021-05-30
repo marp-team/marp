@@ -44,11 +44,13 @@ export const Desktop: React.FC<LayoutProps> = ({
   slug,
 }) => {
   const [docsClearfixRef, docsClearfixRect] = useBoundingClientRect()
+  const [sidebarRef, sidebarRect] = useBoundingClientRect()
 
   const footerAppearedHeight =
     docsClearfixRect &&
     document.documentElement.clientHeight - docsClearfixRect.top
 
+  const navTop = 80 + Math.max(0, footerAppearedHeight ?? 0)
   const navHeight = `calc(100vh - ${
     Math.max(0, footerAppearedHeight ?? 0) + 80
   }px)`
@@ -58,18 +60,23 @@ export const Desktop: React.FC<LayoutProps> = ({
       <div id="docs-container" className="text-sm xl:text-base">
         <div style={{ gridArea: 'sidebar' }}>
           <div
+            className="sticky"
+            style={{ top: navTop, height: navHeight }}
+            ref={sidebarRef}
+          />
+          <SimpleBar
             className="sidebar-nav-container"
             style={{
-              top: 80 + Math.max(0, footerAppearedHeight ?? 0),
-              height: navHeight,
+              top: sidebarRect?.top,
+              left: sidebarRect?.left,
+              width: sidebarRect?.width,
+              height: sidebarRect?.height,
             }}
           >
-            <SimpleBar className="sidebar-nav" style={{ maxHeight: navHeight }}>
-              <div className="sidebar-nav-content">
-                <Navigation manifest={manifest} slug={slug} />
-              </div>
-            </SimpleBar>
-          </div>
+            <div className="sidebar-nav-content">
+              <Navigation manifest={manifest} slug={slug} />
+            </div>
+          </SimpleBar>
         </div>
         <div className="w-px bg-gray-400 my-6" style={{ gridArea: 'border' }} />
         <div style={{ gridArea: 'contents' }}>
@@ -102,18 +109,14 @@ export const Desktop: React.FC<LayoutProps> = ({
           --root-font-size: 0.9rem;
         }
 
-        .sidebar-nav-container {
-          @apply sticky overflow-hidden;
+        & :global(.sidebar-nav-container) {
+          @apply fixed overflow-y-auto;
         }
 
-        & :global(.sidebar-nav) {
-          @apply overflow-y-auto max-h-full;
-        }
-
-        & :global(.sidebar-nav .simplebar-track.simplebar-vertical) {
+        & :global(.sidebar-nav-container .simplebar-track.simplebar-vertical) {
           width: 9px;
         }
-        & :global(.sidebar-nav .simplebar-scrollbar::before) {
+        & :global(.sidebar-nav-container .simplebar-scrollbar::before) {
           @apply bg-gray-600;
         }
 
