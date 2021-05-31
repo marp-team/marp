@@ -70,8 +70,8 @@ Marp will recognize only the last defined value if you set the value for a same 
 | Name                 | Description                                                                                                                               |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | `paginate`           | [Show page number on the slide if set `true` ▶️](#page-number)                                                                            |
-| `header`             | Specify the content of slide header                                                                                                       |
-| `footer`             | Specify the content of slide footer                                                                                                       |
+| `header`             | [Specify the content of slide header ▶️](#header-and-footer)                                                                              |
+| `footer`             | [Specify the content of slide footer ▶️](#header-and-footer)                                                                              |
 | `class`              | Set [HTML `class` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/class) for the slide element `<section>` |
 | `backgroundColor`    | Set [`background-color` style](https://developer.mozilla.org/en-US/docs/Web/CSS/background-color) of the slide                            |
 | `backgroundImage`    | Set [`background-image` style](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image) of the slide                            |
@@ -276,6 +276,112 @@ _paginate: false
 ```
 
 ## Header and footer
+
+Use **`header`** and **`footer`** local directive to add headers and footers to slides.
+
+```markdown
+<!--
+header: Header content
+footer: Footer content
+-->
+
+# Header and footer
+```
+
+```markdown:marp
+<!--
+header: Header content
+footer: Footer content
+-->
+
+# Header and footer
+<style>
+  @keyframes point-up {
+    from { background-position: 50px 50px; }
+    to { background-position: 50px 70px; }
+  }
+  @keyframes point-down {
+    from { background-position: left 50px bottom 50px; }
+    to { background-position: left 50px bottom 70px; }
+  }
+  section {
+    animation: 0.5s ease-in-out alternate infinite point-up;
+    background: #fff url('https://icongr.am/feather/arrow-up.svg?color=0288d1') no-repeat 50px 50px / 80px;
+  }
+  section::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    animation: 0.5s ease-in-out alternate infinite point-down;
+    background: transparent url('https://icongr.am/feather/arrow-down.svg?color=0288d1') no-repeat left 50px bottom 50px / 80px;
+  }
+  @media (prefers-reduced-motion) {
+    section, section::before {
+      animation: none;
+    }
+  }
+</style>
+```
+
+Refer to [theme guide](/docs/guide/theme) for the detail of how to style header and footer.
+
+### Markdown formatting
+
+You can contain inline Markdown formatting (italic, bold, inline image, etc) into header and footer like this:
+
+```markdown
+---
+header: '**bold** _italic_'
+footer: '![image](https://example.com/image.jpg)'
+---
+```
+
+It may require to wrap the content by (double-)quotes to make directives parsable as valid YAML.
+
+### Reset header and footer
+
+Set an empty string value to directives to reset header and footer in the middle of slides.
+
+```markdown
+---
+header: '**Header**'
+footer: '_Footer_'
+---
+
+# Example
+
+---
+
+<!--
+header: ''
+footer: ''
+-->
+
+## Reset header and footer
+```
+
+```markdown:marp
+---
+header: '**Header**'
+footer: '_Footer_'
+---
+
+# Example
+
+---
+
+<!--
+header: ''
+footer: ''
+-->
+
+## Reset header and footer
+```
 
 ## Styling slide
 

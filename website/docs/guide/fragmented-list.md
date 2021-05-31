@@ -4,7 +4,7 @@ Marp recognizes some uncommon list markers as the item of **fragmented list** (a
 
 Fragmented list is _only available in the exported HTML_. Please note PDF and PPTX will not reproduce animation.
 
-> We recommend to make a careful decision whether use fragmented list. This is surely useful to focus audience's interests into the last displayed item. However, keep in mind that may bring confusion by what there are hidden items at the same time. Some articles are pointing out should never use builds in presentation. (e.g. [Presentation Rules](http://www.jilles.net/perma/2020/06/05/presentation-rules.html))
+> We recommend to make a careful decision whether using fragmented list. This is surely useful to focus audience's interests into the last displayed item. However, keep in mind that may bring confusion by what there are hidden items at the same time. Some articles are pointing out that build animation should never use in the presentation. (e.g. [Presentation Rules](http://www.jilles.net/perma/2020/06/05/presentation-rules.html))
 
 ## For bullet list
 

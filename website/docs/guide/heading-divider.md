@@ -105,7 +105,7 @@ CommonMark is a project for a standardization of Markdown launched in 2012.
 Auto split in parent heading levels is a reasonable behavior in the most cases, but sometimes you may require finer control of splitting levels. By setting array value consisted of 1-6, you also can indicate to split at before only specific levels.
 
 ```markdown
-<!-- headingDivider: [3] -->
+<!-- headingDivider: [1, 3] -->
 ```
 
-This setting will indicate to split pages only at before heading level 3.
+This setting will indicate to split pages only at before heading level 1 and 3.
