@@ -1,20 +1,40 @@
 import { Marp as MarpCore } from '@marp-team/marp-core'
 import { browser } from '@marp-team/marp-core/browser'
 import classNames from 'classnames'
+import postcss, { Plugin } from 'postcss'
+import postcssImportUrl from 'postcss-import-url'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import type { Swiper as SwiperClass } from 'swiper/core'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { useFontFace } from 'utils/hooks/useFontFace'
 
-export type RenderedMarp = ReturnType<typeof generateRenderedMarp>
+export type RenderedMarp = ReturnType<
+  typeof generateRenderedMarp
+> extends Promise<infer T>
+  ? T
+  : never
 
 export type MarpProps = {
   border?: boolean
   className?: string
-  rendered: Pick<RenderedMarp, 'css' | 'html'>
+  rendered: Pick<RenderedMarp, 'css' | 'html' | 'fonts'>
   page?: number
 }
 
-export const generateRenderedMarp = (markdown: string) => {
+const postcssStripFontFace = Object.assign(
+  (): Plugin => ({
+    postcssPlugin: 'marp-strip-font-face',
+    AtRule: (rule, { result }) => {
+      if (rule.name === 'font-face') {
+        result['fonts'] = [...(result['fonts'] || []), rule]
+        rule.remove()
+      }
+    },
+  }),
+  { postcss: true as const }
+)
+
+export const generateRenderedMarp = async (markdown: string) => {
   const marp = new MarpCore({
     container: false,
     script: false,
@@ -22,16 +42,27 @@ export const generateRenderedMarp = (markdown: string) => {
     math: 'mathjax', // KaTeX web fonts won't load in shadow DOM so we have to use prerendered MathJax SVG
   })
 
-  return { markdown, ...marp.render(markdown, { htmlAsArray: true }) }
+  const { css, html } = marp.render(markdown, { htmlAsArray: true })
+
+  const result = await postcss()
+    .use(postcssImportUrl)
+    .use(postcssStripFontFace)
+    .process(css, { from: undefined })
+
+  const fonts: string[] = (result['fonts'] || []).map((font) => font.toString())
+
+  return { markdown, html, css: result.css, fonts }
 }
 
 export const Marp = ({
   border = true,
   className,
-  rendered: { css, html },
+  rendered: { css, html, fonts },
   page = 1,
 }: MarpProps) => {
   const element = useRef<HTMLDivElement>(null)
+
+  useFontFace(fonts)
 
   useEffect(() => {
     if (!element.current) return
@@ -58,11 +89,13 @@ export const Marp = ({
 export const MarpSlides = (props) => {
   const htmlRaw: string = props['data-html']
   const css: string = props['data-css']
+  const fontsRaw: string = props['data-fonts']
 
   const [activePageIdx, setActivePageIdx] = useState(0)
   const swiper = useRef<SwiperClass>()
   const html = useMemo(() => JSON.parse(htmlRaw) as string[], [htmlRaw])
   const multiple = html.length > 1
+  const fonts = useMemo(() => JSON.parse(fontsRaw) as string[], [fontsRaw])
 
   const handleActiveIndexChange = useCallback((instance: SwiperClass) => {
     setActivePageIdx(instance.activeIndex)
@@ -99,7 +132,11 @@ export const MarpSlides = (props) => {
         {html.map((h, i) => (
           <SwiperSlide key={h}>
             <div inert={activePageIdx === i ? undefined : ''}>
-              <Marp border={false} rendered={{ html, css }} page={i + 1} />
+              <Marp
+                border={false}
+                rendered={{ html, css, fonts }}
+                page={i + 1}
+              />
             </div>
           </SwiperSlide>
         ))}

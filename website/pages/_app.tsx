@@ -1,5 +1,7 @@
+import { Head } from 'next/document'
 import { Router } from 'next/router'
 import NProgress from 'nprogress'
+import { FontFaceProvider, FontFaceRenderer } from 'utils/hooks/useFontFace'
 import 'focus-visible'
 import 'wicg-inert'
 import 'nprogress/nprogress.css'
@@ -26,6 +28,11 @@ Router.events.on('routeChangeError', translated)
 
 NProgress.configure({ showSpinner: false, trickleSpeed: 350 })
 
-const App = ({ Component, pageProps }) => <Component {...pageProps} />
+const App = ({ Component, pageProps }) => (
+  <FontFaceProvider>
+    <FontFaceRenderer />
+    <Component {...pageProps} />
+  </FontFaceProvider>
+)
 
 export default App

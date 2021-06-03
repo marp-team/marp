@@ -20,6 +20,7 @@ export const toHastCodeHandler = (h, { position, lang, value, marp }) => {
       'data-comments': JSON.stringify(marp.comments),
       'data-css': marp.css,
       'data-html': JSON.stringify(marp.html),
+      'data-fonts': JSON.stringify(marp.fonts),
     })
   }
 

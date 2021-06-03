@@ -44,7 +44,7 @@ foobar
 `.trim()
 
 export const getStaticProps = async () => ({
-  props: { example: generateRenderedMarp(exampleMarkdown) },
+  props: { example: await generateRenderedMarp(exampleMarkdown) },
 })
 
 const Index = (props: InferGetStaticPropsType<typeof getStaticProps>) => (

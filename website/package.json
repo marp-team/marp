@@ -44,6 +44,7 @@
     "null-loader": "^4.0.1",
     "postcss": "^8.3.0",
     "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-import-url": "^7.0.0",
     "postcss-preset-env": "^6.7.0",
     "remark-gfm": "^1.0.0",
     "remark-parse": "^9.0.0",
