@@ -124,9 +124,13 @@ We are supported by them! Thanks for our sponsors! :heart:
     <td>
       <a href="https://github.com/junta-m"><img src="https://github.com/junta-m.png" width="64" height="64" alt="junta-m is sponsored yhatt" valign="middle"/></a>
     </td>
+    <td>
+      <a href="https://github.com/cheese"><img src="https://github.com/cheese.png" width="64" height="64" alt="cheese is sponsored yhatt" valign="middle"/></a>
+    </td>
   </tr>
   <tr>
     <th><a href="https://github.com/junta-m">junta-m</a></th>
+    <th><a href="https://github.com/cheese">cheese</a></th>
   </tr>
 </table>
 
