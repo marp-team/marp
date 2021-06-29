@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-has-content */
 import Link from 'next/link'
 
 export const Anchor: React.FC<{ href: string }> = ({ href, ...rest }) => {

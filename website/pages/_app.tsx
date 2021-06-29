@@ -1,4 +1,3 @@
-import { Head } from 'next/document'
 import { Router } from 'next/router'
 import NProgress from 'nprogress'
 import { FontFaceProvider, FontFaceRenderer } from 'utils/hooks/useFontFace'

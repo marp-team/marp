@@ -7,5 +7,8 @@ module.exports = {
       'error',
       path.join(__dirname, 'pages'),
     ],
+
+    // Marp website is completely static. Automatic Image Optimization by Next.js requires a server for on-demand conversion.
+    '@next/next/no-img-element': 'off',
   },
 }

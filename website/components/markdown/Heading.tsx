@@ -17,7 +17,6 @@ const Heading: React.FC<{ level: number; id?: string }> = ({
         <>
           <span id={id} className="named-anchor" aria-hidden />
           {anchorLink && (
-            // eslint-disable-next-line jsx-a11y/anchor-has-content
             <a
               aria-hidden
               className="anchor-link"
