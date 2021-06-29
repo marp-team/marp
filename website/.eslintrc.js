@@ -1,29 +1,11 @@
+const path = require('path')
+
 module.exports = {
-  extends: [
-    'plugin:import/react',
-    'plugin:react/recommended',
-    'plugin:react-hooks/recommended',
-    'plugin:jsx-a11y/recommended',
-    'prettier',
-  ],
+  extends: ['next', 'prettier'],
   rules: {
-    'react/react-in-jsx-scope': 'off',
-    'jsx-a11y/anchor-is-valid': [
+    '@next/next/no-html-link-for-pages': [
       'error',
-      {
-        components: ['Link'],
-        specialLink: ['hrefLeft', 'hrefRight'],
-        aspects: ['invalidHref', 'preferButton'],
-      },
+      path.join(__dirname, 'pages'),
     ],
   },
-  overrides: [
-    {
-      files: ['**/*.ts', '**/*.tsx'],
-      rules: {
-        'react/prop-types': 'off',
-      },
-    },
-  ],
-  settings: { react: { version: 'detect' } },
 }
