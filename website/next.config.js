@@ -28,7 +28,6 @@ if (process.env.URL) env.NEXT_PUBLIC_HOST = process.env.URL // for Netlify's dep
 module.exports = withBundleAnalyzer(
   withTM({
     env,
-    future: { webpack5: true },
     webpack: (config, { isServer }) => {
       config.module.rules.push({ test: /\.md$/, type: 'asset/source' })
       config.module.rules.push({
