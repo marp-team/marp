@@ -143,6 +143,7 @@ We are supported by them! Thanks for our sponsors! :heart:
   <a href="https://github.com/harsh183"><img src="https://github.com/harsh183.png" width="32" height="32" alt="harsh183 is sponsored yhatt" /></a>
   <a href="https://github.com/laughk"><img src="https://github.com/laughk.png" width="32" height="32" alt="laughk is sponsored yhatt" /></a>
   <a href="https://github.com/synapticvoid"><img src="https://github.com/synapticvoid.png" width="32" height="32" alt="synapticvoid is sponsored yhatt" /></a>
+  <a href="https://github.com/da-moon"><img src="https://github.com/da-moon.png" width="32" height="32" alt="da-moon is sponsored yhatt" /></a>
 </p>
 
 > Do you want to sponsor [the member of Marp team](https://github.com/orgs/marp-team/people)? See [GitHub Sponsors](https://github.com/sponsors) profile(s) from "♥︎ Sponsor" button [at the top of repository](https://github.com/marp-team/marp).
