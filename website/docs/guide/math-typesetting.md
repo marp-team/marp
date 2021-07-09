@@ -56,7 +56,9 @@ Marp uses **[KaTeX]**, the fastest math typesetting library, to render math type
 
 ### VS Code integration
 
-Please note _Marp for VS Code does not provide math authoring support_. You can use [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) extension together with Marp to use syntax highlight and auto completion for KaTeX.
+[VS Code 1.58 and later version can preview KaTeX math formula in a regular Markdown by default.](https://code.visualstudio.com/updates/v1_58#_math-formula-rendering-in-the-markdown-preview) There is high compatibllity with Marp's KaTeX, but might have a bit of differences in rendering due to the difference of version.
+
+You can use [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) extension together with Marp for auto completion.
 
 ### Define global macro
 
