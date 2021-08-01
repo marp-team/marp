@@ -2,13 +2,13 @@
 
 ### This is a stub page!
 
-Marp has extended syntax called **"Directives"** to control theme, page number, header, footer, and so on.
+Marp has an extended syntax called **"Directives"** to control theme, page number, header, footer, and other slide elements.
 
-> The syntax of directives is inherited from [Marpit framework](https://marpit.marp.app/directives). Please note supported directives are different by each Marp tools.
+> The syntax of directives is inherited from [Marpit framework](https://marpit.marp.app/directives). Please note that different directives are different by each Marp tool.
 
 ## Usage
 
-The written directives will parse as [YAML](https://yaml.org/) format.
+Marp parses directives as [YAML](https://yaml.org/).
 
 ### HTML comment
 
@@ -21,9 +21,9 @@ paginate: true
 
 ### Front matter
 
-**YAML front matter** is a syntax often used for keeping metadata of Markdown in a lot of tools (e.g. [Jekyll site generator](https://jekyllrb.com/docs/front-matter/)). Marp has also supported front matter as the container to define directives.
+Like many tools (e.g. [Jekyll site generator](https://jekyllrb.com/docs/front-matter/)), Marp uses **YAML front matter** to store Markdown metadata. In addition, Marp also uses the front matter to define directives.
 
-It must be the first thing of Markdown, and between the dash rulers.
+YAML front matter must be at the beginning of a Markdown document and enclosed by dashed rulers.
 
 ```markdown
 ---
@@ -32,46 +32,46 @@ paginate: true
 ---
 ```
 
-Don't confuse to [the ruler for splitting slides](/docs/guide/how-to-write-slides#slides)! The actual slide contents would start after the ending ruler of front-matter.
+Note that the dashed ruler is also used to indicate where Marp should [ split slides](/docs/guide/how-to-write-slides#slides). Marp uses the first two dashed rulers to indicate YAML front matter. Subsequent dashed rulers indicate slide breaks.
 
-> TIP: Defining directives via front matter is exactly same meaning as setting directives by HTML comment at the first page. When the front matter syntax is not supported in your favorite Markdown editor, you can replace into HTML comment safely in the most cases.
+> TIP: Defining directives in the front matter is equivalent to setting the directives using an HTML comment on the first page. Suppose your favorite Markdown editor does not support the front matter syntax. In that case, you can safely define the directive in an HTML comment instead.
 
 ## Type of directives
 
-Marp directives consisted of two groups:
+There are two types of Marp directives:
 
-- **[Global directives](#global-directives)** - Setting for the whole of slide deck (e.g. `theme`, `size`)
-- **[Local directives](#local-directives)** - Controlling the setting value per slide pages (e.g. `pagiante`, `header`, `footer`)
+- **[Global directives](#global-directives)** - Controlling settings for the all slides (e.g. `theme`, `size`)
+- **[Local directives](#local-directives)** - Controlling setting values for one slide (e.g. `paginate`, `header`, `footer`)
 
-There is no difference how to define each directives, and you can mix definitions too. An only difference is how to consume the value.
+You can define both directives in the same way. You can mix definitions too. The only difference is that some settings apply to all slides, and some apply to only one slide.
 
 ### Global directives
 
-**Global directives** are settings for the whole of slide deck.
+**Global directives** are settings for the entire slide deck.
 
 | Name             | Description                                                      |
 | ---------------- | ---------------------------------------------------------------- |
-| `theme`          | [Set a theme name for the slide deck ▶️](/docs/guide/theme)      |
+| `theme`          | [Set a theme for the slide deck ▶️](/docs/guide/theme)      |
 | `style`          | Specify CSS for tweaking theme                                   |
 | `headingDivider` | [Specify heading divider option ▶️](/docs/guide/heading-divider) |
 | `size`           | Choose the slide size preset provided by theme                   |
-| `title`          | Set a title of the slide deck (for HTML export)                  |
-| `description`    | Set a description of the slide deck (for HTML export)            |
-| `url`            | Set canonical URL for the slide deck (for HTML export)           |
+| `title`          | Set the title of the slide deck (for HTML export)                  |
+| `description`    | Set the description of the slide deck (for HTML export)            |
+| `url`            | Set a canonical URL for the slide deck (for HTML export)           |
 | `image`          | Set Open Graph image URL (for HTML export)                       |
 | `marp`           | Set whether or not enable Marp feature in VS Code                |
 
-Marp will recognize only the last defined value if you set the value for a same global directive many times in multiple HTML comments.
+If you set the same global directive multiple times, Marp will use the last defined value.
 
 ### Local directives
 
-**Local directives** are settings for each slide pages.
+**Local directives** are settings for a specific slide.
 
 | Name                 | Description                                                                                                                               |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `paginate`           | [Show page number on the slide if set `true` ▶️](#page-number)                                                                            |
-| `header`             | [Specify the content of slide header ▶️](#header-and-footer)                                                                              |
-| `footer`             | [Specify the content of slide footer ▶️](#header-and-footer)                                                                              |
+| `paginate`           | [Show page number on the slide if set to `true` ▶️](#page-number)                                                                            |
+| `header`             | [Specify the content of the slide header ▶️](#header-and-footer)                                                                              |
+| `footer`             | [Specify the content of the slide footer ▶️](#header-and-footer)                                                                              |
 | `class`              | Set [HTML `class` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/class) for the slide element `<section>` |
 | `backgroundColor`    | Set [`background-color` style](https://developer.mozilla.org/en-US/docs/Web/CSS/background-color) of the slide                            |
 | `backgroundImage`    | Set [`background-image` style](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image) of the slide                            |
@@ -82,9 +82,9 @@ Marp will recognize only the last defined value if you set the value for a same 
 
 #### Inheritance
 
-If not set the local directive explicit in a slide, **the setting value of local directives for the slide will be inherited from previous slide**. In other words, defined local directives will apply to the defined page and following pages.
+Slides will inherit setting values of local directives from the immediately previous slide **unless** a local directive is explicitly set for the current slide. In other words, defined local directives will apply to both the defined page and subsequent pages.
 
-For example, this Markdown is defining `backgroundColor` directive at the second page, and the third page will use the inherited color.
+For example, the Markdown for this set of slides defines the `backgroundColor` directive on the second page. Because subsequent pages inherit local directives,  the third page will also have the same color.
 
 ```markdown
 # Page 1
@@ -97,13 +97,13 @@ Go to next page :arrow_right:
 
 # Page 2
 
-## This page has lightblue background.
+## This page has a light blue background.
 
 ---
 
 # Page 3
 
-## This page also has the same background.
+## This page also has the same light blue background.
 ```
 
 ```markdown:marp
@@ -117,20 +117,20 @@ Go to next page :arrow_right:
 
 # Page 2
 
-## This page has lightblue background.
+## This page has a light blue background.
 
 ---
 
 # Page 3
 
-## This page also has the same background.
+## This page also has the same light blue background.
 ```
 
 #### Scoped local directives
 
-To set specific value of local directives only to the current page, add the underscore prefix `_` to the name of directives.
+If you want a local directive to apply only to the current page, add the underscore prefix `_` to the name of directives.
 
-The value of scoped directive will be given priority over the inherited value from previous, and will not inherit to following pages.
+The value of a scoped directive will be given priority over an inherited value, and subsequent pages will not inherit the value of the scoped directive.
 
 ```markdown
 <!-- color: red -->
@@ -145,7 +145,7 @@ This page has red text.
 
 # Page 2
 
-This page has blue text, specified by scoped local directive.
+This page has blue text, specified by a scoped local directive.
 
 ---
 
@@ -167,7 +167,7 @@ This page has red text.
 
 # Page 2
 
-This page has blue text, specified by scoped local directive.
+This page has blue text, specified by a scoped local directive.
 
 ---
 
@@ -176,7 +176,7 @@ This page has blue text, specified by scoped local directive.
 Go back to red text.
 ```
 
-The underscore prefix can add to all of local directives.
+The underscore prefix can be added to any local directives.
 
 #### Diagram
 
@@ -188,18 +188,18 @@ The underscore prefix can add to all of local directives.
 
 ## Page number
 
-To add page number to the slide, set **`paginate`** local directive as `true`.
+To add page number to the slide, set the **`paginate`** local directive to `true`.
 
 ```markdown
 <!-- paginate: true -->
 
-You can see a page number of the slide in lower right.
+You can see the slide number in the lower right.
 ```
 
 ```markdown:marp
 <!-- paginate: true -->
 
-You can see a page number of the slide in lower right.
+You can see the slide number in the lower right.
 
 <style>
   @keyframes point {
@@ -218,11 +218,11 @@ You can see a page number of the slide in lower right.
 </style>
 ```
 
-Refer to [theme guide](/docs/guide/theme) for the detail of how to style a page number.
+Refer to [theme guide](/docs/guide/theme) for details on how to style a slide number.
 
 ### Skip pagination in the title slide
 
-Just move a definition of `paginate` directive to an inside of a second page.
+Just move the definition of the `paginate` directive to the second slide.
 
 ```markdown
 # Title slide
@@ -231,7 +231,7 @@ Just move a definition of `paginate` directive to an inside of a second page.
 
 <!-- paginate: true --->
 
-## Start pagination from this page.
+## Start pagination from this slide.
 ```
 
 ```markdown:marp
@@ -241,7 +241,7 @@ Just move a definition of `paginate` directive to an inside of a second page.
 
 <!-- paginate: true --->
 
-## Start pagination from this page.
+## Start pagination from this slide.
 
 <style scoped>
   @keyframes point {
@@ -260,7 +260,7 @@ Just move a definition of `paginate` directive to an inside of a second page.
 </style>
 ```
 
-Or you also can use [scoped directive](#scoped-local-directives) to disable pagination in the title slide.
+You can also use [scoped directive](#scoped-local-directives) to disable pagination in the title slide.
 
 ```markdown
 ---
@@ -272,12 +272,12 @@ _paginate: false
 
 ---
 
-## Start pagination from this page.
+## Start pagination from this slide.
 ```
 
 ## Header and footer
 
-Use **`header`** and **`footer`** local directive to add headers and footers to slides.
+Use **`header`** and **`footer`** local directives to add headers and footers to slides.
 
 ```markdown
 <!--
@@ -328,11 +328,11 @@ footer: Footer content
 </style>
 ```
 
-Refer to [theme guide](/docs/guide/theme) for the detail of how to style header and footer.
+Refer to [theme guide](/docs/guide/theme) for details on how to style header and footer.
 
 ### Markdown formatting
 
-You can contain inline Markdown formatting (italic, bold, inline image, etc) into header and footer like this:
+You can use inline Markdown formatting (italic, bold, inline image, etc) in header and footer like this:
 
 ```markdown
 ---
@@ -341,11 +341,11 @@ footer: '![image](https://example.com/image.jpg)'
 ---
 ```
 
-It may require to wrap the content by (double-)quotes to make directives parsable as valid YAML.
+To make directives parsable as valid YAML, you can wrap content with (double-)quotes.
 
 ### Reset header and footer
 
-Set an empty string value to directives to reset header and footer in the middle of slides.
+Set the value of a directive to an empty string value to reset the header and footer in the middle of the slide deck.
 
 ```markdown
 ---
@@ -389,4 +389,4 @@ footer: ''
 
 ## Editor integration
 
-<!-- By using **Marp for VS Code**, you can peek -->
+<!-- By using **Marp for VS Code**, you can preview -->
