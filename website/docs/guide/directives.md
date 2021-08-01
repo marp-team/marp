@@ -4,7 +4,7 @@
 
 Marp has an extended syntax called **"Directives"** to control theme, page number, header, footer, and other slide elements.
 
-> The syntax of directives is inherited from [Marpit framework](https://marpit.marp.app/directives). Please note that different directives are different by each Marp tool.
+> The syntax of directives is inherited from [Marpit framework](https://marpit.marp.app/directives). Please note that different directives are used by each Marp tool.
 
 ## Usage
 
@@ -21,7 +21,7 @@ paginate: true
 
 ### Front matter
 
-Like many tools (e.g. [Jekyll site generator](https://jekyllrb.com/docs/front-matter/)), Marp uses **YAML front matter** to store Markdown metadata. In addition, Marp also uses the front matter to define directives.
+Like many tools (e.g. [Jekyll site generator](https://jekyllrb.com/docs/front-matter/)), Marp uses **YAML front matter**. Directives can be defined in front matter.
 
 YAML front matter must be at the beginning of a Markdown document and enclosed by dashed rulers.
 
