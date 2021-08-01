@@ -2,7 +2,7 @@
 
 ### This is a stub page!
 
-**Marp** (**Mar**kdown **P**resentation Ecosystem) provides the great experience to _write_ your presentation slide deck with Markdown.
+**Marp** (**Mar**kdown **P**resentation Ecosystem) provides a great experience for _writing_ presentations with Markdown.
 
 ````markdown:marp
 ---
@@ -24,7 +24,7 @@ https://marp.app/
 
 ## What's Marp?
 
-Marp provides the great experience to _write_ your presentation slide deck with Markdown. :pencil:
+Marp provides a great experience for _writing_ presentations with Markdown. :pencil:
 
 ```markdown
 # Slide 1
@@ -43,44 +43,42 @@ bar
 
 ### Markdown
 
-[Markdown] is the one of most popular lightweight markup language. Marp ecosystem is based on [CommonMark], the consistent spec of Markdown. The author can focus to write story with keeping logical structure and efficient writing speed.
+[Markdown] is one of the most popular lightweight markup languages. Markdown allows the author to write presentations quickly and focus on the logical structure of the presentation (rather than the code needed to generate the presentation).
+
+The Marp ecosystem is based on [CommonMark], a consistent spec of Markdown. Marp uses CommonMark to ensure maximum compatibility across Markdown editors and with other Markdown files. Marp only adds a few additional features on top of CommonMark, so your Marp document will look good regardless of what software you used to edit or render Markdown. 
 
 [markdown]: https://en.wikipedia.org/wiki/Markdown
 [commonmark]: https://commonmark.org/
 
-By cherry-picking additional features, we are make careful to keep compatibility with the general Markdown document. It means the result of rendering keeps looking good even if you editting and previewing the Marp Markdown in a general Markdown editor.
-
 ### Theme CSS
 
-Marp ecosystem is faithful to Web basics, HTML and CSS. We provide a theming system using plain CSS to style your slides. It is mostly same as styling HTML page so you can jump right in by just learning CSS.
+The Marp ecosystem is designed to be intuitive to anyone who has made a webpage. As long as you know HTML and CSS, you should be able to style your presentation easily. Our theming system allows you to use plain CSS to style your slides.
 
-"[Separation of content and style](https://en.wikipedia.org/wiki/Separation_of_content_and_presentation)" is an important thing also in the slide deck. You can apply the design made by us or community into your deck easily. If necessary, you can tweak styles by inline style within Markdown too.
+Marp is designed with the "[Separation of content and style](https://en.wikipedia.org/wiki/Separation_of_content_and_presentation)" in mind. The goal is to make it easy for users to apply designs made by the community to the user's content.
 
 ### Export to PDF, PPTX, HTML
 
-We have a first-class support of conversion into other file formats. Marp has given importance to reproducibility of rendering so you do not need to worry about broken layout.
+Marp has first-class support for conversion into other file formats. We prioritize reproducible rendering across formats so that users do not have to worry about different formats breaking layouts. Our goal is to make sure the PDF, PPTX, and HTML versions of your slides look exactly the same.
 
-Marp is not aim to giving a presentation with itself. Exporting to PDF format is the best choice to give a presentation. You can present in anywhere, any devices, and regardless network status by just bringing a one PDF file.
-
-If you want more familiar way to make a presentation, you can export to PowerPoint document (PPTX) too. For using interactive contents or serving the deck on the web, you also can export to HTML that have bare minimum features for presentation.
+Note that Marp is not designed to be stand-alone presentation software. The simplest way to present is to export to HTML and open the presentation in a browser. The HTML format allows you to serve your slide deck on the internet. Also, it allows you to show interactive content and make use of features like fragmented lists. If you are presenting without access to the internet, you should export to the PDF format. If you want to add additional content manually, Marp also allows you to export to the PowerPoint (PPTX) format. 
 
 ### Easy to get started
 
-Our ecosystem provides CLI and GUI (as VS Code extension) for authoring Marp slide deck. All your need is only single Markdown file, and installing either of Chrome, Edge, and Chromium flavored browser if required to export into PDF/PPTX.
+Our ecosystem provides both a CLI and a GUI (as an VS Code extension) for authoring a Marp slide deck. To create a slide deck, all you need to do is install Marp and write a Markdown file in the Marp format. If you want to export to PDF/PPTX, you will also need to have Chrome, Edge, or some other Chromium-flavored browser installed locally.
 
-Marp CLI can convert Markdown into HTML/PDF/PPTX easily. VS Code extension gives real-time slide preview, Marp Markdown language features, and export command.
+The Marp CLI can convert Markdown into HTML/PDF/PPTX easily. VS Code extension gives real-time slide preview, Marp Markdown language features, and export commands.
 
 ### Pluggable architecture
 
-Marp is based on **[Marpit framework]**, the skinny framework for creating slide deck from Markdown. It has a pluggable architecture and developer can extend features via plugin.
+Marp is based on **[Marpit framework]**, the skinny framework for creating a slide deck from Markdown. It has a pluggable architecture, and developers can add features via plugin.
 
-End users can customize conversion engine by using Marp CLI and plugins: Add new Markdown syntax (compatible with markdown-it plugins), add custom directives, provide custom theme set, and so on. Push the limits of Marp as you like!
+End users can customize the conversion engine by using Marp CLI and plugins: Add new Markdown syntax (compatible with markdown-it plugins), add custom directives, provide custom theme set, and so on. Push the limits of Marp as you like!
 
 [marpit framework]: https://marpit.marp.app
 
 ## Author
 
-We're [Marp team](https://github.com/marp-team). (Having said that, currently Marp is a solo project by maintainer. The best way to join us is many contributions into Marp!)
+We're [Marp team](https://github.com/marp-team). (Having said that, currently, Marp is a solo project by maintainer. The best way to join us is many contributions into Marp!)
 
 - **Yuki Hattori ([@yhatt](https://github.com/yhatt))** - Project owner / maintainer
 
