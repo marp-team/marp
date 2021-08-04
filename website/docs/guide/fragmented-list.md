@@ -1,14 +1,14 @@
 # Fragmented list
 
-Marp recognizes some uncommon list markers as the item of **fragmented list** (also known as incremental list, build animation) for appearing contents one by one.
+Marp uses some uncommon list markers to denote a **fragmented list** (also known as an incremental list or builds), which allows list content to appear incrementally.
 
-Fragmented list is _only available in the exported HTML_. Please note PDF and PPTX will not reproduce animation.
+Fragmented lists are _only available if you export to HTML_. If you export to PDF and PPTX, the fragmented list will be rendered as a normal list.
 
-> We recommend to make a careful decision whether using fragmented list. This is surely useful to focus audience's interests into the last displayed item. However, keep in mind that may bring confusion by what there are hidden items at the same time. Some articles are pointing out that build animation should never use in the presentation. (e.g. [Presentation Rules](http://www.jilles.net/perma/2020/06/05/presentation-rules.html))
+> Be careful when using fragmented lists. While fragmented lists can help focus the audience's attention on the last displayed item, they may also create confusion about hidden items. Some articles recommend never using builds (e.g. [Presentation Rules](http://www.jilles.net/perma/2020/06/05/presentation-rules.html)).
 
-## For bullet list
+## For bullet lists
 
-CommonMark allows `-`, `+`, and `*` as the character of [bullet list markers](https://spec.commonmark.org/0.29/#bullet-list-marker). Marp will parse as the fragmented list if you are using `*` as the marker.
+CommonMark's bullet list markers are `-`, `+`, and `*`  (https://spec.commonmark.org/0.29/#bullet-list-marker). If you use `*` as the marker, Marp will parse the list as a fragmented list.
 
 <!-- prettier-ignore-start -->
 
@@ -32,7 +32,7 @@ CommonMark allows `-`, `+`, and `*` as the character of [bullet list markers](ht
 
 ## For ordered list
 
-CommonMark's [ordered list marker](https://spec.commonmark.org/0.29/#ordered-list-marker) must have `.` or `)` after digits. Marp will parse as fragmented list if you are using `)` as the following character.
+CommonMark's [ordered list marker](https://spec.commonmark.org/0.29/#ordered-list-marker) must have `.` or `)` after digits.  If you use `)` as the following character, then Marp will parse the ordered list as a fragmented list.
 
 <!-- prettier-ignore-start -->
 
@@ -56,4 +56,4 @@ CommonMark's [ordered list marker](https://spec.commonmark.org/0.29/#ordered-lis
 
 > These are inherited from [Marpit framework](https://marpit.marp.app/fragmented-list).
 >
-> [The syntax just indicates that the list would be fragmented](https://marpit.marp.app/fragmented-list?id=rendering). A rendering result would be same as normal list if tools that are integrated with Marp did nothing. In the official toolset, [Marp CLI](https://github.com/marp-team/marp-cli)'s default HTML template `bespoke` can reproduce fragmented list as the step animation.
+> [This syntax only indicates that the list _should_ be fragmented](https://marpit.marp.app/fragmented-list?id=rendering). However, this list would be rendered as a normal list if the tools that are integrated with Marp did nothing with the syntax. In the official toolset, [Marp CLI](https://github.com/marp-team/marp-cli)'s default HTML template `bespoke` can reproduce a fragmented list as a build animation.
