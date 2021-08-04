@@ -1,10 +1,10 @@
 # Heading divider
 
-By using heading divider option, you can indicate to split pages at before headings whose specified level. It's useful when converting an existing Markdown document to the slides.
+The heading divider directive tells Marp to automatically add a slide break before a heading of the specified level. This directive is particularly useful when converting an existing Markdown document to slides.
 
-This is similar to [Pandoc](https://pandoc.org/)'s [`--slide-level` option](https://pandoc.org/MANUAL.html#structuring-the-slide-show) and [Deckset 2](https://www.deckset.com/2/)'s "Slide Dividers" option.
+Heading dividers is similar to [Pandoc](https://pandoc.org/)'s [`--slide-level` option](https://pandoc.org/MANUAL.html#structuring-the-slide-show) and [Deckset 2](https://www.deckset.com/2/)'s "Slide Dividers" option.
 
-> This feature is inherited from [Marpit framework](https://marpit.marp.app/directives?id=heading-divider).
+> This feature is inherited from the [Marpit framework](https://marpit.marp.app/directives?id=heading-divider).
 
 ## Example
 
@@ -34,13 +34,13 @@ https://daringfireball.net/projects/markdown/
 CommonMark is a project for a standardization of Markdown launched in 2012.
 ```
 
-Add [`headingDivider` global directive](/docs/guide/directives#global-directives) for making slide pages by sections that are made by heading level 2.
+Add the [`headingDivider` global directive](/docs/guide/directives#global-directives).
 
 ```markdown
 <!-- headingDivider: 2 -->
 ```
 
-That's all! Marp will split pages at before each headings whose level 2.
+Once you have specified the directive, Marp will automatically split the document into slides by starting a new slide whenever a section has a heading level of 2.
 
 ```markdown:marp
 <!-- headingDivider: 2 -->
@@ -59,7 +59,7 @@ The article of Markdown
 
 ### Origin
 
-Markdown has created by John Gruber in 2004.
+Markdown was created by John Gruber in 2004.
 
 https://daringfireball.net/projects/markdown/
 
@@ -68,9 +68,9 @@ https://daringfireball.net/projects/markdown/
 CommonMark is a project for a standardization of Markdown launched in 2012.
 ```
 
-`headingDivider` global directive accepts the heading level from 1 to 6. When the heading level has set by a number, heading divider will enabled in headings that have _a specified level and its parent levels_. So `headingDivider: 2` is actually meaning to split at before headings whose level 1 and 2.
+The `headingDivider` global directive accepts heading levels from 1 to 6. When the heading level is set as a number, Marp will split slides at headings that are _at the specified level and at all parent levels_. So, `headingDivider: 2` will actually make new slides at headings of levels 1 and 2.
 
-It may be better to split by subsections if the section had so many contents that they would protrude from the slide. In that case, just change the base level for `headingDivider` to `3`. Check out the difference from the previous example in after 3rd page:
+If a section has so much content that it overflows the slide, it might be better to split it by subsection. To do that, just change the base level for `headingDivider` to `3`. Check out the difference from the previous example after the 3rd page:
 
 ```markdown:marp
 <!-- headingDivider: 3 -->
@@ -89,7 +89,7 @@ The article of Markdown
 
 ### Origin
 
-Markdown has created by John Gruber in 2004.
+Markdown was created by John Gruber in 2004.
 
 https://daringfireball.net/projects/markdown/
 
@@ -102,10 +102,10 @@ CommonMark is a project for a standardization of Markdown launched in 2012.
 
 ## Advanced
 
-Auto split in parent heading levels is a reasonable behavior in the most cases, but sometimes you may require finer control of splitting levels. By setting array value consisted of 1-6, you also can indicate to split at before only specific levels.
+Auto split in parent heading levels is reasonable behavior in most cases, but sometimes you may require finer control of splitting levels. If you set the directive value to an array, you also instruct Marp to split at only the specified levels.
 
 ```markdown
 <!-- headingDivider: [1, 3] -->
 ```
 
-This setting will indicate to split pages only at before heading level 1 and 3.
+This setting will instruct Marp to split slides at heading levels 1 and 3.
