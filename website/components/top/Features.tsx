@@ -51,7 +51,7 @@ const cards = [
       icon="https://icongr.am/octicons/markdown.svg?color=4a5568"
     >
       If you know how to write document with Markdown, you already know how to
-      write Marp slide deck too. Our format is based on{' '}
+      write a Marp slide deck. Marp&apos;s format is based on{' '}
       <a
         href="https://commonmark.org/"
         target="_blank"
@@ -59,7 +59,7 @@ const cards = [
       >
         CommonMark
       </a>
-      , the consistent spec of Markdown. The only important difference is{' '}
+      , a consistent Markdown specification. The only important difference is{' '}
       <a
         href="https://marpit.marp.app/markdown"
         rel="noopener noreferrer"
@@ -75,8 +75,8 @@ const cards = [
       name="Directives and extended syntax"
       icon="https://icongr.am/octicons/code-square.svg?color=4a5568"
     >
-      Nevertheless, you may think the simple text content is lacking to
-      emphasize your voice. We are supporting to create beautiful slide through{' '}
+      Sometimes simple text content isn&apos;t enough to emphasize your voice,
+      so Marp supports a variety of{' '}
       <a
         href="https://marpit.marp.app/directives"
         rel="noopener noreferrer"
@@ -90,7 +90,7 @@ const cards = [
         rel="noopener noreferrer"
         target="_blank"
       >
-        Image syntax
+        image syntax
       </a>
       ,{' '}
       <a
@@ -108,7 +108,7 @@ const cards = [
       >
         auto-scaling
       </a>
-      , etc...).
+      , etc...) to create beautiful slides.
     </Card>
   ),
   ({ index }) => (
@@ -133,14 +133,14 @@ const cards = [
         3 built-in themes called <code>default</code>, <code>gaia</code>, and{' '}
         <code>uncover</code>
       </a>
-      , to tell your story beautifully. If you are feeling unsatisfied to
-      design, Marp can{' '}
+      , to tell your story beautifully. If you&apos;d rather customize your
+      design, you can use Marp to{' '}
       <a
         href="https://marpit.marp.app/theme-css?id=tweak-style-through-markdown"
         rel="noopener noreferrer"
         target="_blank"
       >
-        tweak style through Markdown
+        tweak styles with Markdown
       </a>
       , or{' '}
       <a
@@ -148,7 +148,7 @@ const cards = [
         rel="noopener noreferrer"
         target="_blank"
       >
-        create your own theme with plain CSS
+        create your own Marp theme with plain CSS
       </a>
       .
     </Card>
@@ -159,9 +159,9 @@ const cards = [
       name="Export to HTML, PDF, and PowerPoint"
       icon="https://icongr.am/octicons/file.svg?color=4a5568"
     >
-      Have you finished writing? Let&apos;s share the deck with a favorite way!
-      We can convert Markdown into presentation-ready HTML, what is more, PDF
-      and PowerPoint document directly! (Powered by{' '}
+      Have you finished writing? It&apos;s time to share your deck! Marp can
+      convert Markdown into presentation-ready HTML, PDF and PowerPoint files
+      directly! (Powered by{' '}
       <a
         href="https://www.google.com/chrome/"
         rel="noopener noreferrer"
@@ -186,7 +186,7 @@ const cards = [
       name="Marp family: The official toolset"
       icon="https://icongr.am/octicons/package.svg?color=4a5568"
     >
-      Marp family has the rich toolset to assist your work.{' '}
+      The Marp ecosystem contains a rich toolset to assist your work.{' '}
       <a
         href="https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode"
         rel="noopener noreferrer"
@@ -194,7 +194,8 @@ const cards = [
       >
         <b>Marp for VS Code</b>
       </a>{' '}
-      extension can preview editting Markdown and custom theme immediately.{' '}
+      is an extension that allows you to edit and preview slide Markdown and
+      custom theming within VS Code.{' '}
       <a
         href="https://github.com/marp-team/marp-cli/"
         rel="noopener noreferrer"
@@ -202,13 +203,14 @@ const cards = [
       >
         <b>Marp CLI</b>
       </a>{' '}
-      allows to convert Markdown through CLI interface.{' '}
+      is a command line tool allows you to convert Markdown with a simple CLI
+      interface.{' '}
       <a
         href="https://github.com/marp-team/marp/"
         rel="noopener noreferrer"
         target="_blank"
       >
-        ...and more!
+        ... and much more!
       </a>
     </Card>
   ),
@@ -219,23 +221,23 @@ const cards = [
       icon="https://icongr.am/octicons/plug.svg?color=4a5568"
     >
       As a matter of fact,{' '}
-      <em>Marp is essentially just a converter for Markdown.</em> Marp ecosystem
-      is built on{' '}
+      <em>Marp is essentially just a converter for Markdown.</em> The Marp
+      ecosystem is built on{' '}
       <a
         href="https://marpit.marp.app"
         rel="noopener noreferrer"
         target="_blank"
       >
-        <b>Marpit framework</b>
+        <b>the Marpit framework</b>
       </a>
-      , the skinny framework for creating HTML + CSS slide deck. It has a
-      pluggable architecture and developer can{' '}
+      , a skinny framework for creating HTML/CSS slide decks. It has a pluggable
+      architecture and any developer can{' '}
       <a
         href="https://marpit.marp.app/usage?id=extend-marpit-by-plugins"
         rel="noopener noreferrer"
         target="_blank"
       >
-        extend features via plugin
+        extend features via plugins
       </a>
       .
     </Card>
@@ -246,15 +248,16 @@ const cards = [
       name="Fully open-source"
       icon="https://icongr.am/octicons/heart-fill.svg?color=4a5568"
     >
-      We are loving open source! All tools and related libraries by{' '}
+      The Marp team loves open source! All tools and related libraries are built
+      by{' '}
       <a
         href="https://github.com/marp-team"
         rel="noopener noreferrer"
         target="_blank"
       >
-        Marp team
+        the Marp team
       </a>{' '}
-      are licensed by MIT License.
+      and are MIT-licensed.
     </Card>
   ),
 ]
