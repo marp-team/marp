@@ -186,7 +186,7 @@ const cards = [
       name="Marp family: The official toolset"
       icon="https://icongr.am/octicons/package.svg?color=4a5568"
     >
-      The Marp ecosystem contains a rich toolset to assist your work. The{' '}
+      The Marp ecosystem contains a rich toolset to assist your work.{' '}
       <a
         href="https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode"
         rel="noopener noreferrer"
@@ -194,8 +194,8 @@ const cards = [
       >
         <b>Marp for VS Code</b>
       </a>{' '}
-      extension allows you to edit and preview slide Markdown and custom theming
-      in your editor. The{' '}
+      is an extension that allows you to edit and preview slide Markdown and
+      custom theming within VS Code.{' '}
       <a
         href="https://github.com/marp-team/marp-cli/"
         rel="noopener noreferrer"
@@ -203,7 +203,8 @@ const cards = [
       >
         <b>Marp CLI</b>
       </a>{' '}
-      tool allows you to convert Markdown with a simple CLI interface.{' '}
+      is a command line tool allows you to convert Markdown with a simple CLI
+      interface.{' '}
       <a
         href="https://github.com/marp-team/marp/"
         rel="noopener noreferrer"
