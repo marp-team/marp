@@ -51,7 +51,7 @@ const cards = [
       icon="https://icongr.am/octicons/markdown.svg?color=4a5568"
     >
       If you know how to write document with Markdown, you already know how to
-      write a Marp slide deck. Marp's format is based on{' '}
+      write a Marp slide deck. Marp&apos;s format is based on{' '}
       <a
         href="https://commonmark.org/"
         target="_blank"
@@ -75,8 +75,8 @@ const cards = [
       name="Directives and extended syntax"
       icon="https://icongr.am/octicons/code-square.svg?color=4a5568"
     >
-      Sometimes simple text content isn't enough to emphasize your voice, so
-      Marp supports a variety of{' '}
+      Sometimes simple text content isn&apos;t enough to emphasize your voice,
+      so Marp supports a variety of{' '}
       <a
         href="https://marpit.marp.app/directives"
         rel="noopener noreferrer"
@@ -133,8 +133,8 @@ const cards = [
         3 built-in themes called <code>default</code>, <code>gaia</code>, and{' '}
         <code>uncover</code>
       </a>
-      , to tell your story beautifully. If you'd rather customize your design,
-      you can use Marp to{' '}
+      , to tell your story beautifully. If you&apos;d rather customize your
+      design, you can use Marp to{' '}
       <a
         href="https://marpit.marp.app/theme-css?id=tweak-style-through-markdown"
         rel="noopener noreferrer"
