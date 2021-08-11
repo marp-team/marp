@@ -246,7 +246,7 @@ export const GetStarted = () => (
         <Card
           description="Marpit (independented from Marp) is the framework that transforms Markdown and CSS themes to slide decks composed of HTML/CSS. It is optimized to output only the minimum set of assets required."
           name="Marpit framework"
-          summary="The lightweight framework for creating slide decks from Markdown"
+          summary="The skinny framework for creating slide decks from Markdown"
           badge="https://img.shields.io/npm/v/@marp-team/marpit.svg?style=flat-square&amp;label=&amp;colorB=0288d1"
           href="https://marpit.marp.app/"
           className="marpit"
@@ -290,7 +290,7 @@ export const GetStarted = () => (
             rel="noopener"
             target="_blank"
           >
-            Marp GitHub Repository
+            Check out Marp on GitHub
           </Button>
         </p>
       </section>

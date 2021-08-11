@@ -75,8 +75,8 @@ const cards = [
       name="Directives and extended syntax"
       icon="https://icongr.am/octicons/code-square.svg?color=4a5568"
     >
-      Sometimes simple text content isn't enough to
-      emphasize your voice, so Marp supports a variety of{' '}
+      Sometimes simple text content isn't enough to emphasize your voice, so
+      Marp supports a variety of{' '}
       <a
         href="https://marpit.marp.app/directives"
         rel="noopener noreferrer"
@@ -133,8 +133,8 @@ const cards = [
         3 built-in themes called <code>default</code>, <code>gaia</code>, and{' '}
         <code>uncover</code>
       </a>
-      , to tell your story beautifully. If you'd rather customize your 
-      design, you can use Marp to{' '}
+      , to tell your story beautifully. If you'd rather customize your design,
+      you can use Marp to{' '}
       <a
         href="https://marpit.marp.app/theme-css?id=tweak-style-through-markdown"
         rel="noopener noreferrer"
@@ -159,9 +159,9 @@ const cards = [
       name="Export to HTML, PDF, and PowerPoint"
       icon="https://icongr.am/octicons/file.svg?color=4a5568"
     >
-      Have you finished writing? It&apos;s time to share your deck!
-      Marp can convert Markdown into presentation-ready HTML, PDF
-      and PowerPoint files directly! (Powered by{' '}
+      Have you finished writing? It&apos;s time to share your deck! Marp can
+      convert Markdown into presentation-ready HTML, PDF and PowerPoint files
+      directly! (Powered by{' '}
       <a
         href="https://www.google.com/chrome/"
         rel="noopener noreferrer"
@@ -186,23 +186,24 @@ const cards = [
       name="Marp family: The official toolset"
       icon="https://icongr.am/octicons/package.svg?color=4a5568"
     >
-      The Marp ecosystem contains a rich toolset to assist your work.{' '}
+      The Marp ecosystem contains a rich toolset to assist your work. The{' '}
       <a
         href="https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode"
         rel="noopener noreferrer"
         target="_blank"
       >
-        <b>The Marp for VS Code extension</b>
+        <b>Marp for VS Code</b>
       </a>{' '}
-      allows you to edit and preview slide Markdown and custom theming in your editor.{' '}
+      extension allows you to edit and preview slide Markdown and custom theming
+      in your editor. The{' '}
       <a
         href="https://github.com/marp-team/marp-cli/"
         rel="noopener noreferrer"
         target="_blank"
       >
-        <b>The Marp CLI</b>
+        <b>Marp CLI</b>
       </a>{' '}
-      allows you to convert Markdown with a simple CLI interface.{' '}
+      tool allows you to convert Markdown with a simple CLI interface.{' '}
       <a
         href="https://github.com/marp-team/marp/"
         rel="noopener noreferrer"
@@ -219,8 +220,8 @@ const cards = [
       icon="https://icongr.am/octicons/plug.svg?color=4a5568"
     >
       As a matter of fact,{' '}
-      <em>Marp is essentially just a converter for Markdown.</em> The Marp ecosystem
-      is built on{' '}
+      <em>Marp is essentially just a converter for Markdown.</em> The Marp
+      ecosystem is built on{' '}
       <a
         href="https://marpit.marp.app"
         rel="noopener noreferrer"
@@ -228,8 +229,8 @@ const cards = [
       >
         <b>the Marpit framework</b>
       </a>
-      , a skinny framework for creating HTML/CSS slide decks. It has a
-      pluggable architecture and any developer can{' '}
+      , a skinny framework for creating HTML/CSS slide decks. It has a pluggable
+      architecture and any developer can{' '}
       <a
         href="https://marpit.marp.app/usage?id=extend-marpit-by-plugins"
         rel="noopener noreferrer"
@@ -246,7 +247,8 @@ const cards = [
       name="Fully open-source"
       icon="https://icongr.am/octicons/heart-fill.svg?color=4a5568"
     >
-      The Marp team loves open source! All tools and related libraries are built by{' '}
+      The Marp team loves open source! All tools and related libraries are built
+      by{' '}
       <a
         href="https://github.com/marp-team"
         rel="noopener noreferrer"

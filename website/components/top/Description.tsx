@@ -14,12 +14,12 @@ export const Description = ({ example }: DescriptionProps) => {
   return (
     <section className="container mx-auto py-16">
       <h2 className="w-5/6 mx-auto text-gradient text-center text-3xl font-bold md:text-4xl">
-        Easily create beautiful slide decks with Markdown
+        Create beautiful slide decks using an intuitive Markdown experience
       </h2>
       <p className="w-5/6 mx-auto mt-8 md:text-lg lg:w-2/3">
-        Marp (also known as the Markdown Presentation Ecosystem) provides a great experience for
-        creating beautiful slide decks. You only have to focus on writing your story
-        in a Markdown document.
+        Marp (also known as the Markdown Presentation Ecosystem) provides a
+        great experience for creating beautiful slide decks. You only have to
+        focus on writing your story in a Markdown document.
       </p>
       <figure className="text-center m-8 mb-0">
         <Marp
