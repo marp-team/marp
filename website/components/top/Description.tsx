@@ -17,9 +17,9 @@ export const Description = ({ example }: DescriptionProps) => {
         Create beautiful slide decks using an intuitive Markdown experience
       </h2>
       <p className="w-5/6 mx-auto mt-8 md:text-lg lg:w-2/3">
-        Marp (also known as the Markdown Presentation Ecosystem) provides a
-        great experience for creating beautiful slide decks. You only have to
-        focus on writing your story in a Markdown document.
+        Marp (also known as the Markdown Presentation Ecosystem) provides an
+        intuitive experience for creating beautiful slide decks. You only have
+        to focus on writing your story in a Markdown document.
       </p>
       <figure className="text-center m-8 mb-0">
         <Marp
