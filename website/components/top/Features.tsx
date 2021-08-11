@@ -246,7 +246,7 @@ const cards = [
       name="Fully open-source"
       icon="https://icongr.am/octicons/heart-fill.svg?color=4a5568"
     >
-      We love open source! All tools and related libraries are built by{' '}
+      The Marp team loves open source! All tools and related libraries are built by{' '}
       <a
         href="https://github.com/marp-team"
         rel="noopener noreferrer"
