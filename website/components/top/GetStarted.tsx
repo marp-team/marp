@@ -143,9 +143,9 @@ export const GetStarted = () => (
           <mark>Tools and integrations</mark>
         </h3>
         <Card
-          description="Enhance VS Code's Markdown preview pane to support writing your beautiful presentation. You can see the slide deck output as soon as editting Markdown."
+          description="Enhance VS Code's Markdown preview pane to support writing your beautiful presentations. You can preview the slide deck output as soon as you edit its Markdown."
           name="Marp for VS Code"
-          summary="Create slide deck written in Marp Markdown, in VS Code"
+          summary="Create slide decks written in Marp Markdown right in VS Code"
           badge="https://img.shields.io/visual-studio-marketplace/v/marp-team.marp-vscode.svg?style=flat-square&amp;label=&amp;colorB=0288d1"
           href="https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode"
           screenShot="/assets/marp-for-vs-code.png"
@@ -173,7 +173,7 @@ export const GetStarted = () => (
           </Button>
         </Card>
         <Card
-          description="CLI is the swiss army knife for Marp ecosystem. Convert your Markdown into various formats, watch changes, launch server for on-demand conversion, and customize engine."
+          description="The Marp CLI is the swiss army knife of the Marp ecosystem. Convert your Markdown into various formats, watch changes, launch server for on-demand conversion, and customize the core engine."
           name="Marp CLI"
           summary="A CLI interface for Marp and Marpit based converters"
           badge="https://img.shields.io/npm/v/@marp-team/marp-cli.svg?style=flat-square&amp;label=&amp;colorB=0288d1"
@@ -216,9 +216,9 @@ export const GetStarted = () => (
           <mark>For developers</mark>
         </h3>
         <Card
-          description="All official Marp tools provided by us are using this core as the engine. It is based on Marpit framework, and includes some extended features to help creating beautiful slide deck."
+          description="All official Marp tooling uses this core as the engine. It is based on the Marpit framework and includes some extra features to help create beautiful slide decks."
           name="Marp Core"
-          summary="The core of Marp converter"
+          summary="The core of the Marp converter"
           badge="https://img.shields.io/npm/v/@marp-team/marp-core.svg?style=flat-square&amp;label=&amp;colorB=0288d1"
           href="https://github.com/marp-team/marp-core"
           className="core"
@@ -244,9 +244,9 @@ export const GetStarted = () => (
           </Button>
         </Card>
         <Card
-          description="Marpit, independented from Marp, is the skinny framework to transform Markdown + CSS theme to the deck composed of HTML + CSS. It has designed to output only minimum assets."
+          description="Marpit (independented from Marp) is the framework that transforms Markdown and CSS themes to slide decks composed of HTML/CSS. It is optimized to output only the minimum set of assets required."
           name="Marpit framework"
-          summary="The skinny framework for creating slide deck from Markdown"
+          summary="The lightweight framework for creating slide decks from Markdown"
           badge="https://img.shields.io/npm/v/@marp-team/marpit.svg?style=flat-square&amp;label=&amp;colorB=0288d1"
           href="https://marpit.marp.app/"
           className="marpit"
@@ -281,8 +281,8 @@ export const GetStarted = () => (
           </Button>
         </Card>
         <p className="text-center mt-4">
-          ...and find out all tools, integrations, examples at our GitHub
-          entrance repository!
+          Find all of the Marp tools, integrations, and examples in the GitHub
+          repository!
         </p>
         <p className="text-center text-sm text-foreground mt-4">
           <Button
@@ -290,7 +290,7 @@ export const GetStarted = () => (
             rel="noopener"
             target="_blank"
           >
-            Go to the entrance repository of Marp...
+            Marp GitHub Repository
           </Button>
         </p>
       </section>
