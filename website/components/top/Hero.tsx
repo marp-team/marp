@@ -39,7 +39,7 @@ export const Hero = () => (
           color="primary"
           outline
         >
-          Find out Marp tools at GitHub...
+          Find more Marp tools on GitHub...
         </Button>
       </p>
       <style jsx>{`
