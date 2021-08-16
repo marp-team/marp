@@ -235,19 +235,19 @@
   dependencies:
     unist-util-visit "^1.3.0"
 
-"@marp-team/marp-core@^2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@marp-team/marp-core/-/marp-core-2.1.0.tgz#211bcc79442add8c5c9c267f1285dfd0863193ca"
-  integrity sha512-xtJezVauhh78OoOHnAtPun2AWSIX8di16oggxJ9CH8uI3EcZ30sC4Z0PViZIx8x/xUR+ERHwobba4SIj5yGlQw==
+"@marp-team/marp-core@^2.1.1":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@marp-team/marp-core/-/marp-core-2.1.1.tgz#444fb1ca9c54ee66e9081a612e83dce9d532171d"
+  integrity sha512-RT3PDOGByu1lP2R46Kt7I/8KJQYwUnbAyF62IazxfZ8QHJWgI24MezEbkF5syjZ7+IaWJvHrobL7p29Y8zPQKQ==
   dependencies:
-    "@marp-team/marpit" "^2.1.0"
+    "@marp-team/marpit" "^2.1.1"
     "@marp-team/marpit-svg-polyfill" "^1.7.1"
     emoji-regex "^9.2.2"
     highlight.js "^10.7.3"
-    katex "^0.13.11"
+    katex "^0.13.13"
     markdown-it-emoji "^2.0.0"
     mathjax-full "^3.2.0"
-    postcss "^8.3.5"
+    postcss "^8.3.6"
     postcss-minify-params "^5.0.1"
     postcss-minify-selectors "^5.1.0"
     postcss-normalize-whitespace "^5.0.1"
@@ -259,18 +259,18 @@
   resolved "https://registry.yarnpkg.com/@marp-team/marpit-svg-polyfill/-/marpit-svg-polyfill-1.7.1.tgz#be98fcd3758c2be60980dc31f17116a90262cf03"
   integrity sha512-dSZLyPNzBY+lrcIPF1dC9dcYcU3MPFigtjQDxLZP48uWq5oaMSnPLGtDsiDjlqVHk6MAmMuw7qy1i4+tt9HhpA==
 
-"@marp-team/marpit@^2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@marp-team/marpit/-/marpit-2.1.0.tgz#29fe9fc5cea07a44ddb3b2e0491e685e5f27c6c9"
-  integrity sha512-PLgwDwjgtImo72wcM0BJYXxJ7YtDVS1XbGqzHZVLRh+NhA6JL/fat/7zxaouIg6gaBfmoOmPL3ecdZdMiadEbQ==
+"@marp-team/marpit@^2.1.1":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@marp-team/marpit/-/marpit-2.1.1.tgz#916b82a0074500202a5d9137b1447507525f9dbe"
+  integrity sha512-purTdrC6tj9NGQMFcRg8pycIAhihdqtOgE3mFteyKmyjK+DxU00vLMB4RVD3mewfuhNd5367Y5gmHek/0KlcBw==
   dependencies:
-    color-string "^1.5.5"
+    color-string "^1.6.0"
     cssesc "^3.0.0"
     js-yaml "^4.1.0"
     lodash.kebabcase "^4.1.1"
-    markdown-it "^12.1.0"
+    markdown-it "^12.2.0"
     markdown-it-front-matter "^0.2.3"
-    postcss "^8.3.5"
+    postcss "^8.3.6"
 
 "@microsoft/task-scheduler@^2.7.1":
   version "2.7.1"
@@ -1421,10 +1421,18 @@ color-name@^1.0.0, color-name@~1.1.4:
   resolved "https://registry.yarnpkg.com/color-name/-/color-name-1.1.4.tgz#c2a09a87acbde69543de6f63fa3995c826c536a2"
   integrity sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==
 
-color-string@^1.5.4, color-string@^1.5.5:
+color-string@^1.5.4:
   version "1.5.5"
   resolved "https://registry.yarnpkg.com/color-string/-/color-string-1.5.5.tgz#65474a8f0e7439625f3d27a6a19d89fc45223014"
   integrity sha512-jgIoum0OfQfq9Whcfc2z/VhCNcmQjWbey6qBX0vqt7YICflUmBCh9E9CiQD5GSJ+Uehixm3NUwHVhqUAWRivZg==
+  dependencies:
+    color-name "^1.0.0"
+    simple-swizzle "^0.2.2"
+
+color-string@^1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/color-string/-/color-string-1.6.0.tgz#c3915f61fe267672cb7e1e064c9d692219f6c312"
+  integrity sha512-c/hGS+kRWJutUBEngKKmk4iH3sD59MBkoxVapS/0wgpCz2u7XsNloxknyvBhzwEs1IbV36D9PwqLPJ2DTu3vMA==
   dependencies:
     color-name "^1.0.0"
     simple-swizzle "^0.2.2"
@@ -3446,10 +3454,10 @@ jsonfile@^6.0.1:
     array-includes "^3.1.2"
     object.assign "^4.1.2"
 
-katex@^0.13.11:
-  version "0.13.11"
-  resolved "https://registry.yarnpkg.com/katex/-/katex-0.13.11.tgz#66138ebf173f25ef130cd3a3ea3ea1d12a3f1362"
-  integrity sha512-yJBHVIgwlAaapzlbvTpVF/ZOs8UkTj/sd46Fl8+qAf2/UiituPYVeapVD8ADZtqyRg/qNWUKt7gJoyYVWLrcXw==
+katex@^0.13.13:
+  version "0.13.13"
+  resolved "https://registry.yarnpkg.com/katex/-/katex-0.13.13.tgz#15a796e95516869bc6d483443b58b2df872ee40f"
+  integrity sha512-cCMcil4jwMm7behpXGiQfXJA29sko/Gd/26iCsr53Dv5Jn2iHbHyEb14dm9uVrIijUXx6Zz1WhlFhHE6DckvkQ==
   dependencies:
     commander "^6.0.0"
 
@@ -3716,10 +3724,10 @@ markdown-it-front-matter@^0.2.3:
   resolved "https://registry.yarnpkg.com/markdown-it-front-matter/-/markdown-it-front-matter-0.2.3.tgz#d6fa0f4b362e02086dd4ce8219fadf3f4c9cfa37"
   integrity sha512-s9+rcClLmZsZc3YL8Awjg/YO/VdphlE20LJ9Bx5a8RAFLI5a1vq6Mll8kOzG6w/wy8yhFLBupaa6Mfd60GATkA==
 
-markdown-it@^12.1.0:
-  version "12.1.0"
-  resolved "https://registry.yarnpkg.com/markdown-it/-/markdown-it-12.1.0.tgz#7ad572caddd336bd27a68d20e86bac1fafe8fb20"
-  integrity sha512-7temG6IFOOxfU0SgzhqR+vr2diuMhyO5uUIEZ3C5NbXhqC9uFUHoU41USYuDFoZRsaY7BEIEei874Z20VMLF6A==
+markdown-it@^12.2.0:
+  version "12.2.0"
+  resolved "https://registry.yarnpkg.com/markdown-it/-/markdown-it-12.2.0.tgz#091f720fd5db206f80de7a8d1f1a7035fd0d38db"
+  integrity sha512-Wjws+uCrVQRqOoJvze4HCqkKl1AsSh95iFAeQDwnyfxM09divCBSXlDR1uTvyUP3Grzpn4Ru8GeCxYPM8vkCQg==
   dependencies:
     argparse "^2.0.1"
     entities "~2.1.0"
@@ -5047,10 +5055,10 @@ postcss@^7.0.14, postcss@^7.0.17, postcss@^7.0.2, postcss@^7.0.32, postcss@^7.0.
     source-map "^0.6.1"
     supports-color "^6.1.0"
 
-postcss@^8.1.6, postcss@^8.2.1, postcss@^8.3.5:
-  version "8.3.5"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.3.5.tgz#982216b113412bc20a86289e91eb994952a5b709"
-  integrity sha512-NxTuJocUhYGsMiMFHDUkmjSKT3EdH4/WbGF6GCi1NDGk+vbcUTun4fpbOqaPtD8IIsztA2ilZm2DhYCuyN58gA==
+postcss@^8.1.6, postcss@^8.2.1, postcss@^8.3.5, postcss@^8.3.6:
+  version "8.3.6"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.3.6.tgz#2730dd76a97969f37f53b9a6096197be311cc4ea"
+  integrity sha512-wG1cc/JhRgdqB6WHEuyLTedf3KIRuD0hG6ldkFEZNCjRxiC+3i6kkWUUbiJQayP28iwG35cEmAbe98585BYV0A==
   dependencies:
     colorette "^1.2.2"
     nanoid "^3.1.23"

@@ -27,7 +27,7 @@
     "wicg-inert": "^3.1.1"
   },
   "devDependencies": {
-    "@marp-team/marp-core": "^2.1.0",
+    "@marp-team/marp-core": "^2.1.1",
     "@next/bundle-analyzer": "^11.1.0",
     "@types/classnames": "^2.3.1",
     "@types/react": "^17.0.11",
