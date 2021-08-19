@@ -13,7 +13,7 @@ There are two ways to use Marp, through a command-line interface (**[Marp CLI][m
 | Editor                  	| VS Code          	| Any editor 	|
 | Live Preview            	| Yes              	| Yes                  	|
 | Export Method           	| Click to export  	| Command Line        	|
-| Use plugins? 	| No               	| Yes                 	|
+| Use Marp plugins? 	| No               	| Yes                 	|
 
 
 ### Marp for VS Code
