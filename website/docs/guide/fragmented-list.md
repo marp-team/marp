@@ -56,4 +56,4 @@ CommonMark's [ordered list marker](https://spec.commonmark.org/0.29/#ordered-lis
 
 > These are inherited from [Marpit framework](https://marpit.marp.app/fragmented-list).
 >
-> [This syntax only indicates that the list _should_ be fragmented](https://marpit.marp.app/fragmented-list?id=rendering). However, this list would be rendered as a normal list if the tools that are integrated with Marp did nothing with the syntax. In the official toolset, [Marp CLI](https://github.com/marp-team/marp-cli)'s default HTML template `bespoke` can reproduce a fragmented list as a build animation.
+> [This syntax only indicates that the list _should_ be fragmented](https://marpit.marp.app/fragmented-list?id=rendering). If the tools integrated with Marp do nothing with the syntax, this list would be rendered as a normal list. In the official toolset, [Marp CLI](https://github.com/marp-team/marp-cli)'s default HTML template `bespoke` can reproduce a fragmented list as a build animation.
