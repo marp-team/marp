@@ -16,7 +16,7 @@ export type LayoutProps = {
 }
 
 const defaultDescription =
-  'Marp, Markdown Presentation Ecosystem, provides the great experience to create beautiful slide deck. You only have to focus writing your story in Markdown document.'
+  'Marp (also known as the Markdown Presentation Ecosystem) provides an intuitive experience for creating beautiful slide decks. You only have to focus on writing your story in a Markdown document.'
 
 export const Layout: React.FC<LayoutProps> = ({
   activeItem,

@@ -145,23 +145,12 @@ KaTeX has faster rendering than MathJax and is well suited for Marp's live previ
 
 ### Enable MathJax
 
-#### Marp CLI
+Set [`math` global directive](/docs/guide/directives#global-directives) as `mathjax`.
 
-Set up a custom config file like following:
+```markdown
+---
+math: mathjax
+---
 
-```javascript
-// marp.config.js
-module.exports = {
-  options: {
-    math: 'mathjax',
-  },
-}
+Render inline math such as $ax^2+bc+c$.
 ```
-
-```bash
-marp -c marp.config.js marp-mathjax.md
-```
-
-#### Marp for VS Code
-
-Change **"Markdown &gt; Marp: Math Typesetting"** (`markdown.marp.mathTypesetting`) option in the extension setting to `mathjax`.
