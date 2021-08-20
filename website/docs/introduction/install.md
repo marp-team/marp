@@ -20,7 +20,7 @@ There are two ways to use Marp, through a command-line interface (**[Marp CLI][m
 
 If you are not familiar with the command line, use the VS Code extension without hesitation! All of the basic Marp features are available in Marp for VS Code.
 
-Even if you are CLI savvy, you may prefer to author presentations through Marp for VS Code. VS Code has many convenient features for authoring a slide deck, including Markdown syntax lookup and live preview.
+Even if you are CLI savvy, you may prefer to author presentations through Marp for VS Code. VS Code has many convenient features for authoring a slide deck, including Marp syntax completion and live preview.
 
 ### Marp CLI
 
