@@ -49,17 +49,20 @@ There is no difference how to define each directives, and you can mix definition
 
 **Global directives** are settings for the whole of slide deck.
 
-| Name             | Description                                                      |
-| ---------------- | ---------------------------------------------------------------- |
-| `theme`          | [Set a theme name for the slide deck ▶️](/docs/guide/theme)      |
-| `style`          | Specify CSS for tweaking theme                                   |
-| `headingDivider` | [Specify heading divider option ▶️](/docs/guide/heading-divider) |
-| `size`           | Choose the slide size preset provided by theme                   |
-| `title`          | Set a title of the slide deck (for HTML export)                  |
-| `description`    | Set a description of the slide deck (for HTML export)            |
-| `url`            | Set canonical URL for the slide deck (for HTML export)           |
-| `image`          | Set Open Graph image URL (for HTML export)                       |
-| `marp`           | Set whether or not enable Marp feature in VS Code                |
+| Name             | Description                                                                    |
+| ---------------- | ------------------------------------------------------------------------------ |
+| `theme`          | [Set a theme name for the slide deck ▶️](/docs/guide/theme)                    |
+| `style`          | Specify CSS for tweaking theme                                                 |
+| `headingDivider` | [Specify heading divider option ▶️](/docs/guide/heading-divider)               |
+| `size`           | Choose the slide size preset provided by theme                                 |
+| `math`           | [Choose a library to render math typesetting ▶️](/docs/guide/math-typesetting) |
+| `title`          | Set a title of the slide deck                                                  |
+| `author`         | Set an author of the slide deck                                                |
+| `description`    | Set a description of the slide deck                                            |
+| `keywords`       | Set comma-separated keywords for the slide deck                                |
+| `url`            | Set canonical URL for the slide deck (for HTML export)                         |
+| `image`          | Set Open Graph image URL (for HTML export)                                     |
+| `marp`           | Set whether or not enable Marp feature in VS Code                              |
 
 Marp will recognize only the last defined value if you set the value for a same global directive many times in multiple HTML comments.
 
