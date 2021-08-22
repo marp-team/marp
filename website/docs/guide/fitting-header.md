@@ -1,6 +1,6 @@
 # Fitting header
 
-When `<!--fit-->` comment has contained in the content of headings, it will be scaled to fit onto the slide size.
+When the `<!--fit-->` comment is placed in a heading, the heading will be scaled to fit onto a single line.
 
 ```markdown
 # <!-- fit --> Fitting header
@@ -10,7 +10,7 @@ When `<!--fit-->` comment has contained in the content of headings, it will be s
 # <!-- fit --> Fitting header
 ```
 
-The syntax is similar to [Deckset's `[fit]` keyword](https://docs.decksetapp.com/English.lproj/Formatting/01-headings.html), but Marp uses HTML comment to hide a keyword when rendered Markdown as the document.
+The syntax is similar to [Deckset's `[fit]` keyword](https://docs.decksetapp.com/English.lproj/Formatting/01-headings.html), but Marp uses an HTML comment to hide the keyword when the Markdown is rendered.
 
 > This feature is inherited from [Marp Core](https://github.com/marp-team/marp-core).
 
@@ -18,7 +18,7 @@ The syntax is similar to [Deckset's `[fit]` keyword](https://docs.decksetapp.com
 
 ### Takahashi-style
 
-You can easily make [Takahashi-style](https://en.wikipedia.org/wiki/Takahashi_method) slides like [Big](https://github.com/tmcw/big) presentation system by using fitting header. Combination with [heading divider](/docs/guide/heading-divider) will give the best efficiency for creating the deck.
+You can efficiently make [Takahashi-style](https://en.wikipedia.org/wiki/Takahashi_method) slides like the [Big](https://github.com/tmcw/big) presentation system by using the fitting header. Combining fitting headers with the [heading divider](/docs/guide/heading-divider) directive will allow you to write one slide per line.
 
 ```markdown
 ---
