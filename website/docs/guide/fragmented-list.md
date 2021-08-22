@@ -8,7 +8,7 @@ Fragmented lists are _only available if you export to HTML_. If you export to PD
 
 ## For bullet lists
 
-CommonMark's bullet list markers are `-`, `+`, and `*`  (https://spec.commonmark.org/0.29/#bullet-list-marker). If you use `*` as the marker, Marp will parse the list as a fragmented list.
+CommonMark's bullet list markers are `-`, `+`, and `*` (https://spec.commonmark.org/0.29/#bullet-list-marker). If you use `*` as the marker, Marp will parse the list as a fragmented list.
 
 <!-- prettier-ignore-start -->
 
@@ -32,7 +32,7 @@ CommonMark's bullet list markers are `-`, `+`, and `*`  (https://spec.commonmark
 
 ## For ordered list
 
-CommonMark's [ordered list marker](https://spec.commonmark.org/0.29/#ordered-list-marker) must have `.` or `)` after digits.  If you use `)` as the following character, then Marp will parse the ordered list as a fragmented list.
+CommonMark's [ordered list marker](https://spec.commonmark.org/0.29/#ordered-list-marker) must have `.` or `)` after digits. If you use `)` as the following character, then Marp will parse the ordered list as a fragmented list.
 
 <!-- prettier-ignore-start -->
 

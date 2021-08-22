@@ -72,9 +72,9 @@ If you set the same global directive multiple times, Marp will use the last defi
 
 | Name                 | Description                                                                                                                               |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| `paginate`           | [Show page number on the slide if set to `true` ▶️](#page-number)                                                                            |
-| `header`             | [Specify the content of the slide header ▶️](#header-and-footer)                                                                              |
-| `footer`             | [Specify the content of the slide footer ▶️](#header-and-footer)                                                                              |
+| `paginate`           | [Show page number on the slide if set to `true` ▶️](#page-number)                                                                         |
+| `header`             | [Specify the content of the slide header ▶️](#header-and-footer)                                                                          |
+| `footer`             | [Specify the content of the slide footer ▶️](#header-and-footer)                                                                          |
 | `class`              | Set [HTML `class` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/class) for the slide element `<section>` |
 | `backgroundColor`    | Set [`background-color` style](https://developer.mozilla.org/en-US/docs/Web/CSS/background-color) of the slide                            |
 | `backgroundImage`    | Set [`background-image` style](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image) of the slide                            |
@@ -87,7 +87,7 @@ If you set the same global directive multiple times, Marp will use the last defi
 
 Slides will inherit setting values of local directives from the immediately previous slide **unless** a local directive is explicitly set for the current slide. In other words, defined local directives will apply to both the defined page and subsequent pages.
 
-For example, the Markdown for this set of slides defines the `backgroundColor` directive on the second page. Because subsequent pages inherit local directives,  the third page will also have the same color.
+For example, the Markdown for this set of slides defines the `backgroundColor` directive on the second page. Because subsequent pages inherit local directives, the third page will also have the same color.
 
 ```markdown
 # Page 1
