@@ -119,8 +119,15 @@ Managed by [@marp-team](https://github.com/marp-team).
 We are supported by them! Thanks for our sponsors! :heart:
 
 <!-- Name and icons (Top-tier sponsors) -->
+<!-- TODO: Top-tier sponsors by organizations -->
+
 <table>
   <tr align="center">
+    <!-- Top-tier sponsors by organizations -->
+    <td>
+      <a href="https://github.com/zenarc"><img src="https://github.com/zenarc.png" width="64" height="64" alt="ZEN ARCHITECTS is sponsored yhatt" valign="middle"/></a>
+    </td>
+    <!-- Top-tier sponsors by sponsors -->
     <td>
       <a href="https://github.com/junta-m"><img src="https://github.com/junta-m.png" width="64" height="64" alt="junta-m is sponsored yhatt" valign="middle"/></a>
     </td>
@@ -129,12 +136,13 @@ We are supported by them! Thanks for our sponsors! :heart:
     </td>
   </tr>
   <tr>
+    <th><a href="https://github.com/zenarc">ZEN ARCHITECTS</a></th>
     <th><a href="https://github.com/junta-m">junta-m</a></th>
     <th><a href="https://github.com/cheese">cheese</a></th>
   </tr>
 </table>
 
-<!-- Small icons (Mid-tier sponsors) -->
+<!-- Small icons: Mid-tier sponsors -->
 <p>
   <a href="https://github.com/pataiji"><img src="https://github.com/pataiji.png" width="32" height="32" alt="pataiji is sponsored yhatt" /></a>
   <a href="https://github.com/miyachik"><img src="https://github.com/miyachik.png" width="32" height="32" alt="miyachik is sponsored yhatt" /></a>
