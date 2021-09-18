@@ -290,7 +290,7 @@ export const GetStarted = () => (
             rel="noopener"
             target="_blank"
           >
-            Check out Marp on GitHub
+            Check out Marp GitHub repository...
           </Button>
         </p>
       </section>
