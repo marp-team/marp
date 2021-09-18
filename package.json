@@ -35,15 +35,15 @@
   },
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.1",
-    "@types/node": "~14.17.4",
-    "@typescript-eslint/eslint-plugin": "^4.28.1",
-    "@typescript-eslint/parser": "^4.28.1",
-    "eslint": "^7.29.0",
+    "@types/node": "~14.17.17",
+    "@typescript-eslint/eslint-plugin": "^4.31.1",
+    "@typescript-eslint/parser": "^4.31.1",
+    "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-import-resolver-typescript": "^2.4.0",
-    "eslint-plugin-import": "^2.23.4",
-    "lage": "^0.30.0",
-    "prettier": "^2.3.2",
-    "typescript": "^4.3.4"
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-import": "^2.24.2",
+    "lage": "^0.32.4",
+    "prettier": "^2.4.1",
+    "typescript": "^4.4.3"
   }
 }
