@@ -1,6 +1,6 @@
 <div align="center">
   <p>
-    <a href="https://marp.app/"><img src="marp.png" alt="Marp" width="500" /></a>
+    <a href="https://marp.app/"><img src="marp.png" alt="Marp" width="450" /></a>
   </p>
   <p>
     <strong>Marp</strong>: Markdown Presentation Ecosystem
@@ -125,7 +125,7 @@ We are supported by them! Thanks for our sponsors! :heart:
 <!-- Logo and links for top-tier sponsors (The image should be up to 300px on a side) -->
 
 <p>
-  <a href="https://zenarchitects.co.jp/"><img src="https://user-images.githubusercontent.com/3993388/132221848-fd9978af-fbca-4382-8ba4-8c9cb1f9e46d.png" alt="ZEN ARCHITECTS Co.,Ltd." width="300" /></a>  
+  <a href="https://zenarchitects.co.jp/"><img src="https://user-images.githubusercontent.com/3993388/132221848-fd9978af-fbca-4382-8ba4-8c9cb1f9e46d.png" alt="ZEN ARCHITECTS Co.,Ltd." width="300" /></a>
 </p>
 
 <!-- [TODO] For mid-tier sponsors: As the smae format as personal spnsors, add small icons and links to GitHub organization. -->
