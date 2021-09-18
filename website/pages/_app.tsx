@@ -5,7 +5,7 @@ import 'focus-visible'
 import 'wicg-inert'
 import 'nprogress/nprogress.css'
 import 'simplebar/dist/simplebar.min.css'
-import 'swiper/swiper-bundle.css'
+import 'swiper/css/bundle'
 import 'css/index.css'
 
 const translating = () => {

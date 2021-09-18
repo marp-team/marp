@@ -4,7 +4,7 @@ import classNames from 'classnames'
 import postcss, { Plugin } from 'postcss'
 import postcssImportUrl from 'postcss-import-url'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import type { Swiper as SwiperClass } from 'swiper/core'
+import type { Swiper as SwiperClass } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { useFontFace } from 'utils/hooks/useFontFace'
 

@@ -1,12 +1,12 @@
 import remarkGfm from 'remark-gfm'
 import remarkParse from 'remark-parse'
 import remarkSlug from 'remark-slug'
-import unified from 'unified'
+import { unified, Processor } from 'unified'
 import { removePosition } from 'unist-util-remove-position'
 import { imageParagraphToFigure } from './image-paragrpah-to-figure'
 import { marpCodeBlock } from './marp-code-block'
 
-let parser: unified.Processor | undefined
+let parser: Processor | undefined
 
 export const parse = async (md: string) => {
   parser =
@@ -16,7 +16,7 @@ export const parse = async (md: string) => {
       .use(remarkGfm)
       .use(remarkSlug)
       .use(imageParagraphToFigure)
-      .use(marpCodeBlock)
+      .use([marpCodeBlock])
 
   return removePosition(await parser.run(parser.parse(md)), true)
 }
