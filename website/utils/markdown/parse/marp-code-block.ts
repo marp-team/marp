@@ -1,8 +1,9 @@
-import { Node, visit } from 'unist-util-visit'
-import { generateRenderedMarp } from 'components/Marp'
+import type { Literal } from 'unist'
+import { visit } from 'unist-util-visit'
+import { RenderedMarp, generateRenderedMarp } from 'components/Marp'
 
 export const marpCodeBlock = () => async (tree) => {
-  const marpNodes = new Set<Node>()
+  const marpNodes = new Set<Literal<string> & { marp?: RenderedMarp }>()
 
   visit(tree, 'code', (node) => {
     const lang = node.lang as string
@@ -14,7 +15,7 @@ export const marpCodeBlock = () => async (tree) => {
   await Promise.all(
     [...marpNodes].map((node) =>
       (async () => {
-        node.marp = await generateRenderedMarp(node.value as string)
+        node.marp = await generateRenderedMarp(node.value)
       })()
     )
   )
