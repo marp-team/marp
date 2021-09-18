@@ -1,3 +1,4 @@
+import { ArrowUpIcon } from '@primer/octicons-react'
 import { useCallback } from 'react'
 
 export const ScrollToTop = () => {
@@ -9,6 +10,7 @@ export const ScrollToTop = () => {
   return (
     <div className="scroll-to-top">
       <button onClick={handleClick} title="Scroll to top">
+        <ArrowUpIcon className="scroll-to-top-icon" />
         <span className="sr-only">Scroll to top</span>
       </button>
       <style jsx>{`
@@ -21,10 +23,6 @@ export const ScrollToTop = () => {
         button {
           @apply appearance-none text-white w-20 h-20 bg-marp-light align-top pointer-events-auto;
 
-          background-image: url('https://icongr.am/octicons/arrow-up.svg?color=ffffff');
-          background-position: 80% 80%;
-          background-repeat: no-repeat;
-          background-size: 35% 35%;
           clip-path: polygon(100% 0, 100% 100%, 0 100%);
         }
         button:hover {
@@ -36,6 +34,13 @@ export const ScrollToTop = () => {
         button:focus,
         button:hover:active {
           @apply bg-marp-dark;
+        }
+        button :global(.scroll-to-top-icon) {
+          height: auto;
+          left: 52%;
+          position: absolute;
+          top: 52%;
+          width: 35%;
         }
       `}</style>
     </div>

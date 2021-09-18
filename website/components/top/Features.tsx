@@ -1,54 +1,76 @@
+import {
+  CodeSquareIcon,
+  FileIcon,
+  HeartFillIcon,
+  MarkdownIcon,
+  PackageIcon,
+  PaintbrushIcon,
+  PlugIcon,
+} from '@primer/octicons-react'
+import type { ReactElement } from 'react'
+
 type CardProps = {
   name: string
-  icon: string
+  icon: string | ReactElement
   index: number
 }
 
-const Card: React.FC<CardProps> = ({ children, name, icon, index }) => (
-  <section className="card">
-    <div>
-      <img
-        className="mx-auto w-12 h-12 m-2 lg:w-16 lg:h-16"
-        src={icon}
-        alt={name}
-        width={48}
-        height={48}
-      />
-      <h2 className="text-gradient text-2xl text-center font-semibold my-4">
-        {name}
-      </h2>
-      <p className="text-sm lg:text-base">{children}</p>
-    </div>
-    <style jsx>{`
-      .card {
-        @apply flex justify-center items-center bg-white shadow-lg rounded-lg mx-4 my-8 p-6 mb-0 relative z-10;
+const Card: React.FC<CardProps> = ({ children, name, icon, index }) => {
+  let cardIcon = icon
 
-        grid-column: 1;
-      }
+  if (typeof icon === 'string') {
+    cardIcon = <img src={icon} alt={name} width={48} height={48} />
+  }
 
-      @screen md {
+  return (
+    <section className="card">
+      <div>
+        <div className="card-icon">{cardIcon}</div>
+        <h2 className="text-gradient text-2xl text-center font-semibold my-4">
+          {name}
+        </h2>
+        <p className="text-sm lg:text-base">{children}</p>
+      </div>
+      <style jsx>{`
         .card {
-          grid-row: ${index + 1} / span 2;
+          @apply flex justify-center items-center bg-white shadow-lg rounded-lg mx-4 my-8 p-6 mb-0 relative z-10;
+
+          grid-column: 1;
         }
 
-        .card:first-child {
-          @apply mt-0;
+        .card-icon {
+          @apply my-2 text-center text-gray-700;
         }
 
-        .card:nth-of-type(even) {
-          grid-column: 2;
+        .card-icon :global(svg),
+        .card-icon :global(img) {
+          @apply inline w-12 h-12 lg:w-16 lg:h-16;
         }
-      }
-    `}</style>
-  </section>
-)
+
+        @screen md {
+          .card {
+            grid-row: ${index + 1} / span 2;
+          }
+
+          .card:first-child {
+            @apply mt-0;
+          }
+
+          .card:nth-of-type(even) {
+            grid-column: 2;
+          }
+        }
+      `}</style>
+    </section>
+  )
+}
 
 const cards = [
   ({ index }) => (
     <Card
       index={index}
       name="Based on CommonMark"
-      icon="https://icongr.am/octicons/markdown.svg?color=4a5568"
+      icon={<MarkdownIcon verticalAlign="top" />}
     >
       If you know how to write document with Markdown, you already know how to
       write a Marp slide deck. Marp&apos;s format is based on{' '}
@@ -73,7 +95,7 @@ const cards = [
     <Card
       index={index}
       name="Directives and extended syntax"
-      icon="https://icongr.am/octicons/code-square.svg?color=4a5568"
+      icon={<CodeSquareIcon verticalAlign="top" />}
     >
       Sometimes simple text content isn&apos;t enough to emphasize your voice,
       so Marp supports a variety of{' '}
@@ -115,7 +137,7 @@ const cards = [
     <Card
       index={index}
       name="Built-in themes and CSS theming"
-      icon="https://icongr.am/octicons/paintbrush.svg?color=4a5568"
+      icon={<PaintbrushIcon verticalAlign="top" />}
     >
       <a
         href="https://github.com/marp-team/marp-core/"
@@ -157,7 +179,7 @@ const cards = [
     <Card
       index={index}
       name="Export to HTML, PDF, and PowerPoint"
-      icon="https://icongr.am/octicons/file.svg?color=4a5568"
+      icon={<FileIcon verticalAlign="top" />}
     >
       Have you finished writing? It&apos;s time to share your deck! Marp can
       convert Markdown into presentation-ready HTML, PDF and PowerPoint files
@@ -184,7 +206,7 @@ const cards = [
     <Card
       index={index}
       name="Marp family: The official toolset"
-      icon="https://icongr.am/octicons/package.svg?color=4a5568"
+      icon={<PackageIcon verticalAlign="top" />}
     >
       The Marp ecosystem contains a rich toolset to assist your work.{' '}
       <a
@@ -218,7 +240,7 @@ const cards = [
     <Card
       index={index}
       name="Pluggable architecture"
-      icon="https://icongr.am/octicons/plug.svg?color=4a5568"
+      icon={<PlugIcon verticalAlign="top" />}
     >
       As a matter of fact,{' '}
       <em>Marp is essentially just a converter for Markdown.</em> The Marp
@@ -246,7 +268,7 @@ const cards = [
     <Card
       index={index}
       name="Fully open-source"
-      icon="https://icongr.am/octicons/heart-fill.svg?color=4a5568"
+      icon={<HeartFillIcon verticalAlign="top" />}
     >
       The Marp team loves open source! All tools and related libraries are built
       by{' '}

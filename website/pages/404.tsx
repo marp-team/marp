@@ -1,3 +1,4 @@
+import { ArrowLeftIcon } from '@primer/octicons-react'
 import { Button } from 'components/Button'
 import { Layout } from 'components/Layout'
 
@@ -18,11 +19,7 @@ const error404 = () => (
             style={{ color: '#4a5568' }}
           >
             <span className="flex justify-center items-center text-lg">
-              <img
-                className="w-8 h-8 mr-2"
-                src="https://icongr.am/octicons/arrow-left.svg?color=4a5568"
-                alt="←"
-              />
+              <ArrowLeftIcon className="w-8 h-8 mr-2" />
               Back to previous
             </span>
           </Button>

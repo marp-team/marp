@@ -1,3 +1,4 @@
+import { ThreeBarsIcon, XIcon } from '@primer/octicons-react'
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
 import classNames from 'classnames'
 import FocusTrap from 'focus-trap-react'
@@ -112,11 +113,8 @@ export const Mobile: React.FC<LayoutProps> = ({
                 onClick={handleClose}
                 aria-expanded={open}
               >
-                <img
-                  src="https://icongr.am/octicons/x.svg?color=4a5568"
-                  alt="Close navigation"
-                  className="w-8 h-8"
-                />
+                <XIcon className="docs-btn-close-icon" />
+                <span className="sr-only">Close navigation</span>
               </button>
             </p>
             <Navigation manifest={manifest} slug={slug} />
@@ -132,11 +130,8 @@ export const Mobile: React.FC<LayoutProps> = ({
           aria-controls="docs-nav"
           aria-expanded={open}
         >
-          <img
-            src="https://icongr.am/octicons/three-bars.svg?color=4a5568"
-            alt="Toggle navigation"
-            className="w-8 h-8 p-1"
-          />
+          <ThreeBarsIcon className="docs-btn-open-drawer-icon" />
+          <span className="sr-only">Toggle navigation</span>
         </button>
         {breadcrumbs?.length && (
           <div className="docs-breadcrumb-wrapper">
@@ -166,7 +161,7 @@ export const Mobile: React.FC<LayoutProps> = ({
         }
 
         .docs-btn {
-          @apply appearance-none rounded;
+          @apply appearance-none rounded text-gray-700;
         }
         .docs-btn:hover,
         .docs-btn:focus {
@@ -177,6 +172,13 @@ export const Mobile: React.FC<LayoutProps> = ({
         }
         .docs-btn:focus-visible {
           @apply ring-offset-2 ring-1 ring-white;
+        }
+
+        .docs-btn :global(.docs-btn-close-icon) {
+          @apply w-8 h-8;
+        }
+        .docs-btn :glboal(.docs-btn-open-drawer-icon) {
+          @apply w-8 h-8 p-1;
         }
 
         #docs-nav {

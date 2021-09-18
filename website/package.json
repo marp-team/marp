@@ -10,6 +10,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@primer/octicons-react": "^15.1.0",
     "body-scroll-lock": "^4.0.0-beta.0",
     "classnames": "^2.3.1",
     "focus-trap-react": "^8.7.1",
@@ -39,11 +40,13 @@
     "gray-matter": "^4.0.3",
     "hast-util-whitespace": "^2.0.0",
     "next-transpile-modules": "^8.0.0",
+    "node-fetch": "^2.6.2",
     "null-loader": "^4.0.1",
     "postcss": "^8.3.5",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-import-url": "^7.0.0",
     "postcss-preset-env": "^6.7.0",
+    "postcss-url": "^10.1.3",
     "remark-gfm": "^2.0.0",
     "remark-parse": "^10.0.0",
     "remark-slug": "^7.0.0",

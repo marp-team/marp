@@ -1,3 +1,4 @@
+import { ChevronDownIcon } from '@primer/octicons-react'
 import classNames from 'classnames'
 import { useState } from 'react'
 import { Button } from 'components/Button'
@@ -37,23 +38,18 @@ export const Description = ({ example }: DescriptionProps) => {
           <a href="https://github.com/marp-team/marp-core">Marp Core</a>
         </figcaption>
       </figure>
-      <p className="text-center mt-8 mx-auto w-5/6">
+      <p className="show-example-section">
         <Button
-          className="text-sm"
+          className="show-example-btn"
           onClick={() => setShowExample((v) => !v)}
           aria-expanded={showExample}
         >
           {showExample ? 'Hide' : 'Show'} Markdown example...
-          <img
+          <ChevronDownIcon
             className={classNames(
-              'inline w-4 h-4 ml-1 transform transition-transform duration-300 md:w-6 md:h-6 md:-my-1',
-              showExample && '-rotate-180'
+              'show-example-btn-chevron',
+              showExample && 'show'
             )}
-            style={showExample ? {} : { verticalAlign: 'sub' }}
-            src="https://icongr.am/octicons/chevron-down.svg?color=4a5568"
-            alt=""
-            width={24}
-            height={24}
           />
         </Button>
       </p>
@@ -71,6 +67,31 @@ export const Description = ({ example }: DescriptionProps) => {
           {example.markdown}
         </CodeBlock>
       </div>
+      <style jsx>{`
+        .show-example-section {
+          @apply text-center mt-8 mx-auto w-5/6;
+        }
+        .show-example-section :global(.show-example-btn) {
+          @apply text-sm;
+        }
+        .show-example-section :global(.show-example-btn-chevron) {
+          @apply w-4 h-4 ml-1 transform transition-transform duration-300 md:w-6 md:h-6 md:-my-1;
+        }
+        .show-example-section :global(.show-example-btn-chevron:not(.show)) {
+          @apply relative;
+
+          top: -1px;
+        }
+        .show-example-section :global(.show-example-btn-chevron.show) {
+          @apply -rotate-180;
+        }
+
+        @screen md {
+          .show-example-section :global(.show-example-btn-chevron:not(.show)) {
+            top: -2px;
+          }
+        }
+      `}</style>
     </section>
   )
 }

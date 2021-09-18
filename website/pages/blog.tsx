@@ -1,5 +1,6 @@
 import fs from 'fs'
 import { basename } from 'path'
+import { ArrowRightIcon } from '@primer/octicons-react'
 import { InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -137,13 +138,7 @@ const Blog = ({ articles }: InferGetStaticPropsType<typeof getStaticProps>) => (
                 </>
               )}
               <p className="read-more">
-                <img
-                  className="inline w-8 h-8"
-                  src="https://icongr.am/octicons/arrow-right.svg?color=4a5568"
-                  alt="→"
-                  width={32}
-                  height={32}
-                />
+                <ArrowRightIcon className="read-more-icon" />
                 Read more...
               </p>
             </div>
@@ -176,6 +171,10 @@ const Blog = ({ articles }: InferGetStaticPropsType<typeof getStaticProps>) => (
 
         .read-more {
           @apply mt-6 text-right uppercase font-bold flex justify-end items-center transition-colors duration-300;
+        }
+
+        .read-more :global(.read-more-icon) {
+          @apply h-8 w-8;
         }
 
         @screen md {
