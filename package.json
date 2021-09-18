@@ -30,7 +30,7 @@
     "check:ts": "yarn lage check:ts",
     "format:write": "yarn -s format --write",
     "format": "prettier \"**/*.{css,js,jsx,json,md,mdx,scss,ts,tsx,yaml,yml}\"",
-    "lint:js": "eslint --ext .js,.jsx,.ts,.tsx --report-unused-disable-directives --cache .",
+    "lint:js": "eslint --report-unused-disable-directives --cache .",
     "website": "yarn workspace @marp-team/marp-website dev"
   },
   "devDependencies": {

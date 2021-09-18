@@ -9,6 +9,9 @@ module.exports = {
   },
   extends: ['eslint:recommended', 'plugin:import/recommended', 'prettier'],
   rules: {
+    // eslint-plugin-import cannot parse exports field in package.json.
+    // https://github.com/import-js/eslint-plugin-import/issues/1810
+    'import/no-unresolved': ['error', { ignore: ['^swiper'] }],
     'import/order': ['error', { alphabetize: { order: 'asc' } }],
   },
   overrides: [
