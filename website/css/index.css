@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --noise-image: url('/assets/noise.svg');
+}
+
 * {
   scrollbar-color: theme('colors.gray.500') theme('colors.gray.300');
   scrollbar-width: thin;
@@ -37,7 +41,7 @@ body {
 body::before {
   @apply fixed block inset-0 bg-background;
 
-  background-image: url('/assets/noise.png'),
+  background-image: var(--noise-image),
     linear-gradient(
       to bottom,
       theme('colors.gray.100'),

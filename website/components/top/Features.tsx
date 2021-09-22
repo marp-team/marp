@@ -299,7 +299,7 @@ export const Features = () => (
       .features::before {
         @apply absolute block inset-0;
 
-        background-image: url('/assets/noise.png'),
+        background-image: var(--noise-image),
           linear-gradient(
             -8deg,
             rgba(120, 197, 233, 0),

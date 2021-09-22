@@ -23,7 +23,7 @@ export const Footer = () => (
         @apply bg-gray-800 text-gray-500;
 
         min-height: 4.5rem;
-        background-image: url('/assets/noise.png');
+        background-image: var(--noise-image);
       }
     `}</style>
   </footer>

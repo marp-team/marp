@@ -35,6 +35,10 @@ module.exports = withBundleAnalyzer(
         type: 'json',
         use: 'yaml-loader',
       })
+      config.module.rules.push({
+        test: /\.svg$/,
+        use: '@svgr/webpack',
+      })
 
       if (!isServer) {
         config.module.rules.push({
