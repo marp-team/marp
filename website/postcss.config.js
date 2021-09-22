@@ -1,3 +1,4 @@
+const path = require('path')
 const fetch = require('node-fetch')
 const remoteInlineCache = new Map()
 
@@ -19,6 +20,12 @@ module.exports = {
       },
     },
     'postcss-url': [
+      {
+        filter: '**/assets/**/*.svg',
+        basePath: path.resolve(__dirname, './public'),
+        url: 'inline',
+        maxSize: 1,
+      },
       {
         filter: ({ url }) => url.startsWith('https://icongr.am/'),
         url: async ({ url }) => {

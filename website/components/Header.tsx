@@ -1,6 +1,6 @@
 import classNames from 'classnames'
-import Head from 'next/head'
 import Link from 'next/link'
+import MarpLogo from 'public/assets/marp-logo.svg'
 
 const handleMouseUp = (e: React.MouseEvent<HTMLElement>) =>
   e.currentTarget.blur()
@@ -9,9 +9,6 @@ export type ItemSlug = 'docs' | 'blog'
 
 export const Header = ({ activeItem }: { activeItem?: ItemSlug }) => (
   <>
-    <Head>
-      <link rel="preload" href="/assets/marp-logo.svg" as="image" />
-    </Head>
     <header className="z-50 flex justify-center bg-white shadow-sm fixed top-0 left-0 w-full h-16 md:h-20">
       <Link href="/">
         <a
@@ -20,13 +17,8 @@ export const Header = ({ activeItem }: { activeItem?: ItemSlug }) => (
           tabIndex={0}
           onMouseUp={handleMouseUp}
         >
-          <img
-            src="/assets/marp-logo.svg"
-            alt="Marp"
-            className="block h-16 w-16 p-2 md:p-3 md:h-20 md:w-20"
-            width={56}
-            height={56}
-          />
+          <MarpLogo className="block h-16 w-16 p-2 md:p-3 md:h-20 md:w-20" />
+          <span className="sr-only">Marp</span>
         </a>
       </Link>
       <nav className="ml-2">

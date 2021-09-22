@@ -299,7 +299,7 @@ export const GetStarted = () => (
       .get-started {
         @apply relative bg-marp-brand text-white;
 
-        background-image: url('/assets/noise.png'),
+        background-image: var(--noise-image),
           linear-gradient(
             -2deg,
             theme('colors.marp.darken'),
@@ -311,7 +311,7 @@ export const GetStarted = () => (
       .get-started::after {
         @apply block absolute inset-x-0;
 
-        background-image: url('/assets/noise.png'),
+        background-image: var(--noise-image),
           linear-gradient(to bottom, rgba(255, 255, 255, 0.4), transparent 95%);
         bottom: calc(100% - 5px);
         content: '';
