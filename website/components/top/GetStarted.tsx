@@ -136,8 +136,7 @@ const Card: React.FC<CardProps> = ({
 
 export const GetStarted = () => (
   <>
-    <span id="get-started" className="named-anchor" />
-    <div className="get-started flow-root">
+    <div id="get-started" className="get-started flow-root">
       <section className="container mx-auto py-10 px-8 lg:px-16">
         <h3 className="font-bold text-center text-2xl sm:text-3xl">
           <mark>Tools and integrations</mark>
