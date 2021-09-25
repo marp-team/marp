@@ -71,16 +71,16 @@ export const Header = ({ activeItem }: { activeItem?: ItemSlug }) => (
           @apply no-underline text-current outline-none;
         }
 
-        .header-item > img {
+        .header-item > :global(svg) {
           @apply transition-transform duration-200;
         }
 
-        .header-item:hover:active > img {
+        .header-item:hover:active > :global(svg) {
           @apply transform scale-125 shadow-none duration-0;
         }
 
         @media not all and (hover: none) {
-          .header-item:hover:active > img {
+          .header-item:hover:active > :global(svg) {
             @apply scale-110;
           }
         }
