@@ -12,19 +12,14 @@ const Heading: React.FC<{ level: number; id?: string }> = ({
   const HeadingTag: any = 'h' + level
 
   return (
-    <HeadingTag key={id} {...rest}>
-      {id && (
-        <>
-          <span id={id} className="named-anchor" aria-hidden />
-          {anchorLink && (
-            <a
-              aria-hidden
-              className="anchor-link"
-              href={`#${id}`}
-              tabIndex={-1}
-            ></a>
-          )}
-        </>
+    <HeadingTag id={id} {...rest}>
+      {id && anchorLink && (
+        <a
+          aria-hidden
+          className="anchor-link"
+          href={`#${id}`}
+          tabIndex={-1}
+        ></a>
       )}
       {children}
     </HeadingTag>

@@ -4,11 +4,22 @@
 
 :root {
   --noise-image: url('/assets/noise.svg');
+  --header-height: 4rem;
+  --anchor-margin: var(--header-height);
+}
+
+@screen md {
+  :root {
+    --header-height: 5rem;
+  }
 }
 
 * {
   scrollbar-color: theme('colors.gray.500') theme('colors.gray.300');
   scrollbar-width: thin;
+}
+*:target {
+  scroll-margin-top: var(--anchor-margin);
 }
 
 *::-webkit-scrollbar {
@@ -61,18 +72,6 @@ a:not(.custom-anchor):hover {
 
 a:not(.custom-anchor):hover:active {
   @apply text-marp-darkest duration-0;
-}
-
-.named-anchor {
-  @apply invisible block h-0 relative;
-
-  top: -4rem;
-}
-
-@screen md {
-  .named-anchor {
-    top: -5rem;
-  }
 }
 
 mark {

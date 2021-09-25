@@ -144,6 +144,11 @@ export const Mobile: React.FC<LayoutProps> = ({
       <article id="docs-article" className="container">
         {children}
       </article>
+      <style jsx global>{`
+        :root {
+          --anchor-margin: calc(var(--header-height) + 2.5rem);
+        }
+      `}</style>
       <style jsx>{`
         .docs-backdrop {
           @apply fixed inset-0 opacity-0 transition-opacity pointer-events-none cursor-pointer;
