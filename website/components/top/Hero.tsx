@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { Button } from 'components/Button'
 import Marp from 'public/assets/marp.svg'
 
-const heroBg = '/assets/hero-background.jpg' as const
+const heroBg = '/assets/hero-background.svg' as const
 
 export const Hero = () => (
   <>
