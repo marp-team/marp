@@ -13,7 +13,7 @@ theme: gaia
 _class: lead
 paginate: true
 backgroundColor: #fff
-backgroundImage: url('${absoluteUrl('/assets/hero-background.jpg')}')
+backgroundImage: url('${absoluteUrl('/assets/hero-background.svg')}')
 ---
 
 ![bg left:40% 80%](${absoluteUrl('/assets/marp.svg')})
