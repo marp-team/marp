@@ -1,6 +1,7 @@
 <div align="center">
   <p>
-    <a href="https://marp.app/"><img src="marp.png" alt="Marp" width="450" /></a>
+    <img src="marp.png#gh-light-mode-only" alt="Marp" width="450" />
+    <img src="marp-dark.png#gh-dark-mode-only" alt="Marp" width="450" />
   </p>
   <p>
     <strong>Marp</strong>: Markdown Presentation Ecosystem
