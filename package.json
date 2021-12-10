@@ -47,6 +47,6 @@
     "typescript": "^4.4.4"
   },
   "resolutions": {
-    "set-value": "^4.1.0"
+    "@rushstack/node-core-library": "^3.44.2"
   }
 }
