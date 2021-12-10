@@ -18,7 +18,7 @@ jobs:
         id: node_version
         run: echo "::set-output name=nvmrc::$(cat .nvmrc)"
 
-      - uses: actions/setup-node@v2-beta
+      - uses: actions/setup-node@v2
         with:
           node-version: ${{ steps.node_version.outputs.nvmrc }}
 
