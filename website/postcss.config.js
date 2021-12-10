@@ -1,5 +1,4 @@
 const path = require('path')
-const fetch = require('node-fetch')
 const remoteInlineCache = new Map()
 
 const encodeForInlining = (buffer) =>
@@ -31,6 +30,7 @@ module.exports = {
         url: async ({ url }) => {
           if (remoteInlineCache.has(url)) return remoteInlineCache.get(url)
 
+          const { default: fetch } = await import('node-fetch')
           const response = await fetch(url)
 
           if (!response.ok) {
