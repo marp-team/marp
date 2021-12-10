@@ -1,5 +1,4 @@
 import { Marp as MarpCore } from '@marp-team/marp-core'
-import { browser } from '@marp-team/marp-core/browser'
 import classNames from 'classnames'
 import postcss, { Plugin } from 'postcss'
 import postcssImportUrl from 'postcss-import-url'
@@ -39,7 +38,6 @@ export const generateRenderedMarp = async (markdown: string) => {
     container: false,
     script: false,
     printable: false,
-    math: 'mathjax', // KaTeX web fonts won't load in shadow DOM so we have to use prerendered MathJax SVG
   })
 
   const { css, html } = marp.render(markdown, { htmlAsArray: true })
@@ -76,7 +74,8 @@ export const Marp = ({
       html[page - 1] +
       `<style>${css}</style><style>:host{all:initial;}:host>[data-marpit-svg]{vertical-align:top;}</style>`
 
-    return browser(root)
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    return require('@marp-team/marp-core/browser').browser(root)
   }, [css, html, page])
 
   return (
