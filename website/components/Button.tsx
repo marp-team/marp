@@ -30,7 +30,7 @@ export const Button = ({
         Tag === 'a' && 'custom-anchor',
         'button',
         color,
-        { outline },
+        { btnOutline: outline },
         className as any
       )}
     >
@@ -77,10 +77,10 @@ export const Button = ({
         }
 
         /* Outline */
-        .button.outline {
+        .button.btnOutline {
           @apply text-foreground;
         }
-        .button.outline::after {
+        .button.btnOutline::after {
           @apply absolute block inset-0 pointer-events-none border-current border-2;
 
           border-radius: inherit;
@@ -88,15 +88,15 @@ export const Button = ({
           transition: inherit;
         }
 
-        .button.outline.primary {
+        .button.btnOutline.primary {
           @apply text-marp-darken bg-white;
 
           background-image: none;
         }
-        .button.outline.primary:hover {
+        .button.btnOutline.primary:hover {
           @apply bg-marp-darken text-white;
         }
-        .button.outline.primary:hover::after {
+        .button.btnOutline.primary:hover::after {
           @apply opacity-0;
         }
       `}</style>
