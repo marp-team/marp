@@ -7475,10 +7475,10 @@ tabbable@^5.2.1:
   resolved "https://registry.yarnpkg.com/tabbable/-/tabbable-5.2.1.tgz#e3fda7367ddbb172dcda9f871c0fdb36d1c4cd9c"
   integrity sha512-40pEZ2mhjaZzK0BnI+QGNjJO8UYx9pP5v7BGe17SORTO0OEuuaAwQTkAp8whcZvqon44wKFOikD+Al11K3JICQ==
 
-tailwindcss@^3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-3.0.2.tgz#9eea4c6dbe8d6d2c11363d313f4a4eba2baeb652"
-  integrity sha512-i1KpjYnGYftjzdAth6jA5iMPjhxpUkk5L6DafhfnQs+KiiWaThYxmk47Weh4oFH1mZqP6MuiQNHxtoRVPOraLg==
+tailwindcss@^3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-3.0.4.tgz#ecd1d5227d7a28e6ae1d314133544d8a63ba62d9"
+  integrity sha512-CGUynQc8CUsheRvc2FbWOiMaTYIM3kRh1IOfIdpbnmT29O9tAxQXqkmiy04KHaIiGJ1lIgmcT2qRKZPHhw0SKQ==
   dependencies:
     arg "^5.0.1"
     chalk "^4.1.2"
