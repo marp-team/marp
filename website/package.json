@@ -53,7 +53,7 @@
     "remark-parse": "^10.0.0",
     "remark-slug": "^7.0.0",
     "styled-jsx-plugin-postcss": "^4.0.1",
-    "tailwindcss": "^2.2.17",
+    "tailwindcss": "^3.0.4",
     "unified": "^10.1.0",
     "unist-util-remove-position": "^4.0.1",
     "unist-util-visit": "^4.1.0",

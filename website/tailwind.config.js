@@ -24,9 +24,7 @@ const gray = {
 }
 
 module.exports = {
-  mode: 'jit',
-  plugins: [],
-  purge: ['@(components|pages|utils)/**/*.[jt]s?(x)'],
+  content: ['@(components|pages|utils)/**/*.[jt]s?(x)'],
   theme: {
     borderColor: (theme) => ({ ...theme('colors'), DEFAULT: gray[300] }),
     colors: {
@@ -54,5 +52,4 @@ module.exports = {
     },
     extend: { transitionDuration: { 0: '0s' } },
   },
-  variants: { transitionDuration: ['responsive', 'hover'] },
 }
