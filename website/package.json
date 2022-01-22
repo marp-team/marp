@@ -42,7 +42,7 @@
     "gray-matter": "^4.0.3",
     "hast-util-whitespace": "^2.0.0",
     "next-transpile-modules": "^9.0.0",
-    "node-fetch": "^3.1.0",
+    "node-fetch": "^3.1.1",
     "null-loader": "^4.0.1",
     "postcss": "^8.3.9",
     "postcss-flexbugs-fixes": "^5.0.2",
