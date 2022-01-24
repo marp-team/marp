@@ -1,5 +1,5 @@
 import path from 'path'
-import dotProp from 'dot-prop'
+import { getProperty } from 'dot-prop'
 import {
   GetStaticPaths,
   GetStaticPropsContext,
@@ -37,9 +37,10 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
   const breadcrumbs = slug.map((sl, i) => {
     const slugs = slug.slice(0, i + 1)
     const key = slugs.join('/')
-    const data = dotProp.get<any>(
+    const data = getProperty(
       { pages: manifest },
-      slugs.flatMap((s) => ['pages', s]).join('.')
+      slugs.flatMap((s) => ['pages', s]).join('.'),
+      undefined as Record<string, string> | undefined
     )
     const hasLink = docsCtx().keys().includes(`./${key}.md`)
 
