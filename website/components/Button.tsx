@@ -37,7 +37,7 @@ export const Button = ({
       {children}
       <style jsx>{`
         .button {
-          @apply appearance-none no-underline inline-block relative select-none font-bold rounded-full shadow-md bg-white text-center;
+          @apply relative inline-block select-none appearance-none rounded-full bg-white text-center font-bold no-underline shadow-md;
 
           padding: 0.625em 1.25em;
           transition: color, background-color, opacity;
@@ -53,10 +53,10 @@ export const Button = ({
           @apply bg-background duration-150;
         }
         .button:hover:active {
-          @apply outline-none ring-offset-2 ring-1 ring-white bg-gray-300 duration-0;
+          @apply duration-0 bg-gray-300 outline-none ring-1 ring-white ring-offset-2;
         }
         .button:focus {
-          @apply outline-none ring-offset-2 ring-1 ring-white;
+          @apply outline-none ring-1 ring-white ring-offset-2;
         }
 
         /* Primary color */
@@ -81,7 +81,7 @@ export const Button = ({
           @apply text-foreground;
         }
         .button.btnOutline::after {
-          @apply absolute block inset-0 pointer-events-none border-current border-2;
+          @apply pointer-events-none absolute inset-0 block border-2 border-current;
 
           border-radius: inherit;
           content: '';

@@ -27,19 +27,19 @@ export const Breadcrumb = ({ breadcrumbs }: BreadcrumbProps) => (
     </div>
     <style jsx>{`
       .breadcrumb-wrapper {
-        @apply relative overflow-hidden h-6;
+        @apply relative h-6 overflow-hidden;
       }
       .breadcrumb-container {
         @apply absolute inset-0 flex items-center justify-end;
       }
       ol {
-        @apply flex-1 inline-flex flex-nowrap whitespace-nowrap;
+        @apply inline-flex flex-1 flex-nowrap whitespace-nowrap;
       }
       li {
         @apply block;
       }
       li::after {
-        @apply pl-6 bg-no-repeat;
+        @apply bg-no-repeat pl-6;
 
         background-image: url('https://icongr.am/octicons/triangle-right.svg?color=718096');
         background-position: 0.25rem center;

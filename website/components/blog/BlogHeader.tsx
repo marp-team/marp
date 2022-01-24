@@ -36,7 +36,7 @@ export const BlogHeader = ({
             <img
               src={`https://github.com/${github}.png`}
               alt={author || github}
-              className="h-16 w-16 rounded-full shadow-md bg-white mr-4"
+              className="mr-4 h-16 w-16 rounded-full bg-white shadow-md"
               width={64}
               height={64}
             />
@@ -63,18 +63,18 @@ export const BlogHeader = ({
       )}
       <style jsx>{`
         .author {
-          @apply mt-5 flex text-left items-center -mx-6;
+          @apply -mx-6 mt-5 flex items-center text-left;
         }
 
         .author::before,
         .author::after {
-          @apply block flex-1 h-px mx-6 bg-gray-400;
+          @apply mx-6 block h-px flex-1 bg-gray-400;
 
           content: '';
         }
 
         .author:empty {
-          @apply h-px mx-0;
+          @apply mx-0 h-px;
         }
 
         .author:empty::before,

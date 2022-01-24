@@ -15,13 +15,13 @@ export const ScrollToTop = () => {
       </button>
       <style jsx>{`
         .scroll-to-top {
-          @apply fixed right-0 bottom-0 z-50 pointer-events-none;
+          @apply pointer-events-none fixed right-0 bottom-0 z-50;
 
           filter: drop-shadow(0 0px 7px rgba(0, 0, 0, 0.3))
             drop-shadow(0 0px 4px rgba(0, 0, 0, 0.15));
         }
         button {
-          @apply appearance-none text-white w-20 h-20 bg-marp-light align-top pointer-events-auto;
+          @apply bg-marp-light pointer-events-auto h-20 w-20 appearance-none align-top text-white;
 
           clip-path: polygon(100% 0, 100% 100%, 0 100%);
         }

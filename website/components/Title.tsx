@@ -1,12 +1,12 @@
 export const Title: React.FC = ({ children }) => (
-  <section className="border-b bg-marp-brand text-white  py-3">
-    <h1 className="text-3xl font-bold text-center font-rounded uppercase">
+  <section className="bg-marp-brand border-b py-3  text-white">
+    <h1 className="font-rounded text-center text-3xl font-bold uppercase">
       {children}
       <style jsx>{`
         & :global(a),
         & :global(a:hover),
         & :global(a:hover:active) {
-          @apply no-underline text-current;
+          @apply text-current no-underline;
         }
         & :global(a:focus-visible) {
           @apply underline outline-none;

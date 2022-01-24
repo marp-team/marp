@@ -26,14 +26,14 @@ const Card: React.FC<CardProps> = ({ children, name, icon, index }) => {
     <section className="card">
       <div>
         <div className="card-icon">{cardIcon}</div>
-        <h2 className="text-gradient text-2xl text-center font-semibold my-4">
+        <h2 className="text-gradient my-4 text-center text-2xl font-semibold">
           {name}
         </h2>
         <p className="text-sm lg:text-base">{children}</p>
       </div>
       <style jsx>{`
         .card {
-          @apply flex justify-center items-center bg-white shadow-lg rounded-lg mx-4 my-8 p-6 mb-0 relative z-10;
+          @apply relative z-10 mx-4 my-8 mb-0 flex items-center justify-center rounded-lg bg-white p-6 shadow-lg;
 
           grid-column: 1;
         }
@@ -44,7 +44,7 @@ const Card: React.FC<CardProps> = ({ children, name, icon, index }) => {
 
         .card-icon :global(svg),
         .card-icon :global(img) {
-          @apply inline w-12 h-12 lg:w-16 lg:h-16;
+          @apply inline h-12 w-12 lg:h-16 lg:w-16;
         }
 
         @screen md {
@@ -286,7 +286,7 @@ const cards = [
 
 export const Features = () => (
   <div className="features">
-    <div className="container features-grid">
+    <div className="features-grid container">
       {cards.map((Card, i) => (
         <Card index={i} key={i} />
       ))}
@@ -297,7 +297,7 @@ export const Features = () => (
       }
 
       .features::before {
-        @apply absolute block inset-0;
+        @apply absolute inset-0 block;
 
         background-image: var(--noise-image),
           linear-gradient(
@@ -311,7 +311,7 @@ export const Features = () => (
       }
 
       .features-grid {
-        @apply grid mx-auto px-4;
+        @apply mx-auto grid px-4;
 
         grid-template-columns: 1fr;
         grid-template-rows: repeat(${cards.length + 1}, auto);

@@ -55,7 +55,7 @@ export const H2: React.FC = ({ children, ...rest }) => (
       }
 
       .divider {
-        @apply flex-1 ml-6 h-0 border-t border-gray-400;
+        @apply ml-6 h-0 flex-1 border-t border-gray-400;
       }
     `}</style>
   </Heading>

@@ -49,27 +49,27 @@ export const Navigation = ({
           @apply mt-0;
         }
         .category-title {
-          @apply font-rounded font-bold text-gray-700 text-xl uppercase mb-2;
+          @apply font-rounded mb-2 text-xl font-bold uppercase text-gray-700;
         }
 
         .page-link {
-          @apply block py-1 px-2 mt-1 rounded text-marp-darken outline-none;
+          @apply text-marp-darken mt-1 block rounded py-1 px-2 outline-none;
 
           transition-property: background-color, border-color, fill, stroke;
         }
         .page-link:hover,
         .page-link:focus {
-          @apply bg-gray-200 text-marp-dark duration-300;
+          @apply text-marp-dark bg-gray-200 duration-300;
         }
         .page-link:hover:active {
-          @apply bg-gray-300 duration-0;
+          @apply duration-0 bg-gray-300;
         }
         .page-link:focus-visible {
-          @apply ring-offset-2 ring-1 ring-white;
+          @apply ring-1 ring-white ring-offset-2;
         }
 
         .page-link.active {
-          @apply font-bold text-white bg-gradient-to-br from-marp-brand to-marp-dark duration-0;
+          @apply from-marp-brand to-marp-dark duration-0 bg-gradient-to-br font-bold text-white;
         }
         .page-link.active:hover:active {
           @apply bg-marp-dark from-marp-dark to-marp-darkest;

@@ -9,7 +9,7 @@ export type ItemSlug = 'docs' | 'blog'
 
 export const Header = ({ activeItem }: { activeItem?: ItemSlug }) => (
   <>
-    <header className="z-50 flex justify-center bg-white shadow-sm fixed top-0 left-0 w-full h-16 md:h-20">
+    <header className="fixed top-0 left-0 z-50 flex h-16 w-full justify-center bg-white shadow-sm md:h-20">
       <Link href="/">
         <a
           className="custom-anchor header-item"
@@ -17,12 +17,12 @@ export const Header = ({ activeItem }: { activeItem?: ItemSlug }) => (
           tabIndex={0}
           onMouseUp={handleMouseUp}
         >
-          <MarpLogo className="block h-16 w-16 p-2 md:p-3 md:h-20 md:w-20" />
+          <MarpLogo className="block h-16 w-16 p-2 md:h-20 md:w-20 md:p-3" />
           <span className="sr-only">Marp</span>
         </a>
       </Link>
       <nav className="ml-2">
-        <ul className="flex items-stretch h-16 md:h-20">
+        <ul className="flex h-16 items-stretch md:h-20">
           {process.env.NEXT_PUBLIC_DOCS && (
             <li className="relative flex items-center justify-center">
               <Link href="/docs">
@@ -68,7 +68,7 @@ export const Header = ({ activeItem }: { activeItem?: ItemSlug }) => (
       </nav>
       <style jsx>{`
         .header-item {
-          @apply no-underline text-current outline-none;
+          @apply text-current no-underline outline-none;
         }
 
         .header-item > :global(svg) {
@@ -76,7 +76,7 @@ export const Header = ({ activeItem }: { activeItem?: ItemSlug }) => (
         }
 
         .header-item:hover:active > :global(svg) {
-          @apply transform scale-125 shadow-none duration-0;
+          @apply duration-0 scale-125 transform shadow-none;
         }
 
         @media not all and (hover: none) {
@@ -86,7 +86,7 @@ export const Header = ({ activeItem }: { activeItem?: ItemSlug }) => (
         }
 
         .nav-item {
-          @apply font-rounded font-medium mx-2 uppercase text-lg leading-none outline-none;
+          @apply font-rounded mx-2 text-lg font-medium uppercase leading-none outline-none;
         }
 
         .nav-item::before {
@@ -115,7 +115,7 @@ export const Header = ({ activeItem }: { activeItem?: ItemSlug }) => (
         }
 
         .nav-item > span::after {
-          @apply absolute block inset-x-0 h-1 mt-1 transition-all duration-300;
+          @apply absolute inset-x-0 mt-1 block h-1 transition-all duration-300;
 
           content: '';
           top: 100%;
