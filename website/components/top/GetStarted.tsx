@@ -32,7 +32,7 @@ const Card: React.FC<CardProps> = ({
       rel="noopener noreferrer"
       className="custom-anchor card-link"
     >
-      <h4 className="inline-block font-bold text-gradient pr-3 pb-1 text-xl sm:text-2xl md:text-3xl">
+      <h4 className="text-gradient inline-block pr-3 pb-1 text-xl font-bold sm:text-2xl md:text-3xl">
         {name}
       </h4>
       {badge && (
@@ -43,7 +43,7 @@ const Card: React.FC<CardProps> = ({
           loading="lazy"
         />
       )}
-      <p className="text-gray-700 text-sm pt-1 leading-tight">{summary}</p>
+      <p className="pt-1 text-sm leading-tight text-gray-700">{summary}</p>
     </a>
     {screenshot && (
       <figure>
@@ -57,15 +57,15 @@ const Card: React.FC<CardProps> = ({
       </figure>
     )}
     <p className="mx-5 lg:my-3">{description}</p>
-    <p className="text-sm mx-5 my-4">{children}</p>
+    <p className="mx-5 my-4 text-sm">{children}</p>
     <style jsx>{`
       .card {
-        @apply bg-white text-foreground relative grid my-8 p-2 rounded-lg shadow-xl overflow-hidden;
+        @apply text-foreground relative my-8 grid overflow-hidden rounded-lg bg-white p-2 shadow-xl;
 
         grid-template-columns: 1fr;
       }
       .card::before {
-        @apply absolute right-0 w-40 h-40 opacity-25 transform bg-center bg-no-repeat bg-contain;
+        @apply absolute right-0 h-40 w-40 transform bg-contain bg-center bg-no-repeat opacity-25;
 
         content: '';
         top: -2rem;
@@ -87,7 +87,7 @@ const Card: React.FC<CardProps> = ({
         @apply relative col-start-1 col-end-1;
       }
       .card > figure {
-        @apply flex justify-center items-center mx-auto p-4;
+        @apply mx-auto flex items-center justify-center p-4;
       }
       .card > figure > img {
         @apply max-w-full;
@@ -96,7 +96,7 @@ const Card: React.FC<CardProps> = ({
       }
 
       .card-link {
-        @apply relative block p-5 transition-all duration-150 rounded z-10;
+        @apply relative z-10 block rounded p-5 transition-all duration-150;
       }
       .card-link:hover,
       .card-link:focus {
@@ -106,7 +106,7 @@ const Card: React.FC<CardProps> = ({
       }
       .card-link:hover:active,
       .card-link:focus {
-        @apply ring-offset-2 ring-1 ring-white outline-none duration-0;
+        @apply duration-0 outline-none ring-1 ring-white ring-offset-2;
       }
 
       @screen lg {
@@ -114,12 +114,12 @@ const Card: React.FC<CardProps> = ({
           grid-template-columns: 3fr 2fr;
         }
         .card > figure {
-          @apply col-start-2 col-end-2 w-full h-full object-contain px-6 py-0;
+          @apply col-start-2 col-end-2 h-full w-full object-contain px-6 py-0;
 
           grid-row: 1 / span 9999;
         }
         .card::before {
-          @apply w-64 h-64;
+          @apply h-64 w-64;
 
           top: -4rem;
         }
@@ -127,7 +127,7 @@ const Card: React.FC<CardProps> = ({
 
       @screen xl {
         .card {
-          @apply w-5/6 mx-auto;
+          @apply mx-auto w-5/6;
         }
       }
     `}</style>
@@ -138,7 +138,7 @@ export const GetStarted = () => (
   <>
     <div id="get-started" className="get-started flow-root">
       <section className="container mx-auto py-10 px-8 lg:px-16">
-        <h3 className="font-bold text-center text-2xl sm:text-3xl">
+        <h3 className="text-center text-2xl font-bold sm:text-3xl">
           <mark>Tools and integrations</mark>
         </h3>
         <Card
@@ -211,7 +211,7 @@ export const GetStarted = () => (
             GitHub
           </Button>
         </Card>
-        <h3 className="font-bold text-center text-2xl sm:text-3xl">
+        <h3 className="text-center text-2xl font-bold sm:text-3xl">
           <mark>For developers</mark>
         </h3>
         <Card
@@ -279,11 +279,11 @@ export const GetStarted = () => (
             GitHub
           </Button>
         </Card>
-        <p className="text-center mt-4">
+        <p className="mt-4 text-center">
           Find all of the Marp tools, integrations, and examples in the GitHub
           repository!
         </p>
-        <p className="text-center text-sm text-foreground mt-4">
+        <p className="text-foreground mt-4 text-center text-sm">
           <Button
             href="https://github.com/marp-team/marp/"
             rel="noopener"
@@ -296,7 +296,7 @@ export const GetStarted = () => (
     </div>
     <style jsx>{`
       .get-started {
-        @apply relative bg-marp-brand text-white;
+        @apply bg-marp-brand relative text-white;
 
         background-image: var(--noise-image),
           linear-gradient(
@@ -308,7 +308,7 @@ export const GetStarted = () => (
 
       .get-started::before,
       .get-started::after {
-        @apply block absolute inset-x-0;
+        @apply absolute inset-x-0 block;
 
         background-image: var(--noise-image),
           linear-gradient(to bottom, rgba(255, 255, 255, 0.4), transparent 95%);

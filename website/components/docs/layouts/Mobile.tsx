@@ -109,7 +109,7 @@ export const Mobile: React.FC<LayoutProps> = ({
           <div className="p-8">
             <p className="mb-6">
               <button
-                className="docs-btn w-8 h-8"
+                className="docs-btn h-8 w-8"
                 onClick={handleClose}
                 aria-expanded={open}
               >
@@ -123,7 +123,7 @@ export const Mobile: React.FC<LayoutProps> = ({
       </FocusTrap>
       <nav className="docs-topbar">
         <button
-          className="docs-btn w-8 h-8 m-1 relative z-20"
+          className="docs-btn relative z-20 m-1 h-8 w-8"
           id="docs-nav-toggle"
           type="button"
           onClick={toggle}
@@ -151,7 +151,7 @@ export const Mobile: React.FC<LayoutProps> = ({
       `}</style>
       <style jsx>{`
         .docs-backdrop {
-          @apply fixed inset-0 opacity-0 transition-opacity pointer-events-none cursor-pointer;
+          @apply pointer-events-none fixed inset-0 cursor-pointer opacity-0 transition-opacity;
 
           -webkit-tap-highlight-color: transparent;
           backdrop-filter: blur(2px);
@@ -176,18 +176,18 @@ export const Mobile: React.FC<LayoutProps> = ({
           @apply bg-gray-300 outline-none;
         }
         .docs-btn:focus-visible {
-          @apply ring-offset-2 ring-1 ring-white;
+          @apply ring-1 ring-white ring-offset-2;
         }
 
         .docs-btn :global(.docs-btn-close-icon) {
-          @apply w-8 h-8;
+          @apply h-8 w-8;
         }
         .docs-btn :glboal(.docs-btn-open-drawer-icon) {
-          @apply w-8 h-8 p-1;
+          @apply h-8 w-8 p-1;
         }
 
         #docs-nav {
-          @apply w-64 border-r fixed inset-0 bg-background overflow-hidden outline-none transform -translate-x-full;
+          @apply bg-background fixed inset-0 w-64 -translate-x-full transform overflow-hidden border-r outline-none;
 
           transition-property: box-shadow, transform;
           z-index: 60;
@@ -196,18 +196,18 @@ export const Mobile: React.FC<LayoutProps> = ({
           @apply duration-300;
         }
         #docs-nav.open {
-          @apply overflow-auto transform-none shadow-2xl;
+          @apply transform-none overflow-auto shadow-2xl;
         }
 
         .docs-topbar {
-          @apply fixed inset-0 h-10 bg-white shadow-sm flex items-stretch z-50;
+          @apply fixed inset-0 z-50 flex h-10 items-stretch bg-white shadow-sm;
           top: 4rem;
         }
         .docs-breadcrumb-wrapper {
-          @apply relative flex-1 my-1 mr-3 -ml-1 overflow-hidden flex items-center;
+          @apply relative my-1 mr-3 -ml-1 flex flex-1 items-center overflow-hidden;
         }
         .docs-breadcrumb-wrapper::before {
-          @apply block absolute inset-0 w-2 z-10;
+          @apply absolute inset-0 z-10 block w-2;
 
           content: '';
           background: linear-gradient(
@@ -224,7 +224,7 @@ export const Mobile: React.FC<LayoutProps> = ({
         }
 
         #docs-article {
-          @apply p-6 pt-16 mx-auto;
+          @apply mx-auto p-6 pt-16;
 
           --root-font-size: 0.9rem;
         }

@@ -9,13 +9,13 @@ export const Hero = () => (
     <Head>
       <link rel="preload" href={heroBg} as="image" />
     </Head>
-    <section className="py-16 px-4 border-b md:py-24 md:tracking-wider">
-      <h1 className="text-center font-rounded font-bold sm:text-xl md:text-2xl">
-        <Marp className="mx-auto w-4/5 h-auto max-w-xl mb-5 p-3" />
+    <section className="border-b py-16 px-4 md:py-24 md:tracking-wider">
+      <h1 className="font-rounded text-center font-bold sm:text-xl md:text-2xl">
+        <Marp className="mx-auto mb-5 h-auto w-4/5 max-w-xl p-3" />
         <span className="sr-only">Marp:</span>
         Markdown Presentation Ecosystem
       </h1>
-      <p className="text-center mt-10">
+      <p className="mt-10 text-center">
         <Button
           href="#get-started"
           color="primary"
@@ -24,7 +24,7 @@ export const Hero = () => (
           Get started!
         </Button>
       </p>
-      <p className="text-center mt-5">
+      <p className="mt-5 text-center">
         <Button
           href="https://github.com/marp-team/marp"
           target="_blank"

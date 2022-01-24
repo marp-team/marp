@@ -78,11 +78,11 @@ export const Desktop: React.FC<LayoutProps> = ({
             </div>
           </SimpleBar>
         </div>
-        <div className="w-px bg-gray-400 my-6" style={{ gridArea: 'border' }} />
+        <div className="my-6 w-px bg-gray-400" style={{ gridArea: 'border' }} />
         <div style={{ gridArea: 'contents' }}>
           <div className="px-8 py-10">
             {breadcrumbs?.length && (
-              <div className="bg-gray-300 rounded mb-6 p-2">
+              <div className="mb-6 rounded bg-gray-300 p-2">
                 <Breadcrumb breadcrumbs={breadcrumbs} />
               </div>
             )}
@@ -121,7 +121,7 @@ export const Desktop: React.FC<LayoutProps> = ({
         }
 
         .sidebar-nav-content {
-          @apply px-8 py-10 w-64 mx-auto;
+          @apply mx-auto w-64 px-8 py-10;
 
           min-width: 16rem;
         }

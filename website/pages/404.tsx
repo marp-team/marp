@@ -5,8 +5,8 @@ import { Layout } from 'components/Layout'
 const error404 = () => (
   <Layout title={['404 Not Found']} noIndex>
     <section className="text-center">
-      <div className="w-screen m-8 max-w-2xl sm:m-16">
-        <h1 className="font-rounded text-4xl text-gray-700 font-bold tracking-tighter">
+      <div className="m-8 w-screen max-w-2xl sm:m-16">
+        <h1 className="font-rounded text-4xl font-bold tracking-tighter text-gray-700">
           404 Not Found
         </h1>
         <hr className="my-6" />
@@ -18,8 +18,8 @@ const error404 = () => (
             outline
             style={{ color: '#4a5568' }}
           >
-            <span className="flex justify-center items-center text-lg">
-              <ArrowLeftIcon className="w-8 h-8 mr-2" />
+            <span className="flex items-center justify-center text-lg">
+              <ArrowLeftIcon className="mr-2 h-8 w-8" />
               Back to previous
             </span>
           </Button>

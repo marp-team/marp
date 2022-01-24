@@ -30,7 +30,7 @@
   @apply bg-gray-300;
 }
 *::-webkit-scrollbar-thumb {
-  @apply bg-gray-500 bg-clip-padding rounded-full;
+  @apply rounded-full bg-gray-500 bg-clip-padding;
 
   border: 1px solid transparent;
 }
@@ -46,11 +46,11 @@ html:not(.translating) {
 }
 
 body {
-  @apply relative text-foreground bg-background min-h-full;
+  @apply text-foreground bg-background relative min-h-full;
 }
 
 body::before {
-  @apply fixed block inset-0 bg-background;
+  @apply bg-background fixed inset-0 block;
 
   background-image: var(--noise-image),
     linear-gradient(
@@ -67,7 +67,7 @@ a:not(.custom-anchor) {
 }
 
 a:not(.custom-anchor):hover {
-  @apply underline text-marp-dark transition-colors duration-300;
+  @apply text-marp-dark underline transition-colors duration-300;
 }
 
 a:not(.custom-anchor):hover:active {
@@ -95,7 +95,7 @@ mark {
 
 @supports (background-clip: text) {
   .text-gradient {
-    @apply text-transparent bg-marp-brand bg-clip-text;
+    @apply bg-marp-brand bg-clip-text text-transparent;
 
     background-image: linear-gradient(
       -1deg,

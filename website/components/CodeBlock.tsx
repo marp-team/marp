@@ -128,14 +128,14 @@ export const CodeBlock = ({
         }
 
         .prism-code {
-          @apply text-sm border rounded-md leading-5 whitespace-pre overflow-x-auto overflow-y-hidden break-words;
+          @apply overflow-x-auto overflow-y-hidden whitespace-pre break-words rounded-md border text-sm leading-5;
 
           font-family: inherit;
           background-image: var(--noise-image);
         }
 
         .prism-code code {
-          @apply inline-block p-4 min-w-full font-mono;
+          @apply inline-block min-w-full p-4 font-mono;
         }
 
         .prism-code.line-number {
@@ -153,7 +153,7 @@ export const CodeBlock = ({
         }
 
         .prism-code.line-number li::before {
-          @apply absolute inset-0 w-12 pr-3 text-right text-gray-500 text-xs leading-5;
+          @apply absolute inset-0 w-12 pr-3 text-right text-xs leading-5 text-gray-500;
 
           content: counter(line);
         }
@@ -163,7 +163,7 @@ export const CodeBlock = ({
         }
 
         .copy-btn-container :global(button) {
-          @apply text-xs opacity-0 transition-opacity duration-300 w-24 py-1;
+          @apply w-24 py-1 text-xs opacity-0 transition-opacity duration-300;
         }
 
         .code-block-container:hover .copy-btn-container :global(button),

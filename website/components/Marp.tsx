@@ -153,14 +153,14 @@ export const MarpSlides = (props) => {
       )}
       <style jsx>{`
         .marp-slides {
-          @apply relative bg-gray-200 my-6 w-full max-w-sm mx-auto border shadow-lg lg:max-w-lg;
+          @apply relative my-6 mx-auto w-full max-w-sm border bg-gray-200 shadow-lg lg:max-w-lg;
         }
         .marp-slides.multiple {
           @apply px-8;
         }
 
         .marp-navigation {
-          @apply absolute appearance-none inset-y-0 w-8 z-10 bg-gray-300 text-gray-600 text-4xl outline-none;
+          @apply absolute inset-y-0 z-10 w-8 appearance-none bg-gray-300 text-4xl text-gray-600 outline-none;
 
           user-select: none;
         }
@@ -171,10 +171,10 @@ export const MarpSlides = (props) => {
           @apply text-gray-700;
         }
         .marp-navigation:disabled {
-          @apply text-opacity-30 pointer-events-none;
+          @apply pointer-events-none text-opacity-30;
         }
         .marp-navigation:focus-visible {
-          @apply ring-2 ring-marp-brand;
+          @apply ring-marp-brand ring-2;
         }
       `}</style>
     </section>

@@ -3,31 +3,31 @@ export const Typography: React.FC = ({ children }) => (
     {children}
     <style jsx>{`
       .typography {
-        @apply break-words leading-relaxed text-base;
+        @apply break-words text-base leading-relaxed;
       }
       .typography :global(p) {
         @apply my-4;
       }
       .typography :global(h1) {
-        @apply relative font-bold text-3xl mt-8 mb-5;
+        @apply relative mt-8 mb-5 text-3xl font-bold;
       }
       .typography :global(h2) {
-        @apply relative font-bold text-2xl mt-8 mb-5;
+        @apply relative mt-8 mb-5 text-2xl font-bold;
       }
       .typography :global(h3) {
-        @apply relative font-bold text-xl mt-8 mb-4;
+        @apply relative mt-8 mb-4 text-xl font-bold;
       }
       .typography :global(h4) {
-        @apply relative font-bold text-lg mt-6 mb-4;
+        @apply relative mt-6 mb-4 text-lg font-bold;
       }
       .typography :global(h5) {
-        @apply relative font-bold text-base mt-6 mb-4;
+        @apply relative mt-6 mb-4 text-base font-bold;
       }
       .typography :global(h6) {
-        @apply relative font-bold text-sm text-gray-600 mt-6 mb-4;
+        @apply relative mt-6 mb-4 text-sm font-bold text-gray-600;
       }
       .typography :global(.anchor-link) {
-        @apply absolute inset-0 w-5 -ml-5 overflow-hidden whitespace-nowrap my-auto bg-no-repeat bg-left hidden;
+        @apply absolute inset-0 my-auto -ml-5 hidden w-5 overflow-hidden whitespace-nowrap bg-left bg-no-repeat;
 
         background-size: 1rem 1rem;
         background-image: url('https://icongr.am/octicons/link.svg?color=718096');
@@ -44,7 +44,7 @@ export const Typography: React.FC = ({ children }) => (
         @apply my-8;
       }
       .typography :global(blockquote) {
-        @apply text-gray-600 border-l-4 border-marp-light pl-5 my-6;
+        @apply border-marp-light my-6 border-l-4 pl-5 text-gray-600;
       }
       .typography :global(blockquote blockquote) {
         border-left-width: 3px;
@@ -53,7 +53,7 @@ export const Typography: React.FC = ({ children }) => (
         @apply border-l-2;
       }
       .typography :global(ul) {
-        @apply list-disc ml-8 mr-3 my-6;
+        @apply my-6 ml-8 mr-3 list-disc;
       }
       .typography :global(ul ul) {
         list-style-type: circle;
@@ -62,7 +62,7 @@ export const Typography: React.FC = ({ children }) => (
         list-style-type: square;
       }
       .typography :global(ol:not(.code-block)) {
-        @apply list-decimal ml-8 mr-3 my-6;
+        @apply my-6 ml-8 mr-3 list-decimal;
       }
       .typography :global(ul ul),
       .typography :global(ul ol:not(._)),
@@ -74,7 +74,7 @@ export const Typography: React.FC = ({ children }) => (
         @apply my-1;
       }
       .typography :global(code:not(.code-block)) {
-        @apply bg-gray-200 border rounded border-gray-400;
+        @apply rounded border border-gray-400 bg-gray-200;
 
         font-size: 0.9em;
         padding: 0.15em 0.35em;
@@ -89,18 +89,18 @@ export const Typography: React.FC = ({ children }) => (
         @apply my-6;
       }
       .typography :global(figure img) {
-        @apply block mx-auto;
+        @apply mx-auto block;
         max-width: min(theme('screens.md'), 100%);
       }
       .typography :global(figcaption) {
-        @apply text-gray-600 text-sm text-center mx-auto w-11/12 my-4;
+        @apply mx-auto my-4 w-11/12 text-center text-sm text-gray-600;
       }
       .typography :global(table) {
-        @apply max-w-full mx-auto my-8;
+        @apply mx-auto my-8 max-w-full;
       }
       .typography :global(td),
       .typography :global(th) {
-        @apply p-2 border-b border-gray-400 text-sm;
+        @apply border-b border-gray-400 p-2 text-sm;
       }
       .typography :global(thead tr:last-child td),
       .typography :global(thead tr:last-child th) {

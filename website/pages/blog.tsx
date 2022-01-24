@@ -113,11 +113,11 @@ const Blog = ({ articles }: InferGetStaticPropsType<typeof getStaticProps>) => (
                 <h1 className="sr-only">{article.data.title}</h1>
               </a>
             </Link>
-            <div className="relative pointer-events-none">
-              <h1 className="text-3xl text-gradient font-bold" aria-hidden>
+            <div className="pointer-events-none relative">
+              <h1 className="text-gradient text-3xl font-bold" aria-hidden>
                 {article.data.title}
               </h1>
-              <p className="mt-2 text-gray-600 pb-4 border-b-2 mb-4 text-sm">
+              <p className="mt-2 mb-4 border-b-2 pb-4 text-sm text-gray-600">
                 <time dateTime={formatDateShort(date)}>{formatDate(date)}</time>
                 {article.data.author && ` by ${article.data.author}`}
               </p>
@@ -129,7 +129,7 @@ const Blog = ({ articles }: InferGetStaticPropsType<typeof getStaticProps>) => (
                         <img
                           src={article.data.image}
                           alt={article.data.title}
-                          className="bg-white border border-gray-100 shadow-md w-full max-w-sm"
+                          className="w-full max-w-sm border border-gray-100 bg-white shadow-md"
                         />
                       </figure>
                     )}
@@ -147,7 +147,7 @@ const Blog = ({ articles }: InferGetStaticPropsType<typeof getStaticProps>) => (
       })}
       <style jsx>{`
         .article-container {
-          @apply relative p-6 my-6;
+          @apply relative my-6 p-6;
         }
         .article-container-link {
           @apply absolute inset-0 rounded-lg transition-all duration-300;
@@ -155,10 +155,10 @@ const Blog = ({ articles }: InferGetStaticPropsType<typeof getStaticProps>) => (
 
         @media not all and (hover: none) {
           .article-container-link:hover {
-            @apply shadow-lg bg-white;
+            @apply bg-white shadow-lg;
           }
           .article-container-link:hover:active {
-            @apply ring-offset-2 ring-1 ring-white bg-white outline-none duration-0;
+            @apply duration-0 bg-white outline-none ring-1 ring-white ring-offset-2;
           }
           .article-container-link:hover + * .read-more {
             @apply text-marp-brand;
@@ -166,11 +166,11 @@ const Blog = ({ articles }: InferGetStaticPropsType<typeof getStaticProps>) => (
         }
 
         .article-container-link:focus {
-          @apply ring-offset-2 ring-1 ring-white bg-white outline-none duration-0;
+          @apply duration-0 bg-white outline-none ring-1 ring-white ring-offset-2;
         }
 
         .read-more {
-          @apply mt-6 text-right uppercase font-bold flex justify-end items-center transition-colors duration-300;
+          @apply mt-6 flex items-center justify-end text-right font-bold uppercase transition-colors duration-300;
         }
 
         .read-more :global(.read-more-icon) {

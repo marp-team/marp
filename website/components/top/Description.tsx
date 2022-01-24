@@ -14,24 +14,24 @@ export const Description = ({ example }: DescriptionProps) => {
 
   return (
     <section className="container mx-auto py-16">
-      <h2 className="w-5/6 mx-auto text-gradient text-center text-3xl font-bold md:text-4xl">
+      <h2 className="text-gradient mx-auto w-5/6 text-center text-3xl font-bold md:text-4xl">
         Create beautiful slide decks using an intuitive Markdown experience
       </h2>
-      <p className="w-5/6 mx-auto mt-8 md:text-lg lg:w-2/3">
+      <p className="mx-auto mt-8 w-5/6 md:text-lg lg:w-2/3">
         Marp (also known as the Markdown Presentation Ecosystem) provides an
         intuitive experience for creating beautiful slide decks. You only have
         to focus on writing your story in a Markdown document.
       </p>
-      <figure className="text-center m-8 mb-0">
+      <figure className="m-8 mb-0 text-center">
         <Marp
           rendered={example}
           page={1}
-          className="max-w-sm w-full inline-block"
+          className="inline-block w-full max-w-sm"
         />
         <Marp
           rendered={example}
           page={2}
-          className="max-w-sm w-full inline-block mt-5 lg:ml-5 lg:mt-0"
+          className="mt-5 inline-block w-full max-w-sm lg:ml-5 lg:mt-0"
         />
         <figcaption className="mt-5 text-sm text-gray-700">
           The slides above are from generated directly from{' '}
@@ -69,13 +69,13 @@ export const Description = ({ example }: DescriptionProps) => {
       </div>
       <style jsx>{`
         .show-example-section {
-          @apply text-center mt-8 mx-auto w-5/6;
+          @apply mx-auto mt-8 w-5/6 text-center;
         }
         .show-example-section :global(.show-example-btn) {
           @apply text-sm;
         }
         .show-example-section :global(.show-example-btn-chevron) {
-          @apply w-4 h-4 ml-1 transform transition-transform duration-300 md:w-6 md:h-6 md:-my-1;
+          @apply ml-1 h-4 w-4 transform transition-transform duration-300 md:-my-1 md:h-6 md:w-6;
         }
         .show-example-section :global(.show-example-btn-chevron:not(.show)) {
           @apply relative;

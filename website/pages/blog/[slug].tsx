@@ -53,13 +53,13 @@ const Blog = ({
         github={data.github}
         slug={slug}
       />
-      <article className="mt-8 mx-auto max-w-screen-lg">
+      <article className="mx-auto mt-8 max-w-screen-lg">
         {data.image && (
           <figure className="my-12">
             <img
               src={data.image}
               alt={data.title}
-              className="block bg-white mx-auto max-w-screen-md shadow-xl w-full"
+              className="mx-auto block w-full max-w-screen-md bg-white shadow-xl"
             />
           </figure>
         )}
