@@ -159,6 +159,7 @@ We are supported by them! Thanks for our sponsors! :heart:
   <a href="https://github.com/miyachik"><img src="https://github.com/miyachik.png" width="32" height="32" alt="miyachik is sponsored yhatt" /></a>
   <a href="https://github.com/mrkn"><img src="https://github.com/mrkn.png" width="32" height="32" alt="mrkn is sponsored yhatt" /></a>
   <a href="https://github.com/pataiji"><img src="https://github.com/pataiji.png" width="32" height="32" alt="pataiji is sponsored yhatt" /></a>
+  <a href="https://github.com/serima"><img src="https://github.com/serima.png" width="32" height="32" alt="serima is sponsored yhatt" /></a>
   <a href="https://github.com/synapticvoid"><img src="https://github.com/synapticvoid.png" width="32" height="32" alt="synapticvoid is sponsored yhatt" /></a>
   <a href="https://github.com/tsuemura"><img src="https://github.com/tsuemura.png" width="32" height="32" alt="tsuemura is sponsored yhatt" /></a>
   <a href="https://github.com/zhangchuck"><img src="https://github.com/zhangchuck.png" width="32" height="32" alt="zhangchuck is sponsored yhatt" /></a>
