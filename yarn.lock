@@ -1211,7 +1211,7 @@
   dependencies:
     unist-util-visit "^1.4.1"
 
-"@marp-team/marp-core@^3.0.2":
+"@marp-team/marp-core@^3.1.2":
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/@marp-team/marp-core/-/marp-core-3.1.2.tgz#763b6d02eb760cf313e2dbce01d6667810e89d34"
   integrity sha512-Hw5lv6XKg7H39eDNQogyS9iFJUrgukSutnVIwuMAmtBVv+LV3chei8OSj7bb/KAokF0E4/+v3s6xNgDtbG+yOw==
