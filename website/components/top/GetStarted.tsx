@@ -1,7 +1,7 @@
 import classNames from 'classnames'
 import { Button } from 'components/Button'
 
-type CardProps = {
+type CardProps = React.PropsWithChildren<{
   badge?: string
   className?: string
   description: string
@@ -11,7 +11,7 @@ type CardProps = {
   ssWidth?: number
   ssHeight?: number
   summary: string
-}
+}>
 
 const Card: React.FC<CardProps> = ({
   badge,

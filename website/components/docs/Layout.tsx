@@ -5,7 +5,9 @@ import { Desktop } from './layouts/Desktop'
 import { Mobile } from './layouts/Mobile'
 import { Layout } from 'components/Layout'
 
-export type LayoutProps = BreadcrumbProps & NavigationProps
+export type LayoutProps = React.PropsWithChildren<
+  BreadcrumbProps & NavigationProps
+>
 
 const useMediaIsomorphic =
   typeof window === 'undefined' ? useMedia : useMediaLayout

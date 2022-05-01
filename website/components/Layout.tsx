@@ -5,7 +5,7 @@ import { Header, ItemSlug } from 'components/Header'
 import { generateTitle } from 'utils/title'
 import { absoluteUrl } from 'utils/url'
 
-export type LayoutProps = {
+export type LayoutProps = React.PropsWithChildren<{
   activeItem?: ItemSlug
   canonical?: string
   description?: string
@@ -13,7 +13,7 @@ export type LayoutProps = {
   noIndex?: boolean
   title?: string | string[]
   type?: string
-}
+}>
 
 const defaultDescription =
   'Marp (also known as the Markdown Presentation Ecosystem) provides an intuitive experience for creating beautiful slide decks. You only have to focus on writing your story in a Markdown document.'

@@ -1,4 +1,4 @@
-import { createElement, FC } from 'react'
+import { createElement, FunctionComponent } from 'react'
 import RemarkReact, { Options } from 'remark-react'
 import { sanitize } from './sanitize'
 import { MarpSlides } from 'components/Marp'
@@ -6,8 +6,7 @@ import { Anchor } from 'components/markdown/Anchor'
 import * as Heading from 'components/markdown/Heading'
 import { Pre, toHastCodeHandler } from 'components/markdown/Pre'
 
-const remarkReactComponents: Options['remarkReactComponents'] &
-  Record<string, FC> = {
+const remarkReactComponents: Record<string, FunctionComponent<any>> = {
   a: Anchor,
   h1: Heading.H1,
   h2: Heading.H2,
@@ -20,7 +19,7 @@ const remarkReactComponents: Options['remarkReactComponents'] &
 }
 
 export const { Compiler: renderer } = new RemarkReact({
-  createElement,
+  createElement: createElement as Options['createElement'],
   remarkReactComponents,
   sanitize,
   toHast: { handlers: { code: toHastCodeHandler } },

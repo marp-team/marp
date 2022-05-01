@@ -1,4 +1,7 @@
-export const Typography: React.FC = ({ children }) => (
+// eslint-disable-next-line @typescript-eslint/ban-types
+export const Typography: React.FC<React.PropsWithChildren<{}>> = ({
+  children,
+}) => (
   <div className="typography">
     {children}
     <style jsx>{`
