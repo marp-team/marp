@@ -33,7 +33,10 @@ module.exports = withBundleAnalyzer(
       config.module.rules.push({
         test: /\.ya?ml$/,
         type: 'json',
-        use: 'yaml-loader',
+        use: {
+          loader: 'yaml-loader',
+          options: { asJSON: true },
+        },
       })
       config.module.rules.push({
         test: /\.svg$/,

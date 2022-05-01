@@ -9,11 +9,11 @@ import {
 } from '@primer/octicons-react'
 import type { ReactElement } from 'react'
 
-type CardProps = {
+type CardProps = React.PropsWithChildren<{
   name: string
   icon: string | ReactElement
   index: number
-}
+}>
 
 const Card: React.FC<CardProps> = ({ children, name, icon, index }) => {
   let cardIcon = icon

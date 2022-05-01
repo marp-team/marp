@@ -34,7 +34,10 @@ export const useFontFace = (fonts: string | string[]) => {
   }, [fnts, setStyles])
 }
 
-export const FontFaceProvider: React.FC = ({ children }) => {
+// eslint-disable-next-line @typescript-eslint/ban-types
+export const FontFaceProvider: React.FC<React.PropsWithChildren<{}>> = ({
+  children,
+}) => {
   const [styles, setStyles] = useState<string[]>([])
 
   return (
