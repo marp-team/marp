@@ -129,7 +129,7 @@ const Blog = ({ articles }: InferGetStaticPropsType<typeof getStaticProps>) => (
                         <img
                           src={article.data.image}
                           alt={article.data.title}
-                          className="w-full max-w-sm border border-gray-100 bg-white shadow-md"
+                          className="w-full max-w-sm bg-white shadow-md"
                         />
                       </figure>
                     )}
