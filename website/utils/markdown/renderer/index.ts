@@ -4,6 +4,7 @@ import { sanitize } from './sanitize'
 import { MarpSlides } from 'components/Marp'
 import { Anchor } from 'components/markdown/Anchor'
 import * as Heading from 'components/markdown/Heading'
+import { Image } from 'components/markdown/Image'
 import { Pre, toHastCodeHandler } from 'components/markdown/Pre'
 
 const remarkReactComponents: Record<string, FunctionComponent<any>> = {
@@ -16,6 +17,7 @@ const remarkReactComponents: Record<string, FunctionComponent<any>> = {
   h6: Heading.H6,
   'marp-slides': MarpSlides,
   pre: Pre,
+  img: Image,
 }
 
 export const { Compiler: renderer } = new RemarkReact({
