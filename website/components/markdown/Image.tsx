@@ -41,6 +41,6 @@ export const Image = ({ src, alt, ...rest }: ImageProps) => {
     )
   }
 
-  // eslint-disable-next-line jsx-a11y/alt-text
+   
   return <img src={src} alt={alt} {...rest} />
 }
