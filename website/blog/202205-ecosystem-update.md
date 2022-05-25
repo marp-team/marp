@@ -22,7 +22,7 @@ We are so excited to introduce a stable release of **[Marp Core](https://github.
 
 [We had released Marp Core v3.0.0 as a release candidate in November 2021.](https://github.com/marp-team/marp-core/releases/tag/v3.0.0) For a half year, it had been available in `next` tag as opt-in engine of Marp CLI, and had accepted feedbacks from community.
 
-This month [v3.2.0](https://github.com/marp-team/marp-core/releases/tag/v3.2.0) has become a stable release, and **we are starting a work to make v3 core the default gradually**..
+This month [v3.2.0](https://github.com/marp-team/marp-core/releases/tag/v3.2.0) has become a stable release, and **we are starting a work to make v3 core the default in downstream Marp tools gradually.**
 
 An updated Marp Core v3 has some major changes, but we also have worked to keep backward compatibility in many exist slides. The most of slide authors should not concern about regressions as long as your tweaks to the slide theme are not complicated.
 

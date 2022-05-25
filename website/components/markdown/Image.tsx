@@ -41,6 +41,5 @@ export const Image = ({ src, alt, ...rest }: ImageProps) => {
     )
   }
 
-   
   return <img src={src} alt={alt} {...rest} />
 }
