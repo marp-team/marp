@@ -8,6 +8,15 @@ export const Image = ({ src, alt, ...rest }: ImageProps) => {
   const isVideo = src.endsWith('.mp4')
 
   if (isVideo) {
+    let poster: string | undefined
+
+    const normalizedAlt = (alt || '')
+      .replace(/\bposter=([^\s]+)\s*\b/g, (_, matched) => {
+        poster = matched
+        return ''
+      })
+      .trim()
+
     return (
       <video
         className="markdown-video"
@@ -15,10 +24,12 @@ export const Image = ({ src, alt, ...rest }: ImageProps) => {
         playsInline
         controls
         loop
+        preload="metadata"
+        poster={poster}
         {...rest}
       >
         <a href={src} target="_blank" rel="noopener noreferrer">
-          {alt}
+          {normalizedAlt}
         </a>
         <style jsx>{`
           .markdown-video {
