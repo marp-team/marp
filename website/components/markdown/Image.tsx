@@ -8,13 +8,21 @@ export const Image = ({ src, alt, ...rest }: ImageProps) => {
   const isVideo = src.endsWith('.mp4')
 
   if (isVideo) {
+    let autoplay: boolean | undefined
+    let controls: boolean | undefined
     let poster: string | undefined
 
     const normalizedAlt = (alt || '')
-      .replace(/\bposter=([^\s]+)\s*\b/g, (_, matched) => {
-        poster = matched
-        return ''
-      })
+      .replace(
+        /\b(?:autoplay|controls|poster=([^\s]+))\s*\b/g,
+        (matched, value) => {
+          if (matched.startsWith('autoplay')) autoplay = true
+          if (matched.startsWith('controls')) controls = true
+          if (matched.startsWith('poster')) poster = value
+
+          return ''
+        }
+      )
       .trim()
 
     return (
@@ -22,10 +30,12 @@ export const Image = ({ src, alt, ...rest }: ImageProps) => {
         className="markdown-video"
         src={src}
         playsInline
-        controls
+        controls={controls}
         loop
         preload="metadata"
         poster={poster}
+        autoPlay={autoplay}
+        muted={autoplay}
         {...rest}
       >
         <a href={src} target="_blank" rel="noopener noreferrer">
