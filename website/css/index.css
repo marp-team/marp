@@ -6,6 +6,8 @@
   --noise-image: url('/assets/noise.svg');
   --header-height: 4rem;
   --anchor-margin: var(--header-height);
+
+  scroll-padding-top: var(--anchor-margin);
 }
 
 @screen md {
@@ -18,10 +20,6 @@
   scrollbar-color: theme('colors.gray.500') theme('colors.gray.300');
   scrollbar-width: thin;
 }
-*:target {
-  scroll-margin-top: var(--anchor-margin);
-}
-
 *::-webkit-scrollbar {
   width: 8px;
   height: 8px;
