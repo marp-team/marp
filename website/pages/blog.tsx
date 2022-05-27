@@ -13,6 +13,9 @@ import { absoluteUrl } from 'utils/url'
 
 const toJSON = (obj: any) => JSON.parse(JSON.stringify(obj))
 
+const escapeEntities = (raw: string) =>
+  raw.replace(/[&<>]/g, (matched) => `&#${matched.charCodeAt(0)};`)
+
 export const getStaticProps = async () => {
   const ctx = require.context('blog', false, /^.[\\/][^\\/]*\.md$/)
   const mdMetas = await Promise.all(
@@ -36,7 +39,7 @@ export const getStaticProps = async () => {
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog | Marp</title>
-    <link>${absoluteUrl('/blog')}</link>
+    <link>${escapeEntities(absoluteUrl('/blog').toString())}</link>
     <description>Marp, Markdown Presentation Ecosystem, provides the great experience to create beautiful slide deck. You only have to focus writing your story in Markdown document.</description>
     <language>en</language>
     <lastBuildDate>${articles[0].data.date.toUTCString()}</lastBuildDate>
@@ -47,10 +50,14 @@ export const getStaticProps = async () => {
       .map((article) =>
         `
       <item>
-        <guid>${absoluteUrl(`/blog/${article.slug}`)}</guid>
-        <title>${article.data.title}</title>
-        <link>${absoluteUrl(`/blog/${article.slug}`)}</link>
-        <description>${article.data.description}</description>
+        <guid>${escapeEntities(
+          absoluteUrl(`/blog/${article.slug}`).toString()
+        )}</guid>
+        <title>${escapeEntities(article.data.title)}</title>
+        <link>${escapeEntities(
+          absoluteUrl(`/blog/${article.slug}`).toString()
+        )}</link>
+        <description>${escapeEntities(article.data.description)}</description>
         <pubDate>${article.data.date.toUTCString()}</pubDate>
       </item>
     `.trim()
@@ -123,13 +130,16 @@ const Blog = ({ articles }: InferGetStaticPropsType<typeof getStaticProps>) => (
               </p>
               {summary && (
                 <>
-                  <div className="flex flex-col lg:flex-row" inert="">
+                  <div
+                    className="article-summary flex flex-col lg:flex-row"
+                    inert=""
+                  >
                     {article.data.image && (
-                      <figure className="mx-auto mb-6 lg:order-1 lg:mb-0 lg:ml-6 lg:w-full lg:max-w-sm">
+                      <figure className="mx-auto mb-6 lg:order-1 lg:mb-0 lg:ml-6 lg:w-full lg:max-w-[20rem]">
                         <img
                           src={article.data.image}
                           alt={article.data.title}
-                          className="w-full max-w-sm bg-white shadow-md"
+                          className="w-full max-w-[20rem] bg-white shadow-md lg:w-[100vw]"
                         />
                       </figure>
                     )}
@@ -167,6 +177,10 @@ const Blog = ({ articles }: InferGetStaticPropsType<typeof getStaticProps>) => (
 
         .article-container-link:focus {
           @apply duration-0 bg-white outline-none ring-1 ring-white ring-offset-2;
+        }
+
+        .article-summary :global(a) {
+          color: inherit;
         }
 
         .read-more {
