@@ -259,7 +259,7 @@ The custom transition can define through just a few conventional [`@keyframes` a
 
 It only has a relatively simple definition(s) but great flexibillity, and brings out boundless creativity of CSS animation! 🤩
 
-I'm going to write another article to describe details about how to declare transition animation later. Please look forward to it. ❤️
+**[👉 Marp CLI Experimental: How to make custom transition](/blog/how-to-make-custom-transition)**
 
 We are really looking forward to what creative transition effects our community will create!
 
