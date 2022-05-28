@@ -1,6 +1,6 @@
 ---
 title: 'Marp CLI Experimental: How to make custom transition'
-date: 2022-05-30
+date: 2022-05-28
 description: Marp CLI v2 has an experimental support for page transitions with many useful built-in effects. But if you had not satisfied to any effects? Make your own effects with CSS!
 author: Yuki Hattori
 github: yhatt
