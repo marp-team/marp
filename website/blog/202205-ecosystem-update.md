@@ -171,7 +171,7 @@ You can track the state of progress at **[marp-team/marp-cli#447](https://github
 
 ## Quick look
 
-![Marp CLI experimental transition showcase poster=/assets/202205-ecosystem-update/transition-showcase-poster.jpg](https://user-images.githubusercontent.com/3993388/169697466-283dd2f2-b6e5-4b33-86d4-b10cc0a6c3e9.mp4)
+![Marp CLI experimental transition showcase poster=/assets/202205-ecosystem-update/transition-showcase-poster.jpg controls](https://user-images.githubusercontent.com/3993388/169697466-283dd2f2-b6e5-4b33-86d4-b10cc0a6c3e9.mp4)
 
 - **33 built-in transitions**: Marp CLI has provided a lot of transition effects out of the box.
 - **Define custom transition via CSS**: Markdown author and theme designer can define the custom transition through `@keyframes` declaration in CSS.
@@ -259,7 +259,7 @@ The custom transition can define through just a few conventional [`@keyframes` a
 
 It only has a relatively simple definition(s) but great flexibillity, and brings out boundless creativity of CSS animation! 🤩
 
-I'm going to write another article to describe details about how to declare transition animation later. Please look forward to it. ❤️
+**[👉 Marp CLI Experimental: How to make custom transition](/blog/how-to-make-custom-transition)**
 
 We are really looking forward to what creative transition effects our community will create!
 
