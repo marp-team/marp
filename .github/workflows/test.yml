@@ -12,13 +12,13 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Detect Node version from .nvmrc
         id: node_version
         run: echo "::set-output name=nvmrc::$(cat .nvmrc)"
 
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
         with:
           node-version: ${{ steps.node_version.outputs.nvmrc }}
 
@@ -28,7 +28,7 @@ jobs:
           cd $HOME && yarn policies set-version $YARN_VERSION
           echo "::set-output name=cache_dir::$(yarn cache dir)"
 
-      - uses: actions/cache@v2
+      - uses: actions/cache@v3
         with:
           path: ${{ steps.yarn.outputs.cache_dir }}
           key: yarn_cache-${{ env.CACHE_PREFIX }}-${{ hashFiles('**/yarn.lock') }}
