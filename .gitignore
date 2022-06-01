@@ -265,6 +265,10 @@ tags
 # Ignore all local history of files
 .history
 
+# IDEA
+.idea
+*.iml
+
 ### Windows ###
 # Windows thumbnail cache files
 Thumbs.db
