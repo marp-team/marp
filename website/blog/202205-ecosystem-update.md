@@ -14,9 +14,17 @@ We are so excited to introduce a stable release of **[Marp Core](https://github.
 
 <!-- more -->
 
-> I would like to mention beforehand; **Following updates are not coming to [Marp for VS Code](https://github.com/marp-team/marp-vscode) extension** at the time of publication of this article. We have recognized Marp users using GUI are including a lot of beginners and non-developers, so we think should provide enough window time for them to review breaking changes.
->
-> Currently, we are planning that v3 core would be available as [pre-release extensions](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#prerelease-extensions), and you would become able to toggle opt in and out v3 features. ([marp-team/marp-vscode#318](https://github.com/marp-team/marp-vscode/issues/318))
+### Opt in the new core in a VS Code extension
+
+_(Updated in 2022-06-03)_
+
+In [Marp for VS Code](https://github.com/marp-team/marp-vscode) extension, this update is not yet coming to the current extension release, but you can try the new core in [a pre-released major update](https://github.com/marp-team/marp-vscode/releases/v2.0.0). Opt in the pre-released version from a **"Switch to Pre-release Version"** button in the extension detail.
+
+![Marp for VS Code v2 is available as a pre-released version](https://user-images.githubusercontent.com/3993388/171881511-f0e925a5-5b61-417f-b662-60437d1f0233.png ' ')
+
+We have recognized that Marp users who use GUI are including a lot of beginners and non-developers, so we think we should provide enough window time for them to review breaking changes.
+
+Try the pre-release extension, and prepare for the following ecosystem updates! You can easily roll back to the stable version that uses v2 core while the new extension is shipping as pre-release.
 
 # Marp Core v3
 
