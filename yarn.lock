@@ -1253,10 +1253,10 @@
   dependencies:
     unist-util-visit "^1.4.1"
 
-"@marp-team/marp-core@^3.2.0":
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/@marp-team/marp-core/-/marp-core-3.2.0.tgz#6f0f2537d043eaf9357cc0ad589cc8ffe3080bc7"
-  integrity sha512-LvpEaMhcFG5ZpPvm0FHywtdHQPLL7HGn/tMDHGG4W8P9+pZIHJf7GsgioLwGWpesYudK7cUXicJg4lFj5OuMhg==
+"@marp-team/marp-core@^3.2.1":
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/@marp-team/marp-core/-/marp-core-3.2.1.tgz#a8c6b3f09e71944614d98c069fafd14dc644982a"
+  integrity sha512-vEePHJvXbb1My0ERJvDoqsUbJQ0uUx0rnnS7VnvMnDPbTuHumnyogEhbIREU3jpYBW7dbkKX9aKCk5kBsquyuw==
   dependencies:
     "@marp-team/marpit" "^2.3.1"
     "@marp-team/marpit-svg-polyfill" "^2.0.0"
