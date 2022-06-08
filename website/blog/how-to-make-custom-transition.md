@@ -255,7 +255,43 @@ Each transition has a linear easing by default. You can specify [`animation-timi
 
 ## Duration
 
-We have a fixed duration `0.5s` as a default value. Custom duration can be set through `transition` local directive in Markdown (`<!-- transition: fade 2s -->`). But unfortunately, _there is no way to declare the default duration at the specific transition for now._
+_(2022-06-08 Update)_
+
+We have a fixed duration time `0.5s` as default for every transitions. If you want to set the different default duration for your custom transition, please set `--marp-transition-duration` property in the first keyframe (`from` or `0%`).
+
+<!-- prettier-ignore-start -->
+
+```css
+@keyframes marp-incoming-transition-gate {
+  from {
+    /* Set the default duration of "gate" transition as 1 second. */
+    --marp-transition-duration: 1s;
+
+    clip-path: inset(0 50%);
+  }
+  to { clip-path: inset(0); }
+}
+
+@keyframes marp-outgoing-transition-backward-gate {
+  from {
+    /* You also can set a different default for backward transition as necessary. */
+    /* --marp-transition-duration: 1.5s; */
+
+    clip-path: inset(0);
+  }
+  to { clip-path: inset(0 50%); }
+}
+@keyframes marp-incoming-transition-backward-gate {
+  from { z-index: -1; }
+  to { z-index: -1; }
+}
+```
+
+<!-- prettier-ignore-end -->
+
+The slide author can override the default duration at any time, through `transition` local directive in Markdown (`<!-- transition: fade 2s -->`).
+
+> Setting custom default duration is available in [Marp CLI v2.0.4](https://github.com/marp-team/marp-cli/releases/tag/v2.0.4) and later.
 
 ## Fixed property
 
@@ -291,7 +327,7 @@ If some of the properties required a fixed value while playing transition, try t
 
 A fixed property [`z-index: -1`](https://developer.mozilla.org/docs/Web/CSS/z-index) is helpful to send the incoming slide layer to back.
 
-> A fixed `z-index: 1` to the outgoing slide (send to front) is also getting the same result, but currently setting a positive number to `z-index` may bring the performance issue in Chrome.
+> A fixed `z-index: 1` to the outgoing slide (send to front) is also getting the same result, but currently setting a positive number to `z-index` may bring animation jank in Chrome.
 
 ## Change layer order during a transition
 
