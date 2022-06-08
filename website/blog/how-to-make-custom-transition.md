@@ -257,14 +257,14 @@ Each transition has a linear easing by default. You can specify [`animation-timi
 
 _(2022-06-08 Update)_
 
-We have a fixed duration time `0.5s` as default for every transitions. If you want to set the different default duration for your custom transition, please set `--marp-transition-duration` property in the first keyframe (`from` or `0%`).
+We have a fixed duration time of `0.5s` as default for every transition. If you want to set a different default duration for your custom transition, please set `--marp-transition-duration` property in the first keyframe (`from` or `0%`).
 
 <!-- prettier-ignore-start -->
 
 ```css
 @keyframes marp-incoming-transition-gate {
   from {
-    /* Set the default duration of "gate" transition as 1 second. */
+    /* Set the default duration of the "gate" transition as 1 second. */
     --marp-transition-duration: 1s;
 
     clip-path: inset(0 50%);
@@ -289,7 +289,7 @@ We have a fixed duration time `0.5s` as default for every transitions. If you wa
 
 <!-- prettier-ignore-end -->
 
-The slide author can override the default duration at any time, through `transition` local directive in Markdown (`<!-- transition: fade 2s -->`).
+The slide author can override the default duration at any time, through the `transition` local directive in Markdown (`<!-- transition: fade 2s -->`).
 
 > Setting custom default duration is available in [Marp CLI v2.0.4](https://github.com/marp-team/marp-cli/releases/tag/v2.0.4) and later.
 
