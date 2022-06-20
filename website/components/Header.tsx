@@ -9,7 +9,7 @@ export type ItemSlug = 'docs' | 'blog'
 
 export const Header = ({ activeItem }: { activeItem?: ItemSlug }) => (
   <>
-    <header className="fixed top-0 left-0 z-50 flex h-16 w-full justify-center bg-white shadow-sm md:h-20">
+    <header className="header">
       <Link href="/">
         <a
           className="custom-anchor header-item"
@@ -67,6 +67,14 @@ export const Header = ({ activeItem }: { activeItem?: ItemSlug }) => (
         </ul>
       </nav>
       <style jsx>{`
+        :global(:root) {
+          @apply [--header-height:theme(spacing.16)] md:[--header-height:theme(spacing.20)];
+        }
+
+        .header {
+          @apply fixed top-0 left-0 z-50 flex h-[var(--header-height)] w-full justify-center bg-white shadow-sm;
+        }
+
         .header-item {
           @apply text-current no-underline outline-none;
         }
