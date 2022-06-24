@@ -8,6 +8,19 @@ import { Breadcrumb } from 'components/docs/Breadcrumb'
 import { LayoutProps } from 'components/docs/Layout'
 import { Navigation } from 'components/docs/Navigation'
 
+const useOnPageLoad = (callback: () => void, immediate = false) => {
+  const router = useRouter()
+
+  useEffect(() => {
+    if (immediate) callback()
+  }, [callback]) // eslint-disable-line react-hooks/exhaustive-deps
+
+  useEffect(() => {
+    router.events.on('routeChangeComplete', callback)
+    return () => router.events.off('routeChangeComplete', callback)
+  }, [callback, router.events])
+}
+
 const useDrawer = (drawer?: HTMLElement) => {
   const router = useRouter()
   const [open, setOpen] = useState(false)
@@ -34,10 +47,7 @@ const useDrawer = (drawer?: HTMLElement) => {
     [open, handleOpen, handleClose]
   )
 
-  useEffect(() => {
-    router.events.on('routeChangeComplete', handleClose)
-    return () => router.events.off('routeChangeComplete', handleClose)
-  }, [handleClose, router.events])
+  useOnPageLoad(handleClose)
 
   useEffect(() => {
     if (drawer && open) {
@@ -48,8 +58,9 @@ const useDrawer = (drawer?: HTMLElement) => {
 
   useEffect(() => {
     if (open) {
-      const escKeyListener = ({ keyCode }: KeyboardEvent) =>
-        keyCode === 27 && handleClose()
+      const escKeyListener = ({ key }: KeyboardEvent) => {
+        if (key === 'Escape') handleClose()
+      }
 
       document.addEventListener('keydown', escKeyListener)
       return () => document.removeEventListener('keydown', escKeyListener)
@@ -82,6 +93,18 @@ export const Mobile: React.FC<LayoutProps> = ({
 }) => {
   const [drawer, setDrawer] = useState<HTMLElement | null>(null)
   const { active, handleClose, toggle, open } = useDrawer(drawer ?? undefined)
+
+  const breadcrumbsContainer = useRef<HTMLDivElement | null>(null)
+
+  useOnPageLoad(
+    useCallback(() => {
+      breadcrumbsContainer.current?.scrollTo({
+        left: breadcrumbsContainer.current.scrollWidth,
+        behavior: 'instant' as any,
+      })
+    }, []),
+    true
+  )
 
   return (
     <>
@@ -134,8 +157,8 @@ export const Mobile: React.FC<LayoutProps> = ({
           <span className="sr-only">Toggle navigation</span>
         </button>
         {breadcrumbs?.length && (
-          <div className="docs-breadcrumb-wrapper">
-            <div className="docs-breadcrumb-container">
+          <div ref={breadcrumbsContainer} className="docs-breadcrumb-container">
+            <div className="docs-breadcrumb">
               <Breadcrumb breadcrumbs={breadcrumbs} />
             </div>
           </div>
@@ -200,27 +223,25 @@ export const Mobile: React.FC<LayoutProps> = ({
         }
 
         .docs-topbar {
-          @apply fixed inset-0 z-50 flex h-10 items-stretch bg-white shadow-sm;
-          top: 4rem;
-        }
-        .docs-breadcrumb-wrapper {
-          @apply relative my-1 mr-3 -ml-1 flex flex-1 items-center overflow-hidden;
-        }
-        .docs-breadcrumb-wrapper::before {
-          @apply absolute inset-0 z-10 block w-2;
-
-          content: '';
-          background: linear-gradient(
-            to right,
-            theme('colors.white') 50%,
-            rgba(255, 255, 255, 0)
-          );
+          @apply fixed inset-0 top-16 z-50 flex h-10 items-stretch bg-white shadow-sm;
         }
         .docs-breadcrumb-container {
-          @apply w-full;
+          @apply flex flex-1 snap-x snap-proximity scroll-px-2 items-center overflow-x-auto;
+
+          mask: linear-gradient(to right, transparent, #000 0.5rem, #000)
+            no-repeat left top;
+          -ms-overflow-style: none;
+          scrollbar-width: none;
         }
-        .docs-breadcrumb-container :global(li:first-child) {
-          @apply pl-2;
+        .docs-breadcrumb-container::-webkit-scrollbar {
+          display: none;
+        }
+        .docs-breadcrumb {
+          @apply relative mr-auto px-2;
+          @apply after:pointer-events-none after:absolute after:inset-0 after:mx-2 after:snap-end;
+        }
+        .docs-breadcrumb :global(li) {
+          @apply snap-start;
         }
 
         #docs-article {

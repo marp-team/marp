@@ -9,29 +9,19 @@ export type BreadcrumbProps = {
 }
 
 export const Breadcrumb = ({ breadcrumbs }: BreadcrumbProps) => (
-  <div className="breadcrumb-wrapper">
-    <div className="breadcrumb-container">
-      <ol>
-        {breadcrumbs.map(({ key, title, link }) => (
-          <li key={key}>
-            {link ? (
-              <Link href={link}>
-                <a>{title}</a>
-              </Link>
-            ) : (
-              title
-            )}
-          </li>
-        ))}
-      </ol>
-    </div>
+  <ol>
+    {breadcrumbs.map(({ key, title, link }) => (
+      <li key={key}>
+        {link ? (
+          <Link href={link}>
+            <a>{title}</a>
+          </Link>
+        ) : (
+          title
+        )}
+      </li>
+    ))}
     <style jsx>{`
-      .breadcrumb-wrapper {
-        @apply relative h-6 overflow-hidden;
-      }
-      .breadcrumb-container {
-        @apply absolute inset-0 flex items-center justify-end;
-      }
       ol {
         @apply inline-flex flex-1 flex-nowrap whitespace-nowrap;
       }
@@ -53,5 +43,5 @@ export const Breadcrumb = ({ breadcrumbs }: BreadcrumbProps) => (
         @apply hidden;
       }
     `}</style>
-  </div>
+  </ol>
 )
