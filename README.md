@@ -131,7 +131,7 @@ We are supported by them! Thanks for our sponsors! :heart:
   <a href="https://zenarchitects.co.jp/"><img src="https://user-images.githubusercontent.com/3993388/132221848-fd9978af-fbca-4382-8ba4-8c9cb1f9e46d.png" alt="ZEN ARCHITECTS Co.,Ltd." width="300" /></a>
 </p>
 
-<!-- [TODO] For mid-tier sponsors: As the smae format as personal spnsors, add small icons and links to GitHub organization. -->
+<!-- [TODO] For mid-tier sponsors: As the same format as personal sponsors, add small icons and links to GitHub organization. -->
 
 ### Personal sponsors
 
@@ -153,6 +153,7 @@ We are supported by them! Thanks for our sponsors! :heart:
 
 <!-- Mid-tier sponsors -->
 <p>
+  <a href="https://github.com/Doctor-love"><img src="https://github.com/Doctor-love.png" width="32" height="32" alt="Doctor-love is sponsored yhatt" /></a>
   <a href="https://github.com/harsh183"><img src="https://github.com/harsh183.png" width="32" height="32" alt="harsh183 is sponsored yhatt" /></a>
   <a href="https://github.com/laughk"><img src="https://github.com/laughk.png" width="32" height="32" alt="laughk is sponsored yhatt" /></a>
   <a href="https://github.com/loic-yvonnet"><img src="https://github.com/loic-yvonnet.png" width="32" height="32" alt="loic-yvonnet is sponsored yhatt" /></a>
