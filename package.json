@@ -44,5 +44,8 @@
     "lage": "^1.7.3",
     "prettier": "^2.7.1",
     "typescript": "^4.7.4"
+  },
+  "resolutions": {
+    "parse-path": "^5.0.0"
   }
 }
