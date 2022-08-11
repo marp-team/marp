@@ -14,13 +14,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Detect Node version from .nvmrc
-        id: node_version
-        run: echo "::set-output name=nvmrc::$(cat .nvmrc)"
-
       - uses: actions/setup-node@v3
         with:
-          node-version: ${{ steps.node_version.outputs.nvmrc }}
+          node-version-file: '.nvmrc'
 
       - name: Install yarn
         id: yarn

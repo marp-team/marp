@@ -22,7 +22,6 @@ const useOnPageLoad = (callback: () => void, immediate = false) => {
 }
 
 const useDrawer = (drawer?: HTMLElement) => {
-  const router = useRouter()
   const [open, setOpen] = useState(false)
   const [active, setActive] = useState(false)
   const activeTimer = useRef<number>()
