@@ -72,7 +72,7 @@ const cards = [
       name="Based on CommonMark"
       icon={<MarkdownIcon verticalAlign="top" />}
     >
-      If you know how to write document with Markdown, you already know how to
+      If you know how to write a document with Markdown, you already know how to
       write a Marp slide deck. Marp&apos;s format is based on{' '}
       <a
         href="https://commonmark.org/"
