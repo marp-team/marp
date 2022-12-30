@@ -85,9 +85,7 @@ export const getStaticProps = async () => {
 const Blog = ({ articles }: InferGetStaticPropsType<typeof getStaticProps>) => (
   <Layout activeItem="blog" title={['Blog']}>
     <Title>
-      <Link href="/blog">
-        <a>Blog</a>
-      </Link>
+      <Link href="/blog">Blog</Link>
     </Title>
     <Head>
       <link
@@ -115,7 +113,7 @@ const Blog = ({ articles }: InferGetStaticPropsType<typeof getStaticProps>) => (
 
         return (
           <div key={article.slug} className="article-container">
-            <Link href={`/blog/${article.slug}`}>
+            <Link href={`/blog/${article.slug}`} legacyBehavior>
               <a className="article-container-link">
                 <h1 className="sr-only">{article.data.title}</h1>
               </a>

@@ -41,9 +41,7 @@ const Blog = ({
     title={[data.title || slug, 'Blog']}
   >
     <Title>
-      <Link href="/blog">
-        <a>Blog</a>
-      </Link>
+      <Link href="/blog">Blog</Link>
     </Title>
     <div className="container mx-auto px-6 py-12">
       <BlogHeader

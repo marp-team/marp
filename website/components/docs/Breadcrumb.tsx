@@ -11,15 +11,7 @@ export type BreadcrumbProps = {
 export const Breadcrumb = ({ breadcrumbs }: BreadcrumbProps) => (
   <ol>
     {breadcrumbs.map(({ key, title, link }) => (
-      <li key={key}>
-        {link ? (
-          <Link href={link}>
-            <a>{title}</a>
-          </Link>
-        ) : (
-          title
-        )}
-      </li>
+      <li key={key}>{link ? <Link href={link}>{title}</Link> : title}</li>
     ))}
     <style jsx>{`
       ol {

@@ -10,7 +10,7 @@ export type ItemSlug = 'docs' | 'blog'
 export const Header = ({ activeItem }: { activeItem?: ItemSlug }) => (
   <>
     <header className="header">
-      <Link href="/">
+      <Link href="/" legacyBehavior>
         <a
           className="custom-anchor header-item"
           role="link"
@@ -25,7 +25,7 @@ export const Header = ({ activeItem }: { activeItem?: ItemSlug }) => (
         <ul className="flex h-16 items-stretch md:h-20">
           {process.env.NEXT_PUBLIC_DOCS && (
             <li className="relative flex items-center justify-center">
-              <Link href="/docs">
+              <Link href="/docs" legacyBehavior>
                 <a
                   className={classNames('custom-anchor header-item nav-item', {
                     active: activeItem === 'docs',
@@ -40,7 +40,7 @@ export const Header = ({ activeItem }: { activeItem?: ItemSlug }) => (
             </li>
           )}
           <li className="relative flex items-center justify-center">
-            <Link href="/blog">
+            <Link href="/blog" legacyBehavior>
               <a
                 className={classNames('custom-anchor header-item nav-item', {
                   active: activeItem === 'blog',

@@ -18,11 +18,7 @@ export const BlogHeader = ({
 }: BlogHeaderProps) => (
   <div className="text-center text-gray-600">
     <Link href={`/blog/${slug}`}>
-      <a>
-        <h1 className="text-gradient text-3xl font-bold md:text-4xl">
-          {title}
-        </h1>
-      </a>
+      <h1 className="text-gradient text-3xl font-bold md:text-4xl">{title}</h1>
     </Link>
     {date && (
       <p className="mt-4">
