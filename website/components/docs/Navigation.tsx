@@ -24,7 +24,7 @@ export const Navigation = ({
                   const href = `/docs/${slug}/${pSlug}`
 
                   return (
-                    <Link href={href} key={pSlug}>
+                    <Link href={href} key={pSlug} legacyBehavior>
                       <a
                         className={classNames(
                           'page-link custom-anchor',
