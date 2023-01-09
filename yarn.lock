@@ -1281,17 +1281,17 @@
   dependencies:
     unist-util-visit "^1.4.1"
 
-"@marp-team/marp-core@^3.4.1":
-  version "3.4.1"
-  resolved "https://registry.yarnpkg.com/@marp-team/marp-core/-/marp-core-3.4.1.tgz#dca33b93b21b78c949300d21fe5d1f14beee5969"
-  integrity sha512-qV/NiXvzAPN9zcenS7S1vkCMQKqJ4OQ4+9WEAHgKkeXd4TMnOk+H67s8tOi/mZOGvPm9sy1+QKjbbg+FRneAwA==
+"@marp-team/marp-core@^3.4.2":
+  version "3.4.2"
+  resolved "https://registry.yarnpkg.com/@marp-team/marp-core/-/marp-core-3.4.2.tgz#07e9444c0be0fc969edfa33d4c31f304f18e7b2e"
+  integrity sha512-eJFK/Xk8d9Fe8yCwXreAA+QjSiQVSVLUP1FbscN2Jr0Jo0NRhvC8cob9yTq6XdPkkcZCyTW/v61W668eKMdaww==
   dependencies:
     "@marp-team/marpit" "^2.4.2"
     "@marp-team/marpit-svg-polyfill" "^2.0.0"
     highlight.js "^11.7.0"
     katex "^0.16.4"
     mathjax-full "^3.2.2"
-    postcss "^8.4.20"
+    postcss "^8.4.21"
     postcss-selector-parser "^6.0.11"
     xss "^1.0.14"
 
@@ -3928,9 +3928,9 @@ json-stable-stringify-without-jsonify@^1.0.1:
   integrity sha512-Bdboy+l7tA3OGW6FjyFHWkP5LuByj1Tk33Ljyq0axyzdk9//JSi2u3fP1QSmd1KNwq6VOKYGlAu87CisVir6Pw==
 
 json5@^1.0.1, json5@^2.1.2, json5@^2.2.1, json5@^2.2.2:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/json5/-/json5-2.2.2.tgz#64471c5bdcc564c18f7c1d4df2e2297f2457c5ab"
-  integrity sha512-46Tk9JiOL2z7ytNQWFLpj99RZkVgeHf87yGQKsIkaPz1qSH9UczKH1rO7K3wgRselo0tYMUNfecYpm/p1vC7tQ==
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/json5/-/json5-2.2.3.tgz#78cd6f1a19bdc12b73db5ad0c61efd66c1e29283"
+  integrity sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg==
 
 jsonfile@^4.0.0:
   version "4.0.0"
@@ -5337,10 +5337,10 @@ postcss@8.4.14:
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
 
-postcss@^8.4.18, postcss@^8.4.19, postcss@^8.4.20:
-  version "8.4.20"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.20.tgz#64c52f509644cecad8567e949f4081d98349dc56"
-  integrity sha512-6Q04AXR1212bXr5fh03u8aAwbLxAQNGQ/Q1LNa0VfOI06ZAlhPHtQvE4OIdpj4kLThXilalPnmDSOD65DcHt+g==
+postcss@^8.4.18, postcss@^8.4.19, postcss@^8.4.20, postcss@^8.4.21:
+  version "8.4.21"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.21.tgz#c639b719a57efc3187b13a1d765675485f4134f4"
+  integrity sha512-tP7u/Sn/dVxK2NnruI4H9BG+x+Wxz6oeZ1cJ8P6G/PZY0IKk4k/63TDsQf2kQq3+qoJeLm2kIBUNlZe3zgb4Zg==
   dependencies:
     nanoid "^3.3.4"
     picocolors "^1.0.0"
