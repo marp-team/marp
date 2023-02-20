@@ -1281,13 +1281,13 @@
   dependencies:
     unist-util-visit "^1.4.1"
 
-"@marp-team/marp-core@^3.4.2":
-  version "3.4.2"
-  resolved "https://registry.yarnpkg.com/@marp-team/marp-core/-/marp-core-3.4.2.tgz#07e9444c0be0fc969edfa33d4c31f304f18e7b2e"
-  integrity sha512-eJFK/Xk8d9Fe8yCwXreAA+QjSiQVSVLUP1FbscN2Jr0Jo0NRhvC8cob9yTq6XdPkkcZCyTW/v61W668eKMdaww==
+"@marp-team/marp-core@^3.5.0":
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/@marp-team/marp-core/-/marp-core-3.5.0.tgz#4f60cebd81172d07e986f0296ac3bd88ef2d9235"
+  integrity sha512-1PcPSvhh3VvHFyh8pMKslCpTuDY7hiAtPKdHb+yZCheTdd0+IUOeOI9YRW3mb3ge9/d65CoOGeATPBzuGYuUYQ==
   dependencies:
     "@marp-team/marpit" "^2.4.2"
-    "@marp-team/marpit-svg-polyfill" "^2.0.0"
+    "@marp-team/marpit-svg-polyfill" "^2.1.0"
     highlight.js "^11.7.0"
     katex "^0.16.4"
     mathjax-full "^3.2.2"
@@ -1295,10 +1295,10 @@
     postcss-selector-parser "^6.0.11"
     xss "^1.0.14"
 
-"@marp-team/marpit-svg-polyfill@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@marp-team/marpit-svg-polyfill/-/marpit-svg-polyfill-2.0.0.tgz#4efbf248c86b48f2dac0d5e6b4d8bf5bac7dd0b2"
-  integrity sha512-KIp5EaUkwFaeYOAb0b9B7+3XAjZYAUDJi3LRSnH1y27jJY2TCKrXnKIATfPJXSkn9QjTy69fbwCZ07B93QhupA==
+"@marp-team/marpit-svg-polyfill@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@marp-team/marpit-svg-polyfill/-/marpit-svg-polyfill-2.1.0.tgz#40e7ce3a2aa7496748541cc7053e6779d2f866ac"
+  integrity sha512-VqCoAKwv1HJdzZp36dDPxznz2JZgRjkVSSPHpCzk72G2N753F0HPKXjevdjxmzN6gir9bUGBgMD1SguWJIi11A==
 
 "@marp-team/marpit@^2.4.2":
   version "2.4.2"
