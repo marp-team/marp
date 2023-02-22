@@ -1,18 +1,19 @@
 ---
-title: 'Marp CLI Experimental: How to make custom transition'
+title: 'Marp CLI: How to make custom transition'
 date: 2022-05-28
-description: Marp CLI v2 has experimental support for page transitions with many useful built-in effects. But if you had not satisfied with any effects? Make your effects with CSS!
+description: Marp CLI v2.4.0+ and Marp for VS Code v2.5.0+ have a stable support for page transitions with many useful built-in effects. But if you had not satisfied with any effects? Make your effects with CSS!
 author: Yuki Hattori
 github: yhatt
 image: /og-images/how-to-make-custom-transition.jpg
 ---
 
-[built-in]: https://github.com/marp-team/marp-cli/issues/447#built-in
-[transition-proposal]: https://github.com/WICG/shared-element-transitions
+[readme]: https://github.com/marp-team/marp-cli/blob/main/docs/bespoke-transitions/README.md
+[built-in]: https://github.com/marp-team/marp-cli/blob/main/docs/bespoke-transitions/README.md#built-in-transitions
+[view transitions api]: https://www.w3.org/TR/css-view-transitions-1/
 
-**[Marp CLI v2](/blog/202205-ecosystem-update#marp-cli-v2)** has supported [brand-new page transitions for a `bespoke` HTML template as experimental](/blog/202205-ecosystem-update#slide-transition-experiment).
+**[Marp CLI v2](/blog/202205-ecosystem-update#marp-cli-v2)** has supported [brand-new page transitions for the `bespoke` HTML template](/blog/202205-ecosystem-update#slide-transition-experiment). You can use this stable transition support in either Marp CLI v2.4.0+ or Marp for VS Code v2.5.0+.
 
-Effective transitions will help make a dramatic presentation. Adding a touch of effects to slides is often common in great talks. By using Marp CLI with `--bespoke.transition` (and `--preview`) option, you can start to use [varied 33 transition effects][built-in] out of the box, by [just a simple definition `transition` directive](/blog/202205-ecosystem-update#transition-local-directive).
+Effective transitions will help make a dramatic presentation. Adding a touch of effects to slides is often common in great talks. By viewing HTML slide in the browser that supports [View Transitions API] (Chrome 111+), or Marp CLI with `--preview` option, you can start to use [varied 33 transition effects][built-in] out of the box, by [just a simple definition `transition` directive](https://github.com/marp-team/marp-cli/blob/main/docs/bespoke-transitions/README.md#transition-local-directive).
 
 Built-in transitions should be useful for 90% of Marp users. But what you can do if there are no effects you are satisfied with? Make your effects in CSS! Marp can register your custom animation set declared in CSS as a named transition, and use it in the Markdown slide.
 
@@ -26,13 +27,11 @@ This article will describe the following things:
 1. **[Declare custom transitions](#declare-custom-transitions)**: How to register custom transitions by CSS
 1. **[Helpful tips for making your transition](#tips)**
 
+[See also the official documentation about transitions in Marp CLI.][readme]
+
 _If using [built-in transitions made by us][built-in] was enough, you don't need to read this article._ Please save your time, with keeping enjoying our transitions in your Markdown slide! :)
 
-> The word "transition" in this article is meaning the slide transition effect in Marp, not meaning [`transition` property in CSS](https://developer.mozilla.org/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions).
-
-### Warning: Transition is experimental
-
-An _experimental_ transition is a cutting-edge feature that is depending on [Shared Element Transitions proposal for Web][transition-proposal] and may change the spec in the future. Before trying to use transitions, _you **must** read [a GitHub issue about this feature](https://github.com/marp-team/marp-cli/issues/447) through!_
+> In this article, the word "transition" is meaning the slide transition effect in Marp. Please note that it is not meaning [`transition` property in CSS](https://developer.mozilla.org/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions).
 
 # The anatomy of a transition
 
@@ -107,10 +106,10 @@ Well, declare animation details at keyframes. In a simple declaration, you only 
 
 > This example has been declared `from` keyframe for clarity, but you can omit it because `opacity: 1` is a default style.
 
-Did you want more? That's it! Try to test this transition in [a preview window](https://github.com/marp-team/marp-cli#preview-window---preview---p).
+Did you want more? That's it! Try to test this transition in the HTML slide with the browser that supports [View Transitions API], or [a preview window in Marp CLI](https://github.com/marp-team/marp-cli#preview-window---preview---p).
 
 ```bash
-npx @marp-team/marp-cli@^2 --bespoke.transition --preview ./transition.md
+npx @marp-team/marp-cli@^2.4.0 --preview ./transition.md
 ```
 
 You have made the first custom transition!
@@ -192,7 +191,7 @@ And now, the slide-up custom transition is working completely in both directiona
 
 ![Slide up transition with correct directions](/assets/how-to-make-custom-transition/slide-up-correct-direction.gif ' ')
 
-> NOTE: Any other CSS variables defined in the context of Marp cannot use in keyframes.
+> NOTE: Any other CSS variables defined in the context of animation keyframes cannot use in keyframes.
 
 ### Set custom animations for backward transition
 
@@ -255,8 +254,6 @@ Each transition has a linear easing by default. You can specify [`animation-timi
 
 ## Duration
 
-_(2022-06-08 Update)_
-
 We have a fixed duration time of `0.5s` as default for every transition. If you want to set a different default duration for your custom transition, please set `--marp-transition-duration` property in the first keyframe (`from` or `0%`).
 
 <!-- prettier-ignore-start -->
@@ -290,8 +287,6 @@ We have a fixed duration time of `0.5s` as default for every transition. If you 
 <!-- prettier-ignore-end -->
 
 The slide author can override the default duration at any time, through the `transition` local directive in Markdown (`<!-- transition: fade 2s -->`).
-
-> Setting custom default duration is available in [Marp CLI v2.0.4](https://github.com/marp-team/marp-cli/releases/tag/v2.0.4) and later.
 
 ## Fixed property
 
@@ -372,10 +367,8 @@ If you want to swap the order of layers during animation, try to animate `z-inde
 
 # Try it!
 
-Marp CLI transition experiment, backed by [Shared Element Transition API proposal for Web][transition-proposal], provides flexibility to design your talk as you like. Custom transition brings out your boundless creativity, without complex codings, just declarative definitions in CSS.
+Transitions for Marp CLI's bespoke template backed by [View Transitions API] in the browser, provides flexibility to design your talk as you like. Custom transition brings out your boundless creativity, without complex JS codings, just declarative definitions in CSS.
 
 We are really looking forward to what creative transition effects our community will create!
 
 Share the custom transition you've made with [Marp community](https://github.com/orgs/marp-team/discussions). You can provide custom theme CSS including a bunch of custom transitions too.
-
-> Again, **the transition feature is still experimental**. Before starting to use transitions, _you **must** read [a GitHub issue](https://github.com/marp-team/marp-cli/issues/447) through._ Any feedbacks are welcome!
