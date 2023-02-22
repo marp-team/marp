@@ -14,18 +14,6 @@ We are so excited to introduce a stable release of **[Marp Core](https://github.
 
 <!-- more -->
 
-### Opt in the new core in a VS Code extension
-
-_(Updated in 2022-06-03)_
-
-In [Marp for VS Code](https://github.com/marp-team/marp-vscode) extension, this update is not yet coming to the current extension release, but you can try the new core in [a pre-released major update](https://github.com/marp-team/marp-vscode/releases/v2.0.0). Opt in the pre-released version from a **"Switch to Pre-release Version"** button in the extension detail.
-
-![Marp for VS Code v2 is available as a pre-released version](https://user-images.githubusercontent.com/3993388/171881511-f0e925a5-5b61-417f-b662-60437d1f0233.png ' ')
-
-We have recognized that Marp users who use GUI are including a lot of beginners and non-developers, so we think we should provide enough window time for them to review breaking changes.
-
-Try the pre-release extension, and prepare for the following ecosystem updates! You can easily roll back to the stable version that uses v2 core while the new extension is shipping as pre-release.
-
 # Marp Core v3
 
 [We had released Marp Core v3.0.0 as a release candidate in November 2021.](https://github.com/marp-team/marp-core/releases/tag/v3.0.0) For a half year, it had been available in the `next` tag as an opt-in engine of Marp CLI, and had accepted feedback from the community.
@@ -171,7 +159,9 @@ A really loving part of this CLI update for me is **[a brand-new experimental sl
 
 We had started testing experimental slide transition effects since [Marp CLI v1.4.0](https://github.com/marp-team/marp-cli/releases/tag/v1.4.0) (Aug 2021). `--bespoke.transition` CLI option had been working well, but not so practical compared to the common presentation tools.
 
-As a result of catching up on the new spec of [Shared Elemental Transitions proposal](https://github.com/WICG/shared-element-transitions) in Marp CLI v2, I'm so excited to provide powerful transition features that are in no other Markdown slide tools, such as CSS custom transition effects!
+As a result of catching up on the new spec of [View Transitions API proposal][view transitions api] in Marp CLI v2, I'm so excited to provide powerful transition features that are in no other Markdown slide tools, such as CSS custom transition effects!
+
+[view transitions api]: https://www.w3.org/TR/css-view-transitions-1/
 
 **Please remember this is a cutting-edge and not stable feature.** There are the demanding browser requirements to work transitions. In addition, the slide transition experiment probably may stop working suddenly due to the upstream API change, or can change the spec without notice.
 
@@ -185,13 +175,13 @@ You can track the state of progress at **[marp-team/marp-cli#447](https://github
 - **Define custom transition via CSS**: Markdown author and theme designer can define the custom transition through `@keyframes` declaration in CSS.
 - **Opt-out transitions**: Prefers [`@media (prefers-reduced-motion)` media query](https://developer.mozilla.org/docs/Web/CSS/@media/prefers-reduced-motion) to be able to opt out transition animations.
 
-The experimental slide transitions in HTML output can opt in through `--bespoke.transition` CLI option, and _it is only working in Chrome/Chromium 101 and later with the enabled "documentTransition API" flag._
+The experimental slide transitions in HTML output can opt in through `--bespoke.transition` CLI option, and _it is only working in the browser that supports View Transitions API, such as Chrome/Chromium 110 and later._
 
-**Both `--bespoke.transition` and `--preview` are required as a CLI option to see transition effects surely.** Try this to open a preview window for the transition showcase:
+`--preview` as a CLI option is helpful see transition effects surely. Try this in Marp CLI v2.4.0+ to open a preview window for the transition showcase:
 
 ```bash
 curl -o ./showcase.md https://gist.githubusercontent.com/yhatt/d9e86ee53eb8816aaf9c996e773b6f82/raw/transition-showcase.md
-marp --bespoke.transition --preview ./showcase.md
+marp --preview ./showcase.md
 ```
 
 > The source Markdown of the showcase is available at Gist: https://gist.github.com/yhatt/d9e86ee53eb8816aaf9c996e773b6f82
@@ -267,7 +257,7 @@ The custom transition can define through just a few conventional [`@keyframes` a
 
 It only has a relatively simple definition(s) but great flexibility, and brings out boundless creativity of CSS animation! 🤩
 
-**[👉 Marp CLI Experimental: How to make custom transition](/blog/how-to-make-custom-transition)**
+**[👉 Marp CLI: How to make custom transition](/blog/how-to-make-custom-transition)**
 
 We are really looking forward to what creative transition effects our community will create!
 
