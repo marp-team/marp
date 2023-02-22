@@ -13,7 +13,7 @@ image: /og-images/how-to-make-custom-transition.jpg
 
 **[Marp CLI v2](/blog/202205-ecosystem-update#marp-cli-v2)** has supported [brand-new page transitions for the `bespoke` HTML template](/blog/202205-ecosystem-update#slide-transition-experiment). You can use this stable transition support in either Marp CLI v2.4.0+ or Marp for VS Code v2.5.0+.
 
-Effective transitions will help make a dramatic presentation. Adding a touch of effects to slides is often common in great talks. By viewing HTML slide in the browser that supports [View Transitions API] (Chrome 111+), or Marp CLI with `--preview` option, you can start to use [varied 33 transition effects][built-in] out of the box, by [just a simple definition `transition` directive](https://github.com/marp-team/marp-cli/blob/main/docs/bespoke-transitions/README.md#transition-local-directive).
+Effective transitions will help make a dramatic presentation. Adding a touch of effects to slides is often common in great talks. By viewing HTML slide in the browser that supports [View Transitions API] (Chrome 110+), or Marp CLI with `--preview` option, you can start to use [varied 33 transition effects][built-in] out of the box, by [just a simple definition `transition` directive](https://github.com/marp-team/marp-cli/blob/main/docs/bespoke-transitions/README.md#transition-local-directive).
 
 Built-in transitions should be useful for 90% of Marp users. But what you can do if there are no effects you are satisfied with? Make your effects in CSS! Marp can register your custom animation set declared in CSS as a named transition, and use it in the Markdown slide.
 
