@@ -127,7 +127,6 @@ We are supported by them! Thanks for our sponsors! :heart:
 <!-- Logo and links for top-tier sponsors (The image should be up to 300px on a side) -->
 
 <p>
-  <a href="https://github.com/mimacom"><img src="https://github.com/mimacom.png" width="64" height="64" alt="mimacom" /></a>
   <a href="https://zenarchitects.co.jp/"><img src="https://user-images.githubusercontent.com/3993388/132221848-fd9978af-fbca-4382-8ba4-8c9cb1f9e46d.png" alt="ZEN ARCHITECTS Co.,Ltd." width="300" /></a>
 </p>
 
