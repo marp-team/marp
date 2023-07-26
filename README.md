@@ -99,6 +99,7 @@ And there is a gravesite of classic Marp app in https://github.com/yhatt/marp. :
 - [Teaching theme for Marp](https://github.com/eyssette/teaching-theme-for-marp) by [@eyssette](https://github.com/eyssette)
 - [CS199: Even More Practice](https://cs199emp.netlify.app/) Fall 2020 and Spring 2021 slides at [UIUC](https://cs.illinois.edu/) - [Github](https://github.com/harsh183/emp-125/)
 - [Autoregressive Models](https://github.com/cheind/autoregressive) by [@cheind](https://github.com/cheind)
+- [Marp for Python](https://github.com/HsergeyF/marp-python) by [@HsergeyF](https://github.com/HsergeyF)
 
 <!-- - [Title](https://example.com/) by [@username](https://github.com/username) -->
 
