@@ -124,38 +124,25 @@ We are supported by them! Thanks for our sponsors! :heart:
 
 ### Organization sponsors
 
-<!-- Logo and links for top-tier sponsors (The image should be up to 300px on a side) -->
+<!-- Logo and links for top-tier sponsors (The image should be up to 400px on a side) -->
 
-<p>
-  <a href="https://zenarchitects.co.jp/"><img src="https://user-images.githubusercontent.com/3993388/132221848-fd9978af-fbca-4382-8ba4-8c9cb1f9e46d.png" alt="ZEN ARCHITECTS Co.,Ltd." width="300" /></a>
+<p align="center">
+  <a href="https://zenarchitects.co.jp/"><img src="https://user-images.githubusercontent.com/3993388/132221848-fd9978af-fbca-4382-8ba4-8c9cb1f9e46d.png" alt="ZEN ARCHITECTS Co.,Ltd." width="400" /></a>
 </p>
 
 <!-- [TODO] For mid-tier sponsors: As the same format as personal sponsors, add small icons and links to GitHub organization. -->
+<!--
+<p>
+  <a href="https://github.com/xxxxxx"><img src="https://github.com/xxxxxx.png" width="32" height="32" alt="xxxxxx" /></a>
+</p>
+-->
 
 ### Personal sponsors
 
-<!-- Name and icons (Top-tier sponsors) -->
-<table>
-  <tr align="center">
-    <td>
-      <a href="https://github.com/junta-m"><img src="https://github.com/junta-m.png" width="64" height="64" alt="junta-m is sponsored yhatt" valign="middle"/></a>
-    </td>
-  </tr>
-  <tr>
-    <th><a href="https://github.com/junta-m">junta-m</a></th>
-  </tr>
-</table>
+<!-- [TODO] Currently shows maintainer's sponsors. We should show sponsors for all Marp team members in future. -->
 
-<!-- Mid-tier sponsors -->
-<p>
-  <a href="https://github.com/Doctor-love"><img src="https://github.com/Doctor-love.png" width="32" height="32" alt="Doctor-love is sponsored yhatt" /></a>
-  <a href="https://github.com/harsh183"><img src="https://github.com/harsh183.png" width="32" height="32" alt="harsh183 is sponsored yhatt" /></a>
-  <a href="https://github.com/laughk"><img src="https://github.com/laughk.png" width="32" height="32" alt="laughk is sponsored yhatt" /></a>
-  <a href="https://github.com/mattwigway"><img src="https://github.com/mattwigway.png" width="32" height="32" alt="mattwigway is sponsored yhatt" /></a>
-  <a href="https://github.com/mrkn"><img src="https://github.com/mrkn.png" width="32" height="32" alt="mrkn is sponsored yhatt" /></a>
-  <a href="https://github.com/pataiji"><img src="https://github.com/pataiji.png" width="32" height="32" alt="pataiji is sponsored yhatt" /></a>
-  <a href="https://github.com/synapticvoid"><img src="https://github.com/synapticvoid.png" width="32" height="32" alt="synapticvoid is sponsored yhatt" /></a>
-  <a href="https://github.com/tsuemura"><img src="https://github.com/tsuemura.png" width="32" height="32" alt="tsuemura is sponsored yhatt" /></a>
+<p align="center">
+  <img alt="Personal sponsors" src="https://yhatt.github.io/yhatt/sponsors.svg" />
 </p>
 
 > Do you want to sponsor [the member of Marp team](https://github.com/orgs/marp-team/people)? See [GitHub Sponsors](https://github.com/sponsors) profile(s) from "♥︎ Sponsor" button [at the top of repository](https://github.com/marp-team/marp).
