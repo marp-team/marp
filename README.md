@@ -12,7 +12,7 @@
 
 <div align="center">
 
-### [🌐 Go to the official website ▶︎](https://marp.app)&emsp;|&emsp;[💬 Discussion forum ▶︎](https://github.com/marp-team/marp/discussions)
+### [🌐 Website ▶︎](https://marp.app)&emsp;|&emsp;[💬 Discussion forum ▶︎](https://github.com/marp-team/marp/discussions)&emsp;|&emsp;[😎 Awesome list ▶︎](https://github.com/marp-team/awesome-marp)
 
 </div>
 
@@ -42,7 +42,7 @@ This repo (**[marp-team/marp][marp]**) is an entrance to the Marp family, and pl
 | **[Marp for VS Code][marp-vscode]** | A [VS Code][vscode] extension to preview the slide deck written in Marp Markdown. | [![VS Marketplace][badge-marp-vscode]][marp-vscode-release] |
 
 <details>
-<summary><b>See outdated/inactive projects...</b></summary><br />
+<summary>See outdated/inactive projects...</summary><br />
 
 |                     Name | Description                                                      | Release                                                      |
 | -----------------------: | :--------------------------------------------------------------- | :----------------------------------------------------------- |
@@ -86,23 +86,9 @@ And there is a gravesite of classic Marp app in https://github.com/yhatt/marp. :
 [badge-marp-cli]: https://img.shields.io/npm/v/@marp-team/marp-cli.svg?style=flat-square&logo=npm
 [badge-marp-vscode]: https://img.shields.io/visual-studio-marketplace/v/marp-team.marp-vscode.svg?style=flat-square&logo=visual-studio-code&label=Marketplace
 
-## Examples
+## Ecosystem
 
-### Starter by Marp author
-
-- **[Marp CLI example](https://yhatt-marp-cli-example.netlify.com/)** by [@yhatt](https://github.com/yhatt) - A good starter to write and host Marp slide with [GitPitch](https://gitpitch.com/) style powered by [Netlify](https://www.netlify.com/). (https://github.com/yhatt/marp-cli-example)
-
-### Community
-
-- [Reflection in Qt and Beyond](https://github.com/tomisaacson/reflection-in-Qt) by [@tomisaacson](https://github.com/tomisaacson)
-- [Marp to Pages](https://github.com/ralexander-phi/marp-to-pages/) by [@ralexander-phi](https://github.com/ralexander-phi)
-- [Teaching theme for Marp](https://github.com/eyssette/teaching-theme-for-marp) by [@eyssette](https://github.com/eyssette)
-- [CS199: Even More Practice](https://cs199emp.netlify.app/) Fall 2020 and Spring 2021 slides at [UIUC](https://cs.illinois.edu/) - [Github](https://github.com/harsh183/emp-125/)
-- [Autoregressive Models](https://github.com/cheind/autoregressive) by [@cheind](https://github.com/cheind)
-
-<!-- - [Title](https://example.com/) by [@username](https://github.com/username) -->
-
-Let us know if you have created an awesome slide deck with Marp ecosystem! [Edit README.md and send pull request.](https://github.com/marp-team/marp/edit/main/README.md)
+Marp ecosystem has a lot of cool stuffs for making awesome presentation. Check out **[the awesome list of Marp](https://github.com/marp-team/awesome-marp)**. 😎
 
 ## Contributing
 
