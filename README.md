@@ -113,7 +113,8 @@ We are supported by them! Thanks for our sponsors! :heart:
 <!-- Logo and links for top-tier sponsors (The image should be up to 400px on a side) -->
 
 <p align="center">
-  <a href="https://zenarchitects.co.jp/"><img src="https://user-images.githubusercontent.com/3993388/132221848-fd9978af-fbca-4382-8ba4-8c9cb1f9e46d.png" alt="ZEN ARCHITECTS Co.,Ltd." width="400" /></a>
+  <a href="https://github.com/markslides"><img src="https://github.com/markslides.png" width="64" height="64" alt="@markslides" valign="middle" hspace="4" /></a>
+  <a href="https://zenarchitects.co.jp/"><img src="https://user-images.githubusercontent.com/3993388/132221848-fd9978af-fbca-4382-8ba4-8c9cb1f9e46d.png" alt="ZEN ARCHITECTS Co.,Ltd." width="400" valign="middle" hspace="4" /></a>
 </p>
 
 <!-- [TODO] For mid-tier sponsors: As the same format as personal sponsors, add small icons and links to GitHub organization. -->
