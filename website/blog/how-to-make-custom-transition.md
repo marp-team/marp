@@ -332,7 +332,7 @@ If you want to swap the order of layers during animation, try to animate `z-inde
 
 ```css
 @keyframes marp-incoming-transition-swap {
-  /* Incoming slide will swap from back to front at 50% of animation */
+  /* Incoming slide will swap from `back` to `front` at 50% of animation */
   from { z-index: -1; }
   to { z-index: 0; }
 
