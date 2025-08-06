@@ -98,7 +98,7 @@ Marp for VS Code v1 is supporting Workspace Trust. If the current workspace is n
 
 Marp for VS Code is focusing into providing the great experience to write presentation. IntelliSense for Marp directives is a big improvement for that. We are going to continue making an effort to cover update of VS Code.
 
-And Marp team is always thinking about security. Supporting VS Code's Workspace Trust is an important thing to save you from maliciouses.
+And Marp team is always thinking about security. Supporting VS Code's Workspace Trust is an important thing to save you from maliciousness.
 
 In addition, a way of thinking about the trusted workspace would open the door to more useful features that were prevented by security concerns: Custom Marp CLI configuration, playing presentation, and so on.
 
