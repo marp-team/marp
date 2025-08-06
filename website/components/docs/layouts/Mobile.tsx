@@ -204,7 +204,7 @@ export const Mobile: React.FC<LayoutProps> = ({
         .docs-btn :global(.docs-btn-close-icon) {
           @apply h-8 w-8;
         }
-        .docs-btn :glboal(.docs-btn-open-drawer-icon) {
+        .docs-btn :global(.docs-btn-open-drawer-icon) {
           @apply h-8 w-8 p-1;
         }
 
