@@ -172,7 +172,7 @@ I would stop publishing the old Marp and archive its repository if Marp Web has 
 
 Your Markdown slides written in the old Marp syntax should rewrite to suit to the brand-new Marp ecosystem.
 
-In a new Marp, we have reconsidered Markdown syntax based on feedback to the old Marp app. So, some syntaxs are losing compatibility.
+In a new Marp, we have reconsidered Markdown syntax based on feedback to the old Marp app. So, some syntaxes are losing compatibility.
 
 ### Syntax
 
