@@ -27,7 +27,7 @@ Marpit has created for using as the base of Marp ecosystem, but it is also indep
 
 [marpit]: https://marpit.marp.app/
 
-### [Marpit Markdown]: Keep compatibillity with a plain Markdown document
+### [Marpit Markdown]: Keep compatibility with a plain Markdown document
 
 We had received [many requests][issues] to the old Marp, about the additional syntax to help creating beautiful slide deck. On the other hand, we also have received a request that [must respect Markdown syntax strictly](https://github.com/yhatt/marp/issues/87). We have to deal with these contradicted issues.
 
@@ -172,7 +172,7 @@ I would stop publishing the old Marp and archive its repository if Marp Web has 
 
 Your Markdown slides written in the old Marp syntax should rewrite to suit to the brand-new Marp ecosystem.
 
-In a new Marp, we have reconsidered Markdown syntax based on feedback to the old Marp app. So, some syntaxs are losing compatibillity.
+In a new Marp, we have reconsidered Markdown syntax based on feedback to the old Marp app. So, some syntaxs are losing compatibility.
 
 ### Syntax
 
