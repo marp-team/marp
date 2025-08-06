@@ -166,7 +166,7 @@ If you are using an old Marp application, **you should migrate to use Marp Next 
 
 In future, the main interface would become to Marp Web. We have bet to PWA technology that has a lot of advantages. The desktop app is planned as "Marp Desktop" but it just may become a wrapper of Web interface.
 
-I would stop publishing the old Marp and archive its repository if Marp Web has grown to become replacable the old Marp.
+I would stop publishing the old Marp and archive its repository if Marp Web has grown to become replaceable the old Marp.
 
 ## Your slide deck
 
