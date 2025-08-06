@@ -76,7 +76,7 @@ No problem even if you don't know the virtual workspace! In short, Marp features
 
 Previously an export command had assumed to deal only local files. So the result of command might miss some resources that have not located in local file system.
 
-We are dealing with this by internally serving resources located in a virtual workspace via HTTP while processing of export ([marp-team/marp-vscode#225](https://github.com/marp-team/marp-vscode/pull/225)). By doing this, the result of export command within [a remote repository](https://code.visualstudio.com/updates/v1_56#_remote-repositories-remotehub), a coming feature of VS Code to edit the content of GitHub repository without clone/download, can include resources correctlly.
+We are dealing with this by internally serving resources located in a virtual workspace via HTTP while processing of export ([marp-team/marp-vscode#225](https://github.com/marp-team/marp-vscode/pull/225)). By doing this, the result of export command within [a remote repository](https://code.visualstudio.com/updates/v1_56#_remote-repositories-remotehub), a coming feature of VS Code to edit the content of GitHub repository without clone/download, can include resources correctly.
 
 This behavior is under verifying and may fail to resolve resources in some cases (e.g. [marp-team/marp-vscode#238](https://github.com/marp-team/marp-vscode/issues/238)). We are welcome more feedbacks about the export command in a virtual workspace!
 
