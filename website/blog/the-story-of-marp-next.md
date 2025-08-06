@@ -137,7 +137,7 @@ In currently published tech-demo, you can try Marp's really fast preview on the 
 
 # Integrations
 
-The modulized Marp Core brought Marp integrations for some tools.
+The modularized Marp Core brought Marp integrations for some tools.
 
 ## [Marp for VS Code][marp vscode]
 
