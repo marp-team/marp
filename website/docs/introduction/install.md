@@ -2,7 +2,7 @@
 
 ### This is a stub page!
 
-There are two ways to use Marp, through a command-line interface (**[Marp CLI][marp cli]**) or through a graphical user interface (**[VS Code extension][marp for vs code]**). To start authoring presentations, you must install either the CLI or the VS Code exension.
+There are two ways to use Marp, through a command-line interface (**[Marp CLI][marp cli]**) or through a graphical user interface (**[VS Code extension][marp for vs code]**). To start authoring presentations, you must install either the CLI or the VS Code extension.
 
 ## Should I use the Marp CLI or Marp for VS Code?
 

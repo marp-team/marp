@@ -123,7 +123,7 @@ Please make a Markdown link `[Amazon.com](https://amazon.com/)` explicitly if yo
 
 According to the time to become core v3 stable, we also worked on **[a major update of Marp CLI](https://github.com/marp-team/marp-cli/releases/tag/v2.0.0)** to bundle a new core.
 
-There are no major changes in the general use of Marp CLI, and I believe your CLI workflow would never break by this updation in most cases.
+There are no major changes in the general use of Marp CLI, and I believe your CLI workflow would never break by this update in most cases.
 
 So what feature is a "major" update of CLI? [_Perhaps you may have interested in a hidden gem..._ 💎](#slide-transition-experiment)
 

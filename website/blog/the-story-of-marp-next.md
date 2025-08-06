@@ -27,7 +27,7 @@ Marpit has created for using as the base of Marp ecosystem, but it is also indep
 
 [marpit]: https://marpit.marp.app/
 
-### [Marpit Markdown]: Keep compatibillity with a plain Markdown document
+### [Marpit Markdown]: Keep compatibility with a plain Markdown document
 
 We had received [many requests][issues] to the old Marp, about the additional syntax to help creating beautiful slide deck. On the other hand, we also have received a request that [must respect Markdown syntax strictly](https://github.com/yhatt/marp/issues/87). We have to deal with these contradicted issues.
 
@@ -137,7 +137,7 @@ In currently published tech-demo, you can try Marp's really fast preview on the 
 
 # Integrations
 
-The modulized Marp Core brought Marp integrations for some tools.
+The modularized Marp Core brought Marp integrations for some tools.
 
 ## [Marp for VS Code][marp vscode]
 
@@ -145,7 +145,7 @@ Honestly, I don't think to want to make a new editor because there are many grea
 
 ![Marp for VS Code](/assets/marp-for-vs-code.png ' ')
 
-It was realized because VS Code is using the same Markdown engine (markdown-it) as Marpit framework. Of course you can export slides as PDF and HTML easily, powered by [Marp CLI].
+It was realized because VS Code is using the same Markdown engine (markdown-it) as Marpit framework. Of course, you can export slides as PDF and HTML easily, powered by [Marp CLI].
 
 [marp vscode]: https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode
 
@@ -166,13 +166,13 @@ If you are using an old Marp application, **you should migrate to use Marp Next 
 
 In future, the main interface would become to Marp Web. We have bet to PWA technology that has a lot of advantages. The desktop app is planned as "Marp Desktop" but it just may become a wrapper of Web interface.
 
-I would stop publishing the old Marp and archive its repository if Marp Web has grown to become replacable the old Marp.
+I would stop publishing the old Marp and archive its repository if Marp Web has grown to become replaceable the old Marp.
 
 ## Your slide deck
 
 Your Markdown slides written in the old Marp syntax should rewrite to suit to the brand-new Marp ecosystem.
 
-In a new Marp, we have reconsidered Markdown syntax based on feedback to the old Marp app. So, some syntaxs are losing compatibillity.
+In a new Marp, we have reconsidered Markdown syntax based on feedback to the old Marp app. So, some syntaxes are losing compatibility.
 
 ### Syntax
 

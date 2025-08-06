@@ -60,7 +60,7 @@ Marp is designed with the "[Separation of content and style](https://en.wikipedi
 
 Marp has first-class support for conversion into other file formats. We prioritize reproducible rendering across formats so that users do not have to worry about different formats breaking layouts. Our goal is to make sure the PDF, PPTX, and HTML versions of your slides look exactly the same.
 
-Note that Marp is not designed to be stand-alone presentation software. The simplest and recommended way to present is to export to PDF, which allows you to present in any environment that supports PDFs. The PDF format is particularly useful if you are presenting without access to the internet. The HTML format allows you to serve your slide deck on the internet, show interactive content, and use features like fragmented lists. If you want to add additional content manually in Powerpoint, Marp also allows you to export to the PowerPoint (PPTX) format.
+Note that Marp is not designed to be stand-alone presentation software. The simplest and recommended way to present is to export to PDF, which allows you to present in any environment that supports PDFs. The PDF format is particularly useful if you are presenting without access to the internet. The HTML format allows you to serve your slide deck on the internet, show interactive content, and use features like fragmented lists. If you want to add additional content manually in PowerPoint, Marp also allows you to export to the PowerPoint (PPTX) format.
 
 ### Easy to get started
 

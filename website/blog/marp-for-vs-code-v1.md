@@ -66,7 +66,7 @@ In this update, we have added some helpful diagnostics for Marp directives. For 
 
 ## Virtual workspace support 🌐
 
-VS Code is still evolving to cover various situations: [Editing remote files](https://code.visualstudio.com/docs/remote/remote-overview), [collaborating with others](https://code.visualstudio.com/learn/collaboration/live-share), and something usefuls provided by [a lot of third-party extension](https://marketplace.visualstudio.com/vscode). Marp for VS Code is also making an effort to cover them as far as possible.
+VS Code is still evolving to cover various situations: [Editing remote files](https://code.visualstudio.com/docs/remote/remote-overview), [collaborating with others](https://code.visualstudio.com/learn/collaboration/live-share), and something useful provided by [a lot of third-party extension](https://marketplace.visualstudio.com/vscode). Marp for VS Code is also making an effort to cover them as far as possible.
 
 In the recent update, we have improved the export command and custom theme support within a virtual workspace by followed [the call to action from VS Code team](https://code.visualstudio.com/updates/v1_56#_define-whether-your-extension-supports-a-virtual-workspace).
 
@@ -76,7 +76,7 @@ No problem even if you don't know the virtual workspace! In short, Marp features
 
 Previously an export command had assumed to deal only local files. So the result of command might miss some resources that have not located in local file system.
 
-We are dealing with this by internally serving resources located in a virtual workspace via HTTP while processing of export ([marp-team/marp-vscode#225](https://github.com/marp-team/marp-vscode/pull/225)). By doing this, the result of export command within [a remote repository](https://code.visualstudio.com/updates/v1_56#_remote-repositories-remotehub), a coming feature of VS Code to edit the content of GitHub repository without clone/download, can include resources correctlly.
+We are dealing with this by internally serving resources located in a virtual workspace via HTTP while processing of export ([marp-team/marp-vscode#225](https://github.com/marp-team/marp-vscode/pull/225)). By doing this, the result of export command within [a remote repository](https://code.visualstudio.com/updates/v1_56#_remote-repositories-remotehub), a coming feature of VS Code to edit the content of GitHub repository without clone/download, can include resources correctly.
 
 This behavior is under verifying and may fail to resolve resources in some cases (e.g. [marp-team/marp-vscode#238](https://github.com/marp-team/marp-vscode/issues/238)). We are welcome more feedbacks about the export command in a virtual workspace!
 
@@ -98,7 +98,7 @@ Marp for VS Code v1 is supporting Workspace Trust. If the current workspace is n
 
 Marp for VS Code is focusing into providing the great experience to write presentation. IntelliSense for Marp directives is a big improvement for that. We are going to continue making an effort to cover update of VS Code.
 
-And Marp team is always thinking about security. Supporting VS Code's Workspace Trust is an important thing to save you from maliciouses.
+And Marp team is always thinking about security. Supporting VS Code's Workspace Trust is an important thing to save you from maliciousness.
 
 In addition, a way of thinking about the trusted workspace would open the door to more useful features that were prevented by security concerns: Custom Marp CLI configuration, playing presentation, and so on.
 

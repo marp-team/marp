@@ -72,7 +72,7 @@ For the determined rendering of slide, we recommend always to declare math libra
 
 **[KaTeX]** is an alternative library to render math typesettings in Marp, and it was former default.
 
-By defining `math` global directive as `katex`, you can can continue to render math with KaTeX.
+By defining `math` global directive as `katex`, you can continue to render math with KaTeX.
 
 ### Enable KaTeX
 
