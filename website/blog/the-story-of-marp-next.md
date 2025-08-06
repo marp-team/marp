@@ -145,7 +145,7 @@ Honestly, I don't think to want to make a new editor because there are many grea
 
 ![Marp for VS Code](/assets/marp-for-vs-code.png ' ')
 
-It was realized because VS Code is using the same Markdown engine (markdown-it) as Marpit framework. Of course you can export slides as PDF and HTML easily, powered by [Marp CLI].
+It was realized because VS Code is using the same Markdown engine (markdown-it) as Marpit framework. Of course, you can export slides as PDF and HTML easily, powered by [Marp CLI].
 
 [marp vscode]: https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode
 
