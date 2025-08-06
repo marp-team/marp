@@ -217,7 +217,7 @@ Declare `@keyframes` with the **`backward-` prefix to the custom transition name
 
 <!-- prettier-ignore-end -->
 
-In backward navigation, each layer will try to use the backward keyframes first, and fallback to the normal keyframes if not declared. To disable unintended fallback in backward animations, set an empty declaration of `@keyframes`.
+In backward navigation, each layer will try to use the backward keyframes first, and fall back to the normal keyframes if not declared. To disable unintended fallback in backward animations, set an empty declaration of `@keyframes`.
 
 <!-- prettier-ignore-start -->
 
