@@ -66,7 +66,7 @@ In this update, we have added some helpful diagnostics for Marp directives. For 
 
 ## Virtual workspace support 🌐
 
-VS Code is still evolving to cover various situations: [Editing remote files](https://code.visualstudio.com/docs/remote/remote-overview), [collaborating with others](https://code.visualstudio.com/learn/collaboration/live-share), and something usefuls provided by [a lot of third-party extension](https://marketplace.visualstudio.com/vscode). Marp for VS Code is also making an effort to cover them as far as possible.
+VS Code is still evolving to cover various situations: [Editing remote files](https://code.visualstudio.com/docs/remote/remote-overview), [collaborating with others](https://code.visualstudio.com/learn/collaboration/live-share), and something useful provided by [a lot of third-party extension](https://marketplace.visualstudio.com/vscode). Marp for VS Code is also making an effort to cover them as far as possible.
 
 In the recent update, we have improved the export command and custom theme support within a virtual workspace by followed [the call to action from VS Code team](https://code.visualstudio.com/updates/v1_56#_define-whether-your-extension-supports-a-virtual-workspace).
 
