@@ -1,0 +1,159 @@
+---
+marp: true
+theme: myCustom
+style: |
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap');
+  section {
+    font-family: 'Noto Sans SC', sans-serif;
+    background-color: #f8f4e9;
+    color: #333;
+    padding: 40px;
+  }
+  h1 {
+    color: #8e1c1c;
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+  }
+  h2 {
+    color: #1a472a;
+    border-bottom: 2px solid #8e1c1c;
+    padding-bottom: 10px;
+  }
+  .columns {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+  }
+  .column {
+    text-align: center;
+    flex: 1;
+  }
+  .column img {
+    max-width: 80%;
+    border: 3px solid #1a472a;
+    border-radius: 5px;
+  }
+  .plus-sign {
+    font-size: 3em;
+    margin: 0 20px;
+    color: #8e1c1c;
+    align-self: center;
+  }
+  footer {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8em;
+    color: #666;
+  }
+  .motto {
+    text-align: center;
+    font-style: italic;
+    line-height: 2.0;
+    margin-top: 80px;
+    font-size: 1.2em;
+    color: #1a472a;
+  }
+---
+
+<!-- _header: 家族象征：蒙古马与草原 -->
+<!-- _footer: 我的家族徽章 Presentation -->
+
+![bg left:40%](https://placehold.co/600x800/1a472a/ffffff?text=蒙古马&fontsize=2.5em)
+# **家族象征**
+## 蒙古马与草原的融合
+
+---
+
+## 第一部分：合成要素
+
+### 蒙古马与草原的融合
+.columns[
+.column[
+![蒙古马](https://placehold.co/300x200/8e1c1c/ffffff?text=蒙古马图片)
+*蒙古马*
+]
+.plus-sign **+**
+.column[
+![草原](https://placehold.co/300x200/1a472a/ffffff?text=草原图片)
+*草原*
+]
+.plus-sign **=**
+.column[
+![家族象征](https://placehold.co/300x200/f8f4e9/333?text=家族徽章)
+*我们的象征*
+]
+]
+
+---
+
+## 第二部分：蒙古马
+
+### Definition
+**蒙古马**是蒙古高原上的古老马种，以其**卓越的耐力**、**强大的适应力**和**无比的忠诚**而闻名于世，是游牧文明的灵魂。
+
+---
+
+### Description
+- **体型**: 虽不高大，但体格粗壮，肌肉结实。
+- **特性**: 极耐寒暑，能在艰苦环境下生存，性情温顺而刚毅。
+- **角色**: 历史上是征战、运输、放牧的伙伴，如今是文化与精神的象征。
+
+---
+
+### History
+蒙古马伴随了蒙古帝国的辉煌，从成吉思汗的铁骑横扫欧亚，到日常的游牧迁徙，它的蹄印深深烙在**家族与民族的历史记忆**中，象征着**勇气、自由与征服**。
+
+---
+
+### Family Values
+它所代表的家族价值观：
+- **坚韧不拔** - 面对困难永不低头。
+- **忠诚协作** - 对家庭和伙伴绝对忠诚。
+- **勇往直前** - 怀着信念向着目标前进。
+
+---
+
+## 第三部分：草原
+
+### Definition
+**草原**是广阔无垠的温带生态系统，以禾本科植物为主，是**生命的摇篮**和**文明的温床**，象征着无限的可能与包容。
+
+---
+
+### Description
+- **景象**: “天苍苍，野茫茫，风吹草低见牛羊”的壮阔美景。
+- **特性**: 滋养万物，默默奉献，循环不息。
+- **角色**: 为游牧生活提供了基础，塑造了豁达、开放的民族性格。
+
+---
+
+### History
+草原是**历史的舞台**，见证了无数部落的兴衰、家族的迁徙与融合。它沉默地承载着一切，是**传承与永恒**的化身，连接着我们的过去与未来。
+
+---
+
+### Family Values
+它所代表的家族价值观：
+- **包容与滋养** - 如草原般胸怀广阔，滋养每一位家庭成员。
+- **和谐共处** - 与自然、与他人和谐共生。
+- **根基与传承** - 家族如草原，是我們扎根和汲取力量的地方。
+
+---
+
+## 第四部分：My Family Crest Motto
+
+### Our Family Motto
+.motto[
+**坚韧如马，驰骋不息**
+**胸怀如原，滋养万物**
+**同心协力，光耀门楣**
+]
+
+### Motto Rationale
+1.  **坚韧与行动**：继承蒙古马的精神，无论遇到什么挑战，家族成员都应以坚韧的意志和持续的行动去克服。
+2.  **包容与奉献**：学习草原的品格，家族要成为一个充满包容、爱与支持的地方，让每位成员都能茁壮成长。
+3.  **协作与荣耀**：融合两种象征的核心——“Many hands make light work”，唯有团结协作，才能让家族兴旺繁荣，共创辉煌。
