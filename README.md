@@ -1,138 +1,116 @@
-<div align="center">
-  <p>
-    <img src="marp.png#gh-light-mode-only" alt="Marp" width="450" />
-    <img src="marp-dark.png#gh-dark-mode-only" alt="Marp" width="450" />
-  </p>
-  <p>
-    <strong>Marp</strong>: Markdown Presentation Ecosystem
-  </p>
-</div>
+---
+marp: true
+theme: uncover
+class: invert
+backgroundColor: #1a1a1a
+color: #ececec
+style: |
+  section {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: left;
+    justify-content: flex-start;
+    padding: 50px;
+  }
+  h1 { color: #3498db; font-size: 1.8em; margin-bottom: 20px; }
+  h2 { color: #3498db; }
+  .tag {
+    background: #3498db;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    text-transform: uppercase;
+  }
+  .price-card {
+    border: 1px solid #3498db;
+    padding: 20px;
+    border-radius: 10px;
+    background: #252525;
+  }
+  footer { font-size: 0.5em; color: #777; }
 
-**Marp** is the ecosystem to write your presentation with plain Markdown.
+---
 
-<div align="center">
+# МАСТЕРСКАЯ ПРОДАЖ
+## АНАСТАСИИ КУРАЛЕСОВОЙ
 
-### [🌐 Website ▶︎](https://marp.app)&emsp;|&emsp;[💬 Discussion forum ▶︎](https://github.com/marp-team/marp/discussions)&emsp;|&emsp;[😎 Awesome list ▶︎](https://github.com/marp-team/awesome-marp)
+[cite_start]**Комплексные решения по найму и адаптации персонала** [cite: 4, 5]
 
-</div>
+- Нанимаем лучших менеджеров
+- Обучаем и внедряем в работу
+- [cite_start]Настраиваем CRM и сопровождение [cite: 2]
 
-## Marp family
+---
 
-Our project is spread over many repos in order to focus on a limited scope per repository.
+# ФОРМАТ ВЫБИРАЕТЕ ВЫ
+### [cite_start]Результат мы берем на себя [cite: 3]
 
-This repo (**[marp-team/marp][marp]**) is an entrance to the Marp family, and places [our website](https://marp.app/) in `/website`.
+* [cite_start]**Гибкость:** выбирайте только нужные услуги [cite: 1]
+* [cite_start]**Эффективность:** от точечного найма до запуска «под ключ» [cite: 2]
+* [cite_start]**Гарантии:** прозрачные условия и поддержка после выхода сотрудника [cite: 12, 24]
 
-### Framework / Core
+---
 
-|                       Name | Description                                                                                 | Release                                                   |
-| -------------------------: | :------------------------------------------------------------------------------------------ | :-------------------------------------------------------- |
-|               **[Marpit]** | The skinny framework for creating slide deck from Markdown. ([marpit.marp.app])             | [![@marp-team/marpit][badge-marpit]][marpit-npm]          |
-| **[Marp Core][marp-core]** | The core of Marp converter with practical features and [built-in themes][marp-core-themes]. | [![@marp-team/marp-core][badge-marp-core]][marp-core-npm] |
+# ТАРИФ: ПОМОЩЬ РЕКРУТЕРА
+[cite_start]<span class="tag">Быстрый старт</span> [cite: 6]
 
-### Apps
+[cite_start]**Что входит в решение:** [cite: 7]
+* Профилирование и создание «цепляющей» вакансии.
+* Активный отбор и телефонные интервью.
+* Передача финальных кандидатов Заказчику.
 
-|                     Name | Description                                                                                      | Release                                                |
-| -----------------------: | :----------------------------------------------------------------------------------------------- | :----------------------------------------------------- |
-| **[Marp CLI][marp-cli]** | [Marp Core][marp-core] / [Marpit]'s CLI interface to convert into HTML, PDF, PPTX, and image(s). | [![@marp-team/marp-cli][badge-marp-cli]][marp-cli-npm] |
+**Условия:**
+* [cite_start]**Стоимость:** 35 000 ₽ / менеджер [cite: 9]
+* [cite_start]**Гарантия:** 10 рабочих дней (расширение до месяца — 5к) [cite: 12, 13]
 
-### Integrations
+---
 
-|                                Name | Description                                                                       | Release                                                     |
-| ----------------------------------: | :-------------------------------------------------------------------------------- | :---------------------------------------------------------- |
-| **[Marp for VS Code][marp-vscode]** | A [VS Code][vscode] extension to preview the slide deck written in Marp Markdown. | [![VS Marketplace][badge-marp-vscode]][marp-vscode-release] |
+# ТАРИФ: БАЗОВЫЙ НАЙМ
+### [cite_start]Глубокое погружение в бизнес [cite: 15]
 
-<details>
-<summary>See outdated/inactive projects...</summary><br />
+1.  [cite_start]**Стратегия:** декомпозиция отдела и калькулятор окупаемости [cite: 17]
+2.  [cite_start]**Контент:** создание «Введения в должность» и карты обучения [cite: 17]
+3.  [cite_start]**Отбор:** видео-интервью и помощь в финальном выборе [cite: 17]
+4.  [cite_start]**Продукт:** глубокий анализ технических характеристик [cite: 17]
 
-|                     Name | Description                                                      | Release                                                      |
-| -----------------------: | :--------------------------------------------------------------- | :----------------------------------------------------------- |
-|     [Marp Web][marp-web] | The Web interface of Marp based on [PWA] and [Preact] framework. | [![tech demo][badge-marp-web]][marp-web-site]                |
-| [Marp React][marp-react] | Marp renderer component for [React].                             | [![@marp-team/marp-react][badge-marp-react]][marp-react-npm] |
-|     [Marp Vue][marp-vue] | Marp renderer component for [Vue].                               | [![@marp-team/marp-vue][badge-marp-vue]][marp-vue-npm]       |
+---
 
-And there is a gravesite of classic Marp app in https://github.com/yhatt/marp. :ghost:
+# БАЗОВЫЙ НАЙМ: УСЛОВИЯ
+[cite_start]<span class="tag">Золотой стандарт</span> [cite: 18]
 
-[marp-web]: https://github.com/marp-team/marp-web
-[marp-react]: https://github.com/marp-team/marp-react
-[marp-vue]: https://github.com/marp-team/marp-vue
-[pwa]: https://en.wikipedia.org/wiki/Progressive_Web_Apps
-[preact]: https://preactjs.com/
-[react]: https://reactjs.org/
-[vue]: https://vuejs.org/
-[marp-web-site]: https://web.marp.app/
-[marp-react-npm]: https://www.npmjs.com/package/@marp-team/marp-react
-[marp-vue-npm]: https://www.npmjs.com/package/@marp-team/marp-vue
-[badge-marp-web]: https://img.shields.io/badge/%E2%80%8B-tech%20demo-%230288d1.svg?style=flat-square&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAUUlEQVQokWNgGD6AqePif3Sx9B2PMcQwNKFrTN/x+D9ejTBNyBphmnBqRNYE04isCatGdE1MHRf/o2vC0IhNE1PaXPwacWnCqxGfJoI2Dn4AAN0ZrMM1VUFvAAAAAElFTkSuQmCC
-[badge-marp-react]: https://img.shields.io/npm/v/@marp-team/marp-react.svg?style=flat-square&logo=npm
-[badge-marp-vue]: https://img.shields.io/npm/v/@marp-team/marp-vue.svg?style=flat-square&logo=npm
+* [cite_start]**Инвестиция:** 115 000 ₽ / менеджер [cite: 21]
+* **Масштабирование:** +30% за каждого доп. [cite_start]человека [cite: 26]
+* [cite_start]**Безопасность:** Гарантия 1 месяц (расширение до 2-х — 15к) [cite: 24, 25]
 
-</details>
+---
 
-[yhatt/marp]: https://github.com/yhatt/marp
-[marp]: https://github.com/marp-team/marp
-[marpit]: https://github.com/marp-team/marpit
-[marp-core]: https://github.com/marp-team/marp-core
-[marp-core-themes]: https://github.com/marp-team/marp-core/tree/main/themes
-[marp-cli]: https://github.com/marp-team/marp-cli
-[marp-vscode]: https://github.com/marp-team/marp-vscode
-[vscode]: https://code.visualstudio.com/
-[marpit.marp.app]: https://marpit.marp.app/
-[marpit-npm]: https://www.npmjs.com/package/@marp-team/marpit
-[marp-core-npm]: https://www.npmjs.com/package/@marp-team/marp-core
-[marp-cli-npm]: https://www.npmjs.com/package/@marp-team/marp-cli
-[marp-vscode-release]: https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode
-[badge-marpit]: https://img.shields.io/npm/v/@marp-team/marpit.svg?style=flat-square&logo=npm
-[badge-marp-core]: https://img.shields.io/npm/v/@marp-team/marp-core.svg?style=flat-square&logo=npm
-[badge-marp-cli]: https://img.shields.io/npm/v/@marp-team/marp-cli.svg?style=flat-square&logo=npm
-[badge-marp-vscode]: https://img.shields.io/visual-studio-marketplace/v/marp-team.marp-vscode.svg?style=flat-square&logo=visual-studio-code&label=Marketplace
+# ИНФРАСТРУКТУРА ПРОДАЖ
+### [cite_start]CRM и Автоматизация [cite: 27]
 
-## Ecosystem
+Мы превращаем хаос в систему:
+* [cite_start]**Настройка CRM:** Авито, Telegram, телефония [cite: 29]
+* [cite_start]**Обучение:** рабочие тетради для быстрого внедрения [cite: 29]
+* [cite_start]**Стоимость:** 66 728 ₽ [cite: 33]
 
-Marp ecosystem has a lot of cool stuffs for making awesome presentation. Check out **[the awesome list of Marp](https://github.com/marp-team/awesome-marp)**. 😎
+---
 
-## Contributing
+# СКРИПТЫ И ЛОГИКА
+### [cite_start]Чтобы менеджеры начали продавать [cite: 27]
 
-Marp and sub-projects are following the [contributing guideline of marp-team][contributing]. Please read this before starting work in our projects.
+* [cite_start]**Холодный обзвон** и входящий трафик [cite: 29]
+* [cite_start]**Скрипты для переписки** (мессенджеры/Авито) [cite: 29]
+* [cite_start]**Усиление логики** и воронки продаж [cite: 29]
 
-[contributing]: https://github.com/marp-team/.github/blob/master/CONTRIBUTING.md
+[cite_start]**Стоимость разработки:** 46 480 ₽ [cite: 32]
 
-## Author
+---
 
-Managed by [@marp-team](https://github.com/marp-team).
+# ГОТОВЫ УСИЛИТЬ ВАШ ОТДЕЛ ПРОДАЖ?
 
-- <img src="https://github.com/yhatt.png" width="16" height="16"/> Yuki Hattori ([@yhatt](https://github.com/yhatt))
+[cite_start]**Мастерская Анастасии Куралесовой** [cite: 4]
 
-## Sponsors
+* Настройка процессов
+* Профессиональный найм
+* [cite_start]Гарантированный результат [cite: 3]
 
-We are supported by them! Thanks for our sponsors! :heart:
-
-<!-- [NOTE] Sort sponsors by name when modify. -->
-
-### Organization sponsors
-
-<!-- Logo and links for top-tier sponsors (The image should be up to 400px on a side) -->
-
-<p align="center">
-  <a href="https://github.com/markslides"><img src="https://github.com/markslides.png" width="64" height="64" alt="@markslides" valign="middle" hspace="4" /></a>
-</p>
-
-<!-- [TODO] For mid-tier sponsors: As the same format as personal sponsors, add small icons and links to GitHub organization. -->
-<!--
-<p>
-  <a href="https://github.com/xxxxxx"><img src="https://github.com/xxxxxx.png" width="32" height="32" alt="xxxxxx" /></a>
-</p>
--->
-
-### Personal sponsors
-
-<!-- [TODO] Currently shows maintainer's sponsors. We should show sponsors for all Marp team members in future. -->
-
-<p align="center">
-  <img alt="Personal sponsors" src="https://yhatt.github.io/yhatt/sponsors.svg" />
-</p>
-
-> Do you want to sponsor [the member of Marp team](https://github.com/orgs/marp-team/people)? See [GitHub Sponsors](https://github.com/sponsors) profile(s) from "♥︎ Sponsor" button [at the top of repository](https://github.com/marp-team/marp).
-
-## License
-
-[MIT License](LICENSE)
+---
