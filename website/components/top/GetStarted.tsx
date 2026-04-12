@@ -145,7 +145,7 @@ export const GetStarted = () => (
           description="Enhance VS Code's Markdown preview pane to support writing your beautiful presentations. You can preview the slide deck output as soon as you edit its Markdown."
           name="Marp for VS Code"
           summary="Create slide decks written in Marp Markdown right in VS Code"
-          badge="https://img.shields.io/visual-studio-marketplace/v/marp-team.marp-vscode.svg?style=flat-square&amp;label=&amp;colorB=0288d1"
+          badge="https://img.shields.io/github/v/release/marp-team/marp-vscode.svg?style=flat-square&amp;label=&amp;colorB=0288d1"
           href="https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode"
           screenShot="/assets/marp-for-vs-code.png"
           ssWidth={1946}
