@@ -84,7 +84,7 @@ And there is a gravesite of classic Marp app in https://github.com/yhatt/marp. :
 [badge-marpit]: https://img.shields.io/npm/v/@marp-team/marpit.svg?style=flat-square&logo=npm
 [badge-marp-core]: https://img.shields.io/npm/v/@marp-team/marp-core.svg?style=flat-square&logo=npm
 [badge-marp-cli]: https://img.shields.io/npm/v/@marp-team/marp-cli.svg?style=flat-square&logo=npm
-[badge-marp-vscode]: https://img.shields.io/visual-studio-marketplace/v/marp-team.marp-vscode.svg?style=flat-square&logo=visual-studio-code&label=Marketplace
+[badge-marp-vscode]: https://img.shields.io/github/v/release/marp-team/marp-vscode.svg?style=flat-square&label=Marketplace
 
 ## Ecosystem
 
