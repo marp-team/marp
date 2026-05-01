@@ -145,7 +145,7 @@ export const GetStarted = () => (
           description="Enhance VS Code's Markdown preview pane to support writing your beautiful presentations. You can preview the slide deck output as soon as you edit its Markdown."
           name="Marp for VS Code"
           summary="Create slide decks written in Marp Markdown right in VS Code"
-          badge="https://img.shields.io/github/v/release/marp-team/marp-vscode.svg?style=flat-square&amp;label=&amp;colorB=0288d1"
+          badge="https://img.shields.io/github/v/release/marp-team/marp-vscode.svg?style=flat-square&amp;label=&amp;color=0288d1"
           href="https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode"
           screenShot="/assets/marp-for-vs-code.png"
           ssWidth={1946}
@@ -175,7 +175,7 @@ export const GetStarted = () => (
           description="The Marp CLI is the swiss army knife of the Marp ecosystem. Convert your Markdown into various formats, watch changes, launch server for on-demand conversion, and customize the core engine."
           name="Marp CLI"
           summary="A CLI interface for Marp and Marpit based converters"
-          badge="https://img.shields.io/npm/v/@marp-team/marp-cli.svg?style=flat-square&amp;label=&amp;colorB=0288d1"
+          badge="https://img.shields.io/npm/v/@marp-team/marp-cli.svg?style=flat-square&amp;label=&amp;color=0288d1"
           href="https://github.com/marp-team/marp-cli"
           screenShot="/assets/marp-cli.png"
           ssWidth={1400}
@@ -218,7 +218,7 @@ export const GetStarted = () => (
           description="All official Marp tooling uses this core as the engine. It is based on the Marpit framework and includes some extra features to help create beautiful slide decks."
           name="Marp Core"
           summary="The core of the Marp converter"
-          badge="https://img.shields.io/npm/v/@marp-team/marp-core.svg?style=flat-square&amp;label=&amp;colorB=0288d1"
+          badge="https://img.shields.io/npm/v/@marp-team/marp-core.svg?style=flat-square&amp;label=&amp;color=0288d1"
           href="https://github.com/marp-team/marp-core"
           className="core"
         >
@@ -246,7 +246,7 @@ export const GetStarted = () => (
           description="Marpit (independent from Marp) is the framework that transforms Markdown and CSS themes to slide decks composed of HTML/CSS. It is optimized to output only the minimum set of assets required."
           name="Marpit framework"
           summary="The skinny framework for creating slide decks from Markdown"
-          badge="https://img.shields.io/npm/v/@marp-team/marpit.svg?style=flat-square&amp;label=&amp;colorB=0288d1"
+          badge="https://img.shields.io/npm/v/@marp-team/marpit.svg?style=flat-square&amp;label=&amp;color=0288d1"
           href="https://marpit.marp.app/"
           className="marpit"
         >
