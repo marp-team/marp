@@ -113,7 +113,8 @@ We are supported by them! Thanks for our sponsors! :heart:
 <!-- Logo and links for top-tier sponsors (The image should be up to 400px on a side) -->
 
 <p align="center">
-  <a href="https://github.com/markslides"><img src="https://github.com/markslides.png" width="64" height="64" alt="@markslides" valign="middle" hspace="4" /></a>
+  <a href="https://github.com/markslides"><img src="https://github.com/markslides.png" width="120" height="120" alt="@markslides" valign="middle" hspace="8" /></a>
+  <a href="https://github.com/moozaru-ch"><img src="https://github.com/moozaru-ch.png" width="120" height="120" alt="@moozaru-ch" valign="middle" hspace="8" /></a>
 </p>
 
 <!-- [TODO] For mid-tier sponsors: As the same format as personal sponsors, add small icons and links to GitHub organization. -->
